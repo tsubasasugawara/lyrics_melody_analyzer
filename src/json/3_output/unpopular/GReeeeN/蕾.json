@@ -288,40 +288,40 @@
       "ひらく": {
         "number": 28,
         "children": {
-          "泣い": {
-            "number": 18,
+          "笑っ": {
+            "number": 23,
             "children": {
-              "ど": {
-                "number": 16,
+              "泣い": {
+                "number": 18,
                 "children": {
-                  "いく": {
-                    "number": 15,
+                  "ど": {
+                    "number": 16,
+                    "children": {
+                      "いく": {
+                        "number": 15,
+                        "children": {}
+                      },
+                      "も": {
+                        "number": 17,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "て": {
+                    "number": 19,
                     "children": {}
                   },
-                  "も": {
-                    "number": 17,
+                  "、": {
+                    "number": 20,
                     "children": {}
                   }
                 }
               },
-              "て": {
-                "number": 19,
-                "children": {}
-              },
-              "、": {
-                "number": 20,
-                "children": {}
-              }
-            }
-          },
-          "笑っ": {
-            "number": 23,
-            "children": {
-              "ど": {
-                "number": 22,
+              "いく": {
+                "number": 21,
                 "children": {
-                  "いく": {
-                    "number": 21,
+                  "ど": {
+                    "number": 22,
                     "children": {}
                   }
                 }

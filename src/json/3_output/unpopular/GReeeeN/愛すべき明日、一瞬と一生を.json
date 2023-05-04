@@ -77,28 +77,6 @@
       "はき違え": {
         "number": 12,
         "children": {
-          "間": {
-            "number": 2,
-            "children": {
-              "いつ": {
-                "number": 0,
-                "children": {
-                  "の": {
-                    "number": 1,
-                    "children": {}
-                  }
-                }
-              },
-              "に": {
-                "number": 3,
-                "children": {}
-              },
-              "か": {
-                "number": 4,
-                "children": {}
-              }
-            }
-          },
           "鈍感": {
             "number": 9,
             "children": {
@@ -108,6 +86,28 @@
                   "なる": {
                     "number": 6,
                     "children": {
+                      "間": {
+                        "number": 2,
+                        "children": {
+                          "いつ": {
+                            "number": 0,
+                            "children": {
+                              "の": {
+                                "number": 1,
+                                "children": {}
+                              }
+                            }
+                          },
+                          "に": {
+                            "number": 3,
+                            "children": {}
+                          },
+                          "か": {
+                            "number": 4,
+                            "children": {}
+                          }
+                        }
+                      },
                       "強く": {
                         "number": 5,
                         "children": {}
@@ -153,63 +153,64 @@
   },
   "S1": {
     "愛すべき明日一瞬と一生をもがいてもがいて立ち向かっていくから。": {
-      "立ち向かっ": {
-        "number": 11,
+      "いく": {
+        "number": 13,
         "children": {
-          "もがい": {
-            "number": 9,
+          "立ち向かっ": {
+            "number": 11,
             "children": {
-              "愛す": {
-                "number": 0,
-                "children": {
-                  "べき": {
-                    "number": 1,
-                    "children": {}
-                  }
-                }
-              },
-              "明日": {
-                "number": 2,
-                "children": {}
-              },
               "もがい": {
-                "number": 7,
+                "number": 9,
                 "children": {
-                  "一生": {
-                    "number": 5,
+                  "もがい": {
+                    "number": 7,
                     "children": {
                       "一瞬": {
                         "number": 3,
                         "children": {
+                          "明日": {
+                            "number": 2,
+                            "children": {
+                              "愛す": {
+                                "number": 0,
+                                "children": {
+                                  "べき": {
+                                    "number": 1,
+                                    "children": {}
+                                  }
+                                }
+                              }
+                            }
+                          },
                           "と": {
                             "number": 4,
                             "children": {}
                           }
                         }
                       },
-                      "を": {
-                        "number": 6,
+                      "一生": {
+                        "number": 5,
+                        "children": {
+                          "を": {
+                            "number": 6,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "て": {
+                        "number": 8,
                         "children": {}
                       }
                     }
                   },
                   "て": {
-                    "number": 8,
+                    "number": 10,
                     "children": {}
                   }
                 }
               },
               "て": {
-                "number": 10,
-                "children": {}
-              }
-            }
-          },
-          "て": {
-            "number": 12,
-            "children": {
-              "いく": {
-                "number": 13,
+                "number": 12,
                 "children": {}
               }
             }
@@ -249,25 +250,26 @@
               }
             }
           },
-          "誰": {
-            "number": 4,
-            "children": {
-              "に": {
-                "number": 5,
-                "children": {}
-              },
-              "も": {
-                "number": 6,
-                "children": {}
-              }
-            }
-          },
           "こと": {
             "number": 8,
             "children": {
               "決める": {
                 "number": 7,
-                "children": {}
+                "children": {
+                  "誰": {
+                    "number": 4,
+                    "children": {
+                      "に": {
+                        "number": 5,
+                        "children": {}
+                      },
+                      "も": {
+                        "number": 6,
+                        "children": {}
+                      }
+                    }
+                  }
+                }
               },
               "は": {
                 "number": 9,
@@ -295,12 +297,17 @@
             "children": {}
           },
           "？": {
-            "number": 17,
+            "number": 15,
             "children": {}
           },
           "ね": {
             "number": 16,
-            "children": {}
+            "children": {
+              "？": {
+                "number": 17,
+                "children": {}
+              }
+            }
           }
         }
       }

@@ -1,41 +1,38 @@
 {
   "A1": {
-    "あの山超えたらなりたい": {
-      "なり": {
-        "number": 4,
-        "children": {
-          "超え": {
-            "number": 2,
-            "children": {
-              "山": {
-                "number": 1,
-                "children": {
-                  "あの": {
-                    "number": 0,
-                    "children": {}
-                  }
-                }
-              },
-              "たら": {
-                "number": 3,
-                "children": {}
-              }
-            }
-          },
-          "たい": {
-            "number": 5,
-            "children": {}
-          }
-        }
-      }
-    },
-    "僕に会える？": {
+    "あの山超えたらなりたい僕に会える？": {
       "会える": {
         "number": 8,
         "children": {
           "僕": {
             "number": 6,
             "children": {
+              "なり": {
+                "number": 4,
+                "children": {
+                  "超え": {
+                    "number": 2,
+                    "children": {
+                      "あの": {
+                        "number": 0,
+                        "children": {}
+                      },
+                      "山": {
+                        "number": 1,
+                        "children": {}
+                      },
+                      "たら": {
+                        "number": 3,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "たい": {
+                    "number": 5,
+                    "children": {}
+                  }
+                }
+              },
               "に": {
                 "number": 7,
                 "children": {}
@@ -49,42 +46,40 @@
         }
       }
     },
-    "あの海越えたらなりたい": {
-      "なり": {
-        "number": 14,
-        "children": {
-          "越え": {
-            "number": 12,
-            "children": {
-              "海": {
-                "number": 11,
-                "children": {
-                  "あの": {
-                    "number": 10,
-                    "children": {}
-                  }
-                }
-              },
-              "たら": {
-                "number": 13,
-                "children": {}
-              }
-            }
-          },
-          "たい": {
-            "number": 15,
-            "children": {}
-          }
-        }
-      }
-    },
-    "私に会える？": {
+    "あの海越えたらなりたい私に会える？": {
       "会える": {
         "number": 18,
         "children": {
           "私": {
             "number": 16,
             "children": {
+              "なり": {
+                "number": 14,
+                "children": {
+                  "越え": {
+                    "number": 12,
+                    "children": {
+                      "海": {
+                        "number": 11,
+                        "children": {
+                          "あの": {
+                            "number": 10,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "たら": {
+                        "number": 13,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "たい": {
+                    "number": 15,
+                    "children": {}
+                  }
+                }
+              },
               "に": {
                 "number": 17,
                 "children": {}
@@ -223,31 +218,32 @@
       "ない": {
         "number": 14,
         "children": {
-          "夜": {
-            "number": 10,
+          "怖く": {
+            "number": 13,
             "children": {
-              "一人": {
-                "number": 8,
+              "夜": {
+                "number": 10,
                 "children": {
-                  "の": {
-                    "number": 9,
+                  "一人": {
+                    "number": 8,
+                    "children": {
+                      "の": {
+                        "number": 9,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "で": {
+                    "number": 11,
+                    "children": {}
+                  },
+                  "も": {
+                    "number": 12,
                     "children": {}
                   }
                 }
-              },
-              "で": {
-                "number": 11,
-                "children": {}
-              },
-              "も": {
-                "number": 12,
-                "children": {}
               }
             }
-          },
-          "怖く": {
-            "number": 13,
-            "children": {}
           },
           "。": {
             "number": 15,
@@ -263,40 +259,40 @@
           "聞か": {
             "number": 25,
             "children": {
-              "もの": {
-                "number": 18,
-                "children": {
-                  "見": {
-                    "number": 16,
-                    "children": {
-                      "た": {
-                        "number": 17,
-                        "children": {}
-                      }
-                    }
-                  }
-                }
-              },
               "こと": {
                 "number": 24,
                 "children": {
-                  "こと": {
-                    "number": 21,
-                    "children": {
-                      "聞い": {
-                        "number": 19,
-                        "children": {
-                          "た": {
-                            "number": 20,
-                            "children": {}
-                          }
-                        }
-                      }
-                    }
-                  },
                   "覚え": {
                     "number": 22,
                     "children": {
+                      "こと": {
+                        "number": 21,
+                        "children": {
+                          "聞い": {
+                            "number": 19,
+                            "children": {
+                              "もの": {
+                                "number": 18,
+                                "children": {
+                                  "見": {
+                                    "number": 16,
+                                    "children": {
+                                      "た": {
+                                        "number": 17,
+                                        "children": {}
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "た": {
+                                "number": 20,
+                                "children": {}
+                              }
+                            }
+                          }
+                        }
+                      },
                       "た": {
                         "number": 23,
                         "children": {}

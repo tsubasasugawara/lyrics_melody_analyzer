@@ -225,36 +225,36 @@
           "景色": {
             "number": 8,
             "children": {
-              "勇気": {
-                "number": 4,
-                "children": {
-                  "飛び込む": {
-                    "number": 3,
-                    "children": {
-                      "世界": {
-                        "number": 1,
-                        "children": {
-                          "新しい": {
-                            "number": 0,
-                            "children": {}
-                          },
-                          "に": {
-                            "number": 2,
-                            "children": {}
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "と": {
-                    "number": 5,
-                    "children": {}
-                  }
-                }
-              },
               "知ら": {
                 "number": 6,
                 "children": {
+                  "勇気": {
+                    "number": 4,
+                    "children": {
+                      "飛び込む": {
+                        "number": 3,
+                        "children": {
+                          "世界": {
+                            "number": 1,
+                            "children": {
+                              "新しい": {
+                                "number": 0,
+                                "children": {}
+                              },
+                              "に": {
+                                "number": 2,
+                                "children": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "と": {
+                        "number": 5,
+                        "children": {}
+                      }
+                    }
+                  },
                   "ない": {
                     "number": 7,
                     "children": {}
@@ -389,18 +389,24 @@
       "clap": {
         "number": 24,
         "children": {
-          "すぐ": {
-            "number": 21,
-            "children": {
-              "今": {
-                "number": 20,
-                "children": {}
-              }
-            }
-          },
           "clap": {
             "number": 23,
-            "children": {}
+            "children": {
+              "clap": {
+                "number": 22,
+                "children": {
+                  "すぐ": {
+                    "number": 21,
+                    "children": {
+                      "今": {
+                        "number": 20,
+                        "children": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
           },
           "!": {
             "number": 25,
@@ -413,17 +419,19 @@
       "up": {
         "number": 30,
         "children": {
-          "and": {
-            "number": 26,
-            "children": {}
-          },
-          "put": {
-            "number": 27,
-            "children": {}
-          },
           "your": {
             "number": 28,
-            "children": {}
+            "children": {
+              "put": {
+                "number": 27,
+                "children": {
+                  "and": {
+                    "number": 26,
+                    "children": {}
+                  }
+                }
+              }
+            }
           },
           "hands": {
             "number": 29,

@@ -236,6 +236,10 @@
       "唄": {
         "number": 29,
         "children": {
+          "ただ": {
+            "number": 0,
+            "children": {}
+          },
           "捧ぐ": {
             "number": 25,
             "children": {
@@ -245,8 +249,8 @@
                   "こと": {
                     "number": 13,
                     "children": {
-                      "立っ": {
-                        "number": 10,
+                      "居れる": {
+                        "number": 12,
                         "children": {
                           "日々": {
                             "number": 6,
@@ -254,10 +258,6 @@
                               "過ごす": {
                                 "number": 5,
                                 "children": {
-                                  "ただ": {
-                                    "number": 0,
-                                    "children": {}
-                                  },
                                   "笑っ": {
                                     "number": 3,
                                     "children": {
@@ -284,20 +284,20 @@
                               }
                             }
                           },
-                          "隣": {
-                            "number": 8,
+                          "立っ": {
+                            "number": 10,
                             "children": {
-                              "に": {
-                                "number": 9,
-                                "children": {}
-                              }
-                            }
-                          },
-                          "て": {
-                            "number": 11,
-                            "children": {
-                              "居れる": {
-                                "number": 12,
+                              "隣": {
+                                "number": 8,
+                                "children": {
+                                  "に": {
+                                    "number": 9,
+                                    "children": {}
+                                  }
+                                }
+                              },
+                              "て": {
+                                "number": 11,
                                 "children": {}
                               }
                             }
@@ -314,21 +314,22 @@
                       }
                     }
                   },
-                  "僕": {
-                    "number": 16,
-                    "children": {
-                      "が": {
-                        "number": 17,
-                        "children": {}
-                      }
-                    }
-                  },
                   "意味": {
                     "number": 19,
                     "children": {
                       "生きる": {
                         "number": 18,
-                        "children": {}
+                        "children": {
+                          "僕": {
+                            "number": 16,
+                            "children": {
+                              "が": {
+                                "number": 17,
+                                "children": {}
+                              }
+                            }
+                          }
+                        }
                       },
                       "に": {
                         "number": 20,
@@ -379,6 +380,10 @@
       "唄": {
         "number": 30,
         "children": {
+          "ただ": {
+            "number": 0,
+            "children": {}
+          },
           "捧ぐ": {
             "number": 26,
             "children": {
@@ -397,10 +402,6 @@
                               "過ごす": {
                                 "number": 5,
                                 "children": {
-                                  "ただ": {
-                                    "number": 0,
-                                    "children": {}
-                                  },
                                   "笑っ": {
                                     "number": 3,
                                     "children": {

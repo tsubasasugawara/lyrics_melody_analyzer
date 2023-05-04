@@ -10,14 +10,13 @@
               "つ": {
                 "number": 3,
                 "children": {
+                  "1": {
+                    "number": 0,
+                    "children": {}
+                  },
                   "つ": {
                     "number": 1,
-                    "children": {
-                      "1": {
-                        "number": 0,
-                        "children": {}
-                      }
-                    }
+                    "children": {}
                   },
                   "2": {
                     "number": 2,
@@ -110,11 +109,11 @@
                       }
                     }
                   },
-                  "何気": {
-                    "number": 22,
+                  "ない": {
+                    "number": 23,
                     "children": {
-                      "ない": {
-                        "number": 23,
+                      "何気": {
+                        "number": 22,
                         "children": {}
                       }
                     }
@@ -125,13 +124,14 @@
                   }
                 }
               },
-              "空色": {
-                "number": 26,
-                "children": {}
-              },
               "同じ": {
                 "number": 27,
-                "children": {}
+                "children": {
+                  "空色": {
+                    "number": 26,
+                    "children": {}
+                  }
+                }
               }
             }
           },
@@ -172,42 +172,44 @@
     }
   },
   "A2": {
-    "ああわかんないよ何回も君を追いかけ駆け出した 愛なのかい？": {
-      "愛": {
-        "number": 11,
+    "ああわかんないよ": {
+      "わかん": {
+        "number": 1,
         "children": {
-          "わかん": {
-            "number": 1,
-            "children": {
-              "ああ": {
-                "number": 0,
-                "children": {}
-              },
-              "ない": {
-                "number": 2,
-                "children": {}
-              },
-              "よ": {
-                "number": 3,
-                "children": {}
-              }
-            }
+          "ああ": {
+            "number": 0,
+            "children": {}
           },
-          "駆け出し": {
-            "number": 9,
+          "ない": {
+            "number": 2,
+            "children": {}
+          },
+          "よ": {
+            "number": 3,
+            "children": {}
+          }
+        }
+      }
+    },
+    "何回も君を追いかけ駆け出した 愛なのかい？": {
+      "い": {
+        "number": 15,
+        "children": {
+          "愛": {
+            "number": 11,
             "children": {
-              "追いかけ": {
-                "number": 8,
+              "何回": {
+                "number": 4,
                 "children": {
-                  "何回": {
-                    "number": 4,
-                    "children": {
-                      "も": {
-                        "number": 5,
-                        "children": {}
-                      }
-                    }
-                  },
+                  "も": {
+                    "number": 5,
+                    "children": {}
+                  }
+                }
+              },
+              "駆け出し": {
+                "number": 9,
+                "children": {
                   "君": {
                     "number": 6,
                     "children": {
@@ -216,30 +218,30 @@
                         "children": {}
                       }
                     }
+                  },
+                  "追いかけ": {
+                    "number": 8,
+                    "children": {}
+                  },
+                  "た": {
+                    "number": 10,
+                    "children": {}
                   }
                 }
               },
-              "た": {
-                "number": 10,
+              "な": {
+                "number": 12,
+                "children": {}
+              },
+              "の": {
+                "number": 13,
+                "children": {}
+              },
+              "か": {
+                "number": 14,
                 "children": {}
               }
             }
-          },
-          "な": {
-            "number": 12,
-            "children": {}
-          },
-          "の": {
-            "number": 13,
-            "children": {}
-          },
-          "か": {
-            "number": 14,
-            "children": {}
-          },
-          "い": {
-            "number": 15,
-            "children": {}
           },
           "？": {
             "number": 16,
@@ -333,28 +335,27 @@
       "駆け出し": {
         "number": 10,
         "children": {
-          "追いかけ": {
-            "number": 9,
+          "何回": {
+            "number": 5,
             "children": {
-              "何回": {
-                "number": 5,
-                "children": {
-                  "も": {
-                    "number": 6,
-                    "children": {}
-                  }
-                }
-              },
-              "君": {
-                "number": 7,
-                "children": {
-                  "を": {
-                    "number": 8,
-                    "children": {}
-                  }
-                }
+              "も": {
+                "number": 6,
+                "children": {}
               }
             }
+          },
+          "君": {
+            "number": 7,
+            "children": {
+              "を": {
+                "number": 8,
+                "children": {}
+              }
+            }
+          },
+          "追いかけ": {
+            "number": 9,
+            "children": {}
           },
           "た": {
             "number": 11,
@@ -368,24 +369,25 @@
       }
     },
     "愛なのかい？": {
-      "愛": {
-        "number": 13,
+      "い": {
+        "number": 17,
         "children": {
-          "な": {
-            "number": 14,
-            "children": {}
-          },
-          "の": {
-            "number": 15,
-            "children": {}
-          },
-          "か": {
-            "number": 16,
-            "children": {}
-          },
-          "い": {
-            "number": 17,
-            "children": {}
+          "愛": {
+            "number": 13,
+            "children": {
+              "な": {
+                "number": 14,
+                "children": {}
+              },
+              "の": {
+                "number": 15,
+                "children": {}
+              },
+              "か": {
+                "number": 16,
+                "children": {}
+              }
+            }
           },
           "？": {
             "number": 18,
@@ -476,21 +478,21 @@
       }
     },
     "これなんだい？": {
-      "ん": {
-        "number": 7,
+      "これ": {
+        "number": 5,
         "children": {
-          "これ": {
-            "number": 5,
+          "な": {
+            "number": 6,
+            "children": {}
+          },
+          "ん": {
+            "number": 7,
             "children": {
-              "な": {
-                "number": 6,
+              "だ": {
+                "number": 8,
                 "children": {}
               }
             }
-          },
-          "だ": {
-            "number": 8,
-            "children": {}
           },
           "い": {
             "number": 9,
@@ -507,23 +509,23 @@
       "近づけ": {
         "number": 22,
         "children": {
+          "焦る": {
+            "number": 11,
+            "children": {}
+          },
           "聞こえ": {
             "number": 19,
             "children": {
               "鼓動": {
                 "number": 15,
                 "children": {
-                  "焦る": {
-                    "number": 11,
-                    "children": {}
-                  },
-                  "この": {
-                    "number": 12,
-                    "children": {}
-                  },
                   "胸": {
                     "number": 13,
                     "children": {
+                      "この": {
+                        "number": 12,
+                        "children": {}
+                      },
                       "の": {
                         "number": 14,
                         "children": {}

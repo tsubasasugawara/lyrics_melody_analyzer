@@ -1,10 +1,26 @@
 from spacy import displacy
 from . import util
 from . import load_model
-import json
+
+def parse(in_dir_path, out_dir_path, artist):
+    # 文法構造を解析
+    res = parse_file(f"{util.put_slash_dir_path(in_dir_path)}{artist}.json")
+
+    # 文法構造の可視化
+    for song_name in res["songs"]:
+        visualize(res["songs"][song_name], song_name)
+    
+    # 曲ごとの構文木のJSONファイルを出力
+    for song_name in res["songs"]:
+        data = to_json(artist, res["songs"][song_name])
+
+        out_dir_path = util.put_slash_dir_path(out_dir_path)
+        util.make_dir(out_dir_path)
+
+        util.output_json(f"{out_dir_path}{song_name}.json", data)
 
 #　文法構造を解析する
-def parse(file_path):
+def parse_file(file_path):
     songs = util.read_json(file_path)
     nlp = load_model.load_ginza()
     
@@ -30,8 +46,8 @@ def recur_tree(token):
         node["children"][child.text] = recur_tree(child)
     return node
 
-# 文法構造をもとに、木を作成する
-def make_tree(song):
+# 文法構造をもとに、構文木のJSONファイルを作成する
+def to_json(artist, song):
     data = {}
     for section in song:
         data[section] = {}
@@ -40,3 +56,5 @@ def make_tree(song):
             data[section][sent.text][sent.root.text] = recur_tree(sent.root)
     
     return data
+    
+        

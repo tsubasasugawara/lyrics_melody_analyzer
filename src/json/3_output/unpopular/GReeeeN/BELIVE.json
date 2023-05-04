@@ -158,22 +158,22 @@
       "感謝": {
         "number": 19,
         "children": {
-          "日": {
-            "number": 13,
-            "children": {
-              "あの": {
-                "number": 12,
-                "children": {}
-              },
-              "の": {
-                "number": 14,
-                "children": {}
-              }
-            }
-          },
           "がんばれ": {
             "number": 17,
             "children": {
+              "日": {
+                "number": 13,
+                "children": {
+                  "あの": {
+                    "number": 12,
+                    "children": {}
+                  },
+                  "の": {
+                    "number": 14,
+                    "children": {}
+                  }
+                }
+              },
               "君": {
                 "number": 15,
                 "children": {
@@ -270,11 +270,19 @@
       "連れ": {
         "number": 20,
         "children": {
-          "口惜し": {
-            "number": 11,
+          "涙": {
+            "number": 13,
             "children": {
+              "口惜し": {
+                "number": 11,
+                "children": {}
+              },
               "さ": {
                 "number": 12,
+                "children": {}
+              },
+              "も": {
+                "number": 14,
                 "children": {}
               }
             }
@@ -282,15 +290,6 @@
           "日々": {
             "number": 16,
             "children": {
-              "涙": {
-                "number": 13,
-                "children": {
-                  "も": {
-                    "number": 14,
-                    "children": {}
-                  }
-                }
-              },
               "あの": {
                 "number": 15,
                 "children": {}
@@ -360,11 +359,12 @@
                       },
                       "ちゃ": {
                         "number": 4,
-                        "children": {}
-                      },
-                      "い": {
-                        "number": 5,
-                        "children": {}
+                        "children": {
+                          "い": {
+                            "number": 5,
+                            "children": {}
+                          }
+                        }
                       },
                       "ない": {
                         "number": 6,

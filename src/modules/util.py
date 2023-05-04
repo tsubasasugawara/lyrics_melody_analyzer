@@ -16,13 +16,16 @@ def output_json(file_path, data):
     json.dump(data, f, ensure_ascii=False, indent=2)
     f.close()
 
+def put_slash_dir_path(dir_path):
+    if dir_path[-1] != "/":
+        dir_path = dir_path + "/"
+    return dir_path
+
 def get_file_list(dir_path):
     if len(dir_path) <= 0:
         return []
     
-    if dir_path[-1] != "/":
-        dir_path = dir_path + "/"
-    path = dir_path + "*.json"
+    path = put_slash_dir_path(dir_path) + "*.json"
     
     return glob.glob(path);
 
@@ -32,7 +35,7 @@ def get_file_name(file_path):
 
 def make_dir(dir_path):
     if path.exists(dir_path) == False:
-        os.mkdir(dir_path)
+        os.makedirs(dir_path)
 
 # 文字列が含まれるかどうか
 def contains(str_list, text):

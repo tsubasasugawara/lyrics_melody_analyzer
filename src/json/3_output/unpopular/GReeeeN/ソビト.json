@@ -4,16 +4,17 @@
       "言える": {
         "number": 8,
         "children": {
-          "例えば": {
-            "number": 0,
-            "children": {}
-          },
           "離れ": {
             "number": 2,
             "children": {
               "遠く": {
                 "number": 1,
-                "children": {}
+                "children": {
+                  "例えば": {
+                    "number": 0,
+                    "children": {}
+                  }
+                }
               },
               "て": {
                 "number": 3,
@@ -224,30 +225,30 @@
       "生まれ": {
         "number": 12,
         "children": {
+          "言葉": {
+            "number": 2,
+            "children": {
+              "キミ": {
+                "number": 0,
+                "children": {
+                  "の": {
+                    "number": 1,
+                    "children": {}
+                  }
+                }
+              },
+              "、": {
+                "number": 3,
+                "children": {}
+              }
+            }
+          },
           "重なっ": {
             "number": 8,
             "children": {
               "気持ち": {
                 "number": 6,
                 "children": {
-                  "言葉": {
-                    "number": 2,
-                    "children": {
-                      "キミ": {
-                        "number": 0,
-                        "children": {
-                          "の": {
-                            "number": 1,
-                            "children": {}
-                          }
-                        }
-                      },
-                      "、": {
-                        "number": 3,
-                        "children": {}
-                      }
-                    }
-                  },
                   "僕": {
                     "number": 4,
                     "children": {
@@ -290,27 +291,27 @@
       }
     },
     "そうやって繋がって続く。": {
-      "続く": {
-        "number": 20,
+      "繋がっ": {
+        "number": 18,
         "children": {
-          "繋がっ": {
-            "number": 18,
+          "やっ": {
+            "number": 16,
             "children": {
-              "やっ": {
-                "number": 16,
-                "children": {
-                  "そう": {
-                    "number": 15,
-                    "children": {}
-                  },
-                  "て": {
-                    "number": 17,
-                    "children": {}
-                  }
-                }
+              "そう": {
+                "number": 15,
+                "children": {}
               },
               "て": {
-                "number": 19,
+                "number": 17,
+                "children": {}
+              }
+            }
+          },
+          "て": {
+            "number": 19,
+            "children": {
+              "続く": {
+                "number": 20,
                 "children": {}
               }
             }
@@ -345,26 +346,25 @@
   },
   "S2": {
     "僕らきっと愛せるもっと。": {
-      "もっと": {
-        "number": 4,
+      "愛せる": {
+        "number": 3,
         "children": {
-          "愛せる": {
-            "number": 3,
+          "ら": {
+            "number": 1,
             "children": {
-              "ら": {
-                "number": 1,
-                "children": {
-                  "僕": {
-                    "number": 0,
-                    "children": {}
-                  }
-                }
-              },
-              "きっと": {
-                "number": 2,
+              "僕": {
+                "number": 0,
                 "children": {}
               }
             }
+          },
+          "きっと": {
+            "number": 2,
+            "children": {}
+          },
+          "もっと": {
+            "number": 4,
+            "children": {}
           },
           "。": {
             "number": 5,
@@ -381,18 +381,19 @@
             "number": 6,
             "children": {}
           },
-          "ここ": {
-            "number": 7,
-            "children": {
-              "が": {
-                "number": 8,
-                "children": {}
-              }
-            }
-          },
           "互い": {
             "number": 9,
-            "children": {}
+            "children": {
+              "ここ": {
+                "number": 7,
+                "children": {
+                  "が": {
+                    "number": 8,
+                    "children": {}
+                  }
+                }
+              }
+            }
           },
           "「": {
             "number": 10,

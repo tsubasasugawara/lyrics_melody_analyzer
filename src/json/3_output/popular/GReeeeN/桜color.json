@@ -83,44 +83,47 @@
     }
   },
   "A2": {
-    "まだ見慣れない景色の中淋しさこらえ笑ってみるよ。": {
+    "まだ見慣れない景色の中": {
+      "中": {
+        "number": 6,
+        "children": {
+          "見": {
+            "number": 1,
+            "children": {
+              "まだ": {
+                "number": 0,
+                "children": {}
+              }
+            }
+          },
+          "景色": {
+            "number": 4,
+            "children": {
+              "慣れ": {
+                "number": 2,
+                "children": {
+                  "ない": {
+                    "number": 3,
+                    "children": {}
+                  }
+                }
+              },
+              "の": {
+                "number": 5,
+                "children": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "淋しさこらえ笑ってみるよ。": {
       "笑っ": {
         "number": 10,
         "children": {
           "こらえ": {
             "number": 9,
             "children": {
-              "中": {
-                "number": 6,
-                "children": {
-                  "景色": {
-                    "number": 4,
-                    "children": {
-                      "まだ": {
-                        "number": 0,
-                        "children": {}
-                      },
-                      "見": {
-                        "number": 1,
-                        "children": {
-                          "慣れ": {
-                            "number": 2,
-                            "children": {}
-                          },
-                          "ない": {
-                            "number": 3,
-                            "children": {}
-                          }
-                        }
-                      },
-                      "の": {
-                        "number": 5,
-                        "children": {}
-                      }
-                    }
-                  }
-                }
-              },
               "淋し": {
                 "number": 7,
                 "children": {}
@@ -153,31 +156,32 @@
     }
   },
   "S1": {
-    "桜color『今はさよなら』。": {
-      "さよなら": {
-        "number": 5,
+    "桜color": {
+      "color": {
+        "number": 1,
         "children": {
-          "color": {
-            "number": 1,
-            "children": {
-              "桜": {
-                "number": 0,
-                "children": {}
-              }
-            }
+          "桜": {
+            "number": 0,
+            "children": {}
+          }
+        }
+      }
+    },
+    "『今はさよなら』。": {
+      "今": {
+        "number": 3,
+        "children": {
+          "『": {
+            "number": 2,
+            "children": {}
           },
-          "今": {
-            "number": 3,
-            "children": {
-              "『": {
-                "number": 2,
-                "children": {}
-              },
-              "は": {
-                "number": 4,
-                "children": {}
-              }
-            }
+          "は": {
+            "number": 4,
+            "children": {}
+          },
+          "さよなら": {
+            "number": 5,
+            "children": {}
           },
           "』": {
             "number": 6,

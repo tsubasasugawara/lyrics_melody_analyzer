@@ -37,8 +37,8 @@
       }
     },
     "靴を青い空向け飛ばす。": {
-      "飛ばす": {
-        "number": 13,
+      "向け": {
+        "number": 12,
         "children": {
           "靴": {
             "number": 8,
@@ -49,23 +49,23 @@
               }
             }
           },
-          "向け": {
-            "number": 12,
+          "空": {
+            "number": 11,
             "children": {
-              "空": {
-                "number": 11,
-                "children": {
-                  "青い": {
-                    "number": 10,
-                    "children": {}
-                  }
-                }
+              "青い": {
+                "number": 10,
+                "children": {}
               }
             }
           },
-          "。": {
-            "number": 14,
-            "children": {}
+          "飛ばす": {
+            "number": 13,
+            "children": {
+              "。": {
+                "number": 14,
+                "children": {}
+              }
+            }
           }
         }
       }
@@ -172,12 +172,12 @@
                         "children": {}
                       }
                     }
+                  },
+                  "my": {
+                    "number": 7,
+                    "children": {}
                   }
                 }
-              },
-              "my": {
-                "number": 7,
-                "children": {}
               }
             }
           },
@@ -226,47 +226,45 @@
     }
   },
   "S2": {
-    "明日明後日、間違いあったってほら始動": {
-      "あっ": {
-        "number": 3,
-        "children": {
-          "明日明後日": {
-            "number": 0,
-            "children": {
-              "、": {
-                "number": 1,
-                "children": {}
-              }
-            }
-          },
-          "間違い": {
-            "number": 2,
-            "children": {}
-          },
-          "た": {
-            "number": 4,
-            "children": {}
-          },
-          "って": {
-            "number": 5,
-            "children": {}
-          },
-          "始動": {
-            "number": 7,
-            "children": {
-              "ほら": {
-                "number": 6,
-                "children": {}
-              }
-            }
-          }
-        }
-      }
-    },
-    "ソラシド。": {
+    "明日明後日、間違いあったってほら始動ソラシド。": {
       "ソラシド": {
         "number": 8,
         "children": {
+          "ほら": {
+            "number": 6,
+            "children": {
+              "あっ": {
+                "number": 3,
+                "children": {
+                  "明日明後日": {
+                    "number": 0,
+                    "children": {
+                      "、": {
+                        "number": 1,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "間違い": {
+                    "number": 2,
+                    "children": {}
+                  },
+                  "た": {
+                    "number": 4,
+                    "children": {}
+                  },
+                  "って": {
+                    "number": 5,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "始動": {
+            "number": 7,
+            "children": {}
+          },
           "。": {
             "number": 9,
             "children": {}
@@ -274,21 +272,18 @@
         }
       }
     },
-    "花唄歌": {
+    "花唄歌おう。": {
       "唄歌": {
         "number": 11,
         "children": {
           "花": {
             "number": 10,
             "children": {}
-          }
-        }
-      }
-    },
-    "おう。": {
-      "おう": {
-        "number": 12,
-        "children": {
+          },
+          "おう": {
+            "number": 12,
+            "children": {}
+          },
           "。": {
             "number": 13,
             "children": {}

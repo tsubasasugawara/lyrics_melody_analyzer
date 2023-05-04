@@ -4,62 +4,62 @@
       "気付く": {
         "number": 18,
         "children": {
-          "アナタ": {
-            "number": 10,
+          "好き": {
+            "number": 15,
             "children": {
-              "笑う": {
-                "number": 9,
+              "アナタ": {
+                "number": 10,
                 "children": {
-                  "言っ": {
-                    "number": 7,
+                  "笑う": {
+                    "number": 9,
                     "children": {
-                      "明日": {
-                        "number": 2,
+                      "言っ": {
+                        "number": 7,
                         "children": {
-                          "また": {
-                            "number": 1,
+                          "明日": {
+                            "number": 2,
                             "children": {
-                              "『": {
-                                "number": 0,
+                              "また": {
+                                "number": 1,
+                                "children": {
+                                  "『": {
+                                    "number": 0,
+                                    "children": {}
+                                  }
+                                }
+                              },
+                              "ね": {
+                                "number": 3,
+                                "children": {}
+                              },
+                              "。": {
+                                "number": 4,
+                                "children": {}
+                              },
+                              "』": {
+                                "number": 5,
+                                "children": {}
+                              },
+                              "って": {
+                                "number": 6,
                                 "children": {}
                               }
                             }
                           },
-                          "ね": {
-                            "number": 3,
-                            "children": {}
-                          },
-                          "。": {
-                            "number": 4,
-                            "children": {}
-                          },
-                          "』": {
-                            "number": 5,
-                            "children": {}
-                          },
-                          "って": {
-                            "number": 6,
+                          "て": {
+                            "number": 8,
                             "children": {}
                           }
                         }
-                      },
-                      "て": {
-                        "number": 8,
-                        "children": {}
                       }
                     }
+                  },
+                  "に": {
+                    "number": 11,
+                    "children": {}
                   }
                 }
               },
-              "に": {
-                "number": 11,
-                "children": {}
-              }
-            }
-          },
-          "好き": {
-            "number": 15,
-            "children": {
               "こんな": {
                 "number": 12,
                 "children": {
@@ -160,31 +160,31 @@
       "いける": {
         "number": 19,
         "children": {
+          "ため": {
+            "number": 3,
+            "children": {
+              "会う": {
+                "number": 2,
+                "children": {
+                  "アナタ": {
+                    "number": 0,
+                    "children": {
+                      "に": {
+                        "number": 1,
+                        "children": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "ら": {
             "number": 10,
             "children": {
               "生まれ": {
                 "number": 7,
                 "children": {
-                  "ため": {
-                    "number": 3,
-                    "children": {
-                      "会う": {
-                        "number": 2,
-                        "children": {
-                          "アナタ": {
-                            "number": 0,
-                            "children": {
-                              "に": {
-                                "number": 1,
-                                "children": {}
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
                   "瞬間（とき）": {
                     "number": 5,
                     "children": {
@@ -224,12 +224,7 @@
               "も": {
                 "number": 14,
                 "children": {}
-              }
-            }
-          },
-          "歩ん": {
-            "number": 17,
-            "children": {
+              },
               "ラララ": {
                 "number": 15,
                 "children": {
@@ -238,7 +233,12 @@
                     "children": {}
                   }
                 }
-              },
+              }
+            }
+          },
+          "歩ん": {
+            "number": 17,
+            "children": {
               "で": {
                 "number": 18,
                 "children": {}
@@ -258,42 +258,40 @@
     }
   },
   "S2": {
-    "少しマジメに書き出したラブレター": {
-      "ラブレター": {
-        "number": 5,
-        "children": {
-          "書き出し": {
-            "number": 3,
-            "children": {
-              "マジメ": {
-                "number": 1,
-                "children": {
-                  "少し": {
-                    "number": 0,
-                    "children": {}
-                  },
-                  "に": {
-                    "number": 2,
-                    "children": {}
-                  }
-                }
-              },
-              "た": {
-                "number": 4,
-                "children": {}
-              }
-            }
-          }
-        }
-      }
-    },
-    "いつか渡そう。": {
+    "少しマジメに書き出したラブレターいつか渡そう。": {
       "渡そう": {
         "number": 8,
         "children": {
           "いつ": {
             "number": 6,
             "children": {
+              "ラブレター": {
+                "number": 5,
+                "children": {
+                  "書き出し": {
+                    "number": 3,
+                    "children": {
+                      "少し": {
+                        "number": 0,
+                        "children": {}
+                      },
+                      "マジメ": {
+                        "number": 1,
+                        "children": {
+                          "に": {
+                            "number": 2,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "た": {
+                        "number": 4,
+                        "children": {}
+                      }
+                    }
+                  }
+                }
+              },
               "か": {
                 "number": 7,
                 "children": {}

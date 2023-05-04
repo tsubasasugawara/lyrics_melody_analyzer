@@ -4,13 +4,13 @@
       "探し": {
         "number": 3,
         "children": {
-          "『": {
-            "number": 0,
-            "children": {}
-          },
           "君": {
             "number": 1,
             "children": {
+              "『": {
+                "number": 0,
+                "children": {}
+              },
               "を": {
                 "number": 2,
                 "children": {}
@@ -162,52 +162,52 @@
       "セレナーデ": {
         "number": 18,
         "children": {
+          "笑っ": {
+            "number": 5,
+            "children": {
+              "君": {
+                "number": 2,
+                "children": {
+                  "大好き": {
+                    "number": 0,
+                    "children": {
+                      "な": {
+                        "number": 1,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "と": {
+                    "number": 3,
+                    "children": {}
+                  }
+                }
+              },
+              "ただ": {
+                "number": 4,
+                "children": {}
+              },
+              "て": {
+                "number": 6,
+                "children": {}
+              },
+              "何気": {
+                "number": 7,
+                "children": {
+                  "ない": {
+                    "number": 8,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
           "中": {
             "number": 11,
             "children": {
               "日々": {
                 "number": 9,
                 "children": {
-                  "笑っ": {
-                    "number": 5,
-                    "children": {
-                      "君": {
-                        "number": 2,
-                        "children": {
-                          "大好き": {
-                            "number": 0,
-                            "children": {
-                              "な": {
-                                "number": 1,
-                                "children": {}
-                              }
-                            }
-                          },
-                          "と": {
-                            "number": 3,
-                            "children": {}
-                          }
-                        }
-                      },
-                      "ただ": {
-                        "number": 4,
-                        "children": {}
-                      },
-                      "て": {
-                        "number": 6,
-                        "children": {}
-                      }
-                    }
-                  },
-                  "何気": {
-                    "number": 7,
-                    "children": {
-                      "ない": {
-                        "number": 8,
-                        "children": {}
-                      }
-                    }
-                  },
                   "の": {
                     "number": 10,
                     "children": {}

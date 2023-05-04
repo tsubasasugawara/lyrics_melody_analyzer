@@ -71,8 +71,8 @@
       "でき": {
         "number": 12,
         "children": {
-          "いる": {
-            "number": 6,
+          "好き": {
+            "number": 4,
             "children": {
               "今": {
                 "number": 0,
@@ -83,20 +83,20 @@
                   }
                 }
               },
-              "好き": {
-                "number": 4,
+              "こんな": {
+                "number": 2,
                 "children": {
-                  "こんな": {
-                    "number": 2,
-                    "children": {
-                      "に": {
-                        "number": 3,
-                        "children": {}
-                      }
-                    }
-                  },
-                  "で": {
-                    "number": 5,
+                  "に": {
+                    "number": 3,
+                    "children": {}
+                  }
+                }
+              },
+              "で": {
+                "number": 5,
+                "children": {
+                  "いる": {
+                    "number": 6,
                     "children": {}
                   }
                 }
@@ -365,23 +365,7 @@
     }
   },
   "S3": {
-    "アリガトウやAh": {
-      "Ah": {
-        "number": 2,
-        "children": {
-          "アリガトウ": {
-            "number": 0,
-            "children": {
-              "や": {
-                "number": 1,
-                "children": {}
-              }
-            }
-          }
-        }
-      }
-    },
-    "愛しているじゃ、まだ足りないけどせめて言わせて「幸せです」と。": {
+    "アリガトウやAh愛しているじゃ、まだ足りないけどせめて言わせて「幸せです」と。": {
       "幸せ": {
         "number": 17,
         "children": {
@@ -391,6 +375,20 @@
               "愛し": {
                 "number": 3,
                 "children": {
+                  "Ah": {
+                    "number": 2,
+                    "children": {
+                      "アリガトウ": {
+                        "number": 0,
+                        "children": {
+                          "や": {
+                            "number": 1,
+                            "children": {}
+                          }
+                        }
+                      }
+                    }
+                  },
                   "て": {
                     "number": 4,
                     "children": {

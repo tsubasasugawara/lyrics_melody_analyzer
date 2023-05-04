@@ -111,36 +111,35 @@
       }
     },
     "手を引き背を押し出逢うでしょう。": {
-      "出逢う": {
-        "number": 13,
+      "押し": {
+        "number": 12,
         "children": {
-          "押し": {
-            "number": 12,
+          "引き": {
+            "number": 9,
             "children": {
-              "引き": {
-                "number": 9,
-                "children": {
-                  "手": {
-                    "number": 7,
-                    "children": {
-                      "を": {
-                        "number": 8,
-                        "children": {}
-                      }
-                    }
-                  }
-                }
-              },
-              "背": {
-                "number": 10,
+              "手": {
+                "number": 7,
                 "children": {
                   "を": {
-                    "number": 11,
+                    "number": 8,
                     "children": {}
                   }
                 }
               }
             }
+          },
+          "背": {
+            "number": 10,
+            "children": {
+              "を": {
+                "number": 11,
+                "children": {}
+              }
+            }
+          },
+          "出逢う": {
+            "number": 13,
+            "children": {}
           },
           "でしょう": {
             "number": 14,

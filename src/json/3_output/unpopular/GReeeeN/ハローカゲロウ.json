@@ -10,27 +10,27 @@
               "泣い": {
                 "number": 11,
                 "children": {
-                  "日": {
-                    "number": 1,
-                    "children": {
-                      "あの": {
-                        "number": 0,
-                        "children": {}
-                      }
-                    }
-                  },
-                  "キミ": {
-                    "number": 2,
-                    "children": {
-                      "が": {
-                        "number": 3,
-                        "children": {}
-                      }
-                    }
-                  },
                   "見え": {
                     "number": 7,
                     "children": {
+                      "日": {
+                        "number": 1,
+                        "children": {
+                          "あの": {
+                            "number": 0,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "キミ": {
+                        "number": 2,
+                        "children": {
+                          "が": {
+                            "number": 3,
+                            "children": {}
+                          }
+                        }
+                      },
                       "誰": {
                         "number": 4,
                         "children": {
@@ -144,11 +144,16 @@
             "number": 10,
             "children": {
               "て": {
-                "number": 13,
+                "number": 11,
                 "children": {}
-              },
-              "欲しく": {
-                "number": 12,
+              }
+            }
+          },
+          "欲しく": {
+            "number": 12,
+            "children": {
+              "て": {
+                "number": 13,
                 "children": {}
               }
             }
@@ -206,13 +211,13 @@
           "思っ": {
             "number": 8,
             "children": {
-              "何度": {
-                "number": 5,
-                "children": {}
-              },
               "大丈夫": {
                 "number": 6,
                 "children": {
+                  "何度": {
+                    "number": 5,
+                    "children": {}
+                  },
                   "って": {
                     "number": 7,
                     "children": {}
@@ -272,7 +277,7 @@
   "S2": {
     "キミのこれまで応応応応応。": {
       "応": {
-        "number": 8,
+        "number": 4,
         "children": {
           "これ": {
             "number": 2,
@@ -293,7 +298,7 @@
             }
           },
           "応": {
-            "number": 7,
+            "number": 8,
             "children": {}
           },
           "。": {

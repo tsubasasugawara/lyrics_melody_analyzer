@@ -134,6 +134,85 @@
       "沈ん": {
         "number": 22,
         "children": {
+          "たとえば": {
+            "number": 0,
+            "children": {}
+          },
+          "日": {
+            "number": 9,
+            "children": {
+              "流す": {
+                "number": 6,
+                "children": {
+                  "ら": {
+                    "number": 2,
+                    "children": {
+                      "僕": {
+                        "number": 1,
+                        "children": {}
+                      },
+                      "が": {
+                        "number": 3,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "涙": {
+                    "number": 4,
+                    "children": {
+                      "を": {
+                        "number": 5,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "よう": {
+                    "number": 7,
+                    "children": {}
+                  },
+                  "な": {
+                    "number": 8,
+                    "children": {}
+                  }
+                }
+              },
+              "に": {
+                "number": 10,
+                "children": {}
+              },
+              "も": {
+                "number": 11,
+                "children": {}
+              },
+              "、": {
+                "number": 12,
+                "children": {}
+              }
+            }
+          },
+          "よう": {
+            "number": 16,
+            "children": {
+              "同じ": {
+                "number": 15,
+                "children": {
+                  "いつも": {
+                    "number": 13,
+                    "children": {
+                      "と": {
+                        "number": 14,
+                        "children": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "に": {
+                "number": 17,
+                "children": {}
+              }
+            }
+          },
           "上り": {
             "number": 20,
             "children": {
@@ -142,29 +221,6 @@
                 "children": {
                   "は": {
                     "number": 19,
-                    "children": {}
-                  }
-                }
-              },
-              "よう": {
-                "number": 16,
-                "children": {
-                  "同じ": {
-                    "number": 15,
-                    "children": {
-                      "いつも": {
-                        "number": 13,
-                        "children": {
-                          "と": {
-                            "number": 14,
-                            "children": {}
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "に": {
-                    "number": 17,
                     "children": {}
                   }
                 }

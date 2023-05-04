@@ -4,31 +4,31 @@
       "時": {
         "number": 13,
         "children": {
-          "気づく": {
-            "number": 4,
+          "し": {
+            "number": 11,
             "children": {
-              "僕": {
-                "number": 2,
+              "気づく": {
+                "number": 4,
                 "children": {
-                  "に": {
-                    "number": 3,
+                  "僕": {
+                    "number": 2,
+                    "children": {
+                      "に": {
+                        "number": 3,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "の": {
+                    "number": 5,
+                    "children": {}
+                  },
+                  "は": {
+                    "number": 6,
                     "children": {}
                   }
                 }
               },
-              "の": {
-                "number": 5,
-                "children": {}
-              },
-              "は": {
-                "number": 6,
-                "children": {}
-              }
-            }
-          },
-          "し": {
-            "number": 11,
-            "children": {
               "越えよう": {
                 "number": 9,
                 "children": {

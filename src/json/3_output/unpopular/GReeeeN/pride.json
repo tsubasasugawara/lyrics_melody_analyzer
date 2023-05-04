@@ -162,27 +162,28 @@
                   }
                 }
               },
-              "これ": {
-                "number": 8,
+              "誇らしい": {
+                "number": 10,
                 "children": {
-                  "ここ": {
-                    "number": 6,
+                  "これ": {
+                    "number": 8,
                     "children": {
-                      "まで": {
-                        "number": 7,
+                      "ここ": {
+                        "number": 6,
+                        "children": {
+                          "まで": {
+                            "number": 7,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "た": {
+                        "number": 9,
                         "children": {}
                       }
                     }
-                  },
-                  "た": {
-                    "number": 9,
-                    "children": {}
                   }
                 }
-              },
-              "誇らしい": {
-                "number": 10,
-                "children": {}
               },
               "も": {
                 "number": 12,
@@ -203,13 +204,13 @@
       "つかめ": {
         "number": 6,
         "children": {
+          "あと": {
+            "number": 0,
+            "children": {}
+          },
           "伸ばし": {
             "number": 4,
             "children": {
-              "あと": {
-                "number": 0,
-                "children": {}
-              },
               "少し": {
                 "number": 1,
                 "children": {}
@@ -248,18 +249,18 @@
       "輝き": {
         "number": 15,
         "children": {
+          "信じ": {
+            "number": 10,
+            "children": {
+              "てる": {
+                "number": 11,
+                "children": {}
+              }
+            }
+          },
           "ら": {
             "number": 13,
             "children": {
-              "信じ": {
-                "number": 10,
-                "children": {
-                  "てる": {
-                    "number": 11,
-                    "children": {}
-                  }
-                }
-              },
               "僕": {
                 "number": 12,
                 "children": {}

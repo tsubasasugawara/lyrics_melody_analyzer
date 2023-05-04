@@ -28,22 +28,23 @@
         }
       }
     },
-    "取り外せ今すぐサイレンサー。": {
+    "取り外せ": {
+      "取り外せ": {
+        "number": 6,
+        "children": {}
+      }
+    },
+    "今すぐサイレンサー。": {
       "サイレンサー": {
         "number": 9,
         "children": {
-          "取り外せ": {
-            "number": 6,
+          "今": {
+            "number": 7,
             "children": {}
           },
           "すぐ": {
             "number": 8,
-            "children": {
-              "今": {
-                "number": 7,
-                "children": {}
-              }
-            }
+            "children": {}
           },
           "。": {
             "number": 10,
@@ -120,16 +121,14 @@
     }
   },
   "A2": {
-    "Hey": {
-      "Hey": {
-        "number": 0,
-        "children": {}
-      }
-    },
-    "バトンタッチしたぜ。": {
+    "Heyバトンタッチしたぜ。": {
       "バトンタッチ": {
         "number": 1,
         "children": {
+          "Hey": {
+            "number": 0,
+            "children": {}
+          },
           "し": {
             "number": 2,
             "children": {}
@@ -248,24 +247,26 @@
         }
       }
     },
-    "もっと頂戴潤せこの渇きを。": {
+    "もっと頂戴潤せ": {
+      "潤せ": {
+        "number": 8,
+        "children": {
+          "頂戴": {
+            "number": 7,
+            "children": {
+              "もっと": {
+                "number": 6,
+                "children": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "この渇きを。": {
       "渇き": {
         "number": 10,
         "children": {
-          "潤せ": {
-            "number": 8,
-            "children": {
-              "頂戴": {
-                "number": 7,
-                "children": {
-                  "もっと": {
-                    "number": 6,
-                    "children": {}
-                  }
-                }
-              }
-            }
-          },
           "この": {
             "number": 9,
             "children": {}
@@ -412,14 +413,14 @@
       }
     },
     "弾けて踊り明かそう。": {
-      "踊り明かそう": {
-        "number": 16,
+      "弾け": {
+        "number": 14,
         "children": {
-          "弾け": {
-            "number": 14,
+          "て": {
+            "number": 15,
             "children": {
-              "て": {
-                "number": 15,
+              "踊り明かそう": {
+                "number": 16,
                 "children": {}
               }
             }

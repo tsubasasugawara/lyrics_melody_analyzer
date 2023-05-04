@@ -151,60 +151,58 @@
       "ヒーロー": {
         "number": 30,
         "children": {
-          "守る": {
-            "number": 29,
+          "回": {
+            "number": 19,
             "children": {
-              "回": {
-                "number": 19,
-                "children": {
-                  "何百": {
-                    "number": 18,
-                    "children": {}
-                  }
-                }
-              },
-              "永久": {
-                "number": 22,
-                "children": {
-                  "永久": {
-                    "number": 20,
-                    "children": {
-                      "に": {
-                        "number": 21,
-                        "children": {}
-                      }
-                    }
-                  },
-                  "に": {
-                    "number": 23,
-                    "children": {}
-                  }
-                }
-              },
-              "君": {
-                "number": 24,
-                "children": {
-                  "は": {
-                    "number": 25,
-                    "children": {}
-                  }
-                }
-              },
-              "世界": {
-                "number": 28,
-                "children": {
-                  "僕": {
-                    "number": 26,
-                    "children": {
-                      "の": {
-                        "number": 27,
-                        "children": {}
-                      }
-                    }
-                  }
-                }
+              "何百": {
+                "number": 18,
+                "children": {}
               }
             }
+          },
+          "永久": {
+            "number": 22,
+            "children": {
+              "永久": {
+                "number": 20,
+                "children": {
+                  "に": {
+                    "number": 21,
+                    "children": {}
+                  }
+                }
+              },
+              "に": {
+                "number": 23,
+                "children": {}
+              }
+            }
+          },
+          "君": {
+            "number": 24,
+            "children": {
+              "は": {
+                "number": 25,
+                "children": {}
+              }
+            }
+          },
+          "僕": {
+            "number": 26,
+            "children": {
+              "の": {
+                "number": 27,
+                "children": {}
+              }
+            }
+          },
+          "世界": {
+            "number": 28,
+            "children": {}
+          },
+          "守る": {
+            "number": 29,
+            "children": {}
           },
           "。": {
             "number": 31,
@@ -219,20 +217,19 @@
       "進めよ": {
         "number": 12,
         "children": {
-          "stop": {
-            "number": 9,
+          "勇気": {
+            "number": 5,
             "children": {
               "鐘": {
                 "number": 2,
                 "children": {
+                  "Yes": {
+                    "number": 0,
+                    "children": {}
+                  },
                   "no": {
                     "number": 1,
-                    "children": {
-                      "Yes": {
-                        "number": 0,
-                        "children": {}
-                      }
-                    }
+                    "children": {}
                   },
                   "なら": {
                     "number": 3,
@@ -246,17 +243,17 @@
               },
               "出し": {
                 "number": 6,
-                "children": {
-                  "勇気": {
-                    "number": 5,
-                    "children": {}
-                  },
-                  "て": {
-                    "number": 7,
-                    "children": {}
-                  }
-                }
+                "children": {}
               },
+              "て": {
+                "number": 7,
+                "children": {}
+              }
+            }
+          },
+          "stop": {
+            "number": 9,
+            "children": {
               "Don't": {
                 "number": 8,
                 "children": {}

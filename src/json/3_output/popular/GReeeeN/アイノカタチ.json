@@ -188,69 +188,68 @@
       "溢れる": {
         "number": 21,
         "children": {
-          "溢れ": {
-            "number": 19,
+          "愛": {
+            "number": 17,
             "children": {
-              "たび": {
-                "number": 16,
+              "広がっ": {
+                "number": 13,
                 "children": {
-                  "広がっ": {
-                    "number": 13,
+                  "あなた": {
+                    "number": 7,
                     "children": {
-                      "あなた": {
-                        "number": 7,
+                      "が": {
+                        "number": 8,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "中": {
+                    "number": 11,
+                    "children": {
+                      "心": {
+                        "number": 9,
                         "children": {
-                          "が": {
-                            "number": 8,
+                          "の": {
+                            "number": 10,
                             "children": {}
                           }
                         }
                       },
-                      "中": {
-                        "number": 11,
-                        "children": {
-                          "心": {
-                            "number": 9,
-                            "children": {
-                              "の": {
-                                "number": 10,
-                                "children": {}
-                              }
-                            }
-                          },
-                          "で": {
-                            "number": 12,
-                            "children": {}
-                          }
-                        }
-                      },
-                      "て": {
-                        "number": 14,
-                        "children": {
-                          "いく": {
-                            "number": 15,
-                            "children": {}
-                          }
-                        }
+                      "で": {
+                        "number": 12,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "て": {
+                    "number": 14,
+                    "children": {
+                      "いく": {
+                        "number": 15,
+                        "children": {}
                       }
                     }
                   }
                 }
               },
-              "愛": {
-                "number": 17,
-                "children": {
-                  "が": {
-                    "number": 18,
-                    "children": {}
-                  }
-                }
+              "たび": {
+                "number": 16,
+                "children": {}
+              },
+              "が": {
+                "number": 18,
+                "children": {}
               }
             }
           },
           "涙": {
             "number": 20,
-            "children": {}
+            "children": {
+              "溢れ": {
+                "number": 19,
+                "children": {}
+              }
+            }
           },
           "ん": {
             "number": 22,
