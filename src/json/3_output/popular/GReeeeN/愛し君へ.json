@@ -1,0 +1,449 @@
+{
+  "A1": {
+    "僕の隣にいつも君がいる事。": {
+      "事": {
+        "number": 8,
+        "children": {
+          "いる": {
+            "number": 7,
+            "children": {
+              "隣": {
+                "number": 2,
+                "children": {
+                  "僕": {
+                    "number": 0,
+                    "children": {
+                      "の": {
+                        "number": 1,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "に": {
+                    "number": 3,
+                    "children": {}
+                  }
+                }
+              },
+              "いつも": {
+                "number": 4,
+                "children": {}
+              },
+              "君": {
+                "number": 5,
+                "children": {
+                  "が": {
+                    "number": 6,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "。": {
+            "number": 9,
+            "children": {}
+          }
+        }
+      }
+    },
+    "ここで良かったと思ってくれるかな。": {
+      "思っ": {
+        "number": 15,
+        "children": {
+          "良かっ": {
+            "number": 12,
+            "children": {
+              "ここ": {
+                "number": 10,
+                "children": {
+                  "で": {
+                    "number": 11,
+                    "children": {}
+                  }
+                }
+              },
+              "た": {
+                "number": 13,
+                "children": {}
+              },
+              "と": {
+                "number": 14,
+                "children": {}
+              }
+            }
+          },
+          "て": {
+            "number": 16,
+            "children": {
+              "くれる": {
+                "number": 17,
+                "children": {}
+              }
+            }
+          },
+          "か": {
+            "number": 18,
+            "children": {}
+          },
+          "な": {
+            "number": 19,
+            "children": {}
+          },
+          "。": {
+            "number": 20,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "A2": {
+    "世界がもし明日悲しみにあふれても君がいるなら僕は生きていく。": {
+      "生き": {
+        "number": 15,
+        "children": {
+          "いる": {
+            "number": 11,
+            "children": {
+              "あふれ": {
+                "number": 6,
+                "children": {
+                  "世界": {
+                    "number": 0,
+                    "children": {
+                      "が": {
+                        "number": 1,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "もし": {
+                    "number": 2,
+                    "children": {}
+                  },
+                  "明日": {
+                    "number": 3,
+                    "children": {}
+                  },
+                  "悲しみ": {
+                    "number": 4,
+                    "children": {
+                      "に": {
+                        "number": 5,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "て": {
+                    "number": 7,
+                    "children": {}
+                  },
+                  "も": {
+                    "number": 8,
+                    "children": {}
+                  }
+                }
+              },
+              "君": {
+                "number": 9,
+                "children": {
+                  "が": {
+                    "number": 10,
+                    "children": {}
+                  }
+                }
+              },
+              "なら": {
+                "number": 12,
+                "children": {}
+              }
+            }
+          },
+          "僕": {
+            "number": 13,
+            "children": {
+              "は": {
+                "number": 14,
+                "children": {}
+              }
+            }
+          },
+          "て": {
+            "number": 16,
+            "children": {
+              "いく": {
+                "number": 17,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 18,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S1": {
+    "愛って何かわからなかった。": {
+      "わから": {
+        "number": 4,
+        "children": {
+          "愛": {
+            "number": 0,
+            "children": {
+              "って": {
+                "number": 1,
+                "children": {}
+              }
+            }
+          },
+          "何": {
+            "number": 2,
+            "children": {
+              "か": {
+                "number": 3,
+                "children": {}
+              }
+            }
+          },
+          "なかっ": {
+            "number": 5,
+            "children": {}
+          },
+          "た": {
+            "number": 6,
+            "children": {}
+          },
+          "。": {
+            "number": 7,
+            "children": {}
+          }
+        }
+      }
+    },
+    "そんな過去(とき)もあったけれど心震えた、涙あふれた、胸がギュッと苦しかった。": {
+      "苦しかっ": {
+        "number": 26,
+        "children": {
+          "あっ": {
+            "number": 11,
+            "children": {
+              "過去(とき)": {
+                "number": 9,
+                "children": {
+                  "そんな": {
+                    "number": 8,
+                    "children": {}
+                  },
+                  "も": {
+                    "number": 10,
+                    "children": {}
+                  }
+                }
+              },
+              "た": {
+                "number": 12,
+                "children": {}
+              },
+              "けれど": {
+                "number": 13,
+                "children": {}
+              }
+            }
+          },
+          "あふれ": {
+            "number": 19,
+            "children": {
+              "震え": {
+                "number": 15,
+                "children": {
+                  "心": {
+                    "number": 14,
+                    "children": {}
+                  },
+                  "た": {
+                    "number": 16,
+                    "children": {}
+                  },
+                  "、": {
+                    "number": 17,
+                    "children": {}
+                  }
+                }
+              },
+              "涙": {
+                "number": 18,
+                "children": {}
+              },
+              "た": {
+                "number": 20,
+                "children": {}
+              },
+              "、": {
+                "number": 21,
+                "children": {}
+              }
+            }
+          },
+          "胸": {
+            "number": 22,
+            "children": {
+              "が": {
+                "number": 23,
+                "children": {}
+              }
+            }
+          },
+          "ギュッ": {
+            "number": 24,
+            "children": {
+              "と": {
+                "number": 25,
+                "children": {}
+              }
+            }
+          },
+          "た": {
+            "number": 27,
+            "children": {}
+          },
+          "。": {
+            "number": 28,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S2": {
+    "『君がいる』": {
+      "いる": {
+        "number": 3,
+        "children": {
+          "君": {
+            "number": 1,
+            "children": {
+              "『": {
+                "number": 0,
+                "children": {}
+              },
+              "が": {
+                "number": 2,
+                "children": {}
+              }
+            }
+          },
+          "』": {
+            "number": 4,
+            "children": {}
+          }
+        }
+      }
+    },
+    "それだけで今日も明日も進む意味です。": {
+      "意味": {
+        "number": 13,
+        "children": {
+          "進む": {
+            "number": 12,
+            "children": {
+              "それ": {
+                "number": 5,
+                "children": {
+                  "だけ": {
+                    "number": 6,
+                    "children": {}
+                  },
+                  "で": {
+                    "number": 7,
+                    "children": {}
+                  }
+                }
+              },
+              "明日": {
+                "number": 10,
+                "children": {
+                  "今日": {
+                    "number": 8,
+                    "children": {
+                      "も": {
+                        "number": 9,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "も": {
+                    "number": 11,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "です": {
+            "number": 14,
+            "children": {}
+          },
+          "。": {
+            "number": 15,
+            "children": {}
+          }
+        }
+      }
+    },
+    "大切なもの見失わないようにこの歌唄おう。": {
+      "唄おう": {
+        "number": 25,
+        "children": {
+          "見失わ": {
+            "number": 19,
+            "children": {
+              "もの": {
+                "number": 18,
+                "children": {
+                  "大切": {
+                    "number": 16,
+                    "children": {
+                      "な": {
+                        "number": 17,
+                        "children": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "ない": {
+                "number": 20,
+                "children": {}
+              },
+              "よう": {
+                "number": 21,
+                "children": {}
+              },
+              "に": {
+                "number": 22,
+                "children": {}
+              }
+            }
+          },
+          "歌": {
+            "number": 24,
+            "children": {
+              "この": {
+                "number": 23,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 26,
+            "children": {}
+          }
+        }
+      }
+    }
+  }
+}

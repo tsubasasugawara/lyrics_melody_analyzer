@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  jupyter:
+    container_name: jupyter
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - .:/jupyter
+    ports:
+      - 8888:8888
+    command: jupyter lab --ip=0.0.0.0 --no-browser --NotebookApp.token=''

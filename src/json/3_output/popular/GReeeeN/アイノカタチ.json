@@ -1,0 +1,272 @@
+{
+  "A1": {
+    "あのね、いつの間にか気づいたんだ。": {
+      "気づい": {
+        "number": 8,
+        "children": {
+          "あの": {
+            "number": 0,
+            "children": {
+              "ね": {
+                "number": 1,
+                "children": {}
+              },
+              "、": {
+                "number": 2,
+                "children": {}
+              }
+            }
+          },
+          "間": {
+            "number": 5,
+            "children": {
+              "いつ": {
+                "number": 3,
+                "children": {
+                  "の": {
+                    "number": 4,
+                    "children": {}
+                  }
+                }
+              },
+              "に": {
+                "number": 6,
+                "children": {}
+              },
+              "か": {
+                "number": 7,
+                "children": {}
+              }
+            }
+          },
+          "た": {
+            "number": 9,
+            "children": {}
+          },
+          "ん": {
+            "number": 10,
+            "children": {
+              "だ": {
+                "number": 11,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 12,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "A2": {
+    "愛にもしカタチがあって、それがすでに私の胸にはまってたなら。": {
+      "はまっ": {
+        "number": 15,
+        "children": {
+          "あっ": {
+            "number": 5,
+            "children": {
+              "愛": {
+                "number": 0,
+                "children": {
+                  "に": {
+                    "number": 1,
+                    "children": {}
+                  }
+                }
+              },
+              "もし": {
+                "number": 2,
+                "children": {}
+              },
+              "カタチ": {
+                "number": 3,
+                "children": {
+                  "が": {
+                    "number": 4,
+                    "children": {}
+                  }
+                }
+              },
+              "て": {
+                "number": 6,
+                "children": {}
+              },
+              "、": {
+                "number": 7,
+                "children": {}
+              }
+            }
+          },
+          "それ": {
+            "number": 8,
+            "children": {
+              "が": {
+                "number": 9,
+                "children": {}
+              }
+            }
+          },
+          "すでに": {
+            "number": 10,
+            "children": {}
+          },
+          "胸": {
+            "number": 13,
+            "children": {
+              "私": {
+                "number": 11,
+                "children": {
+                  "の": {
+                    "number": 12,
+                    "children": {}
+                  }
+                }
+              },
+              "に": {
+                "number": 14,
+                "children": {}
+              }
+            }
+          },
+          "て": {
+            "number": 16,
+            "children": {}
+          },
+          "た": {
+            "number": 17,
+            "children": {}
+          },
+          "なら": {
+            "number": 18,
+            "children": {}
+          },
+          "。": {
+            "number": 19,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S1": {
+    "あのね、大好きだよ。": {
+      "大好き": {
+        "number": 3,
+        "children": {
+          "あの": {
+            "number": 0,
+            "children": {
+              "ね": {
+                "number": 1,
+                "children": {}
+              },
+              "、": {
+                "number": 2,
+                "children": {}
+              }
+            }
+          },
+          "だ": {
+            "number": 4,
+            "children": {}
+          },
+          "よ": {
+            "number": 5,
+            "children": {}
+          },
+          "。": {
+            "number": 6,
+            "children": {}
+          }
+        }
+      }
+    },
+    "あなたが心の中で広がっていくたび愛が溢れ涙溢れるんだ。": {
+      "溢れる": {
+        "number": 21,
+        "children": {
+          "溢れ": {
+            "number": 19,
+            "children": {
+              "たび": {
+                "number": 16,
+                "children": {
+                  "広がっ": {
+                    "number": 13,
+                    "children": {
+                      "あなた": {
+                        "number": 7,
+                        "children": {
+                          "が": {
+                            "number": 8,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "中": {
+                        "number": 11,
+                        "children": {
+                          "心": {
+                            "number": 9,
+                            "children": {
+                              "の": {
+                                "number": 10,
+                                "children": {}
+                              }
+                            }
+                          },
+                          "で": {
+                            "number": 12,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "て": {
+                        "number": 14,
+                        "children": {
+                          "いく": {
+                            "number": 15,
+                            "children": {}
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "愛": {
+                "number": 17,
+                "children": {
+                  "が": {
+                    "number": 18,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "涙": {
+            "number": 20,
+            "children": {}
+          },
+          "ん": {
+            "number": 22,
+            "children": {
+              "だ": {
+                "number": 23,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 24,
+            "children": {}
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,436 @@
+{
+  "A1": {
+    "僕らが生まれる何千年も前から空にお日様野には咲く花変わらずあるのに。": {
+      "ある": {
+        "number": 19,
+        "children": {
+          "前": {
+            "number": 7,
+            "children": {
+              "年": {
+                "number": 5,
+                "children": {
+                  "生まれる": {
+                    "number": 3,
+                    "children": {
+                      "ら": {
+                        "number": 1,
+                        "children": {
+                          "僕": {
+                            "number": 0,
+                            "children": {}
+                          },
+                          "が": {
+                            "number": 2,
+                            "children": {}
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "何千": {
+                    "number": 4,
+                    "children": {}
+                  },
+                  "も": {
+                    "number": 6,
+                    "children": {}
+                  }
+                }
+              },
+              "から": {
+                "number": 8,
+                "children": {}
+              }
+            }
+          },
+          "変わら": {
+            "number": 17,
+            "children": {
+              "花": {
+                "number": 16,
+                "children": {
+                  "咲く": {
+                    "number": 15,
+                    "children": {
+                      "空": {
+                        "number": 9,
+                        "children": {
+                          "に": {
+                            "number": 10,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "野": {
+                        "number": 12,
+                        "children": {
+                          "お日様": {
+                            "number": 11,
+                            "children": {}
+                          },
+                          "に": {
+                            "number": 13,
+                            "children": {}
+                          },
+                          "は": {
+                            "number": 14,
+                            "children": {}
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "ず": {
+                "number": 18,
+                "children": {}
+              }
+            }
+          },
+          "の": {
+            "number": 20,
+            "children": {}
+          },
+          "に": {
+            "number": 21,
+            "children": {}
+          },
+          "。": {
+            "number": 22,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "A2": {
+    "生きていく中で抱える荷物も増えて見栄や虚勢やアスファルトが気持ちを隠した。": {
+      "隠し": {
+        "number": 18,
+        "children": {
+          "増え": {
+            "number": 8,
+            "children": {
+              "中": {
+                "number": 3,
+                "children": {
+                  "生き": {
+                    "number": 0,
+                    "children": {
+                      "て": {
+                        "number": 1,
+                        "children": {
+                          "いく": {
+                            "number": 2,
+                            "children": {}
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "で": {
+                    "number": 4,
+                    "children": {}
+                  }
+                }
+              },
+              "荷物": {
+                "number": 6,
+                "children": {
+                  "抱える": {
+                    "number": 5,
+                    "children": {}
+                  },
+                  "も": {
+                    "number": 7,
+                    "children": {}
+                  }
+                }
+              },
+              "て": {
+                "number": 9,
+                "children": {}
+              }
+            }
+          },
+          "アスファルト": {
+            "number": 14,
+            "children": {
+              "虚勢": {
+                "number": 12,
+                "children": {
+                  "見栄": {
+                    "number": 10,
+                    "children": {
+                      "や": {
+                        "number": 11,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "や": {
+                    "number": 13,
+                    "children": {}
+                  }
+                }
+              },
+              "が": {
+                "number": 15,
+                "children": {}
+              }
+            }
+          },
+          "気持ち": {
+            "number": 16,
+            "children": {
+              "を": {
+                "number": 17,
+                "children": {}
+              }
+            }
+          },
+          "た": {
+            "number": 19,
+            "children": {}
+          },
+          "。": {
+            "number": 20,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S1": {
+    "響けよ、僕らの声よ。": {
+      "声": {
+        "number": 6,
+        "children": {
+          "響け": {
+            "number": 0,
+            "children": {
+              "よ": {
+                "number": 1,
+                "children": {}
+              },
+              "、": {
+                "number": 2,
+                "children": {}
+              }
+            }
+          },
+          "ら": {
+            "number": 4,
+            "children": {
+              "僕": {
+                "number": 3,
+                "children": {}
+              },
+              "の": {
+                "number": 5,
+                "children": {}
+              }
+            }
+          },
+          "よ": {
+            "number": 7,
+            "children": {}
+          },
+          "。": {
+            "number": 8,
+            "children": {}
+          }
+        }
+      }
+    },
+    "大切なのは胸(ここ)にあるだろう?": {
+      "ある": {
+        "number": 15,
+        "children": {
+          "大切": {
+            "number": 9,
+            "children": {
+              "な": {
+                "number": 10,
+                "children": {}
+              },
+              "の": {
+                "number": 11,
+                "children": {}
+              },
+              "は": {
+                "number": 12,
+                "children": {}
+              }
+            }
+          },
+          "胸(ここ)": {
+            "number": 13,
+            "children": {
+              "に": {
+                "number": 14,
+                "children": {}
+              }
+            }
+          },
+          "だろう": {
+            "number": 16,
+            "children": {}
+          },
+          "?": {
+            "number": 17,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S2": {
+    "響けよ僕らの声よ": {
+      "声": {
+        "number": 5,
+        "children": {
+          "響け": {
+            "number": 0,
+            "children": {
+              "よ": {
+                "number": 1,
+                "children": {}
+              }
+            }
+          },
+          "ら": {
+            "number": 3,
+            "children": {
+              "僕": {
+                "number": 2,
+                "children": {}
+              },
+              "の": {
+                "number": 4,
+                "children": {}
+              }
+            }
+          },
+          "よ": {
+            "number": 6,
+            "children": {}
+          }
+        }
+      }
+    },
+    "大切なのは胸(ここ)にあるだろう?": {
+      "ある": {
+        "number": 13,
+        "children": {
+          "大切": {
+            "number": 7,
+            "children": {
+              "な": {
+                "number": 8,
+                "children": {}
+              },
+              "の": {
+                "number": 9,
+                "children": {}
+              },
+              "は": {
+                "number": 10,
+                "children": {}
+              }
+            }
+          },
+          "胸(ここ)": {
+            "number": 11,
+            "children": {
+              "に": {
+                "number": 12,
+                "children": {}
+              }
+            }
+          },
+          "だろう": {
+            "number": 14,
+            "children": {}
+          },
+          "?": {
+            "number": 15,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S3": {
+    "今君だけにできる形で大きな花を咲かせてやれ。": {
+      "咲か": {
+        "number": 10,
+        "children": {
+          "今": {
+            "number": 0,
+            "children": {}
+          },
+          "形": {
+            "number": 5,
+            "children": {
+              "できる": {
+                "number": 4,
+                "children": {
+                  "君": {
+                    "number": 1,
+                    "children": {
+                      "だけ": {
+                        "number": 2,
+                        "children": {}
+                      },
+                      "に": {
+                        "number": 3,
+                        "children": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "で": {
+                "number": 6,
+                "children": {}
+              }
+            }
+          },
+          "花": {
+            "number": 8,
+            "children": {
+              "大きな": {
+                "number": 7,
+                "children": {}
+              },
+              "を": {
+                "number": 9,
+                "children": {}
+              }
+            }
+          },
+          "せ": {
+            "number": 11,
+            "children": {}
+          },
+          "て": {
+            "number": 12,
+            "children": {
+              "やれ": {
+                "number": 13,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 14,
+            "children": {}
+          }
+        }
+      }
+    }
+  }
+}

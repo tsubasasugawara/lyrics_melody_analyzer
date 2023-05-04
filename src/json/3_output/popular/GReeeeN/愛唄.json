@@ -1,0 +1,525 @@
+{
+  "A1": {
+    "「ねぇ、大好きな君へ」": {
+      "君": {
+        "number": 5,
+        "children": {
+          "ねぇ": {
+            "number": 1,
+            "children": {
+              "「": {
+                "number": 0,
+                "children": {}
+              },
+              "、": {
+                "number": 2,
+                "children": {}
+              }
+            }
+          },
+          "大好き": {
+            "number": 3,
+            "children": {
+              "な": {
+                "number": 4,
+                "children": {}
+              }
+            }
+          },
+          "へ": {
+            "number": 6,
+            "children": {}
+          },
+          "」": {
+            "number": 7,
+            "children": {}
+          }
+        }
+      }
+    },
+    "笑わないで聞いていくれ。": {
+      "聞い": {
+        "number": 11,
+        "children": {
+          "笑わ": {
+            "number": 8,
+            "children": {
+              "ない": {
+                "number": 9,
+                "children": {}
+              },
+              "で": {
+                "number": 10,
+                "children": {}
+              }
+            }
+          },
+          "て": {
+            "number": 12,
+            "children": {
+              "い": {
+                "number": 13,
+                "children": {}
+              }
+            }
+          },
+          "くれ": {
+            "number": 14,
+            "children": {}
+          },
+          "。": {
+            "number": 15,
+            "children": {}
+          }
+        }
+      }
+    },
+    "「愛してる」だなんてクサいけどね。": {
+      "クサい": {
+        "number": 22,
+        "children": {
+          "愛し": {
+            "number": 17,
+            "children": {
+              "「": {
+                "number": 16,
+                "children": {}
+              },
+              "てる": {
+                "number": 18,
+                "children": {}
+              },
+              "」": {
+                "number": 19,
+                "children": {}
+              },
+              "だ": {
+                "number": 20,
+                "children": {}
+              },
+              "なんて": {
+                "number": 21,
+                "children": {}
+              }
+            }
+          },
+          "けど": {
+            "number": 23,
+            "children": {}
+          },
+          "ね": {
+            "number": 24,
+            "children": {}
+          },
+          "。": {
+            "number": 25,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "A2": {
+    "だけどこの言葉以外伝えることができない。": {
+      "伝える": {
+        "number": 5,
+        "children": {
+          "だ": {
+            "number": 0,
+            "children": {
+              "けど": {
+                "number": 1,
+                "children": {}
+              }
+            }
+          },
+          "以外": {
+            "number": 4,
+            "children": {
+              "この": {
+                "number": 2,
+                "children": {}
+              },
+              "言葉": {
+                "number": 3,
+                "children": {}
+              }
+            }
+          },
+          "こと": {
+            "number": 6,
+            "children": {
+              "が": {
+                "number": 7,
+                "children": {}
+              },
+              "でき": {
+                "number": 8,
+                "children": {}
+              }
+            }
+          },
+          "ない": {
+            "number": 9,
+            "children": {}
+          },
+          "。": {
+            "number": 10,
+            "children": {}
+          }
+        }
+      }
+    },
+    "ほらね!": {
+      "ほら": {
+        "number": 11,
+        "children": {
+          "ね": {
+            "number": 12,
+            "children": {}
+          },
+          "!": {
+            "number": 13,
+            "children": {}
+          }
+        }
+      }
+    },
+    "またバカにして笑ったよね。": {
+      "笑っ": {
+        "number": 19,
+        "children": {
+          "また": {
+            "number": 14,
+            "children": {}
+          },
+          "し": {
+            "number": 17,
+            "children": {
+              "バカ": {
+                "number": 15,
+                "children": {
+                  "に": {
+                    "number": 16,
+                    "children": {}
+                  }
+                }
+              },
+              "て": {
+                "number": 18,
+                "children": {}
+              }
+            }
+          },
+          "た": {
+            "number": 20,
+            "children": {}
+          },
+          "よ": {
+            "number": 21,
+            "children": {}
+          },
+          "ね": {
+            "number": 22,
+            "children": {}
+          },
+          "。": {
+            "number": 23,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S1": {
+    "ただ泣いて笑って過ごす日々に隣に立って居れることで、僕が生きる意味になって君に捧ぐこの愛の唄。": {
+      "唄": {
+        "number": 29,
+        "children": {
+          "捧ぐ": {
+            "number": 25,
+            "children": {
+              "なっ": {
+                "number": 21,
+                "children": {
+                  "こと": {
+                    "number": 13,
+                    "children": {
+                      "立っ": {
+                        "number": 10,
+                        "children": {
+                          "日々": {
+                            "number": 6,
+                            "children": {
+                              "過ごす": {
+                                "number": 5,
+                                "children": {
+                                  "ただ": {
+                                    "number": 0,
+                                    "children": {}
+                                  },
+                                  "笑っ": {
+                                    "number": 3,
+                                    "children": {
+                                      "泣い": {
+                                        "number": 1,
+                                        "children": {
+                                          "て": {
+                                            "number": 2,
+                                            "children": {}
+                                          }
+                                        }
+                                      },
+                                      "て": {
+                                        "number": 4,
+                                        "children": {}
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "に": {
+                                "number": 7,
+                                "children": {}
+                              }
+                            }
+                          },
+                          "隣": {
+                            "number": 8,
+                            "children": {
+                              "に": {
+                                "number": 9,
+                                "children": {}
+                              }
+                            }
+                          },
+                          "て": {
+                            "number": 11,
+                            "children": {
+                              "居れる": {
+                                "number": 12,
+                                "children": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "で": {
+                        "number": 14,
+                        "children": {}
+                      },
+                      "、": {
+                        "number": 15,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "僕": {
+                    "number": 16,
+                    "children": {
+                      "が": {
+                        "number": 17,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "意味": {
+                    "number": 19,
+                    "children": {
+                      "生きる": {
+                        "number": 18,
+                        "children": {}
+                      },
+                      "に": {
+                        "number": 20,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "て": {
+                    "number": 22,
+                    "children": {}
+                  }
+                }
+              },
+              "君": {
+                "number": 23,
+                "children": {
+                  "に": {
+                    "number": 24,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "愛": {
+            "number": 27,
+            "children": {
+              "この": {
+                "number": 26,
+                "children": {}
+              },
+              "の": {
+                "number": 28,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 30,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S2": {
+    "ただ泣いて笑って過ごす日々に隣に立って入れることで、僕が生きるに意味になって君に捧ぐこの愛の唄。": {
+      "唄": {
+        "number": 30,
+        "children": {
+          "捧ぐ": {
+            "number": 26,
+            "children": {
+              "なっ": {
+                "number": 22,
+                "children": {
+                  "こと": {
+                    "number": 13,
+                    "children": {
+                      "入れる": {
+                        "number": 12,
+                        "children": {
+                          "日々": {
+                            "number": 6,
+                            "children": {
+                              "過ごす": {
+                                "number": 5,
+                                "children": {
+                                  "ただ": {
+                                    "number": 0,
+                                    "children": {}
+                                  },
+                                  "笑っ": {
+                                    "number": 3,
+                                    "children": {
+                                      "泣い": {
+                                        "number": 1,
+                                        "children": {
+                                          "て": {
+                                            "number": 2,
+                                            "children": {}
+                                          }
+                                        }
+                                      },
+                                      "て": {
+                                        "number": 4,
+                                        "children": {}
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "に": {
+                                "number": 7,
+                                "children": {}
+                              }
+                            }
+                          },
+                          "立っ": {
+                            "number": 10,
+                            "children": {
+                              "隣": {
+                                "number": 8,
+                                "children": {
+                                  "に": {
+                                    "number": 9,
+                                    "children": {}
+                                  }
+                                }
+                              },
+                              "て": {
+                                "number": 11,
+                                "children": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "で": {
+                        "number": 14,
+                        "children": {}
+                      },
+                      "、": {
+                        "number": 15,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "生きる": {
+                    "number": 18,
+                    "children": {
+                      "僕": {
+                        "number": 16,
+                        "children": {
+                          "が": {
+                            "number": 17,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "に": {
+                        "number": 19,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "意味": {
+                    "number": 20,
+                    "children": {
+                      "に": {
+                        "number": 21,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "て": {
+                    "number": 23,
+                    "children": {}
+                  }
+                }
+              },
+              "君": {
+                "number": 24,
+                "children": {
+                  "に": {
+                    "number": 25,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "愛": {
+            "number": 28,
+            "children": {
+              "この": {
+                "number": 27,
+                "children": {}
+              },
+              "の": {
+                "number": 29,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 31,
+            "children": {}
+          }
+        }
+      }
+    }
+  }
+}

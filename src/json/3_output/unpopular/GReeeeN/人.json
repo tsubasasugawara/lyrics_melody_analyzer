@@ -1,0 +1,507 @@
+{
+  "A1": {
+    "キミは今、何してるかな。": {
+      "し": {
+        "number": 5,
+        "children": {
+          "キミ": {
+            "number": 0,
+            "children": {
+              "は": {
+                "number": 1,
+                "children": {}
+              }
+            }
+          },
+          "今": {
+            "number": 2,
+            "children": {
+              "、": {
+                "number": 3,
+                "children": {}
+              }
+            }
+          },
+          "何": {
+            "number": 4,
+            "children": {}
+          },
+          "てる": {
+            "number": 6,
+            "children": {}
+          },
+          "か": {
+            "number": 7,
+            "children": {}
+          },
+          "な": {
+            "number": 8,
+            "children": {}
+          },
+          "。": {
+            "number": 9,
+            "children": {}
+          }
+        }
+      }
+    },
+    "一人寂しく泣いているかな。": {
+      "泣い": {
+        "number": 12,
+        "children": {
+          "一人": {
+            "number": 10,
+            "children": {}
+          },
+          "寂しく": {
+            "number": 11,
+            "children": {}
+          },
+          "て": {
+            "number": 13,
+            "children": {
+              "いる": {
+                "number": 14,
+                "children": {}
+              }
+            }
+          },
+          "か": {
+            "number": 15,
+            "children": {}
+          },
+          "な": {
+            "number": 16,
+            "children": {}
+          },
+          "。": {
+            "number": 17,
+            "children": {}
+          }
+        }
+      }
+    },
+    "そう、あの時もこの気持ちをわからず突き放しまた強がるし。": {
+      "強がる": {
+        "number": 30,
+        "children": {
+          "そう": {
+            "number": 18,
+            "children": {
+              "、": {
+                "number": 19,
+                "children": {}
+              }
+            }
+          },
+          "時": {
+            "number": 21,
+            "children": {
+              "あの": {
+                "number": 20,
+                "children": {}
+              },
+              "も": {
+                "number": 22,
+                "children": {}
+              }
+            }
+          },
+          "突き放し": {
+            "number": 28,
+            "children": {
+              "わから": {
+                "number": 26,
+                "children": {
+                  "気持ち": {
+                    "number": 24,
+                    "children": {
+                      "この": {
+                        "number": 23,
+                        "children": {}
+                      },
+                      "を": {
+                        "number": 25,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "ず": {
+                    "number": 27,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "また": {
+            "number": 29,
+            "children": {}
+          },
+          "し": {
+            "number": 31,
+            "children": {}
+          },
+          "。": {
+            "number": 32,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "A2": {
+    "机の横の写真は今も渡っているからさ今は辛くて。": {
+      "辛く": {
+        "number": 15,
+        "children": {
+          "渡っ": {
+            "number": 8,
+            "children": {
+              "写真": {
+                "number": 4,
+                "children": {
+                  "横": {
+                    "number": 2,
+                    "children": {
+                      "机": {
+                        "number": 0,
+                        "children": {
+                          "の": {
+                            "number": 1,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "の": {
+                        "number": 3,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "は": {
+                    "number": 5,
+                    "children": {}
+                  }
+                }
+              },
+              "今": {
+                "number": 6,
+                "children": {
+                  "も": {
+                    "number": 7,
+                    "children": {}
+                  }
+                }
+              },
+              "て": {
+                "number": 9,
+                "children": {
+                  "いる": {
+                    "number": 10,
+                    "children": {}
+                  }
+                }
+              },
+              "から": {
+                "number": 11,
+                "children": {}
+              },
+              "さ": {
+                "number": 12,
+                "children": {}
+              }
+            }
+          },
+          "今": {
+            "number": 13,
+            "children": {
+              "は": {
+                "number": 14,
+                "children": {}
+              }
+            }
+          },
+          "て": {
+            "number": 16,
+            "children": {}
+          },
+          "。": {
+            "number": 17,
+            "children": {}
+          }
+        }
+      }
+    },
+    "二人今は、この手には、握れる手もなくて日々が過ぎていく。": {
+      "いく": {
+        "number": 36,
+        "children": {
+          "過ぎ": {
+            "number": 34,
+            "children": {
+              "なく": {
+                "number": 30,
+                "children": {
+                  "今": {
+                    "number": 19,
+                    "children": {
+                      "二人": {
+                        "number": 18,
+                        "children": {}
+                      },
+                      "は": {
+                        "number": 20,
+                        "children": {}
+                      },
+                      "、": {
+                        "number": 21,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "手": {
+                    "number": 28,
+                    "children": {
+                      "握れる": {
+                        "number": 27,
+                        "children": {}
+                      },
+                      "も": {
+                        "number": 29,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "て": {
+                    "number": 31,
+                    "children": {}
+                  }
+                }
+              },
+              "日々": {
+                "number": 32,
+                "children": {
+                  "が": {
+                    "number": 33,
+                    "children": {}
+                  }
+                }
+              },
+              "て": {
+                "number": 35,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 37,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S1": {
+    "人は皆それぞれに気持ちを抱えて、今はただ別々の道を歩んでいく。": {
+      "歩ん": {
+        "number": 17,
+        "children": {
+          "抱え": {
+            "number": 7,
+            "children": {
+              "人": {
+                "number": 0,
+                "children": {
+                  "は": {
+                    "number": 1,
+                    "children": {}
+                  }
+                }
+              },
+              "それぞれ": {
+                "number": 3,
+                "children": {
+                  "皆": {
+                    "number": 2,
+                    "children": {}
+                  },
+                  "に": {
+                    "number": 4,
+                    "children": {}
+                  }
+                }
+              },
+              "気持ち": {
+                "number": 5,
+                "children": {
+                  "を": {
+                    "number": 6,
+                    "children": {}
+                  }
+                }
+              },
+              "て": {
+                "number": 8,
+                "children": {}
+              },
+              "、": {
+                "number": 9,
+                "children": {}
+              }
+            }
+          },
+          "今": {
+            "number": 10,
+            "children": {
+              "は": {
+                "number": 11,
+                "children": {}
+              }
+            }
+          },
+          "ただ": {
+            "number": 12,
+            "children": {}
+          },
+          "道": {
+            "number": 15,
+            "children": {
+              "別々": {
+                "number": 13,
+                "children": {
+                  "の": {
+                    "number": 14,
+                    "children": {}
+                  }
+                }
+              },
+              "を": {
+                "number": 16,
+                "children": {}
+              }
+            }
+          },
+          "で": {
+            "number": 18,
+            "children": {
+              "いく": {
+                "number": 19,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 20,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S2": {
+    "どこまでも続いてく、このEvery stage of life.まだまだこれからも行くぜ。": {
+      "行く": {
+        "number": 16,
+        "children": {
+          "life": {
+            "number": 10,
+            "children": {
+              "続い": {
+                "number": 3,
+                "children": {
+                  "どこ": {
+                    "number": 0,
+                    "children": {
+                      "まで": {
+                        "number": 1,
+                        "children": {}
+                      },
+                      "も": {
+                        "number": 2,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "てく": {
+                    "number": 4,
+                    "children": {}
+                  },
+                  "、": {
+                    "number": 5,
+                    "children": {}
+                  }
+                }
+              },
+              "この": {
+                "number": 6,
+                "children": {}
+              },
+              "Every": {
+                "number": 7,
+                "children": {}
+              },
+              "stage": {
+                "number": 8,
+                "children": {}
+              },
+              "of": {
+                "number": 9,
+                "children": {}
+              },
+              ".": {
+                "number": 11,
+                "children": {}
+              }
+            }
+          },
+          "まだまだ": {
+            "number": 12,
+            "children": {}
+          },
+          "これ": {
+            "number": 13,
+            "children": {
+              "から": {
+                "number": 14,
+                "children": {}
+              },
+              "も": {
+                "number": 15,
+                "children": {}
+              }
+            }
+          },
+          "ぜ": {
+            "number": 17,
+            "children": {}
+          },
+          "。": {
+            "number": 18,
+            "children": {}
+          }
+        }
+      }
+    },
+    "自分らしくあれ。": {
+      "あれ": {
+        "number": 21,
+        "children": {
+          "自分": {
+            "number": 19,
+            "children": {
+              "らしく": {
+                "number": 20,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 22,
+            "children": {}
+          }
+        }
+      }
+    }
+  }
+}

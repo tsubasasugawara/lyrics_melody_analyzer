@@ -1,0 +1,394 @@
+{
+  "A1": {
+    "窓から流れる景色変わらない。": {
+      "変わら": {
+        "number": 4,
+        "children": {
+          "景色": {
+            "number": 3,
+            "children": {
+              "流れる": {
+                "number": 2,
+                "children": {
+                  "窓": {
+                    "number": 0,
+                    "children": {
+                      "から": {
+                        "number": 1,
+                        "children": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "ない": {
+            "number": 5,
+            "children": {}
+          },
+          "。": {
+            "number": 6,
+            "children": {}
+          }
+        }
+      }
+    },
+    "この街旅立つ春風、舞い散る桜。": {
+      "桜": {
+        "number": 13,
+        "children": {
+          "春風": {
+            "number": 10,
+            "children": {
+              "旅立つ": {
+                "number": 9,
+                "children": {
+                  "街": {
+                    "number": 8,
+                    "children": {
+                      "この": {
+                        "number": 7,
+                        "children": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "、": {
+                "number": 11,
+                "children": {}
+              }
+            }
+          },
+          "舞い散る": {
+            "number": 12,
+            "children": {}
+          },
+          "。": {
+            "number": 14,
+            "children": {}
+          }
+        }
+      }
+    },
+    "憧ればかり強くなってく。": {
+      "なっ": {
+        "number": 18,
+        "children": {
+          "強く": {
+            "number": 17,
+            "children": {
+              "憧れ": {
+                "number": 15,
+                "children": {
+                  "ばかり": {
+                    "number": 16,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "てく": {
+            "number": 19,
+            "children": {}
+          },
+          "。": {
+            "number": 20,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "A2": {
+    "「どれだけ寂しくても自分で決めた道信じて。」。": {
+      "信じ": {
+        "number": 11,
+        "children": {
+          "寂しく": {
+            "number": 3,
+            "children": {
+              "どれ": {
+                "number": 1,
+                "children": {
+                  "「": {
+                    "number": 0,
+                    "children": {}
+                  },
+                  "だけ": {
+                    "number": 2,
+                    "children": {}
+                  }
+                }
+              },
+              "て": {
+                "number": 4,
+                "children": {}
+              },
+              "も": {
+                "number": 5,
+                "children": {}
+              }
+            }
+          },
+          "道": {
+            "number": 10,
+            "children": {
+              "決め": {
+                "number": 8,
+                "children": {
+                  "自分": {
+                    "number": 6,
+                    "children": {
+                      "で": {
+                        "number": 7,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "た": {
+                    "number": 9,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "て": {
+            "number": 12,
+            "children": {}
+          },
+          "。": {
+            "number": 15,
+            "children": {}
+          },
+          "」": {
+            "number": 14,
+            "children": {}
+          }
+        }
+      }
+    },
+    "手紙の最後の行があいつらしくて笑える。": {
+      "笑える": {
+        "number": 25,
+        "children": {
+          "あいつ": {
+            "number": 22,
+            "children": {
+              "行": {
+                "number": 20,
+                "children": {
+                  "手紙": {
+                    "number": 16,
+                    "children": {
+                      "の": {
+                        "number": 17,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "最後": {
+                    "number": 18,
+                    "children": {
+                      "の": {
+                        "number": 19,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "が": {
+                    "number": 21,
+                    "children": {}
+                  }
+                }
+              },
+              "らしく": {
+                "number": 23,
+                "children": {}
+              },
+              "て": {
+                "number": 24,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 26,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S1": {
+    "「誰かにうそをつくような人になってくれるな」父の願いと。": {
+      "願い": {
+        "number": 18,
+        "children": {
+          "なっ": {
+            "number": 11,
+            "children": {
+              "人": {
+                "number": 9,
+                "children": {
+                  "つく": {
+                    "number": 6,
+                    "children": {
+                      "誰": {
+                        "number": 1,
+                        "children": {
+                          "「": {
+                            "number": 0,
+                            "children": {}
+                          },
+                          "か": {
+                            "number": 2,
+                            "children": {}
+                          },
+                          "に": {
+                            "number": 3,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "うそ": {
+                        "number": 4,
+                        "children": {
+                          "を": {
+                            "number": 5,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "よう": {
+                        "number": 7,
+                        "children": {}
+                      },
+                      "な": {
+                        "number": 8,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "に": {
+                    "number": 10,
+                    "children": {}
+                  }
+                }
+              },
+              "て": {
+                "number": 12,
+                "children": {
+                  "くれる": {
+                    "number": 13,
+                    "children": {}
+                  }
+                }
+              },
+              "な": {
+                "number": 14,
+                "children": {}
+              },
+              "」": {
+                "number": 15,
+                "children": {}
+              }
+            }
+          },
+          "父": {
+            "number": 16,
+            "children": {
+              "の": {
+                "number": 17,
+                "children": {}
+              }
+            }
+          },
+          "と": {
+            "number": 19,
+            "children": {}
+          },
+          "。": {
+            "number": 20,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S2": {
+    "「傷ついたって笑い飛ばして傷つけるより全然いいね」": {
+      "いい": {
+        "number": 8,
+        "children": {
+          "傷つける": {
+            "number": 5,
+            "children": {
+              "傷つい": {
+                "number": 1,
+                "children": {
+                  "「": {
+                    "number": 0,
+                    "children": {}
+                  },
+                  "たって": {
+                    "number": 2,
+                    "children": {}
+                  }
+                }
+              },
+              "笑い飛ばし": {
+                "number": 3,
+                "children": {
+                  "て": {
+                    "number": 4,
+                    "children": {}
+                  }
+                }
+              },
+              "より": {
+                "number": 6,
+                "children": {}
+              }
+            }
+          },
+          "全然": {
+            "number": 7,
+            "children": {}
+          },
+          "ね": {
+            "number": 9,
+            "children": {}
+          },
+          "」": {
+            "number": 10,
+            "children": {}
+          }
+        }
+      }
+    },
+    "母の愛。": {
+      "愛": {
+        "number": 13,
+        "children": {
+          "母": {
+            "number": 11,
+            "children": {
+              "の": {
+                "number": 12,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 14,
+            "children": {}
+          }
+        }
+      }
+    }
+  }
+}

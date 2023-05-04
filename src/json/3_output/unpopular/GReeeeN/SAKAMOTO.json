@@ -1,0 +1,334 @@
+{
+  "A1": {
+    "あの山超えたらなりたい": {
+      "なり": {
+        "number": 4,
+        "children": {
+          "超え": {
+            "number": 2,
+            "children": {
+              "山": {
+                "number": 1,
+                "children": {
+                  "あの": {
+                    "number": 0,
+                    "children": {}
+                  }
+                }
+              },
+              "たら": {
+                "number": 3,
+                "children": {}
+              }
+            }
+          },
+          "たい": {
+            "number": 5,
+            "children": {}
+          }
+        }
+      }
+    },
+    "僕に会える？": {
+      "会える": {
+        "number": 8,
+        "children": {
+          "僕": {
+            "number": 6,
+            "children": {
+              "に": {
+                "number": 7,
+                "children": {}
+              }
+            }
+          },
+          "？": {
+            "number": 9,
+            "children": {}
+          }
+        }
+      }
+    },
+    "あの海越えたらなりたい": {
+      "なり": {
+        "number": 14,
+        "children": {
+          "越え": {
+            "number": 12,
+            "children": {
+              "海": {
+                "number": 11,
+                "children": {
+                  "あの": {
+                    "number": 10,
+                    "children": {}
+                  }
+                }
+              },
+              "たら": {
+                "number": 13,
+                "children": {}
+              }
+            }
+          },
+          "たい": {
+            "number": 15,
+            "children": {}
+          }
+        }
+      }
+    },
+    "私に会える？": {
+      "会える": {
+        "number": 18,
+        "children": {
+          "私": {
+            "number": 16,
+            "children": {
+              "に": {
+                "number": 17,
+                "children": {}
+              }
+            }
+          },
+          "？": {
+            "number": 19,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "A2": {
+    "私の心よもっと自由になれ。": {
+      "なれ": {
+        "number": 7,
+        "children": {
+          "心": {
+            "number": 2,
+            "children": {
+              "私": {
+                "number": 0,
+                "children": {
+                  "の": {
+                    "number": 1,
+                    "children": {}
+                  }
+                }
+              },
+              "よ": {
+                "number": 3,
+                "children": {}
+              }
+            }
+          },
+          "自由": {
+            "number": 5,
+            "children": {
+              "もっと": {
+                "number": 4,
+                "children": {}
+              },
+              "に": {
+                "number": 6,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 8,
+            "children": {}
+          }
+        }
+      }
+    },
+    "これから始まる僕だけのストーリー。": {
+      "ストーリー": {
+        "number": 15,
+        "children": {
+          "始まる": {
+            "number": 11,
+            "children": {
+              "これ": {
+                "number": 9,
+                "children": {
+                  "から": {
+                    "number": 10,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "僕": {
+            "number": 12,
+            "children": {
+              "だけ": {
+                "number": 13,
+                "children": {}
+              },
+              "の": {
+                "number": 14,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 16,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S1": {
+    "可能性を自分で消さないで。": {
+      "消さ": {
+        "number": 4,
+        "children": {
+          "可能性": {
+            "number": 0,
+            "children": {
+              "を": {
+                "number": 1,
+                "children": {}
+              }
+            }
+          },
+          "自分": {
+            "number": 2,
+            "children": {
+              "で": {
+                "number": 3,
+                "children": {}
+              }
+            }
+          },
+          "ない": {
+            "number": 5,
+            "children": {}
+          },
+          "で": {
+            "number": 6,
+            "children": {}
+          },
+          "。": {
+            "number": 7,
+            "children": {}
+          }
+        }
+      }
+    },
+    "一人の夜でも怖くない。": {
+      "ない": {
+        "number": 14,
+        "children": {
+          "夜": {
+            "number": 10,
+            "children": {
+              "一人": {
+                "number": 8,
+                "children": {
+                  "の": {
+                    "number": 9,
+                    "children": {}
+                  }
+                }
+              },
+              "で": {
+                "number": 11,
+                "children": {}
+              },
+              "も": {
+                "number": 12,
+                "children": {}
+              }
+            }
+          },
+          "怖く": {
+            "number": 13,
+            "children": {}
+          },
+          "。": {
+            "number": 15,
+            "children": {}
+          }
+        }
+      }
+    },
+    "見たもの聞いたこと覚えたこと聞かせるね待っててね。": {
+      "待っ": {
+        "number": 28,
+        "children": {
+          "聞か": {
+            "number": 25,
+            "children": {
+              "もの": {
+                "number": 18,
+                "children": {
+                  "見": {
+                    "number": 16,
+                    "children": {
+                      "た": {
+                        "number": 17,
+                        "children": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "こと": {
+                "number": 24,
+                "children": {
+                  "こと": {
+                    "number": 21,
+                    "children": {
+                      "聞い": {
+                        "number": 19,
+                        "children": {
+                          "た": {
+                            "number": 20,
+                            "children": {}
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "覚え": {
+                    "number": 22,
+                    "children": {
+                      "た": {
+                        "number": 23,
+                        "children": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "せる": {
+                "number": 26,
+                "children": {}
+              },
+              "ね": {
+                "number": 27,
+                "children": {}
+              }
+            }
+          },
+          "て": {
+            "number": 30,
+            "children": {}
+          },
+          "ね": {
+            "number": 31,
+            "children": {}
+          },
+          "。": {
+            "number": 32,
+            "children": {}
+          }
+        }
+      }
+    }
+  }
+}

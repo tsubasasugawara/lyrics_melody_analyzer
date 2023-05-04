@@ -1,0 +1,393 @@
+{
+  "A1": {
+    "どうしてなの。": {
+      "どう": {
+        "number": 0,
+        "children": {
+          "し": {
+            "number": 1,
+            "children": {}
+          },
+          "て": {
+            "number": 2,
+            "children": {}
+          },
+          "な": {
+            "number": 3,
+            "children": {}
+          },
+          "の": {
+            "number": 4,
+            "children": {}
+          },
+          "。": {
+            "number": 5,
+            "children": {}
+          }
+        }
+      }
+    },
+    "寒い夜はアナタを想い胸が締め付ける。": {
+      "締め付ける": {
+        "number": 14,
+        "children": {
+          "夜": {
+            "number": 7,
+            "children": {
+              "寒い": {
+                "number": 6,
+                "children": {}
+              },
+              "は": {
+                "number": 8,
+                "children": {}
+              }
+            }
+          },
+          "想い": {
+            "number": 11,
+            "children": {
+              "アナタ": {
+                "number": 9,
+                "children": {
+                  "を": {
+                    "number": 10,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "胸": {
+            "number": 12,
+            "children": {
+              "が": {
+                "number": 13,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 15,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "A2": {
+    "伝わるかな？": {
+      "伝わる": {
+        "number": 0,
+        "children": {
+          "か": {
+            "number": 1,
+            "children": {}
+          },
+          "な": {
+            "number": 2,
+            "children": {}
+          },
+          "？": {
+            "number": 3,
+            "children": {}
+          }
+        }
+      }
+    },
+    "伝えきれるかな？": {
+      "伝え": {
+        "number": 4,
+        "children": {
+          "きれる": {
+            "number": 5,
+            "children": {}
+          },
+          "か": {
+            "number": 6,
+            "children": {}
+          },
+          "な": {
+            "number": 7,
+            "children": {}
+          },
+          "？": {
+            "number": 8,
+            "children": {}
+          }
+        }
+      }
+    },
+    "また今日も言えないけれど。": {
+      "言え": {
+        "number": 12,
+        "children": {
+          "また": {
+            "number": 9,
+            "children": {}
+          },
+          "今日": {
+            "number": 10,
+            "children": {
+              "も": {
+                "number": 11,
+                "children": {}
+              }
+            }
+          },
+          "ない": {
+            "number": 13,
+            "children": {}
+          },
+          "けれど": {
+            "number": 14,
+            "children": {}
+          },
+          "。": {
+            "number": 15,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S1": {
+    "いま目と目が合って気付いた。": {
+      "気付い": {
+        "number": 7,
+        "children": {
+          "いま": {
+            "number": 0,
+            "children": {}
+          },
+          "合っ": {
+            "number": 5,
+            "children": {
+              "目": {
+                "number": 3,
+                "children": {
+                  "目": {
+                    "number": 1,
+                    "children": {
+                      "と": {
+                        "number": 2,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "が": {
+                    "number": 4,
+                    "children": {}
+                  }
+                }
+              },
+              "て": {
+                "number": 6,
+                "children": {}
+              }
+            }
+          },
+          "た": {
+            "number": 8,
+            "children": {}
+          },
+          "。": {
+            "number": 9,
+            "children": {}
+          }
+        }
+      }
+    },
+    "ずっとこのまま時が止まれば離れずに逸らさずに見つめられるのに。": {
+      "見つめ": {
+        "number": 23,
+        "children": {
+          "止まれ": {
+            "number": 15,
+            "children": {
+              "ずっと": {
+                "number": 10,
+                "children": {}
+              },
+              "まま": {
+                "number": 12,
+                "children": {
+                  "この": {
+                    "number": 11,
+                    "children": {}
+                  }
+                }
+              },
+              "時": {
+                "number": 13,
+                "children": {
+                  "が": {
+                    "number": 14,
+                    "children": {}
+                  }
+                }
+              },
+              "ば": {
+                "number": 16,
+                "children": {}
+              }
+            }
+          },
+          "逸らさ": {
+            "number": 20,
+            "children": {
+              "離れ": {
+                "number": 17,
+                "children": {
+                  "ず": {
+                    "number": 18,
+                    "children": {}
+                  },
+                  "に": {
+                    "number": 19,
+                    "children": {}
+                  }
+                }
+              },
+              "ず": {
+                "number": 21,
+                "children": {}
+              },
+              "に": {
+                "number": 22,
+                "children": {}
+              }
+            }
+          },
+          "られる": {
+            "number": 24,
+            "children": {}
+          },
+          "の": {
+            "number": 25,
+            "children": {}
+          },
+          "に": {
+            "number": 26,
+            "children": {}
+          },
+          "。": {
+            "number": 27,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S2": {
+    "この街に雪が舞い降りてあなたのぬくもりが温かくて触れた手をどかさずにこのままずっと。": {
+      "ずっと": {
+        "number": 22,
+        "children": {
+          "舞い降り": {
+            "number": 5,
+            "children": {
+              "街": {
+                "number": 1,
+                "children": {
+                  "この": {
+                    "number": 0,
+                    "children": {}
+                  },
+                  "に": {
+                    "number": 2,
+                    "children": {}
+                  }
+                }
+              },
+              "雪": {
+                "number": 3,
+                "children": {
+                  "が": {
+                    "number": 4,
+                    "children": {}
+                  }
+                }
+              },
+              "て": {
+                "number": 6,
+                "children": {}
+              }
+            }
+          },
+          "どかさ": {
+            "number": 17,
+            "children": {
+              "手": {
+                "number": 15,
+                "children": {
+                  "触れ": {
+                    "number": 13,
+                    "children": {
+                      "温かく": {
+                        "number": 11,
+                        "children": {
+                          "ぬくもり": {
+                            "number": 9,
+                            "children": {
+                              "あなた": {
+                                "number": 7,
+                                "children": {
+                                  "の": {
+                                    "number": 8,
+                                    "children": {}
+                                  }
+                                }
+                              },
+                              "が": {
+                                "number": 10,
+                                "children": {}
+                              }
+                            }
+                          },
+                          "て": {
+                            "number": 12,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "た": {
+                        "number": 14,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "を": {
+                    "number": 16,
+                    "children": {}
+                  }
+                }
+              },
+              "ず": {
+                "number": 18,
+                "children": {}
+              },
+              "に": {
+                "number": 19,
+                "children": {}
+              }
+            }
+          },
+          "まま": {
+            "number": 21,
+            "children": {
+              "この": {
+                "number": 20,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 23,
+            "children": {}
+          }
+        }
+      }
+    }
+  }
+}

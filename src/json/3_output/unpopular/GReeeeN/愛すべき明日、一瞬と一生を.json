@@ -1,0 +1,490 @@
+{
+  "A1": {
+    "ほらねぇ今日も聞こえてくるよ": {
+      "聞こえ": {
+        "number": 4,
+        "children": {
+          "ほら": {
+            "number": 0,
+            "children": {
+              "ねぇ": {
+                "number": 1,
+                "children": {}
+              }
+            }
+          },
+          "今日": {
+            "number": 2,
+            "children": {
+              "も": {
+                "number": 3,
+                "children": {}
+              }
+            }
+          },
+          "て": {
+            "number": 5,
+            "children": {
+              "くる": {
+                "number": 6,
+                "children": {}
+              }
+            }
+          },
+          "よ": {
+            "number": 7,
+            "children": {}
+          }
+        }
+      }
+    },
+    "素直な自分からの叫び。": {
+      "叫び": {
+        "number": 13,
+        "children": {
+          "自分": {
+            "number": 10,
+            "children": {
+              "素直": {
+                "number": 8,
+                "children": {
+                  "な": {
+                    "number": 9,
+                    "children": {}
+                  }
+                }
+              },
+              "から": {
+                "number": 11,
+                "children": {}
+              },
+              "の": {
+                "number": 12,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 14,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "A2": {
+    "いつの間にか強くなることと鈍感さをはき違えていた。": {
+      "はき違え": {
+        "number": 12,
+        "children": {
+          "間": {
+            "number": 2,
+            "children": {
+              "いつ": {
+                "number": 0,
+                "children": {
+                  "の": {
+                    "number": 1,
+                    "children": {}
+                  }
+                }
+              },
+              "に": {
+                "number": 3,
+                "children": {}
+              },
+              "か": {
+                "number": 4,
+                "children": {}
+              }
+            }
+          },
+          "鈍感": {
+            "number": 9,
+            "children": {
+              "こと": {
+                "number": 7,
+                "children": {
+                  "なる": {
+                    "number": 6,
+                    "children": {
+                      "強く": {
+                        "number": 5,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "と": {
+                    "number": 8,
+                    "children": {}
+                  }
+                }
+              },
+              "さ": {
+                "number": 10,
+                "children": {}
+              },
+              "を": {
+                "number": 11,
+                "children": {}
+              }
+            }
+          },
+          "て": {
+            "number": 13,
+            "children": {
+              "い": {
+                "number": 14,
+                "children": {}
+              }
+            }
+          },
+          "た": {
+            "number": 15,
+            "children": {}
+          },
+          "。": {
+            "number": 16,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S1": {
+    "愛すべき明日一瞬と一生をもがいてもがいて立ち向かっていくから。": {
+      "立ち向かっ": {
+        "number": 11,
+        "children": {
+          "もがい": {
+            "number": 9,
+            "children": {
+              "愛す": {
+                "number": 0,
+                "children": {
+                  "べき": {
+                    "number": 1,
+                    "children": {}
+                  }
+                }
+              },
+              "明日": {
+                "number": 2,
+                "children": {}
+              },
+              "もがい": {
+                "number": 7,
+                "children": {
+                  "一生": {
+                    "number": 5,
+                    "children": {
+                      "一瞬": {
+                        "number": 3,
+                        "children": {
+                          "と": {
+                            "number": 4,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "を": {
+                        "number": 6,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "て": {
+                    "number": 8,
+                    "children": {}
+                  }
+                }
+              },
+              "て": {
+                "number": 10,
+                "children": {}
+              }
+            }
+          },
+          "て": {
+            "number": 12,
+            "children": {
+              "いく": {
+                "number": 13,
+                "children": {}
+              }
+            }
+          },
+          "から": {
+            "number": 14,
+            "children": {}
+          },
+          "。": {
+            "number": 15,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S2": {
+    "どれが正しいって誰にも決めることはできないよ": {
+      "でき": {
+        "number": 10,
+        "children": {
+          "正しい": {
+            "number": 2,
+            "children": {
+              "どれ": {
+                "number": 0,
+                "children": {
+                  "が": {
+                    "number": 1,
+                    "children": {}
+                  }
+                }
+              },
+              "って": {
+                "number": 3,
+                "children": {}
+              }
+            }
+          },
+          "誰": {
+            "number": 4,
+            "children": {
+              "に": {
+                "number": 5,
+                "children": {}
+              },
+              "も": {
+                "number": 6,
+                "children": {}
+              }
+            }
+          },
+          "こと": {
+            "number": 8,
+            "children": {
+              "決める": {
+                "number": 7,
+                "children": {}
+              },
+              "は": {
+                "number": 9,
+                "children": {}
+              }
+            }
+          },
+          "ない": {
+            "number": 11,
+            "children": {}
+          },
+          "よ": {
+            "number": 12,
+            "children": {}
+          }
+        }
+      }
+    },
+    "そうだろ？ね？": {
+      "そう": {
+        "number": 13,
+        "children": {
+          "だろ": {
+            "number": 14,
+            "children": {}
+          },
+          "？": {
+            "number": 17,
+            "children": {}
+          },
+          "ね": {
+            "number": 16,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S3": {
+    "それを知ってるのは自分自身。": {
+      "自分自身": {
+        "number": 6,
+        "children": {
+          "知っ": {
+            "number": 2,
+            "children": {
+              "それ": {
+                "number": 0,
+                "children": {
+                  "を": {
+                    "number": 1,
+                    "children": {}
+                  }
+                }
+              },
+              "てる": {
+                "number": 3,
+                "children": {}
+              },
+              "の": {
+                "number": 4,
+                "children": {}
+              },
+              "は": {
+                "number": 5,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 7,
+            "children": {}
+          }
+        }
+      }
+    },
+    "後悔と不安はどんな境遇にもいて。": {
+      "い": {
+        "number": 16,
+        "children": {
+          "不安": {
+            "number": 10,
+            "children": {
+              "後悔": {
+                "number": 8,
+                "children": {
+                  "と": {
+                    "number": 9,
+                    "children": {}
+                  }
+                }
+              },
+              "は": {
+                "number": 11,
+                "children": {}
+              }
+            }
+          },
+          "境遇": {
+            "number": 13,
+            "children": {
+              "どんな": {
+                "number": 12,
+                "children": {}
+              },
+              "に": {
+                "number": 14,
+                "children": {}
+              },
+              "も": {
+                "number": 15,
+                "children": {}
+              }
+            }
+          },
+          "て": {
+            "number": 17,
+            "children": {}
+          },
+          "。": {
+            "number": 18,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S4": {
+    "だから今を全部ぶつけてやれるだけやってそのあとで君が笑えばいい。": {
+      "笑え": {
+        "number": 16,
+        "children": {
+          "だ": {
+            "number": 0,
+            "children": {
+              "から": {
+                "number": 1,
+                "children": {}
+              }
+            }
+          },
+          "やっ": {
+            "number": 9,
+            "children": {
+              "ぶつけ": {
+                "number": 5,
+                "children": {
+                  "今": {
+                    "number": 2,
+                    "children": {
+                      "を": {
+                        "number": 3,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "全部": {
+                    "number": 4,
+                    "children": {}
+                  },
+                  "て": {
+                    "number": 6,
+                    "children": {}
+                  },
+                  "やれる": {
+                    "number": 7,
+                    "children": {}
+                  },
+                  "だけ": {
+                    "number": 8,
+                    "children": {}
+                  }
+                }
+              },
+              "て": {
+                "number": 10,
+                "children": {}
+              }
+            }
+          },
+          "あと": {
+            "number": 12,
+            "children": {
+              "その": {
+                "number": 11,
+                "children": {}
+              },
+              "で": {
+                "number": 13,
+                "children": {}
+              }
+            }
+          },
+          "君": {
+            "number": 14,
+            "children": {
+              "が": {
+                "number": 15,
+                "children": {}
+              }
+            }
+          },
+          "ば": {
+            "number": 17,
+            "children": {
+              "いい": {
+                "number": 18,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 19,
+            "children": {}
+          }
+        }
+      }
+    }
+  }
+}

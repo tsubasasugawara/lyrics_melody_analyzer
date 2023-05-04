@@ -1,0 +1,404 @@
+{
+  "A1": {
+    "『今日もありがとう。": {
+      "ありがとう": {
+        "number": 3,
+        "children": {
+          "今日": {
+            "number": 1,
+            "children": {
+              "『": {
+                "number": 0,
+                "children": {}
+              },
+              "も": {
+                "number": 2,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 4,
+            "children": {}
+          }
+        }
+      }
+    },
+    "元気でいますよ。": {
+      "い": {
+        "number": 7,
+        "children": {
+          "元気": {
+            "number": 5,
+            "children": {
+              "で": {
+                "number": 6,
+                "children": {}
+              }
+            }
+          },
+          "ます": {
+            "number": 8,
+            "children": {}
+          },
+          "よ": {
+            "number": 9,
+            "children": {}
+          },
+          "。": {
+            "number": 10,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "A2": {
+    "たまにへこんでしまうような日もあるけれどなんだかんだで明日が私を迎えに来てくれる。": {
+      "来": {
+        "number": 21,
+        "children": {
+          "ある": {
+            "number": 8,
+            "children": {
+              "日": {
+                "number": 6,
+                "children": {
+                  "へこん": {
+                    "number": 1,
+                    "children": {
+                      "たまに": {
+                        "number": 0,
+                        "children": {}
+                      },
+                      "で": {
+                        "number": 2,
+                        "children": {
+                          "しまう": {
+                            "number": 3,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "よう": {
+                        "number": 4,
+                        "children": {}
+                      },
+                      "な": {
+                        "number": 5,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "も": {
+                    "number": 7,
+                    "children": {}
+                  }
+                }
+              },
+              "けれど": {
+                "number": 9,
+                "children": {}
+              }
+            }
+          },
+          "かん": {
+            "number": 12,
+            "children": {
+              "なん": {
+                "number": 10,
+                "children": {
+                  "だ": {
+                    "number": 11,
+                    "children": {}
+                  }
+                }
+              },
+              "だ": {
+                "number": 13,
+                "children": {}
+              }
+            }
+          },
+          "で": {
+            "number": 14,
+            "children": {}
+          },
+          "迎え": {
+            "number": 19,
+            "children": {
+              "明日": {
+                "number": 15,
+                "children": {
+                  "が": {
+                    "number": 16,
+                    "children": {}
+                  }
+                }
+              },
+              "私": {
+                "number": 17,
+                "children": {
+                  "を": {
+                    "number": 18,
+                    "children": {}
+                  }
+                }
+              },
+              "に": {
+                "number": 20,
+                "children": {}
+              }
+            }
+          },
+          "て": {
+            "number": 22,
+            "children": {
+              "くれる": {
+                "number": 23,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 24,
+            "children": {}
+          }
+        }
+      }
+    },
+    "そうだね。": {
+      "そう": {
+        "number": 25,
+        "children": {
+          "だ": {
+            "number": 26,
+            "children": {}
+          },
+          "ね": {
+            "number": 27,
+            "children": {}
+          },
+          "。": {
+            "number": 28,
+            "children": {}
+          }
+        }
+      }
+    },
+    "今日も晴れだ。』": {
+      "晴れ": {
+        "number": 31,
+        "children": {
+          "今日": {
+            "number": 29,
+            "children": {
+              "も": {
+                "number": 30,
+                "children": {}
+              }
+            }
+          },
+          "だ": {
+            "number": 32,
+            "children": {}
+          },
+          "。": {
+            "number": 33,
+            "children": {}
+          },
+          "』": {
+            "number": 34,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S1": {
+    "白い空を超えた先で百の蕾が花ひらくの。": {
+      "ひらく": {
+        "number": 12,
+        "children": {
+          "先": {
+            "number": 5,
+            "children": {
+              "超え": {
+                "number": 3,
+                "children": {
+                  "空": {
+                    "number": 1,
+                    "children": {
+                      "白い": {
+                        "number": 0,
+                        "children": {}
+                      },
+                      "を": {
+                        "number": 2,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "た": {
+                    "number": 4,
+                    "children": {}
+                  }
+                }
+              },
+              "で": {
+                "number": 6,
+                "children": {}
+              }
+            }
+          },
+          "蕾": {
+            "number": 9,
+            "children": {
+              "百": {
+                "number": 7,
+                "children": {
+                  "の": {
+                    "number": 8,
+                    "children": {}
+                  }
+                }
+              },
+              "が": {
+                "number": 10,
+                "children": {}
+              }
+            }
+          },
+          "花": {
+            "number": 11,
+            "children": {}
+          },
+          "の": {
+            "number": 13,
+            "children": {}
+          },
+          "。": {
+            "number": 14,
+            "children": {}
+          }
+        }
+      }
+    },
+    "いくども泣いて、いくど笑って蕾はやがてひらくのでしょう。": {
+      "ひらく": {
+        "number": 28,
+        "children": {
+          "泣い": {
+            "number": 18,
+            "children": {
+              "ど": {
+                "number": 16,
+                "children": {
+                  "いく": {
+                    "number": 15,
+                    "children": {}
+                  },
+                  "も": {
+                    "number": 17,
+                    "children": {}
+                  }
+                }
+              },
+              "て": {
+                "number": 19,
+                "children": {}
+              },
+              "、": {
+                "number": 20,
+                "children": {}
+              }
+            }
+          },
+          "笑っ": {
+            "number": 23,
+            "children": {
+              "ど": {
+                "number": 22,
+                "children": {
+                  "いく": {
+                    "number": 21,
+                    "children": {}
+                  }
+                }
+              },
+              "て": {
+                "number": 24,
+                "children": {}
+              }
+            }
+          },
+          "蕾": {
+            "number": 25,
+            "children": {
+              "は": {
+                "number": 26,
+                "children": {}
+              }
+            }
+          },
+          "やがて": {
+            "number": 27,
+            "children": {}
+          },
+          "の": {
+            "number": 29,
+            "children": {
+              "でしょう": {
+                "number": 30,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 31,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S2": {
+    "私も一つの花でしょう。": {
+      "花": {
+        "number": 5,
+        "children": {
+          "私": {
+            "number": 0,
+            "children": {
+              "も": {
+                "number": 1,
+                "children": {}
+              }
+            }
+          },
+          "つ": {
+            "number": 3,
+            "children": {
+              "一": {
+                "number": 2,
+                "children": {}
+              },
+              "の": {
+                "number": 4,
+                "children": {}
+              }
+            }
+          },
+          "でしょう": {
+            "number": 6,
+            "children": {}
+          },
+          "。": {
+            "number": 7,
+            "children": {}
+          }
+        }
+      }
+    }
+  }
+}

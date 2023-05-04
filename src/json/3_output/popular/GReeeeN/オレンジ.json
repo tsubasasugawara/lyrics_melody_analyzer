@@ -1,0 +1,627 @@
+{
+  "A1": {
+    "1つ2つと星が出てきた。": {
+      "出": {
+        "number": 7,
+        "children": {
+          "星": {
+            "number": 5,
+            "children": {
+              "つ": {
+                "number": 3,
+                "children": {
+                  "つ": {
+                    "number": 1,
+                    "children": {
+                      "1": {
+                        "number": 0,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "2": {
+                    "number": 2,
+                    "children": {}
+                  },
+                  "と": {
+                    "number": 4,
+                    "children": {}
+                  }
+                }
+              },
+              "が": {
+                "number": 6,
+                "children": {}
+              }
+            }
+          },
+          "て": {
+            "number": 8,
+            "children": {
+              "き": {
+                "number": 9,
+                "children": {}
+              }
+            }
+          },
+          "た": {
+            "number": 10,
+            "children": {}
+          },
+          "。": {
+            "number": 11,
+            "children": {}
+          }
+        }
+      }
+    },
+    "夕焼け、あの日の帰り道で並び歩いた何気ない日と空色同じ色重ねた。": {
+      "重ね": {
+        "number": 29,
+        "children": {
+          "夕焼け": {
+            "number": 12,
+            "children": {
+              "、": {
+                "number": 13,
+                "children": {}
+              }
+            }
+          },
+          "色": {
+            "number": 28,
+            "children": {
+              "日": {
+                "number": 24,
+                "children": {
+                  "歩い": {
+                    "number": 20,
+                    "children": {
+                      "並び": {
+                        "number": 19,
+                        "children": {
+                          "帰り道": {
+                            "number": 17,
+                            "children": {
+                              "日": {
+                                "number": 15,
+                                "children": {
+                                  "あの": {
+                                    "number": 14,
+                                    "children": {}
+                                  },
+                                  "の": {
+                                    "number": 16,
+                                    "children": {}
+                                  }
+                                }
+                              },
+                              "で": {
+                                "number": 18,
+                                "children": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "た": {
+                        "number": 21,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "何気": {
+                    "number": 22,
+                    "children": {
+                      "ない": {
+                        "number": 23,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "と": {
+                    "number": 25,
+                    "children": {}
+                  }
+                }
+              },
+              "空色": {
+                "number": 26,
+                "children": {}
+              },
+              "同じ": {
+                "number": 27,
+                "children": {}
+              }
+            }
+          },
+          "た": {
+            "number": 30,
+            "children": {}
+          },
+          "。": {
+            "number": 31,
+            "children": {}
+          }
+        }
+      }
+    },
+    "君を想って。": {
+      "想っ": {
+        "number": 34,
+        "children": {
+          "君": {
+            "number": 32,
+            "children": {
+              "を": {
+                "number": 33,
+                "children": {}
+              }
+            }
+          },
+          "て": {
+            "number": 35,
+            "children": {}
+          },
+          "。": {
+            "number": 36,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "A2": {
+    "ああわかんないよ何回も君を追いかけ駆け出した 愛なのかい？": {
+      "愛": {
+        "number": 11,
+        "children": {
+          "わかん": {
+            "number": 1,
+            "children": {
+              "ああ": {
+                "number": 0,
+                "children": {}
+              },
+              "ない": {
+                "number": 2,
+                "children": {}
+              },
+              "よ": {
+                "number": 3,
+                "children": {}
+              }
+            }
+          },
+          "駆け出し": {
+            "number": 9,
+            "children": {
+              "追いかけ": {
+                "number": 8,
+                "children": {
+                  "何回": {
+                    "number": 4,
+                    "children": {
+                      "も": {
+                        "number": 5,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "君": {
+                    "number": 6,
+                    "children": {
+                      "を": {
+                        "number": 7,
+                        "children": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "た": {
+                "number": 10,
+                "children": {}
+              }
+            }
+          },
+          "な": {
+            "number": 12,
+            "children": {}
+          },
+          "の": {
+            "number": 13,
+            "children": {}
+          },
+          "か": {
+            "number": 14,
+            "children": {}
+          },
+          "い": {
+            "number": 15,
+            "children": {}
+          },
+          "？": {
+            "number": 16,
+            "children": {}
+          }
+        }
+      }
+    },
+    "恋なのかい？": {
+      "恋": {
+        "number": 17,
+        "children": {
+          "な": {
+            "number": 18,
+            "children": {}
+          },
+          "の": {
+            "number": 19,
+            "children": {}
+          },
+          "か": {
+            "number": 20,
+            "children": {}
+          },
+          "い": {
+            "number": 21,
+            "children": {}
+          },
+          "？": {
+            "number": 22,
+            "children": {}
+          }
+        }
+      }
+    },
+    "どれもわからない感情。": {
+      "感情": {
+        "number": 27,
+        "children": {
+          "わから": {
+            "number": 25,
+            "children": {
+              "どれ": {
+                "number": 23,
+                "children": {
+                  "も": {
+                    "number": 24,
+                    "children": {}
+                  }
+                }
+              },
+              "ない": {
+                "number": 26,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 28,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S1": {
+    "ああわかんないよ。": {
+      "わかん": {
+        "number": 1,
+        "children": {
+          "ああ": {
+            "number": 0,
+            "children": {}
+          },
+          "ない": {
+            "number": 2,
+            "children": {}
+          },
+          "よ": {
+            "number": 3,
+            "children": {}
+          },
+          "。": {
+            "number": 4,
+            "children": {}
+          }
+        }
+      }
+    },
+    "何回も君を追いかけ駆け出した。": {
+      "駆け出し": {
+        "number": 10,
+        "children": {
+          "追いかけ": {
+            "number": 9,
+            "children": {
+              "何回": {
+                "number": 5,
+                "children": {
+                  "も": {
+                    "number": 6,
+                    "children": {}
+                  }
+                }
+              },
+              "君": {
+                "number": 7,
+                "children": {
+                  "を": {
+                    "number": 8,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "た": {
+            "number": 11,
+            "children": {}
+          },
+          "。": {
+            "number": 12,
+            "children": {}
+          }
+        }
+      }
+    },
+    "愛なのかい？": {
+      "愛": {
+        "number": 13,
+        "children": {
+          "な": {
+            "number": 14,
+            "children": {}
+          },
+          "の": {
+            "number": 15,
+            "children": {}
+          },
+          "か": {
+            "number": 16,
+            "children": {}
+          },
+          "い": {
+            "number": 17,
+            "children": {}
+          },
+          "？": {
+            "number": 18,
+            "children": {}
+          }
+        }
+      }
+    },
+    "恋なのかい？": {
+      "恋": {
+        "number": 19,
+        "children": {
+          "な": {
+            "number": 20,
+            "children": {}
+          },
+          "の": {
+            "number": 21,
+            "children": {}
+          },
+          "か": {
+            "number": 22,
+            "children": {}
+          },
+          "い": {
+            "number": 23,
+            "children": {}
+          },
+          "？": {
+            "number": 24,
+            "children": {}
+          }
+        }
+      }
+    },
+    "どれもわからない感情。": {
+      "感情": {
+        "number": 29,
+        "children": {
+          "わから": {
+            "number": 27,
+            "children": {
+              "どれ": {
+                "number": 25,
+                "children": {
+                  "も": {
+                    "number": 26,
+                    "children": {}
+                  }
+                }
+              },
+              "ない": {
+                "number": 28,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 30,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S2": {
+    "ああ止めらんない。": {
+      "止め": {
+        "number": 1,
+        "children": {
+          "ああ": {
+            "number": 0,
+            "children": {}
+          },
+          "らん": {
+            "number": 2,
+            "children": {}
+          },
+          "ない": {
+            "number": 3,
+            "children": {}
+          },
+          "。": {
+            "number": 4,
+            "children": {}
+          }
+        }
+      }
+    },
+    "これなんだい？": {
+      "ん": {
+        "number": 7,
+        "children": {
+          "これ": {
+            "number": 5,
+            "children": {
+              "な": {
+                "number": 6,
+                "children": {}
+              }
+            }
+          },
+          "だ": {
+            "number": 8,
+            "children": {}
+          },
+          "い": {
+            "number": 9,
+            "children": {}
+          },
+          "？": {
+            "number": 10,
+            "children": {}
+          }
+        }
+      }
+    },
+    "焦るこの胸の鼓動が君に聞こえそうで近づけない。": {
+      "近づけ": {
+        "number": 22,
+        "children": {
+          "聞こえ": {
+            "number": 19,
+            "children": {
+              "鼓動": {
+                "number": 15,
+                "children": {
+                  "焦る": {
+                    "number": 11,
+                    "children": {}
+                  },
+                  "この": {
+                    "number": 12,
+                    "children": {}
+                  },
+                  "胸": {
+                    "number": 13,
+                    "children": {
+                      "の": {
+                        "number": 14,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "が": {
+                    "number": 16,
+                    "children": {}
+                  }
+                }
+              },
+              "君": {
+                "number": 17,
+                "children": {
+                  "に": {
+                    "number": 18,
+                    "children": {}
+                  }
+                }
+              },
+              "そう": {
+                "number": 20,
+                "children": {}
+              },
+              "で": {
+                "number": 21,
+                "children": {}
+              }
+            }
+          },
+          "ない": {
+            "number": 23,
+            "children": {}
+          },
+          "。": {
+            "number": 24,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S3": {
+    "どうしようもないくらい君が好きなんだ。": {
+      "好き": {
+        "number": 7,
+        "children": {
+          "ない": {
+            "number": 3,
+            "children": {
+              "しよう": {
+                "number": 1,
+                "children": {
+                  "どう": {
+                    "number": 0,
+                    "children": {}
+                  },
+                  "も": {
+                    "number": 2,
+                    "children": {}
+                  }
+                }
+              },
+              "くらい": {
+                "number": 4,
+                "children": {}
+              }
+            }
+          },
+          "君": {
+            "number": 5,
+            "children": {
+              "が": {
+                "number": 6,
+                "children": {}
+              }
+            }
+          },
+          "な": {
+            "number": 8,
+            "children": {}
+          },
+          "ん": {
+            "number": 9,
+            "children": {
+              "だ": {
+                "number": 10,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 11,
+            "children": {}
+          }
+        }
+      }
+    }
+  }
+}

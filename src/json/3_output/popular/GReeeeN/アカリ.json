@@ -1,0 +1,348 @@
+{
+  "A1": {
+    "この世界が暗闇に飲み込まれても君がいるから。": {
+      "いる": {
+        "number": 11,
+        "children": {
+          "飲み込ま": {
+            "number": 5,
+            "children": {
+              "世界": {
+                "number": 1,
+                "children": {
+                  "この": {
+                    "number": 0,
+                    "children": {}
+                  },
+                  "が": {
+                    "number": 2,
+                    "children": {}
+                  }
+                }
+              },
+              "暗闇": {
+                "number": 3,
+                "children": {
+                  "に": {
+                    "number": 4,
+                    "children": {}
+                  }
+                }
+              },
+              "れ": {
+                "number": 6,
+                "children": {}
+              },
+              "て": {
+                "number": 7,
+                "children": {}
+              },
+              "も": {
+                "number": 8,
+                "children": {}
+              }
+            }
+          },
+          "君": {
+            "number": 9,
+            "children": {
+              "が": {
+                "number": 10,
+                "children": {}
+              }
+            }
+          },
+          "から": {
+            "number": 12,
+            "children": {}
+          },
+          "。": {
+            "number": 13,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S1": {
+    "Don't cry. もう泣かなくていい。": {
+      "いい": {
+        "number": 7,
+        "children": {
+          "cry": {
+            "number": 1,
+            "children": {
+              "Don't": {
+                "number": 0,
+                "children": {}
+              },
+              ".": {
+                "number": 2,
+                "children": {}
+              }
+            }
+          },
+          "泣か": {
+            "number": 4,
+            "children": {
+              "もう": {
+                "number": 3,
+                "children": {}
+              },
+              "なく": {
+                "number": 5,
+                "children": {}
+              },
+              "て": {
+                "number": 6,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 8,
+            "children": {}
+          }
+        }
+      }
+    },
+    "毎回君に救われてきた。": {
+      "救わ": {
+        "number": 12,
+        "children": {
+          "毎回": {
+            "number": 9,
+            "children": {}
+          },
+          "君": {
+            "number": 10,
+            "children": {
+              "に": {
+                "number": 11,
+                "children": {}
+              }
+            }
+          },
+          "れ": {
+            "number": 13,
+            "children": {}
+          },
+          "て": {
+            "number": 14,
+            "children": {
+              "き": {
+                "number": 15,
+                "children": {}
+              }
+            }
+          },
+          "た": {
+            "number": 16,
+            "children": {}
+          },
+          "。": {
+            "number": 17,
+            "children": {}
+          }
+        }
+      }
+    },
+    "何百回永久に永久に君は僕の世界守るヒーロー。": {
+      "ヒーロー": {
+        "number": 30,
+        "children": {
+          "守る": {
+            "number": 29,
+            "children": {
+              "回": {
+                "number": 19,
+                "children": {
+                  "何百": {
+                    "number": 18,
+                    "children": {}
+                  }
+                }
+              },
+              "永久": {
+                "number": 22,
+                "children": {
+                  "永久": {
+                    "number": 20,
+                    "children": {
+                      "に": {
+                        "number": 21,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "に": {
+                    "number": 23,
+                    "children": {}
+                  }
+                }
+              },
+              "君": {
+                "number": 24,
+                "children": {
+                  "は": {
+                    "number": 25,
+                    "children": {}
+                  }
+                }
+              },
+              "世界": {
+                "number": 28,
+                "children": {
+                  "僕": {
+                    "number": 26,
+                    "children": {
+                      "の": {
+                        "number": 27,
+                        "children": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "。": {
+            "number": 31,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S2": {
+    "Yes no 鐘ならし勇気出して Don't stop 次々に進めよ。": {
+      "進めよ": {
+        "number": 12,
+        "children": {
+          "stop": {
+            "number": 9,
+            "children": {
+              "鐘": {
+                "number": 2,
+                "children": {
+                  "no": {
+                    "number": 1,
+                    "children": {
+                      "Yes": {
+                        "number": 0,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "なら": {
+                    "number": 3,
+                    "children": {}
+                  },
+                  "し": {
+                    "number": 4,
+                    "children": {}
+                  }
+                }
+              },
+              "出し": {
+                "number": 6,
+                "children": {
+                  "勇気": {
+                    "number": 5,
+                    "children": {}
+                  },
+                  "て": {
+                    "number": 7,
+                    "children": {}
+                  }
+                }
+              },
+              "Don't": {
+                "number": 8,
+                "children": {}
+              }
+            }
+          },
+          "次々": {
+            "number": 10,
+            "children": {
+              "に": {
+                "number": 11,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 13,
+            "children": {}
+          }
+        }
+      }
+    },
+    "今日だって過ぎ去って Everything's gonna be alright, yeah!": {
+      "yeah": {
+        "number": 26,
+        "children": {
+          "過ぎ去っ": {
+            "number": 17,
+            "children": {
+              "今日": {
+                "number": 14,
+                "children": {
+                  "だ": {
+                    "number": 15,
+                    "children": {}
+                  },
+                  "って": {
+                    "number": 16,
+                    "children": {}
+                  }
+                }
+              },
+              "て": {
+                "number": 18,
+                "children": {}
+              }
+            }
+          },
+          "alright": {
+            "number": 24,
+            "children": {
+              "be": {
+                "number": 23,
+                "children": {
+                  "gonna": {
+                    "number": 22,
+                    "children": {
+                      "s": {
+                        "number": 21,
+                        "children": {
+                          "Everything": {
+                            "number": 19,
+                            "children": {}
+                          },
+                          "'": {
+                            "number": 20,
+                            "children": {}
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              ",": {
+                "number": 25,
+                "children": {}
+              }
+            }
+          },
+          "!": {
+            "number": 27,
+            "children": {}
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,357 @@
+{
+  "A1": {
+    "『君を探してた。』": {
+      "探し": {
+        "number": 3,
+        "children": {
+          "『": {
+            "number": 0,
+            "children": {}
+          },
+          "君": {
+            "number": 1,
+            "children": {
+              "を": {
+                "number": 2,
+                "children": {}
+              }
+            }
+          },
+          "て": {
+            "number": 4,
+            "children": {}
+          },
+          "た": {
+            "number": 5,
+            "children": {}
+          },
+          "。": {
+            "number": 6,
+            "children": {}
+          },
+          "』": {
+            "number": 7,
+            "children": {}
+          }
+        }
+      }
+    },
+    "初めて会った日はうまく話せないままで。": {
+      "まま": {
+        "number": 16,
+        "children": {
+          "話せ": {
+            "number": 14,
+            "children": {
+              "日": {
+                "number": 11,
+                "children": {
+                  "会っ": {
+                    "number": 9,
+                    "children": {
+                      "初めて": {
+                        "number": 8,
+                        "children": {}
+                      },
+                      "た": {
+                        "number": 10,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "は": {
+                    "number": 12,
+                    "children": {}
+                  }
+                }
+              },
+              "うまく": {
+                "number": 13,
+                "children": {}
+              },
+              "ない": {
+                "number": 15,
+                "children": {}
+              }
+            }
+          },
+          "で": {
+            "number": 17,
+            "children": {}
+          },
+          "。": {
+            "number": 18,
+            "children": {}
+          }
+        }
+      }
+    },
+    "真面目な顔した君が下向いた。": {
+      "下向い": {
+        "number": 26,
+        "children": {
+          "君": {
+            "number": 24,
+            "children": {
+              "顔": {
+                "number": 21,
+                "children": {
+                  "真面目": {
+                    "number": 19,
+                    "children": {
+                      "な": {
+                        "number": 20,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "し": {
+                    "number": 22,
+                    "children": {}
+                  },
+                  "た": {
+                    "number": 23,
+                    "children": {}
+                  }
+                }
+              },
+              "が": {
+                "number": 25,
+                "children": {}
+              }
+            }
+          },
+          "た": {
+            "number": 27,
+            "children": {}
+          },
+          "。": {
+            "number": 28,
+            "children": {}
+          }
+        }
+      }
+    },
+    "眺めて戸惑った。": {
+      "戸惑っ": {
+        "number": 31,
+        "children": {
+          "眺め": {
+            "number": 29,
+            "children": {
+              "て": {
+                "number": 30,
+                "children": {}
+              }
+            }
+          },
+          "た": {
+            "number": 32,
+            "children": {}
+          },
+          "。": {
+            "number": 33,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S1": {
+    "大好きな君とただ笑って何気ない日々の中、伝えきれない思いはセレナーデ。": {
+      "セレナーデ": {
+        "number": 18,
+        "children": {
+          "中": {
+            "number": 11,
+            "children": {
+              "日々": {
+                "number": 9,
+                "children": {
+                  "笑っ": {
+                    "number": 5,
+                    "children": {
+                      "君": {
+                        "number": 2,
+                        "children": {
+                          "大好き": {
+                            "number": 0,
+                            "children": {
+                              "な": {
+                                "number": 1,
+                                "children": {}
+                              }
+                            }
+                          },
+                          "と": {
+                            "number": 3,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "ただ": {
+                        "number": 4,
+                        "children": {}
+                      },
+                      "て": {
+                        "number": 6,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "何気": {
+                    "number": 7,
+                    "children": {
+                      "ない": {
+                        "number": 8,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "の": {
+                    "number": 10,
+                    "children": {}
+                  }
+                }
+              },
+              "、": {
+                "number": 12,
+                "children": {}
+              }
+            }
+          },
+          "思い": {
+            "number": 16,
+            "children": {
+              "伝え": {
+                "number": 13,
+                "children": {
+                  "きれ": {
+                    "number": 14,
+                    "children": {}
+                  },
+                  "ない": {
+                    "number": 15,
+                    "children": {}
+                  }
+                }
+              },
+              "は": {
+                "number": 17,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 19,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S2": {
+    "淋しい夜の空にきらりと星がひとつ。": {
+      "つ": {
+        "number": 10,
+        "children": {
+          "空": {
+            "number": 3,
+            "children": {
+              "夜": {
+                "number": 1,
+                "children": {
+                  "淋しい": {
+                    "number": 0,
+                    "children": {}
+                  },
+                  "の": {
+                    "number": 2,
+                    "children": {}
+                  }
+                }
+              },
+              "に": {
+                "number": 4,
+                "children": {}
+              }
+            }
+          },
+          "きらり": {
+            "number": 5,
+            "children": {
+              "と": {
+                "number": 6,
+                "children": {}
+              }
+            }
+          },
+          "星": {
+            "number": 7,
+            "children": {
+              "が": {
+                "number": 8,
+                "children": {}
+              }
+            }
+          },
+          "ひと": {
+            "number": 9,
+            "children": {}
+          },
+          "。": {
+            "number": 11,
+            "children": {}
+          }
+        }
+      }
+    },
+    "君も見ていたらおしゃべりをしよう。": {
+      "しよう": {
+        "number": 20,
+        "children": {
+          "見": {
+            "number": 14,
+            "children": {
+              "君": {
+                "number": 12,
+                "children": {
+                  "も": {
+                    "number": 13,
+                    "children": {}
+                  }
+                }
+              },
+              "て": {
+                "number": 15,
+                "children": {
+                  "い": {
+                    "number": 16,
+                    "children": {}
+                  }
+                }
+              },
+              "たら": {
+                "number": 17,
+                "children": {}
+              }
+            }
+          },
+          "おしゃべり": {
+            "number": 18,
+            "children": {
+              "を": {
+                "number": 19,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 21,
+            "children": {}
+          }
+        }
+      }
+    }
+  }
+}

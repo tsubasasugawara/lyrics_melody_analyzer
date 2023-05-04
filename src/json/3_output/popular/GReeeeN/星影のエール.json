@@ -1,0 +1,316 @@
+{
+  "A1": {
+    "泣いて生まれて響く命。": {
+      "命": {
+        "number": 5,
+        "children": {
+          "響く": {
+            "number": 4,
+            "children": {
+              "生まれ": {
+                "number": 2,
+                "children": {
+                  "泣い": {
+                    "number": 0,
+                    "children": {
+                      "て": {
+                        "number": 1,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "て": {
+                    "number": 3,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "。": {
+            "number": 6,
+            "children": {}
+          }
+        }
+      }
+    },
+    "きっと嬉しくて渡っているんだ。": {
+      "渡っ": {
+        "number": 10,
+        "children": {
+          "きっと": {
+            "number": 7,
+            "children": {}
+          },
+          "嬉しく": {
+            "number": 8,
+            "children": {
+              "て": {
+                "number": 9,
+                "children": {}
+              }
+            }
+          },
+          "て": {
+            "number": 11,
+            "children": {
+              "いる": {
+                "number": 12,
+                "children": {}
+              }
+            }
+          },
+          "ん": {
+            "number": 13,
+            "children": {
+              "だ": {
+                "number": 14,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 15,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "A2": {
+    "僕らはきっと出会うでしょう。": {
+      "出会う": {
+        "number": 4,
+        "children": {
+          "ら": {
+            "number": 1,
+            "children": {
+              "僕": {
+                "number": 0,
+                "children": {}
+              },
+              "は": {
+                "number": 2,
+                "children": {}
+              }
+            }
+          },
+          "きっと": {
+            "number": 3,
+            "children": {}
+          },
+          "でしょう": {
+            "number": 5,
+            "children": {}
+          },
+          "。": {
+            "number": 6,
+            "children": {}
+          }
+        }
+      }
+    },
+    "手を引き背を押し出逢うでしょう。": {
+      "出逢う": {
+        "number": 13,
+        "children": {
+          "押し": {
+            "number": 12,
+            "children": {
+              "引き": {
+                "number": 9,
+                "children": {
+                  "手": {
+                    "number": 7,
+                    "children": {
+                      "を": {
+                        "number": 8,
+                        "children": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "背": {
+                "number": 10,
+                "children": {
+                  "を": {
+                    "number": 11,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "でしょう": {
+            "number": 14,
+            "children": {}
+          },
+          "。": {
+            "number": 15,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S1": {
+    "星の見えない日々を越えるたびに互い照らすその意味を知るのでしょう。": {
+      "知る": {
+        "number": 14,
+        "children": {
+          "意味": {
+            "number": 12,
+            "children": {
+              "照らす": {
+                "number": 10,
+                "children": {
+                  "たび": {
+                    "number": 7,
+                    "children": {
+                      "越える": {
+                        "number": 6,
+                        "children": {
+                          "日々": {
+                            "number": 4,
+                            "children": {
+                              "見え": {
+                                "number": 2,
+                                "children": {
+                                  "星": {
+                                    "number": 0,
+                                    "children": {
+                                      "の": {
+                                        "number": 1,
+                                        "children": {}
+                                      }
+                                    }
+                                  },
+                                  "ない": {
+                                    "number": 3,
+                                    "children": {}
+                                  }
+                                }
+                              },
+                              "を": {
+                                "number": 5,
+                                "children": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "に": {
+                        "number": 8,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "互い": {
+                    "number": 9,
+                    "children": {}
+                  }
+                }
+              },
+              "その": {
+                "number": 11,
+                "children": {}
+              },
+              "を": {
+                "number": 13,
+                "children": {}
+              }
+            }
+          },
+          "の": {
+            "number": 15,
+            "children": {
+              "でしょう": {
+                "number": 16,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 17,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S2": {
+    "愛する人よ。": {
+      "人": {
+        "number": 1,
+        "children": {
+          "愛する": {
+            "number": 0,
+            "children": {}
+          },
+          "よ": {
+            "number": 2,
+            "children": {}
+          },
+          "。": {
+            "number": 3,
+            "children": {}
+          }
+        }
+      }
+    },
+    "親愛なる友よ。": {
+      "友": {
+        "number": 6,
+        "children": {
+          "親愛": {
+            "number": 4,
+            "children": {
+              "なる": {
+                "number": 5,
+                "children": {}
+              }
+            }
+          },
+          "よ": {
+            "number": 7,
+            "children": {}
+          },
+          "。": {
+            "number": 8,
+            "children": {}
+          }
+        }
+      }
+    },
+    "遠くまで響くはエール。": {
+      "エール": {
+        "number": 13,
+        "children": {
+          "響く": {
+            "number": 11,
+            "children": {
+              "遠く": {
+                "number": 9,
+                "children": {
+                  "まで": {
+                    "number": 10,
+                    "children": {}
+                  }
+                }
+              },
+              "は": {
+                "number": 12,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 14,
+            "children": {}
+          }
+        }
+      }
+    }
+  }
+}

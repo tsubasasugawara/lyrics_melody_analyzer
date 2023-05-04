@@ -1,0 +1,455 @@
+{
+  "A1": {
+    "さぁお祭り騒ぎの始まりだ。": {
+      "始まり": {
+        "number": 3,
+        "children": {
+          "さぁ": {
+            "number": 0,
+            "children": {}
+          },
+          "お祭り騒ぎ": {
+            "number": 1,
+            "children": {
+              "の": {
+                "number": 2,
+                "children": {}
+              }
+            }
+          },
+          "だ": {
+            "number": 4,
+            "children": {}
+          },
+          "。": {
+            "number": 5,
+            "children": {}
+          }
+        }
+      }
+    },
+    "取り外せ今すぐサイレンサー。": {
+      "サイレンサー": {
+        "number": 9,
+        "children": {
+          "取り外せ": {
+            "number": 6,
+            "children": {}
+          },
+          "すぐ": {
+            "number": 8,
+            "children": {
+              "今": {
+                "number": 7,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 10,
+            "children": {}
+          }
+        }
+      }
+    },
+    "HIDの次はEですか？": {
+      "E": {
+        "number": 15,
+        "children": {
+          "次": {
+            "number": 13,
+            "children": {
+              "HID": {
+                "number": 11,
+                "children": {
+                  "の": {
+                    "number": 12,
+                    "children": {}
+                  }
+                }
+              },
+              "は": {
+                "number": 14,
+                "children": {}
+              }
+            }
+          },
+          "です": {
+            "number": 16,
+            "children": {}
+          },
+          "か": {
+            "number": 17,
+            "children": {}
+          },
+          "？": {
+            "number": 18,
+            "children": {}
+          }
+        }
+      }
+    },
+    "鼓膜突き刺す言葉言えるか！！": {
+      "言える": {
+        "number": 22,
+        "children": {
+          "言葉": {
+            "number": 21,
+            "children": {
+              "突き刺す": {
+                "number": 20,
+                "children": {
+                  "鼓膜": {
+                    "number": 19,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "か": {
+            "number": 23,
+            "children": {}
+          },
+          "！": {
+            "number": 25,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "A2": {
+    "Hey": {
+      "Hey": {
+        "number": 0,
+        "children": {}
+      }
+    },
+    "バトンタッチしたぜ。": {
+      "バトンタッチ": {
+        "number": 1,
+        "children": {
+          "し": {
+            "number": 2,
+            "children": {}
+          },
+          "た": {
+            "number": 3,
+            "children": {}
+          },
+          "ぜ": {
+            "number": 4,
+            "children": {}
+          },
+          "。": {
+            "number": 5,
+            "children": {}
+          }
+        }
+      }
+    },
+    "音と言葉足し算していく。": {
+      "足し算": {
+        "number": 9,
+        "children": {
+          "言葉": {
+            "number": 8,
+            "children": {
+              "音": {
+                "number": 6,
+                "children": {
+                  "と": {
+                    "number": 7,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "し": {
+            "number": 10,
+            "children": {}
+          },
+          "て": {
+            "number": 11,
+            "children": {
+              "いく": {
+                "number": 12,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 13,
+            "children": {}
+          }
+        }
+      }
+    },
+    "8765431": {
+      "8765431": {
+        "number": 14,
+        "children": {}
+      }
+    },
+    "集まる言霊のsign。": {
+      "sign": {
+        "number": 18,
+        "children": {
+          "言霊": {
+            "number": 16,
+            "children": {
+              "集まる": {
+                "number": 15,
+                "children": {}
+              },
+              "の": {
+                "number": 17,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 19,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S1": {
+    "体が欲しがるテンション。": {
+      "テンション": {
+        "number": 4,
+        "children": {
+          "欲し": {
+            "number": 2,
+            "children": {
+              "体": {
+                "number": 0,
+                "children": {
+                  "が": {
+                    "number": 1,
+                    "children": {}
+                  }
+                }
+              },
+              "がる": {
+                "number": 3,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 5,
+            "children": {}
+          }
+        }
+      }
+    },
+    "もっと頂戴潤せこの渇きを。": {
+      "渇き": {
+        "number": 10,
+        "children": {
+          "潤せ": {
+            "number": 8,
+            "children": {
+              "頂戴": {
+                "number": 7,
+                "children": {
+                  "もっと": {
+                    "number": 6,
+                    "children": {}
+                  }
+                }
+              }
+            }
+          },
+          "この": {
+            "number": 9,
+            "children": {}
+          },
+          "を": {
+            "number": 11,
+            "children": {}
+          },
+          "。": {
+            "number": 12,
+            "children": {}
+          }
+        }
+      }
+    },
+    "愛も恋も仕事も乗り越えていける気がする。": {
+      "する": {
+        "number": 24,
+        "children": {
+          "気": {
+            "number": 22,
+            "children": {
+              "乗り越え": {
+                "number": 19,
+                "children": {
+                  "仕事": {
+                    "number": 17,
+                    "children": {
+                      "恋": {
+                        "number": 15,
+                        "children": {
+                          "愛": {
+                            "number": 13,
+                            "children": {
+                              "も": {
+                                "number": 14,
+                                "children": {}
+                              }
+                            }
+                          },
+                          "も": {
+                            "number": 16,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "も": {
+                        "number": 18,
+                        "children": {}
+                      }
+                    }
+                  },
+                  "て": {
+                    "number": 20,
+                    "children": {
+                      "いける": {
+                        "number": 21,
+                        "children": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "が": {
+                "number": 23,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 25,
+            "children": {}
+          }
+        }
+      }
+    }
+  },
+  "S2": {
+    "願いは叶えるんだ。": {
+      "叶える": {
+        "number": 2,
+        "children": {
+          "願い": {
+            "number": 0,
+            "children": {
+              "は": {
+                "number": 1,
+                "children": {}
+              }
+            }
+          },
+          "ん": {
+            "number": 3,
+            "children": {
+              "だ": {
+                "number": 4,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 5,
+            "children": {}
+          }
+        }
+      }
+    },
+    "世界は自分で決めんだ。": {
+      "決め": {
+        "number": 10,
+        "children": {
+          "世界": {
+            "number": 6,
+            "children": {
+              "は": {
+                "number": 7,
+                "children": {}
+              }
+            }
+          },
+          "自分": {
+            "number": 8,
+            "children": {
+              "で": {
+                "number": 9,
+                "children": {}
+              }
+            }
+          },
+          "ん": {
+            "number": 11,
+            "children": {
+              "だ": {
+                "number": 12,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 13,
+            "children": {}
+          }
+        }
+      }
+    },
+    "弾けて踊り明かそう。": {
+      "踊り明かそう": {
+        "number": 16,
+        "children": {
+          "弾け": {
+            "number": 14,
+            "children": {
+              "て": {
+                "number": 15,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 17,
+            "children": {}
+          }
+        }
+      }
+    },
+    "ハートがKARAKARA。": {
+      "KARAKARA": {
+        "number": 20,
+        "children": {
+          "ハート": {
+            "number": 18,
+            "children": {
+              "が": {
+                "number": 19,
+                "children": {}
+              }
+            }
+          },
+          "。": {
+            "number": 21,
+            "children": {}
+          }
+        }
+      }
+    }
+  }
+}
