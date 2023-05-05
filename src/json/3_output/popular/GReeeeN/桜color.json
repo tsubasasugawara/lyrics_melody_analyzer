@@ -3,43 +3,63 @@
     "『桜の花が咲きました。』": {
       "咲き": {
         "number": 5,
+        "child_count": 5,
+        "descendant_count": 9,
         "children": {
           "花": {
             "number": 3,
+            "child_count": 2,
+            "descendant_count": 4,
             "children": {
               "桜": {
                 "number": 1,
+                "child_count": 2,
+                "descendant_count": 2,
                 "children": {
                   "『": {
                     "number": 0,
+                    "child_count": 0,
+                    "descendant_count": 0,
                     "children": {}
                   },
                   "の": {
                     "number": 2,
+                    "child_count": 0,
+                    "descendant_count": 0,
                     "children": {}
                   }
                 }
               },
               "が": {
                 "number": 4,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "まし": {
             "number": 6,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "た": {
             "number": 7,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "。": {
             "number": 8,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "』": {
             "number": 9,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           }
         }
@@ -48,34 +68,50 @@
     "この街でも同じ色で。": {
       "色": {
         "number": 15,
+        "child_count": 4,
+        "descendant_count": 7,
         "children": {
           "街": {
             "number": 11,
+            "child_count": 3,
+            "descendant_count": 3,
             "children": {
               "この": {
                 "number": 10,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               },
               "で": {
                 "number": 12,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               },
               "も": {
                 "number": 13,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "同じ": {
             "number": 14,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "で": {
             "number": 16,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "。": {
             "number": 17,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           }
         }
@@ -86,30 +122,44 @@
     "まだ見慣れない景色の中": {
       "中": {
         "number": 6,
+        "child_count": 2,
+        "descendant_count": 6,
         "children": {
           "見": {
             "number": 1,
+            "child_count": 1,
+            "descendant_count": 1,
             "children": {
               "まだ": {
                 "number": 0,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "景色": {
             "number": 4,
+            "child_count": 2,
+            "descendant_count": 3,
             "children": {
               "慣れ": {
                 "number": 2,
+                "child_count": 1,
+                "descendant_count": 1,
                 "children": {
                   "ない": {
                     "number": 3,
+                    "child_count": 0,
+                    "descendant_count": 0,
                     "children": {}
                   }
                 }
               },
               "の": {
                 "number": 5,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
@@ -120,35 +170,51 @@
     "淋しさこらえ笑ってみるよ。": {
       "笑っ": {
         "number": 10,
+        "child_count": 4,
+        "descendant_count": 7,
         "children": {
           "こらえ": {
             "number": 9,
+            "child_count": 2,
+            "descendant_count": 2,
             "children": {
               "淋し": {
                 "number": 7,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               },
               "さ": {
                 "number": 8,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "て": {
             "number": 11,
+            "child_count": 1,
+            "descendant_count": 1,
             "children": {
               "みる": {
                 "number": 12,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "よ": {
             "number": 13,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "。": {
             "number": 14,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           }
         }
@@ -159,9 +225,13 @@
     "桜color": {
       "color": {
         "number": 1,
+        "child_count": 1,
+        "descendant_count": 1,
         "children": {
           "桜": {
             "number": 0,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           }
         }
@@ -170,25 +240,37 @@
     "『今はさよなら』。": {
       "今": {
         "number": 3,
+        "child_count": 5,
+        "descendant_count": 5,
         "children": {
           "『": {
             "number": 2,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "は": {
             "number": 4,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "さよなら": {
             "number": 5,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "』": {
             "number": 6,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "。": {
             "number": 7,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           }
         }
@@ -197,30 +279,44 @@
     "あの日から追い続けてる。": {
       "追い": {
         "number": 11,
+        "child_count": 4,
+        "descendant_count": 6,
         "children": {
           "日": {
             "number": 9,
+            "child_count": 2,
+            "descendant_count": 2,
             "children": {
               "あの": {
                 "number": 8,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               },
               "から": {
                 "number": 10,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "続け": {
             "number": 12,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "てる": {
             "number": 13,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "。": {
             "number": 14,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           }
         }
@@ -231,35 +327,51 @@
     "咲くのならばこの街で。": {
       "街": {
         "number": 5,
+        "child_count": 4,
+        "descendant_count": 7,
         "children": {
           "咲く": {
             "number": 0,
+            "child_count": 2,
+            "descendant_count": 3,
             "children": {
               "の": {
                 "number": 1,
+                "child_count": 1,
+                "descendant_count": 1,
                 "children": {
                   "なら": {
                     "number": 2,
+                    "child_count": 0,
+                    "descendant_count": 0,
                     "children": {}
                   }
                 }
               },
               "ば": {
                 "number": 3,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "この": {
             "number": 4,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "で": {
             "number": 6,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "。": {
             "number": 7,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           }
         }
@@ -268,31 +380,45 @@
     "そう決めて見上げた桜。": {
       "桜": {
         "number": 13,
+        "child_count": 2,
+        "descendant_count": 6,
         "children": {
           "見上げ": {
             "number": 11,
+            "child_count": 2,
+            "descendant_count": 4,
             "children": {
               "決め": {
                 "number": 9,
+                "child_count": 2,
+                "descendant_count": 2,
                 "children": {
                   "そう": {
                     "number": 8,
+                    "child_count": 0,
+                    "descendant_count": 0,
                     "children": {}
                   },
                   "て": {
                     "number": 10,
+                    "child_count": 0,
+                    "descendant_count": 0,
                     "children": {}
                   }
                 }
               },
               "た": {
                 "number": 12,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "。": {
             "number": 14,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           }
         }

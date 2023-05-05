@@ -41,9 +41,16 @@ def visualize(song, song_name):
 
 # 再帰的に木を作成する
 def recur_tree(token):
-    node = {"number": token.i, "children": {}}
+    node = {"number": token.i, "child_count": len(list(token.children)), "descendant_count": 0, "children": {}}
+    descendant_count = 0
+
     for child in token.children:
         node["children"][child.text] = recur_tree(child)
+        descendant_count += 1
+        descendant_count += node["children"][child.text]["descendant_count"]
+
+    node["descendant_count"] = descendant_count
+
     return node
 
 # 文法構造をもとに、構文木のJSONファイルを作成する

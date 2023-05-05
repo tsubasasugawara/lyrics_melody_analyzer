@@ -3,35 +3,51 @@
     "「ねぇ、大好きな君へ」": {
       "君": {
         "number": 5,
+        "child_count": 4,
+        "descendant_count": 7,
         "children": {
           "ねぇ": {
             "number": 1,
+            "child_count": 2,
+            "descendant_count": 2,
             "children": {
               "「": {
                 "number": 0,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               },
               "、": {
                 "number": 2,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "大好き": {
             "number": 3,
+            "child_count": 1,
+            "descendant_count": 1,
             "children": {
               "な": {
                 "number": 4,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "へ": {
             "number": 6,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "」": {
             "number": 7,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           }
         }
@@ -40,35 +56,51 @@
     "笑わないで聞いていくれ。": {
       "聞い": {
         "number": 11,
+        "child_count": 4,
+        "descendant_count": 7,
         "children": {
           "笑わ": {
             "number": 8,
+            "child_count": 2,
+            "descendant_count": 2,
             "children": {
               "ない": {
                 "number": 9,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               },
               "で": {
                 "number": 10,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "て": {
             "number": 12,
+            "child_count": 1,
+            "descendant_count": 1,
             "children": {
               "い": {
                 "number": 13,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "くれ": {
             "number": 14,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "。": {
             "number": 15,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           }
         }
@@ -77,42 +109,62 @@
     "「愛してる」だなんてクサいけどね。": {
       "クサい": {
         "number": 22,
+        "child_count": 4,
+        "descendant_count": 9,
         "children": {
           "愛し": {
             "number": 17,
+            "child_count": 5,
+            "descendant_count": 5,
             "children": {
               "「": {
                 "number": 16,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               },
               "てる": {
                 "number": 18,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               },
               "」": {
                 "number": 19,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               },
               "だ": {
                 "number": 20,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               },
               "なんて": {
                 "number": 21,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "けど": {
             "number": 23,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "ね": {
             "number": 24,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "。": {
             "number": 25,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           }
         }
@@ -123,48 +175,70 @@
     "だけどこの言葉以外伝えることができない。": {
       "伝える": {
         "number": 5,
+        "child_count": 5,
+        "descendant_count": 10,
         "children": {
           "だ": {
             "number": 0,
+            "child_count": 1,
+            "descendant_count": 1,
             "children": {
               "けど": {
                 "number": 1,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "以外": {
             "number": 4,
+            "child_count": 2,
+            "descendant_count": 2,
             "children": {
               "この": {
                 "number": 2,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               },
               "言葉": {
                 "number": 3,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "こと": {
             "number": 6,
+            "child_count": 2,
+            "descendant_count": 2,
             "children": {
               "が": {
                 "number": 7,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               },
               "でき": {
                 "number": 8,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "ない": {
             "number": 9,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "。": {
             "number": 10,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           }
         }
@@ -173,13 +247,19 @@
     "ほらね!": {
       "ほら": {
         "number": 11,
+        "child_count": 2,
+        "descendant_count": 2,
         "children": {
           "ね": {
             "number": 12,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "!": {
             "number": 13,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           }
         }
@@ -188,43 +268,63 @@
     "またバカにして笑ったよね。": {
       "笑っ": {
         "number": 19,
+        "child_count": 6,
+        "descendant_count": 9,
         "children": {
           "また": {
             "number": 14,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "し": {
             "number": 17,
+            "child_count": 2,
+            "descendant_count": 3,
             "children": {
               "バカ": {
                 "number": 15,
+                "child_count": 1,
+                "descendant_count": 1,
                 "children": {
                   "に": {
                     "number": 16,
+                    "child_count": 0,
+                    "descendant_count": 0,
                     "children": {}
                   }
                 }
               },
               "て": {
                 "number": 18,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "た": {
             "number": 20,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "よ": {
             "number": 21,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "ね": {
             "number": 22,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "。": {
             "number": 23,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           }
         }
@@ -235,43 +335,67 @@
     "ただ泣いて笑って過ごす日々に隣に立って居れることで、僕が生きる意味になって君に捧ぐこの愛の唄。": {
       "唄": {
         "number": 29,
+        "child_count": 4,
+        "descendant_count": 30,
         "children": {
           "ただ": {
             "number": 0,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "捧ぐ": {
             "number": 25,
+            "child_count": 2,
+            "descendant_count": 24,
             "children": {
               "なっ": {
                 "number": 21,
+                "child_count": 3,
+                "descendant_count": 21,
                 "children": {
                   "こと": {
                     "number": 13,
+                    "child_count": 3,
+                    "descendant_count": 14,
                     "children": {
                       "居れる": {
                         "number": 12,
+                        "child_count": 2,
+                        "descendant_count": 11,
                         "children": {
                           "日々": {
                             "number": 6,
+                            "child_count": 2,
+                            "descendant_count": 6,
                             "children": {
                               "過ごす": {
                                 "number": 5,
+                                "child_count": 1,
+                                "descendant_count": 4,
                                 "children": {
                                   "笑っ": {
                                     "number": 3,
+                                    "child_count": 2,
+                                    "descendant_count": 3,
                                     "children": {
                                       "泣い": {
                                         "number": 1,
+                                        "child_count": 1,
+                                        "descendant_count": 1,
                                         "children": {
                                           "て": {
                                             "number": 2,
+                                            "child_count": 0,
+                                            "descendant_count": 0,
                                             "children": {}
                                           }
                                         }
                                       },
                                       "て": {
                                         "number": 4,
+                                        "child_count": 0,
+                                        "descendant_count": 0,
                                         "children": {}
                                       }
                                     }
@@ -280,24 +404,34 @@
                               },
                               "に": {
                                 "number": 7,
+                                "child_count": 0,
+                                "descendant_count": 0,
                                 "children": {}
                               }
                             }
                           },
                           "立っ": {
                             "number": 10,
+                            "child_count": 2,
+                            "descendant_count": 3,
                             "children": {
                               "隣": {
                                 "number": 8,
+                                "child_count": 1,
+                                "descendant_count": 1,
                                 "children": {
                                   "に": {
                                     "number": 9,
+                                    "child_count": 0,
+                                    "descendant_count": 0,
                                     "children": {}
                                   }
                                 }
                               },
                               "て": {
                                 "number": 11,
+                                "child_count": 0,
+                                "descendant_count": 0,
                                 "children": {}
                               }
                             }
@@ -306,25 +440,37 @@
                       },
                       "で": {
                         "number": 14,
+                        "child_count": 0,
+                        "descendant_count": 0,
                         "children": {}
                       },
                       "、": {
                         "number": 15,
+                        "child_count": 0,
+                        "descendant_count": 0,
                         "children": {}
                       }
                     }
                   },
                   "意味": {
                     "number": 19,
+                    "child_count": 2,
+                    "descendant_count": 4,
                     "children": {
                       "生きる": {
                         "number": 18,
+                        "child_count": 1,
+                        "descendant_count": 2,
                         "children": {
                           "僕": {
                             "number": 16,
+                            "child_count": 1,
+                            "descendant_count": 1,
                             "children": {
                               "が": {
                                 "number": 17,
+                                "child_count": 0,
+                                "descendant_count": 0,
                                 "children": {}
                               }
                             }
@@ -333,21 +479,29 @@
                       },
                       "に": {
                         "number": 20,
+                        "child_count": 0,
+                        "descendant_count": 0,
                         "children": {}
                       }
                     }
                   },
                   "て": {
                     "number": 22,
+                    "child_count": 0,
+                    "descendant_count": 0,
                     "children": {}
                   }
                 }
               },
               "君": {
                 "number": 23,
+                "child_count": 1,
+                "descendant_count": 1,
                 "children": {
                   "に": {
                     "number": 24,
+                    "child_count": 0,
+                    "descendant_count": 0,
                     "children": {}
                   }
                 }
@@ -356,19 +510,27 @@
           },
           "愛": {
             "number": 27,
+            "child_count": 2,
+            "descendant_count": 2,
             "children": {
               "この": {
                 "number": 26,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               },
               "の": {
                 "number": 28,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "。": {
             "number": 30,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           }
         }
@@ -379,43 +541,67 @@
     "ただ泣いて笑って過ごす日々に隣に立って入れることで、僕が生きるに意味になって君に捧ぐこの愛の唄。": {
       "唄": {
         "number": 30,
+        "child_count": 4,
+        "descendant_count": 31,
         "children": {
           "ただ": {
             "number": 0,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           },
           "捧ぐ": {
             "number": 26,
+            "child_count": 2,
+            "descendant_count": 25,
             "children": {
               "なっ": {
                 "number": 22,
+                "child_count": 4,
+                "descendant_count": 22,
                 "children": {
                   "こと": {
                     "number": 13,
+                    "child_count": 3,
+                    "descendant_count": 14,
                     "children": {
                       "入れる": {
                         "number": 12,
+                        "child_count": 2,
+                        "descendant_count": 11,
                         "children": {
                           "日々": {
                             "number": 6,
+                            "child_count": 2,
+                            "descendant_count": 6,
                             "children": {
                               "過ごす": {
                                 "number": 5,
+                                "child_count": 1,
+                                "descendant_count": 4,
                                 "children": {
                                   "笑っ": {
                                     "number": 3,
+                                    "child_count": 2,
+                                    "descendant_count": 3,
                                     "children": {
                                       "泣い": {
                                         "number": 1,
+                                        "child_count": 1,
+                                        "descendant_count": 1,
                                         "children": {
                                           "て": {
                                             "number": 2,
+                                            "child_count": 0,
+                                            "descendant_count": 0,
                                             "children": {}
                                           }
                                         }
                                       },
                                       "て": {
                                         "number": 4,
+                                        "child_count": 0,
+                                        "descendant_count": 0,
                                         "children": {}
                                       }
                                     }
@@ -424,24 +610,34 @@
                               },
                               "に": {
                                 "number": 7,
+                                "child_count": 0,
+                                "descendant_count": 0,
                                 "children": {}
                               }
                             }
                           },
                           "立っ": {
                             "number": 10,
+                            "child_count": 2,
+                            "descendant_count": 3,
                             "children": {
                               "隣": {
                                 "number": 8,
+                                "child_count": 1,
+                                "descendant_count": 1,
                                 "children": {
                                   "に": {
                                     "number": 9,
+                                    "child_count": 0,
+                                    "descendant_count": 0,
                                     "children": {}
                                   }
                                 }
                               },
                               "て": {
                                 "number": 11,
+                                "child_count": 0,
+                                "descendant_count": 0,
                                 "children": {}
                               }
                             }
@@ -450,52 +646,74 @@
                       },
                       "で": {
                         "number": 14,
+                        "child_count": 0,
+                        "descendant_count": 0,
                         "children": {}
                       },
                       "、": {
                         "number": 15,
+                        "child_count": 0,
+                        "descendant_count": 0,
                         "children": {}
                       }
                     }
                   },
                   "生きる": {
                     "number": 18,
+                    "child_count": 2,
+                    "descendant_count": 3,
                     "children": {
                       "僕": {
                         "number": 16,
+                        "child_count": 1,
+                        "descendant_count": 1,
                         "children": {
                           "が": {
                             "number": 17,
+                            "child_count": 0,
+                            "descendant_count": 0,
                             "children": {}
                           }
                         }
                       },
                       "に": {
                         "number": 19,
+                        "child_count": 0,
+                        "descendant_count": 0,
                         "children": {}
                       }
                     }
                   },
                   "意味": {
                     "number": 20,
+                    "child_count": 1,
+                    "descendant_count": 1,
                     "children": {
                       "に": {
                         "number": 21,
+                        "child_count": 0,
+                        "descendant_count": 0,
                         "children": {}
                       }
                     }
                   },
                   "て": {
                     "number": 23,
+                    "child_count": 0,
+                    "descendant_count": 0,
                     "children": {}
                   }
                 }
               },
               "君": {
                 "number": 24,
+                "child_count": 1,
+                "descendant_count": 1,
                 "children": {
                   "に": {
                     "number": 25,
+                    "child_count": 0,
+                    "descendant_count": 0,
                     "children": {}
                   }
                 }
@@ -504,19 +722,27 @@
           },
           "愛": {
             "number": 28,
+            "child_count": 2,
+            "descendant_count": 2,
             "children": {
               "この": {
                 "number": 27,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               },
               "の": {
                 "number": 29,
+                "child_count": 0,
+                "descendant_count": 0,
                 "children": {}
               }
             }
           },
           "。": {
             "number": 31,
+            "child_count": 0,
+            "descendant_count": 0,
             "children": {}
           }
         }
