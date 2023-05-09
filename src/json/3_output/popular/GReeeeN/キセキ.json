@@ -1,668 +1,785 @@
 {
   "A1": {
-    "明日今日よりも好きになれる。": {
-      "なれる": {
+    "word": "止まら",
+    "number": 11,
+    "child_count": 3,
+    "descendant_count": 5,
+    "children": [
+      {
+        "word": "思い",
+        "number": 9,
+        "child_count": 2,
+        "descendant_count": 2,
+        "children": [
+          {
+            "word": "あふれる",
+            "number": 8,
+            "child_count": 0,
+            "descendant_count": 0,
+            "children": []
+          },
+          {
+            "word": "が",
+            "number": 10,
+            "child_count": 0,
+            "descendant_count": 0,
+            "children": []
+          }
+        ]
+      },
+      {
+        "word": "ない",
+        "number": 12,
+        "child_count": 0,
+        "descendant_count": 0,
+        "children": []
+      },
+      {
+        "word": "。",
+        "number": 13,
+        "child_count": 0,
+        "descendant_count": 0,
+        "children": []
+      },
+      {
+        "word": "なれる",
         "number": 6,
         "child_count": 4,
         "descendant_count": 7,
-        "children": {
-          "明日": {
+        "children": [
+          {
+            "word": "明日",
             "number": 0,
             "child_count": 0,
             "descendant_count": 0,
-            "children": {}
+            "children": []
           },
-          "今日": {
+          {
+            "word": "今日",
             "number": 1,
             "child_count": 2,
             "descendant_count": 2,
-            "children": {
-              "より": {
+            "children": [
+              {
+                "word": "より",
                 "number": 2,
                 "child_count": 0,
                 "descendant_count": 0,
-                "children": {}
+                "children": []
               },
-              "も": {
+              {
+                "word": "も",
                 "number": 3,
                 "child_count": 0,
                 "descendant_count": 0,
-                "children": {}
+                "children": []
               }
-            }
+            ]
           },
-          "好き": {
+          {
+            "word": "好き",
             "number": 4,
             "child_count": 1,
             "descendant_count": 1,
-            "children": {
-              "に": {
+            "children": [
+              {
+                "word": "に",
                 "number": 5,
                 "child_count": 0,
                 "descendant_count": 0,
-                "children": {}
+                "children": []
               }
-            }
+            ]
           },
-          "。": {
+          {
+            "word": "。",
             "number": 7,
             "child_count": 0,
             "descendant_count": 0,
-            "children": {}
+            "children": []
           }
-        }
+        ]
       }
-    },
-    "あふれる思いが止まらない。": {
-      "止まら": {
-        "number": 11,
-        "child_count": 3,
-        "descendant_count": 5,
-        "children": {
-          "思い": {
-            "number": 9,
-            "child_count": 2,
-            "descendant_count": 2,
-            "children": {
-              "あふれる": {
-                "number": 8,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              },
-              "が": {
-                "number": 10,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              }
-            }
-          },
-          "ない": {
-            "number": 12,
-            "child_count": 0,
-            "descendant_count": 0,
-            "children": {}
-          },
-          "。": {
-            "number": 13,
-            "child_count": 0,
-            "descendant_count": 0,
-            "children": {}
-          }
-        }
-      }
-    }
+    ]
   },
-  "A2": {
-    "今もこんなに好きでいるのに、言葉にできない。": {
-      "でき": {
-        "number": 12,
-        "child_count": 4,
-        "descendant_count": 14,
-        "children": {
-          "好き": {
-            "number": 4,
-            "child_count": 6,
-            "descendant_count": 9,
-            "children": {
-              "今": {
-                "number": 0,
-                "child_count": 1,
-                "descendant_count": 1,
-                "children": {
-                  "も": {
-                    "number": 1,
-                    "child_count": 0,
-                    "descendant_count": 0,
-                    "children": {}
-                  }
+  "A2": [
+    {
+      "word": "でき",
+      "number": 12,
+      "child_count": 4,
+      "descendant_count": 14,
+      "children": [
+        {
+          "word": "好き",
+          "number": 4,
+          "child_count": 6,
+          "descendant_count": 9,
+          "children": [
+            {
+              "word": "今",
+              "number": 0,
+              "child_count": 1,
+              "descendant_count": 1,
+              "children": [
+                {
+                  "word": "も",
+                  "number": 1,
+                  "child_count": 0,
+                  "descendant_count": 0,
+                  "children": []
                 }
-              },
-              "こんな": {
-                "number": 2,
-                "child_count": 1,
-                "descendant_count": 1,
-                "children": {
-                  "に": {
-                    "number": 3,
-                    "child_count": 0,
-                    "descendant_count": 0,
-                    "children": {}
-                  }
+              ]
+            },
+            {
+              "word": "こんな",
+              "number": 2,
+              "child_count": 1,
+              "descendant_count": 1,
+              "children": [
+                {
+                  "word": "に",
+                  "number": 3,
+                  "child_count": 0,
+                  "descendant_count": 0,
+                  "children": []
                 }
-              },
-              "で": {
-                "number": 5,
-                "child_count": 1,
-                "descendant_count": 1,
-                "children": {
-                  "いる": {
-                    "number": 6,
-                    "child_count": 0,
-                    "descendant_count": 0,
-                    "children": {}
-                  }
+              ]
+            },
+            {
+              "word": "で",
+              "number": 5,
+              "child_count": 1,
+              "descendant_count": 1,
+              "children": [
+                {
+                  "word": "いる",
+                  "number": 6,
+                  "child_count": 0,
+                  "descendant_count": 0,
+                  "children": []
                 }
-              },
-              "の": {
-                "number": 7,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              },
-              "に": {
-                "number": 8,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              },
-              "、": {
-                "number": 9,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              }
+              ]
+            },
+            {
+              "word": "の",
+              "number": 7,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
+            },
+            {
+              "word": "に",
+              "number": 8,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
+            },
+            {
+              "word": "、",
+              "number": 9,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
             }
-          },
-          "言葉": {
-            "number": 10,
-            "child_count": 1,
-            "descendant_count": 1,
-            "children": {
-              "に": {
-                "number": 11,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              }
+          ]
+        },
+        {
+          "word": "言葉",
+          "number": 10,
+          "child_count": 1,
+          "descendant_count": 1,
+          "children": [
+            {
+              "word": "に",
+              "number": 11,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
             }
-          },
-          "ない": {
-            "number": 13,
-            "child_count": 0,
-            "descendant_count": 0,
-            "children": {}
-          },
-          "。": {
-            "number": 14,
-            "child_count": 0,
-            "descendant_count": 0,
-            "children": {}
-          }
+          ]
+        },
+        {
+          "word": "ない",
+          "number": 13,
+          "child_count": 0,
+          "descendant_count": 0,
+          "children": []
+        },
+        {
+          "word": "。",
+          "number": 14,
+          "child_count": 0,
+          "descendant_count": 0,
+          "children": []
         }
-      }
+      ]
     }
-  },
-  "S1": {
-    "2人寄り添って歩いて永久の愛を形にして、いつまでも君の横で笑っていたくて。": {
-      "笑っ": {
-        "number": 21,
-        "child_count": 7,
-        "descendant_count": 26,
-        "children": {
-          "し": {
-            "number": 11,
-            "child_count": 5,
-            "descendant_count": 13,
-            "children": {
-              "歩い": {
-                "number": 3,
-                "child_count": 2,
-                "descendant_count": 4,
-                "children": {
-                  "寄り添っ": {
-                    "number": 1,
-                    "child_count": 2,
-                    "descendant_count": 2,
-                    "children": {
-                      "2人": {
-                        "number": 0,
-                        "child_count": 0,
-                        "descendant_count": 0,
-                        "children": {}
-                      },
-                      "て": {
-                        "number": 2,
-                        "child_count": 0,
-                        "descendant_count": 0,
-                        "children": {}
-                      }
+  ],
+  "S1": [
+    {
+      "word": "笑っ",
+      "number": 21,
+      "child_count": 7,
+      "descendant_count": 26,
+      "children": [
+        {
+          "word": "し",
+          "number": 11,
+          "child_count": 5,
+          "descendant_count": 13,
+          "children": [
+            {
+              "word": "歩い",
+              "number": 3,
+              "child_count": 2,
+              "descendant_count": 4,
+              "children": [
+                {
+                  "word": "寄り添っ",
+                  "number": 1,
+                  "child_count": 2,
+                  "descendant_count": 2,
+                  "children": [
+                    {
+                      "word": "2人",
+                      "number": 0,
+                      "child_count": 0,
+                      "descendant_count": 0,
+                      "children": []
+                    },
+                    {
+                      "word": "て",
+                      "number": 2,
+                      "child_count": 0,
+                      "descendant_count": 0,
+                      "children": []
                     }
-                  },
-                  "て": {
-                    "number": 4,
-                    "child_count": 0,
-                    "descendant_count": 0,
-                    "children": {}
-                  }
+                  ]
+                },
+                {
+                  "word": "て",
+                  "number": 4,
+                  "child_count": 0,
+                  "descendant_count": 0,
+                  "children": []
                 }
-              },
-              "愛": {
-                "number": 7,
-                "child_count": 2,
-                "descendant_count": 3,
-                "children": {
-                  "永久": {
-                    "number": 5,
-                    "child_count": 1,
-                    "descendant_count": 1,
-                    "children": {
-                      "の": {
-                        "number": 6,
-                        "child_count": 0,
-                        "descendant_count": 0,
-                        "children": {}
-                      }
+              ]
+            },
+            {
+              "word": "愛",
+              "number": 7,
+              "child_count": 2,
+              "descendant_count": 3,
+              "children": [
+                {
+                  "word": "永久",
+                  "number": 5,
+                  "child_count": 1,
+                  "descendant_count": 1,
+                  "children": [
+                    {
+                      "word": "の",
+                      "number": 6,
+                      "child_count": 0,
+                      "descendant_count": 0,
+                      "children": []
                     }
-                  },
-                  "を": {
-                    "number": 8,
-                    "child_count": 0,
-                    "descendant_count": 0,
-                    "children": {}
-                  }
+                  ]
+                },
+                {
+                  "word": "を",
+                  "number": 8,
+                  "child_count": 0,
+                  "descendant_count": 0,
+                  "children": []
                 }
-              },
-              "形": {
-                "number": 9,
-                "child_count": 1,
-                "descendant_count": 1,
-                "children": {
-                  "に": {
-                    "number": 10,
-                    "child_count": 0,
-                    "descendant_count": 0,
-                    "children": {}
-                  }
+              ]
+            },
+            {
+              "word": "形",
+              "number": 9,
+              "child_count": 1,
+              "descendant_count": 1,
+              "children": [
+                {
+                  "word": "に",
+                  "number": 10,
+                  "child_count": 0,
+                  "descendant_count": 0,
+                  "children": []
                 }
-              },
-              "て": {
-                "number": 12,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              },
-              "、": {
-                "number": 13,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              }
+              ]
+            },
+            {
+              "word": "て",
+              "number": 12,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
+            },
+            {
+              "word": "、",
+              "number": 13,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
             }
-          },
-          "いつ": {
-            "number": 14,
-            "child_count": 2,
-            "descendant_count": 2,
-            "children": {
-              "まで": {
-                "number": 15,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              },
-              "も": {
-                "number": 16,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              }
+          ]
+        },
+        {
+          "word": "いつ",
+          "number": 14,
+          "child_count": 2,
+          "descendant_count": 2,
+          "children": [
+            {
+              "word": "まで",
+              "number": 15,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
+            },
+            {
+              "word": "も",
+              "number": 16,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
             }
-          },
-          "横": {
-            "number": 19,
-            "child_count": 2,
-            "descendant_count": 3,
-            "children": {
-              "君": {
-                "number": 17,
-                "child_count": 1,
-                "descendant_count": 1,
-                "children": {
-                  "の": {
-                    "number": 18,
-                    "child_count": 0,
-                    "descendant_count": 0,
-                    "children": {}
-                  }
+          ]
+        },
+        {
+          "word": "横",
+          "number": 19,
+          "child_count": 2,
+          "descendant_count": 3,
+          "children": [
+            {
+              "word": "君",
+              "number": 17,
+              "child_count": 1,
+              "descendant_count": 1,
+              "children": [
+                {
+                  "word": "の",
+                  "number": 18,
+                  "child_count": 0,
+                  "descendant_count": 0,
+                  "children": []
                 }
-              },
-              "で": {
-                "number": 20,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              }
+              ]
+            },
+            {
+              "word": "で",
+              "number": 20,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
             }
-          },
-          "て": {
-            "number": 25,
-            "child_count": 0,
-            "descendant_count": 0,
-            "children": {}
-          },
-          "たく": {
-            "number": 24,
-            "child_count": 0,
-            "descendant_count": 0,
-            "children": {}
-          },
-          "。": {
-            "number": 26,
-            "child_count": 0,
-            "descendant_count": 0,
-            "children": {}
-          }
+          ]
+        },
+        {
+          "word": "て",
+          "number": 22,
+          "child_count": 1,
+          "descendant_count": 1,
+          "children": [
+            {
+              "word": "い",
+              "number": 23,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
+            }
+          ]
+        },
+        {
+          "word": "たく",
+          "number": 24,
+          "child_count": 0,
+          "descendant_count": 0,
+          "children": []
+        },
+        {
+          "word": "て",
+          "number": 25,
+          "child_count": 0,
+          "descendant_count": 0,
+          "children": []
+        },
+        {
+          "word": "。",
+          "number": 26,
+          "child_count": 0,
+          "descendant_count": 0,
+          "children": []
         }
-      }
+      ]
     }
-  },
-  "S2": {
-    "2人寄り添って歩いて永久の愛を形にして、いつまでも君の横で笑っていたくて。": {
-      "笑っ": {
-        "number": 21,
-        "child_count": 7,
-        "descendant_count": 26,
-        "children": {
-          "し": {
-            "number": 11,
-            "child_count": 5,
-            "descendant_count": 13,
-            "children": {
-              "歩い": {
-                "number": 3,
-                "child_count": 2,
-                "descendant_count": 4,
-                "children": {
-                  "寄り添っ": {
-                    "number": 1,
-                    "child_count": 2,
-                    "descendant_count": 2,
-                    "children": {
-                      "2人": {
-                        "number": 0,
-                        "child_count": 0,
-                        "descendant_count": 0,
-                        "children": {}
-                      },
-                      "て": {
-                        "number": 2,
-                        "child_count": 0,
-                        "descendant_count": 0,
-                        "children": {}
-                      }
+  ],
+  "S2": [
+    {
+      "word": "笑っ",
+      "number": 21,
+      "child_count": 7,
+      "descendant_count": 26,
+      "children": [
+        {
+          "word": "し",
+          "number": 11,
+          "child_count": 5,
+          "descendant_count": 13,
+          "children": [
+            {
+              "word": "歩い",
+              "number": 3,
+              "child_count": 2,
+              "descendant_count": 4,
+              "children": [
+                {
+                  "word": "寄り添っ",
+                  "number": 1,
+                  "child_count": 2,
+                  "descendant_count": 2,
+                  "children": [
+                    {
+                      "word": "2人",
+                      "number": 0,
+                      "child_count": 0,
+                      "descendant_count": 0,
+                      "children": []
+                    },
+                    {
+                      "word": "て",
+                      "number": 2,
+                      "child_count": 0,
+                      "descendant_count": 0,
+                      "children": []
                     }
-                  },
-                  "て": {
-                    "number": 4,
-                    "child_count": 0,
-                    "descendant_count": 0,
-                    "children": {}
-                  }
+                  ]
+                },
+                {
+                  "word": "て",
+                  "number": 4,
+                  "child_count": 0,
+                  "descendant_count": 0,
+                  "children": []
                 }
-              },
-              "愛": {
-                "number": 7,
-                "child_count": 2,
-                "descendant_count": 3,
-                "children": {
-                  "永久": {
-                    "number": 5,
-                    "child_count": 1,
-                    "descendant_count": 1,
-                    "children": {
-                      "の": {
-                        "number": 6,
-                        "child_count": 0,
-                        "descendant_count": 0,
-                        "children": {}
-                      }
+              ]
+            },
+            {
+              "word": "愛",
+              "number": 7,
+              "child_count": 2,
+              "descendant_count": 3,
+              "children": [
+                {
+                  "word": "永久",
+                  "number": 5,
+                  "child_count": 1,
+                  "descendant_count": 1,
+                  "children": [
+                    {
+                      "word": "の",
+                      "number": 6,
+                      "child_count": 0,
+                      "descendant_count": 0,
+                      "children": []
                     }
-                  },
-                  "を": {
-                    "number": 8,
-                    "child_count": 0,
-                    "descendant_count": 0,
-                    "children": {}
-                  }
+                  ]
+                },
+                {
+                  "word": "を",
+                  "number": 8,
+                  "child_count": 0,
+                  "descendant_count": 0,
+                  "children": []
                 }
-              },
-              "形": {
-                "number": 9,
-                "child_count": 1,
-                "descendant_count": 1,
-                "children": {
-                  "に": {
-                    "number": 10,
-                    "child_count": 0,
-                    "descendant_count": 0,
-                    "children": {}
-                  }
+              ]
+            },
+            {
+              "word": "形",
+              "number": 9,
+              "child_count": 1,
+              "descendant_count": 1,
+              "children": [
+                {
+                  "word": "に",
+                  "number": 10,
+                  "child_count": 0,
+                  "descendant_count": 0,
+                  "children": []
                 }
-              },
-              "て": {
-                "number": 12,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              },
-              "、": {
-                "number": 13,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              }
+              ]
+            },
+            {
+              "word": "て",
+              "number": 12,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
+            },
+            {
+              "word": "、",
+              "number": 13,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
             }
-          },
-          "いつ": {
-            "number": 14,
-            "child_count": 2,
-            "descendant_count": 2,
-            "children": {
-              "まで": {
-                "number": 15,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              },
-              "も": {
-                "number": 16,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              }
+          ]
+        },
+        {
+          "word": "いつ",
+          "number": 14,
+          "child_count": 2,
+          "descendant_count": 2,
+          "children": [
+            {
+              "word": "まで",
+              "number": 15,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
+            },
+            {
+              "word": "も",
+              "number": 16,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
             }
-          },
-          "横": {
-            "number": 19,
-            "child_count": 2,
-            "descendant_count": 3,
-            "children": {
-              "君": {
-                "number": 17,
-                "child_count": 1,
-                "descendant_count": 1,
-                "children": {
-                  "の": {
-                    "number": 18,
-                    "child_count": 0,
-                    "descendant_count": 0,
-                    "children": {}
-                  }
+          ]
+        },
+        {
+          "word": "横",
+          "number": 19,
+          "child_count": 2,
+          "descendant_count": 3,
+          "children": [
+            {
+              "word": "君",
+              "number": 17,
+              "child_count": 1,
+              "descendant_count": 1,
+              "children": [
+                {
+                  "word": "の",
+                  "number": 18,
+                  "child_count": 0,
+                  "descendant_count": 0,
+                  "children": []
                 }
-              },
-              "で": {
-                "number": 20,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              }
+              ]
+            },
+            {
+              "word": "で",
+              "number": 20,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
             }
-          },
-          "て": {
-            "number": 25,
-            "child_count": 0,
-            "descendant_count": 0,
-            "children": {}
-          },
-          "たく": {
-            "number": 24,
-            "child_count": 0,
-            "descendant_count": 0,
-            "children": {}
-          },
-          "。": {
-            "number": 26,
-            "child_count": 0,
-            "descendant_count": 0,
-            "children": {}
-          }
+          ]
+        },
+        {
+          "word": "て",
+          "number": 22,
+          "child_count": 1,
+          "descendant_count": 1,
+          "children": [
+            {
+              "word": "い",
+              "number": 23,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
+            }
+          ]
+        },
+        {
+          "word": "たく",
+          "number": 24,
+          "child_count": 0,
+          "descendant_count": 0,
+          "children": []
+        },
+        {
+          "word": "て",
+          "number": 25,
+          "child_count": 0,
+          "descendant_count": 0,
+          "children": []
+        },
+        {
+          "word": "。",
+          "number": 26,
+          "child_count": 0,
+          "descendant_count": 0,
+          "children": []
         }
-      }
+      ]
     }
-  },
-  "S3": {
-    "アリガトウやAh愛しているじゃ、まだ足りないけどせめて言わせて「幸せです」と。": {
-      "幸せ": {
-        "number": 17,
-        "child_count": 7,
-        "descendant_count": 21,
-        "children": {
-          "足り": {
-            "number": 9,
-            "child_count": 4,
-            "descendant_count": 11,
-            "children": {
-              "愛し": {
-                "number": 3,
-                "child_count": 4,
-                "descendant_count": 7,
-                "children": {
-                  "Ah": {
-                    "number": 2,
-                    "child_count": 1,
-                    "descendant_count": 2,
-                    "children": {
-                      "アリガトウ": {
-                        "number": 0,
-                        "child_count": 1,
-                        "descendant_count": 1,
-                        "children": {
-                          "や": {
-                            "number": 1,
-                            "child_count": 0,
-                            "descendant_count": 0,
-                            "children": {}
-                          }
+  ],
+  "S3": [
+    {
+      "word": "幸せ",
+      "number": 17,
+      "child_count": 7,
+      "descendant_count": 21,
+      "children": [
+        {
+          "word": "足り",
+          "number": 9,
+          "child_count": 4,
+          "descendant_count": 11,
+          "children": [
+            {
+              "word": "愛し",
+              "number": 3,
+              "child_count": 4,
+              "descendant_count": 7,
+              "children": [
+                {
+                  "word": "Ah",
+                  "number": 2,
+                  "child_count": 1,
+                  "descendant_count": 2,
+                  "children": [
+                    {
+                      "word": "アリガトウ",
+                      "number": 0,
+                      "child_count": 1,
+                      "descendant_count": 1,
+                      "children": [
+                        {
+                          "word": "や",
+                          "number": 1,
+                          "child_count": 0,
+                          "descendant_count": 0,
+                          "children": []
                         }
-                      }
+                      ]
                     }
-                  },
-                  "て": {
-                    "number": 4,
-                    "child_count": 1,
-                    "descendant_count": 1,
-                    "children": {
-                      "いる": {
-                        "number": 5,
-                        "child_count": 0,
-                        "descendant_count": 0,
-                        "children": {}
-                      }
+                  ]
+                },
+                {
+                  "word": "て",
+                  "number": 4,
+                  "child_count": 1,
+                  "descendant_count": 1,
+                  "children": [
+                    {
+                      "word": "いる",
+                      "number": 5,
+                      "child_count": 0,
+                      "descendant_count": 0,
+                      "children": []
                     }
-                  },
-                  "じゃ": {
-                    "number": 6,
-                    "child_count": 0,
-                    "descendant_count": 0,
-                    "children": {}
-                  },
-                  "、": {
-                    "number": 7,
-                    "child_count": 0,
-                    "descendant_count": 0,
-                    "children": {}
-                  }
+                  ]
+                },
+                {
+                  "word": "じゃ",
+                  "number": 6,
+                  "child_count": 0,
+                  "descendant_count": 0,
+                  "children": []
+                },
+                {
+                  "word": "、",
+                  "number": 7,
+                  "child_count": 0,
+                  "descendant_count": 0,
+                  "children": []
                 }
-              },
-              "まだ": {
-                "number": 8,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              },
-              "ない": {
-                "number": 10,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              },
-              "けど": {
-                "number": 11,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              }
+              ]
+            },
+            {
+              "word": "まだ",
+              "number": 8,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
+            },
+            {
+              "word": "ない",
+              "number": 10,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
+            },
+            {
+              "word": "けど",
+              "number": 11,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
             }
-          },
-          "言わ": {
-            "number": 13,
-            "child_count": 3,
-            "descendant_count": 3,
-            "children": {
-              "せめて": {
-                "number": 12,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              },
-              "せ": {
-                "number": 14,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              },
-              "て": {
-                "number": 15,
-                "child_count": 0,
-                "descendant_count": 0,
-                "children": {}
-              }
+          ]
+        },
+        {
+          "word": "言わ",
+          "number": 13,
+          "child_count": 3,
+          "descendant_count": 3,
+          "children": [
+            {
+              "word": "せめて",
+              "number": 12,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
+            },
+            {
+              "word": "せ",
+              "number": 14,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
+            },
+            {
+              "word": "て",
+              "number": 15,
+              "child_count": 0,
+              "descendant_count": 0,
+              "children": []
             }
-          },
-          "「": {
-            "number": 16,
-            "child_count": 0,
-            "descendant_count": 0,
-            "children": {}
-          },
-          "です": {
-            "number": 18,
-            "child_count": 0,
-            "descendant_count": 0,
-            "children": {}
-          },
-          "」": {
-            "number": 19,
-            "child_count": 0,
-            "descendant_count": 0,
-            "children": {}
-          },
-          "と": {
-            "number": 20,
-            "child_count": 0,
-            "descendant_count": 0,
-            "children": {}
-          },
-          "。": {
-            "number": 21,
-            "child_count": 0,
-            "descendant_count": 0,
-            "children": {}
-          }
+          ]
+        },
+        {
+          "word": "「",
+          "number": 16,
+          "child_count": 0,
+          "descendant_count": 0,
+          "children": []
+        },
+        {
+          "word": "です",
+          "number": 18,
+          "child_count": 0,
+          "descendant_count": 0,
+          "children": []
+        },
+        {
+          "word": "」",
+          "number": 19,
+          "child_count": 0,
+          "descendant_count": 0,
+          "children": []
+        },
+        {
+          "word": "と",
+          "number": 20,
+          "child_count": 0,
+          "descendant_count": 0,
+          "children": []
+        },
+        {
+          "word": "。",
+          "number": 21,
+          "child_count": 0,
+          "descendant_count": 0,
+          "children": []
         }
-      }
+      ]
     }
-  }
+  ]
 }
