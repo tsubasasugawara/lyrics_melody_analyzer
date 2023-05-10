@@ -1,204 +1,235 @@
 {
   "A1": {
-    "君の背中をいつもいつも見詰めてた。": {
-      "見詰め": {
-        "number": 6,
-        "children": {
-          "背中": {
-            "number": 2,
-            "children": {
-              "君": {
-                "number": 0,
-                "children": {
-                  "の": {
-                    "number": 1,
-                    "children": {}
-                  }
-                }
-              },
-              "を": {
-                "number": 3,
-                "children": {}
-              }
-            }
-          },
-          "いつも": {
-            "number": 5,
-            "children": {}
-          },
-          "て": {
-            "number": 7,
-            "children": {}
-          },
-          "た": {
-            "number": 8,
-            "children": {}
-          },
-          "。": {
-            "number": 9,
-            "children": {}
-          }
-        }
-      }
-    },
-    "誰にも言えない想いを抱え今日も立つ。": {
-      "立つ": {
-        "number": 20,
-        "children": {
-          "今日": {
-            "number": 18,
-            "children": {
-              "抱え": {
-                "number": 17,
-                "children": {
-                  "想い": {
-                    "number": 15,
-                    "children": {
-                      "言え": {
-                        "number": 13,
-                        "children": {
-                          "誰": {
-                            "number": 10,
-                            "children": {
-                              "に": {
-                                "number": 11,
-                                "children": {}
-                              },
-                              "も": {
-                                "number": 12,
-                                "children": {}
-                              }
-                            }
+    "word": "立つ",
+    "number": 20,
+    "children": [
+      {
+        "word": "今日",
+        "number": 18,
+        "children": [
+          {
+            "word": "抱え",
+            "number": 17,
+            "children": [
+              {
+                "word": "想い",
+                "number": 15,
+                "children": [
+                  {
+                    "word": "言え",
+                    "number": 13,
+                    "children": [
+                      {
+                        "word": "誰",
+                        "number": 10,
+                        "children": [
+                          {
+                            "word": "に",
+                            "number": 11,
+                            "children": []
                           },
-                          "ない": {
-                            "number": 14,
-                            "children": {}
+                          {
+                            "word": "も",
+                            "number": 12,
+                            "children": []
                           }
-                        }
+                        ]
                       },
-                      "を": {
-                        "number": 16,
-                        "children": {}
+                      {
+                        "word": "ない",
+                        "number": 14,
+                        "children": []
                       }
-                    }
+                    ]
+                  },
+                  {
+                    "word": "を",
+                    "number": 16,
+                    "children": []
                   }
-                }
-              },
-              "も": {
-                "number": 19,
-                "children": {}
+                ]
               }
-            }
+            ]
           },
-          "。": {
-            "number": 21,
-            "children": {}
+          {
+            "word": "も",
+            "number": 19,
+            "children": []
           }
-        }
+        ]
+      },
+      {
+        "word": "。",
+        "number": 21,
+        "children": []
+      },
+      {
+        "word": "見詰め",
+        "number": 6,
+        "children": [
+          {
+            "word": "背中",
+            "number": 2,
+            "children": [
+              {
+                "word": "君",
+                "number": 0,
+                "children": [
+                  {
+                    "word": "の",
+                    "number": 1,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "word": "を",
+                "number": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "word": "いつも",
+            "number": 4,
+            "children": []
+          },
+          {
+            "word": "いつも",
+            "number": 5,
+            "children": []
+          },
+          {
+            "word": "て",
+            "number": 7,
+            "children": []
+          },
+          {
+            "word": "た",
+            "number": 8,
+            "children": []
+          },
+          {
+            "word": "。",
+            "number": 9,
+            "children": []
+          }
+        ]
       }
-    }
+    ]
   },
   "S1": {
-    "さぁいざ": {
-      "さぁ": {
-        "number": 0,
-        "children": {
-          "いざ": {
-            "number": 1,
-            "children": {}
-          }
-        }
-      }
-    },
-    "行け準備はOK。": {
-      "OK": {
+    "word": "さぁ",
+    "number": 0,
+    "children": [
+      {
+        "word": "いざ",
+        "number": 1,
+        "children": []
+      },
+      {
+        "word": "OK",
         "number": 5,
-        "children": {
-          "準備": {
+        "children": [
+          {
+            "word": "準備",
             "number": 3,
-            "children": {
-              "行け": {
+            "children": [
+              {
+                "word": "行け",
                 "number": 2,
-                "children": {}
+                "children": []
               },
-              "は": {
+              {
+                "word": "は",
                 "number": 4,
-                "children": {}
+                "children": []
               }
-            }
+            ]
           },
-          "。": {
+          {
+            "word": "。",
             "number": 6,
-            "children": {}
+            "children": []
           }
-        }
-      }
-    },
-    "どこまでも遠く目指せ。": {
-      "目指せ": {
+        ]
+      },
+      {
+        "word": "目指せ",
         "number": 11,
-        "children": {
-          "遠く": {
+        "children": [
+          {
+            "word": "遠く",
             "number": 10,
-            "children": {
-              "どこ": {
+            "children": [
+              {
+                "word": "どこ",
                 "number": 7,
-                "children": {
-                  "まで": {
+                "children": [
+                  {
+                    "word": "まで",
                     "number": 8,
-                    "children": {}
+                    "children": []
                   },
-                  "も": {
+                  {
+                    "word": "も",
                     "number": 9,
-                    "children": {}
+                    "children": []
                   }
-                }
+                ]
               }
-            }
+            ]
           },
-          "。": {
+          {
+            "word": "。",
             "number": 12,
-            "children": {}
+            "children": []
           }
-        }
-      }
-    },
-    "僕らの思いを乗せて。": {
-      "乗せ": {
+        ]
+      },
+      {
+        "word": "乗せ",
         "number": 18,
-        "children": {
-          "思い": {
+        "children": [
+          {
+            "word": "思い",
             "number": 16,
-            "children": {
-              "ら": {
+            "children": [
+              {
+                "word": "ら",
                 "number": 14,
-                "children": {
-                  "僕": {
+                "children": [
+                  {
+                    "word": "僕",
                     "number": 13,
-                    "children": {}
+                    "children": []
                   },
-                  "の": {
+                  {
+                    "word": "の",
                     "number": 15,
-                    "children": {}
+                    "children": []
                   }
-                }
+                ]
               },
-              "を": {
+              {
+                "word": "を",
                 "number": 17,
-                "children": {}
+                "children": []
               }
-            }
+            ]
           },
-          "て": {
+          {
+            "word": "て",
             "number": 19,
-            "children": {}
+            "children": []
           },
-          "。": {
+          {
+            "word": "。",
             "number": 20,
-            "children": {}
+            "children": []
           }
-        }
+        ]
       }
-    }
+    ]
   }
 }

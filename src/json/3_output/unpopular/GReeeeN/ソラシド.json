@@ -1,295 +1,347 @@
 {
   "A1": {
-    "明日晴れたなら何しようか？": {
-      "しよう": {
+    "word": "向け",
+    "number": 12,
+    "children": [
+      {
+        "word": "靴",
+        "number": 8,
+        "children": [
+          {
+            "word": "を",
+            "number": 9,
+            "children": []
+          }
+        ]
+      },
+      {
+        "word": "空",
+        "number": 11,
+        "children": [
+          {
+            "word": "青い",
+            "number": 10,
+            "children": []
+          }
+        ]
+      },
+      {
+        "word": "飛ばす",
+        "number": 13,
+        "children": [
+          {
+            "word": "。",
+            "number": 14,
+            "children": []
+          }
+        ]
+      },
+      {
+        "word": "しよう",
         "number": 5,
-        "children": {
-          "晴れ": {
+        "children": [
+          {
+            "word": "晴れ",
             "number": 1,
-            "children": {
-              "明日": {
+            "children": [
+              {
+                "word": "明日",
                 "number": 0,
-                "children": {}
+                "children": []
               },
-              "た": {
+              {
+                "word": "た",
                 "number": 2,
-                "children": {}
+                "children": []
               },
-              "なら": {
+              {
+                "word": "なら",
                 "number": 3,
-                "children": {}
+                "children": []
               }
-            }
+            ]
           },
-          "何": {
+          {
+            "word": "何",
             "number": 4,
-            "children": {}
+            "children": []
           },
-          "か": {
+          {
+            "word": "か",
             "number": 6,
-            "children": {}
+            "children": []
           },
-          "？": {
+          {
+            "word": "？",
             "number": 7,
-            "children": {}
+            "children": []
           }
-        }
+        ]
       }
-    },
-    "靴を青い空向け飛ばす。": {
-      "向け": {
-        "number": 12,
-        "children": {
-          "靴": {
-            "number": 8,
-            "children": {
-              "を": {
-                "number": 9,
-                "children": {}
-              }
-            }
-          },
-          "空": {
-            "number": 11,
-            "children": {
-              "青い": {
-                "number": 10,
-                "children": {}
-              }
-            }
-          },
-          "飛ばす": {
-            "number": 13,
-            "children": {
-              "。": {
-                "number": 14,
-                "children": {}
-              }
-            }
-          }
-        }
-      }
-    }
+    ]
   },
   "A2": {
-    "楽しい出来事あるといいな！": {
-      "いい": {
-        "number": 4,
-        "children": {
-          "ある": {
-            "number": 2,
-            "children": {
-              "出来事": {
-                "number": 1,
-                "children": {
-                  "楽しい": {
-                    "number": 0,
-                    "children": {}
-                  }
-                }
+    "word": "道",
+    "number": 11,
+    "children": [
+      {
+        "word": "歩く",
+        "number": 10,
+        "children": [
+          {
+            "word": "笛吹",
+            "number": 8,
+            "children": [
+              {
+                "word": "口",
+                "number": 7,
+                "children": []
               },
-              "と": {
-                "number": 3,
-                "children": {}
+              {
+                "word": "ながら",
+                "number": 9,
+                "children": []
               }
-            }
-          },
-          "な": {
-            "number": 5,
-            "children": {}
-          },
-          "！": {
-            "number": 6,
-            "children": {}
+            ]
           }
-        }
-      }
-    },
-    "口笛吹ながら歩く道。": {
-      "道": {
-        "number": 11,
-        "children": {
-          "歩く": {
-            "number": 10,
-            "children": {
-              "笛吹": {
-                "number": 8,
-                "children": {
-                  "口": {
-                    "number": 7,
-                    "children": {}
-                  },
-                  "ながら": {
-                    "number": 9,
-                    "children": {}
+        ]
+      },
+      {
+        "word": "。",
+        "number": 12,
+        "children": []
+      },
+      {
+        "word": "いい",
+        "number": 4,
+        "children": [
+          {
+            "word": "ある",
+            "number": 2,
+            "children": [
+              {
+                "word": "出来事",
+                "number": 1,
+                "children": [
+                  {
+                    "word": "楽しい",
+                    "number": 0,
+                    "children": []
                   }
-                }
+                ]
+              },
+              {
+                "word": "と",
+                "number": 3,
+                "children": []
               }
-            }
+            ]
           },
-          "。": {
-            "number": 12,
-            "children": {}
+          {
+            "word": "な",
+            "number": 5,
+            "children": []
+          },
+          {
+            "word": "！",
+            "number": 6,
+            "children": []
           }
-        }
+        ]
       }
-    }
+    ]
   },
   "S1": {
-    "フル回転で超えるスピードで行くmy way next!!!!": {
-      "next": {
-        "number": 9,
-        "children": {
-          "way": {
-            "number": 8,
-            "children": {
-              "行く": {
-                "number": 6,
-                "children": {
-                  "スピード": {
-                    "number": 4,
-                    "children": {
-                      "超える": {
-                        "number": 3,
-                        "children": {
-                          "回転": {
-                            "number": 1,
-                            "children": {
-                              "フル": {
-                                "number": 0,
-                                "children": {}
-                              },
-                              "で": {
-                                "number": 2,
-                                "children": {}
-                              }
-                            }
+    "word": "next",
+    "number": 9,
+    "children": [
+      {
+        "word": "way",
+        "number": 8,
+        "children": [
+          {
+            "word": "行く",
+            "number": 6,
+            "children": [
+              {
+                "word": "スピード",
+                "number": 4,
+                "children": [
+                  {
+                    "word": "超える",
+                    "number": 3,
+                    "children": [
+                      {
+                        "word": "回転",
+                        "number": 1,
+                        "children": [
+                          {
+                            "word": "フル",
+                            "number": 0,
+                            "children": []
+                          },
+                          {
+                            "word": "で",
+                            "number": 2,
+                            "children": []
                           }
-                        }
-                      },
-                      "で": {
-                        "number": 5,
-                        "children": {}
+                        ]
                       }
-                    }
+                    ]
                   },
-                  "my": {
-                    "number": 7,
-                    "children": {}
+                  {
+                    "word": "で",
+                    "number": 5,
+                    "children": []
                   }
-                }
+                ]
+              },
+              {
+                "word": "my",
+                "number": 7,
+                "children": []
               }
-            }
-          },
-          "!": {
-            "number": 13,
-            "children": {}
+            ]
           }
-        }
-      }
-    },
-    "目指せ向こう「自由zone」へ。": {
-      "zone": {
+        ]
+      },
+      {
+        "word": "!",
+        "number": 10,
+        "children": []
+      },
+      {
+        "word": "!",
+        "number": 11,
+        "children": []
+      },
+      {
+        "word": "!",
+        "number": 12,
+        "children": []
+      },
+      {
+        "word": "!",
+        "number": 13,
+        "children": []
+      },
+      {
+        "word": "zone",
         "number": 18,
-        "children": {
-          "向こう": {
+        "children": [
+          {
+            "word": "向こう",
             "number": 15,
-            "children": {
-              "目指せ": {
+            "children": [
+              {
+                "word": "目指せ",
                 "number": 14,
-                "children": {}
+                "children": []
               }
-            }
+            ]
           },
-          "「": {
+          {
+            "word": "「",
             "number": 16,
-            "children": {}
+            "children": []
           },
-          "自由": {
+          {
+            "word": "自由",
             "number": 17,
-            "children": {}
+            "children": []
           },
-          "」": {
+          {
+            "word": "」",
             "number": 19,
-            "children": {}
+            "children": []
           },
-          "へ": {
+          {
+            "word": "へ",
             "number": 20,
-            "children": {}
+            "children": []
           },
-          "。": {
+          {
+            "word": "。",
             "number": 21,
-            "children": {}
+            "children": []
           }
-        }
+        ]
       }
-    }
+    ]
   },
   "S2": {
-    "明日明後日、間違いあったってほら始動ソラシド。": {
-      "ソラシド": {
-        "number": 8,
-        "children": {
-          "ほら": {
-            "number": 6,
-            "children": {
-              "あっ": {
-                "number": 3,
-                "children": {
-                  "明日明後日": {
-                    "number": 0,
-                    "children": {
-                      "、": {
-                        "number": 1,
-                        "children": {}
-                      }
-                    }
-                  },
-                  "間違い": {
-                    "number": 2,
-                    "children": {}
-                  },
-                  "た": {
-                    "number": 4,
-                    "children": {}
-                  },
-                  "って": {
-                    "number": 5,
-                    "children": {}
+    "word": "ソラシド",
+    "number": 8,
+    "children": [
+      {
+        "word": "ほら",
+        "number": 6,
+        "children": [
+          {
+            "word": "あっ",
+            "number": 3,
+            "children": [
+              {
+                "word": "明日明後日",
+                "number": 0,
+                "children": [
+                  {
+                    "word": "、",
+                    "number": 1,
+                    "children": []
                   }
-                }
+                ]
+              },
+              {
+                "word": "間違い",
+                "number": 2,
+                "children": []
+              },
+              {
+                "word": "た",
+                "number": 4,
+                "children": []
+              },
+              {
+                "word": "って",
+                "number": 5,
+                "children": []
               }
-            }
-          },
-          "始動": {
-            "number": 7,
-            "children": {}
-          },
-          "。": {
-            "number": 9,
-            "children": {}
+            ]
           }
-        }
-      }
-    },
-    "花唄歌おう。": {
-      "唄歌": {
+        ]
+      },
+      {
+        "word": "始動",
+        "number": 7,
+        "children": []
+      },
+      {
+        "word": "。",
+        "number": 9,
+        "children": []
+      },
+      {
+        "word": "唄歌",
         "number": 11,
-        "children": {
-          "花": {
+        "children": [
+          {
+            "word": "花",
             "number": 10,
-            "children": {}
+            "children": []
           },
-          "おう": {
+          {
+            "word": "おう",
             "number": 12,
-            "children": {}
+            "children": []
           },
-          "。": {
+          {
+            "word": "。",
             "number": 13,
-            "children": {}
+            "children": []
           }
-        }
+        ]
       }
-    }
+    ]
   }
 }

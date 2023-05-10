@@ -41,16 +41,11 @@ def visualize(song, song_name):
 
 # 再帰的に木を作成する
 def recur_tree(token):
-    node = {"word": token.text, "number": token.i, "child_count": len(list(token.children)), "descendant_count": 0, "children": {}}
-    descendant_count = 0
+    node = {"word": token.text, "number": token.i, "children": {}}
 
     node["children"] = []
     for child in token.children:
         node["children"].append(recur_tree(child))
-        descendant_count += node["children"][len(node["children"])-1]["descendant_count"]
-        descendant_count += 1
-
-    node["descendant_count"] = descendant_count
 
     return node
 
@@ -61,7 +56,7 @@ def join_roots(roots):
 
     res = roots[0]
     for i in range(1,len(roots)):
-        if res["child_count"] > roots[i]["child_count"]:
+        if len(res["children"]) > len(roots[i]["children"]):
             temp = roots[i]
             temp["children"].append(res)
             res = temp
@@ -75,9 +70,7 @@ def to_tree_map(artist, song):
     data = {}
     for section in song:
         data[section] = []
-        text = ""
         for sent in song[section].sents:
-            text = sent.text
             data[section].append(recur_tree(sent.root))
 
         data[section] = join_roots(data[section])

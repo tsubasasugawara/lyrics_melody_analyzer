@@ -1,330 +1,384 @@
 {
   "A1": {
-    "あの山超えたらなりたい僕に会える？": {
-      "会える": {
-        "number": 8,
-        "children": {
-          "僕": {
-            "number": 6,
-            "children": {
-              "なり": {
-                "number": 4,
-                "children": {
-                  "超え": {
-                    "number": 2,
-                    "children": {
-                      "あの": {
-                        "number": 0,
-                        "children": {}
-                      },
-                      "山": {
-                        "number": 1,
-                        "children": {}
-                      },
-                      "たら": {
-                        "number": 3,
-                        "children": {}
-                      }
-                    }
+    "word": "会える",
+    "number": 8,
+    "children": [
+      {
+        "word": "僕",
+        "number": 6,
+        "children": [
+          {
+            "word": "なり",
+            "number": 4,
+            "children": [
+              {
+                "word": "超え",
+                "number": 2,
+                "children": [
+                  {
+                    "word": "あの",
+                    "number": 0,
+                    "children": []
                   },
-                  "たい": {
-                    "number": 5,
-                    "children": {}
+                  {
+                    "word": "山",
+                    "number": 1,
+                    "children": []
+                  },
+                  {
+                    "word": "たら",
+                    "number": 3,
+                    "children": []
                   }
-                }
+                ]
               },
-              "に": {
-                "number": 7,
-                "children": {}
+              {
+                "word": "たい",
+                "number": 5,
+                "children": []
               }
-            }
+            ]
           },
-          "？": {
-            "number": 9,
-            "children": {}
+          {
+            "word": "に",
+            "number": 7,
+            "children": []
           }
-        }
-      }
-    },
-    "あの海越えたらなりたい私に会える？": {
-      "会える": {
+        ]
+      },
+      {
+        "word": "？",
+        "number": 9,
+        "children": []
+      },
+      {
+        "word": "会える",
         "number": 18,
-        "children": {
-          "私": {
+        "children": [
+          {
+            "word": "私",
             "number": 16,
-            "children": {
-              "なり": {
+            "children": [
+              {
+                "word": "なり",
                 "number": 14,
-                "children": {
-                  "越え": {
+                "children": [
+                  {
+                    "word": "越え",
                     "number": 12,
-                    "children": {
-                      "海": {
+                    "children": [
+                      {
+                        "word": "海",
                         "number": 11,
-                        "children": {
-                          "あの": {
+                        "children": [
+                          {
+                            "word": "あの",
                             "number": 10,
-                            "children": {}
+                            "children": []
                           }
-                        }
+                        ]
                       },
-                      "たら": {
+                      {
+                        "word": "たら",
                         "number": 13,
-                        "children": {}
+                        "children": []
                       }
-                    }
+                    ]
                   },
-                  "たい": {
+                  {
+                    "word": "たい",
                     "number": 15,
-                    "children": {}
+                    "children": []
                   }
-                }
+                ]
               },
-              "に": {
+              {
+                "word": "に",
                 "number": 17,
-                "children": {}
+                "children": []
               }
-            }
+            ]
           },
-          "？": {
+          {
+            "word": "？",
             "number": 19,
-            "children": {}
+            "children": []
           }
-        }
+        ]
       }
-    }
+    ]
   },
   "A2": {
-    "私の心よもっと自由になれ。": {
-      "なれ": {
-        "number": 7,
-        "children": {
-          "心": {
-            "number": 2,
-            "children": {
-              "私": {
-                "number": 0,
-                "children": {
-                  "の": {
-                    "number": 1,
-                    "children": {}
-                  }
-                }
-              },
-              "よ": {
-                "number": 3,
-                "children": {}
+    "word": "なれ",
+    "number": 7,
+    "children": [
+      {
+        "word": "心",
+        "number": 2,
+        "children": [
+          {
+            "word": "私",
+            "number": 0,
+            "children": [
+              {
+                "word": "の",
+                "number": 1,
+                "children": []
               }
-            }
+            ]
           },
-          "自由": {
-            "number": 5,
-            "children": {
-              "もっと": {
-                "number": 4,
-                "children": {}
-              },
-              "に": {
-                "number": 6,
-                "children": {}
-              }
-            }
-          },
-          "。": {
-            "number": 8,
-            "children": {}
+          {
+            "word": "よ",
+            "number": 3,
+            "children": []
           }
-        }
-      }
-    },
-    "これから始まる僕だけのストーリー。": {
-      "ストーリー": {
+        ]
+      },
+      {
+        "word": "自由",
+        "number": 5,
+        "children": [
+          {
+            "word": "もっと",
+            "number": 4,
+            "children": []
+          },
+          {
+            "word": "に",
+            "number": 6,
+            "children": []
+          }
+        ]
+      },
+      {
+        "word": "。",
+        "number": 8,
+        "children": []
+      },
+      {
+        "word": "ストーリー",
         "number": 15,
-        "children": {
-          "始まる": {
+        "children": [
+          {
+            "word": "始まる",
             "number": 11,
-            "children": {
-              "これ": {
+            "children": [
+              {
+                "word": "これ",
                 "number": 9,
-                "children": {
-                  "から": {
+                "children": [
+                  {
+                    "word": "から",
                     "number": 10,
-                    "children": {}
+                    "children": []
                   }
-                }
+                ]
               }
-            }
+            ]
           },
-          "僕": {
+          {
+            "word": "僕",
             "number": 12,
-            "children": {
-              "だけ": {
+            "children": [
+              {
+                "word": "だけ",
                 "number": 13,
-                "children": {}
+                "children": []
               },
-              "の": {
+              {
+                "word": "の",
                 "number": 14,
-                "children": {}
+                "children": []
               }
-            }
+            ]
           },
-          "。": {
+          {
+            "word": "。",
             "number": 16,
-            "children": {}
+            "children": []
           }
-        }
+        ]
       }
-    }
+    ]
   },
   "S1": {
-    "可能性を自分で消さないで。": {
-      "消さ": {
+    "word": "ない",
+    "number": 14,
+    "children": [
+      {
+        "word": "怖く",
+        "number": 13,
+        "children": [
+          {
+            "word": "夜",
+            "number": 10,
+            "children": [
+              {
+                "word": "一人",
+                "number": 8,
+                "children": [
+                  {
+                    "word": "の",
+                    "number": 9,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "word": "で",
+                "number": 11,
+                "children": []
+              },
+              {
+                "word": "も",
+                "number": 12,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "word": "。",
+        "number": 15,
+        "children": []
+      },
+      {
+        "word": "消さ",
         "number": 4,
-        "children": {
-          "可能性": {
+        "children": [
+          {
+            "word": "可能性",
             "number": 0,
-            "children": {
-              "を": {
+            "children": [
+              {
+                "word": "を",
                 "number": 1,
-                "children": {}
+                "children": []
               }
-            }
+            ]
           },
-          "自分": {
+          {
+            "word": "自分",
             "number": 2,
-            "children": {
-              "で": {
+            "children": [
+              {
+                "word": "で",
                 "number": 3,
-                "children": {}
+                "children": []
               }
-            }
+            ]
           },
-          "ない": {
+          {
+            "word": "ない",
             "number": 5,
-            "children": {}
+            "children": []
           },
-          "で": {
+          {
+            "word": "で",
             "number": 6,
-            "children": {}
+            "children": []
           },
-          "。": {
+          {
+            "word": "。",
             "number": 7,
-            "children": {}
+            "children": []
           }
-        }
-      }
-    },
-    "一人の夜でも怖くない。": {
-      "ない": {
-        "number": 14,
-        "children": {
-          "怖く": {
-            "number": 13,
-            "children": {
-              "夜": {
-                "number": 10,
-                "children": {
-                  "一人": {
-                    "number": 8,
-                    "children": {
-                      "の": {
-                        "number": 9,
-                        "children": {}
-                      }
-                    }
-                  },
-                  "で": {
-                    "number": 11,
-                    "children": {}
-                  },
-                  "も": {
-                    "number": 12,
-                    "children": {}
-                  }
-                }
-              }
-            }
-          },
-          "。": {
-            "number": 15,
-            "children": {}
-          }
-        }
-      }
-    },
-    "見たもの聞いたこと覚えたこと聞かせるね待っててね。": {
-      "待っ": {
+        ]
+      },
+      {
+        "word": "待っ",
         "number": 28,
-        "children": {
-          "聞か": {
+        "children": [
+          {
+            "word": "聞か",
             "number": 25,
-            "children": {
-              "こと": {
+            "children": [
+              {
+                "word": "こと",
                 "number": 24,
-                "children": {
-                  "覚え": {
+                "children": [
+                  {
+                    "word": "覚え",
                     "number": 22,
-                    "children": {
-                      "こと": {
+                    "children": [
+                      {
+                        "word": "こと",
                         "number": 21,
-                        "children": {
-                          "聞い": {
+                        "children": [
+                          {
+                            "word": "聞い",
                             "number": 19,
-                            "children": {
-                              "もの": {
+                            "children": [
+                              {
+                                "word": "もの",
                                 "number": 18,
-                                "children": {
-                                  "見": {
+                                "children": [
+                                  {
+                                    "word": "見",
                                     "number": 16,
-                                    "children": {
-                                      "た": {
+                                    "children": [
+                                      {
+                                        "word": "た",
                                         "number": 17,
-                                        "children": {}
+                                        "children": []
                                       }
-                                    }
+                                    ]
                                   }
-                                }
+                                ]
                               },
-                              "た": {
+                              {
+                                "word": "た",
                                 "number": 20,
-                                "children": {}
+                                "children": []
                               }
-                            }
+                            ]
                           }
-                        }
+                        ]
                       },
-                      "た": {
+                      {
+                        "word": "た",
                         "number": 23,
-                        "children": {}
+                        "children": []
                       }
-                    }
+                    ]
                   }
-                }
+                ]
               },
-              "せる": {
+              {
+                "word": "せる",
                 "number": 26,
-                "children": {}
+                "children": []
               },
-              "ね": {
+              {
+                "word": "ね",
                 "number": 27,
-                "children": {}
+                "children": []
               }
-            }
+            ]
           },
-          "て": {
+          {
+            "word": "て",
+            "number": 29,
+            "children": []
+          },
+          {
+            "word": "て",
             "number": 30,
-            "children": {}
+            "children": []
           },
-          "ね": {
+          {
+            "word": "ね",
             "number": 31,
-            "children": {}
+            "children": []
           },
-          "。": {
+          {
+            "word": "。",
             "number": 32,
-            "children": {}
+            "children": []
           }
-        }
+        ]
       }
-    }
+    ]
   }
 }

@@ -2,34 +2,24 @@
   "A1": {
     "word": "色",
     "number": 15,
-    "child_count": 4,
-    "descendant_count": 7,
     "children": [
       {
         "word": "街",
         "number": 11,
-        "child_count": 3,
-        "descendant_count": 3,
         "children": [
           {
             "word": "この",
             "number": 10,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           },
           {
             "word": "で",
             "number": 12,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           },
           {
             "word": "も",
             "number": 13,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           }
         ]
@@ -37,54 +27,38 @@
       {
         "word": "同じ",
         "number": 14,
-        "child_count": 0,
-        "descendant_count": 0,
         "children": []
       },
       {
         "word": "で",
         "number": 16,
-        "child_count": 0,
-        "descendant_count": 0,
         "children": []
       },
       {
         "word": "。",
         "number": 17,
-        "child_count": 0,
-        "descendant_count": 0,
         "children": []
       },
       {
         "word": "咲き",
         "number": 5,
-        "child_count": 5,
-        "descendant_count": 9,
         "children": [
           {
             "word": "花",
             "number": 3,
-            "child_count": 2,
-            "descendant_count": 4,
             "children": [
               {
                 "word": "桜",
                 "number": 1,
-                "child_count": 2,
-                "descendant_count": 2,
                 "children": [
                   {
                     "word": "『",
                     "number": 0,
-                    "child_count": 0,
-                    "descendant_count": 0,
                     "children": []
                   },
                   {
                     "word": "の",
                     "number": 2,
-                    "child_count": 0,
-                    "descendant_count": 0,
                     "children": []
                   }
                 ]
@@ -92,8 +66,6 @@
               {
                 "word": "が",
                 "number": 4,
-                "child_count": 0,
-                "descendant_count": 0,
                 "children": []
               }
             ]
@@ -101,29 +73,21 @@
           {
             "word": "まし",
             "number": 6,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           },
           {
             "word": "た",
             "number": 7,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           },
           {
             "word": "。",
             "number": 8,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           },
           {
             "word": "』",
             "number": 9,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           }
         ]
@@ -133,20 +97,14 @@
   "A2": {
     "word": "中",
     "number": 6,
-    "child_count": 2,
-    "descendant_count": 6,
     "children": [
       {
         "word": "見",
         "number": 1,
-        "child_count": 1,
-        "descendant_count": 1,
         "children": [
           {
             "word": "まだ",
             "number": 0,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           }
         ]
@@ -154,20 +112,14 @@
       {
         "word": "景色",
         "number": 4,
-        "child_count": 2,
-        "descendant_count": 3,
         "children": [
           {
             "word": "慣れ",
             "number": 2,
-            "child_count": 1,
-            "descendant_count": 1,
             "children": [
               {
                 "word": "ない",
                 "number": 3,
-                "child_count": 0,
-                "descendant_count": 0,
                 "children": []
               }
             ]
@@ -175,8 +127,6 @@
           {
             "word": "の",
             "number": 5,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           }
         ]
@@ -184,27 +134,19 @@
       {
         "word": "笑っ",
         "number": 10,
-        "child_count": 4,
-        "descendant_count": 7,
         "children": [
           {
             "word": "こらえ",
             "number": 9,
-            "child_count": 2,
-            "descendant_count": 2,
             "children": [
               {
                 "word": "淋し",
                 "number": 7,
-                "child_count": 0,
-                "descendant_count": 0,
                 "children": []
               },
               {
                 "word": "さ",
                 "number": 8,
-                "child_count": 0,
-                "descendant_count": 0,
                 "children": []
               }
             ]
@@ -212,14 +154,10 @@
           {
             "word": "て",
             "number": 11,
-            "child_count": 1,
-            "descendant_count": 1,
             "children": [
               {
                 "word": "みる",
                 "number": 12,
-                "child_count": 0,
-                "descendant_count": 0,
                 "children": []
               }
             ]
@@ -227,15 +165,11 @@
           {
             "word": "よ",
             "number": 13,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           },
           {
             "word": "。",
             "number": 14,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           }
         ]
@@ -245,55 +179,39 @@
   "S1": {
     "word": "color",
     "number": 1,
-    "child_count": 1,
-    "descendant_count": 1,
     "children": [
       {
         "word": "桜",
         "number": 0,
-        "child_count": 0,
-        "descendant_count": 0,
         "children": []
       },
       {
         "word": "今",
         "number": 3,
-        "child_count": 5,
-        "descendant_count": 5,
         "children": [
           {
             "word": "『",
             "number": 2,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           },
           {
             "word": "は",
             "number": 4,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           },
           {
             "word": "さよなら",
             "number": 5,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           },
           {
             "word": "』",
             "number": 6,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           },
           {
             "word": "。",
             "number": 7,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           }
         ]
@@ -301,27 +219,19 @@
       {
         "word": "追い",
         "number": 11,
-        "child_count": 4,
-        "descendant_count": 6,
         "children": [
           {
             "word": "日",
             "number": 9,
-            "child_count": 2,
-            "descendant_count": 2,
             "children": [
               {
                 "word": "あの",
                 "number": 8,
-                "child_count": 0,
-                "descendant_count": 0,
                 "children": []
               },
               {
                 "word": "から",
                 "number": 10,
-                "child_count": 0,
-                "descendant_count": 0,
                 "children": []
               }
             ]
@@ -329,22 +239,16 @@
           {
             "word": "続け",
             "number": 12,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           },
           {
             "word": "てる",
             "number": 13,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           },
           {
             "word": "。",
             "number": 14,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           }
         ]
@@ -354,33 +258,23 @@
   "S2": {
     "word": "桜",
     "number": 13,
-    "child_count": 2,
-    "descendant_count": 6,
     "children": [
       {
         "word": "見上げ",
         "number": 11,
-        "child_count": 2,
-        "descendant_count": 4,
         "children": [
           {
             "word": "決め",
             "number": 9,
-            "child_count": 2,
-            "descendant_count": 2,
             "children": [
               {
                 "word": "そう",
                 "number": 8,
-                "child_count": 0,
-                "descendant_count": 0,
                 "children": []
               },
               {
                 "word": "て",
                 "number": 10,
-                "child_count": 0,
-                "descendant_count": 0,
                 "children": []
               }
             ]
@@ -388,8 +282,6 @@
           {
             "word": "た",
             "number": 12,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           }
         ]
@@ -397,33 +289,23 @@
       {
         "word": "。",
         "number": 14,
-        "child_count": 0,
-        "descendant_count": 0,
         "children": []
       },
       {
         "word": "街",
         "number": 5,
-        "child_count": 4,
-        "descendant_count": 7,
         "children": [
           {
             "word": "咲く",
             "number": 0,
-            "child_count": 2,
-            "descendant_count": 3,
             "children": [
               {
                 "word": "の",
                 "number": 1,
-                "child_count": 1,
-                "descendant_count": 1,
                 "children": [
                   {
                     "word": "なら",
                     "number": 2,
-                    "child_count": 0,
-                    "descendant_count": 0,
                     "children": []
                   }
                 ]
@@ -431,8 +313,6 @@
               {
                 "word": "ば",
                 "number": 3,
-                "child_count": 0,
-                "descendant_count": 0,
                 "children": []
               }
             ]
@@ -440,22 +320,16 @@
           {
             "word": "この",
             "number": 4,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           },
           {
             "word": "で",
             "number": 6,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           },
           {
             "word": "。",
             "number": 7,
-            "child_count": 0,
-            "descendant_count": 0,
             "children": []
           }
         ]

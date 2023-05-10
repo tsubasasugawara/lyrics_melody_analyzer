@@ -1,287 +1,346 @@
 {
-  "A1": {
-    "僕が僕に気づくのは自分を越えようとした時。": {
-      "時": {
-        "number": 13,
-        "children": {
-          "し": {
-            "number": 11,
-            "children": {
-              "気づく": {
-                "number": 4,
-                "children": {
-                  "僕": {
-                    "number": 2,
-                    "children": {
-                      "に": {
-                        "number": 3,
-                        "children": {}
-                      }
+  "A1": [
+    {
+      "word": "時",
+      "number": 13,
+      "children": [
+        {
+          "word": "し",
+          "number": 11,
+          "children": [
+            {
+              "word": "気づく",
+              "number": 4,
+              "children": [
+                {
+                  "word": "僕",
+                  "number": 0,
+                  "children": [
+                    {
+                      "word": "が",
+                      "number": 1,
+                      "children": []
                     }
-                  },
-                  "の": {
-                    "number": 5,
-                    "children": {}
-                  },
-                  "は": {
-                    "number": 6,
-                    "children": {}
-                  }
-                }
-              },
-              "越えよう": {
-                "number": 9,
-                "children": {
-                  "自分": {
-                    "number": 7,
-                    "children": {
-                      "を": {
-                        "number": 8,
-                        "children": {}
-                      }
+                  ]
+                },
+                {
+                  "word": "僕",
+                  "number": 2,
+                  "children": [
+                    {
+                      "word": "に",
+                      "number": 3,
+                      "children": []
                     }
-                  },
-                  "と": {
-                    "number": 10,
-                    "children": {}
-                  }
+                  ]
+                },
+                {
+                  "word": "の",
+                  "number": 5,
+                  "children": []
+                },
+                {
+                  "word": "は",
+                  "number": 6,
+                  "children": []
                 }
-              },
-              "た": {
-                "number": 12,
-                "children": {}
-              }
+              ]
+            },
+            {
+              "word": "越えよう",
+              "number": 9,
+              "children": [
+                {
+                  "word": "自分",
+                  "number": 7,
+                  "children": [
+                    {
+                      "word": "を",
+                      "number": 8,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "word": "と",
+                  "number": 10,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "word": "た",
+              "number": 12,
+              "children": []
             }
-          },
-          "。": {
-            "number": 14,
-            "children": {}
-          }
+          ]
+        },
+        {
+          "word": "。",
+          "number": 14,
+          "children": []
         }
-      }
+      ]
     }
-  },
-  "A2": {
-    "毎日の中で悩んで後悔して回り道をした時。": {
-      "時": {
-        "number": 13,
-        "children": {
-          "し": {
-            "number": 11,
-            "children": {
-              "後悔": {
-                "number": 6,
-                "children": {
-                  "悩ん": {
-                    "number": 4,
-                    "children": {
-                      "中": {
-                        "number": 2,
-                        "children": {
-                          "毎日": {
-                            "number": 0,
-                            "children": {
-                              "の": {
-                                "number": 1,
-                                "children": {}
-                              }
+  ],
+  "A2": [
+    {
+      "word": "時",
+      "number": 13,
+      "children": [
+        {
+          "word": "し",
+          "number": 11,
+          "children": [
+            {
+              "word": "後悔",
+              "number": 6,
+              "children": [
+                {
+                  "word": "悩ん",
+                  "number": 4,
+                  "children": [
+                    {
+                      "word": "中",
+                      "number": 2,
+                      "children": [
+                        {
+                          "word": "毎日",
+                          "number": 0,
+                          "children": [
+                            {
+                              "word": "の",
+                              "number": 1,
+                              "children": []
                             }
-                          },
-                          "で": {
-                            "number": 3,
-                            "children": {}
-                          }
+                          ]
+                        },
+                        {
+                          "word": "で",
+                          "number": 3,
+                          "children": []
                         }
-                      },
-                      "で": {
-                        "number": 5,
-                        "children": {}
-                      }
+                      ]
+                    },
+                    {
+                      "word": "で",
+                      "number": 5,
+                      "children": []
                     }
-                  },
-                  "し": {
-                    "number": 7,
-                    "children": {}
-                  },
-                  "て": {
-                    "number": 8,
-                    "children": {}
-                  }
+                  ]
+                },
+                {
+                  "word": "し",
+                  "number": 7,
+                  "children": []
+                },
+                {
+                  "word": "て",
+                  "number": 8,
+                  "children": []
                 }
-              },
-              "回り道": {
-                "number": 9,
-                "children": {
-                  "を": {
-                    "number": 10,
-                    "children": {}
-                  }
+              ]
+            },
+            {
+              "word": "回り道",
+              "number": 9,
+              "children": [
+                {
+                  "word": "を",
+                  "number": 10,
+                  "children": []
                 }
-              },
-              "た": {
-                "number": 12,
-                "children": {}
-              }
+              ]
+            },
+            {
+              "word": "た",
+              "number": 12,
+              "children": []
             }
-          },
-          "。": {
-            "number": 14,
-            "children": {}
-          }
+          ]
+        },
+        {
+          "word": "。",
+          "number": 14,
+          "children": []
         }
-      }
+      ]
     }
-  },
+  ],
   "S1": {
-    "大きく広がる道が見えるだろう。": {
-      "見える": {
-        "number": 4,
-        "children": {
-          "道": {
-            "number": 2,
-            "children": {
-              "広がる": {
-                "number": 1,
-                "children": {
-                  "大きく": {
-                    "number": 0,
-                    "children": {}
-                  }
-                }
-              },
-              "が": {
-                "number": 3,
-                "children": {}
+    "word": "見える",
+    "number": 4,
+    "children": [
+      {
+        "word": "道",
+        "number": 2,
+        "children": [
+          {
+            "word": "広がる",
+            "number": 1,
+            "children": [
+              {
+                "word": "大きく",
+                "number": 0,
+                "children": []
               }
-            }
+            ]
           },
-          "だろう": {
-            "number": 5,
-            "children": {}
-          },
-          "。": {
-            "number": 6,
-            "children": {}
+          {
+            "word": "が",
+            "number": 3,
+            "children": []
           }
-        }
-      }
-    },
-    "多くの傷とここに立つんだろう。": {
-      "立つ": {
+        ]
+      },
+      {
+        "word": "だろう",
+        "number": 5,
+        "children": []
+      },
+      {
+        "word": "。",
+        "number": 6,
+        "children": []
+      },
+      {
+        "word": "立つ",
         "number": 13,
-        "children": {
-          "傷": {
+        "children": [
+          {
+            "word": "傷",
             "number": 9,
-            "children": {
-              "多く": {
+            "children": [
+              {
+                "word": "多く",
                 "number": 7,
-                "children": {
-                  "の": {
+                "children": [
+                  {
+                    "word": "の",
                     "number": 8,
-                    "children": {}
+                    "children": []
                   }
-                }
+                ]
               },
-              "と": {
+              {
+                "word": "と",
                 "number": 10,
-                "children": {}
+                "children": []
               }
-            }
+            ]
           },
-          "ここ": {
+          {
+            "word": "ここ",
             "number": 11,
-            "children": {
-              "に": {
+            "children": [
+              {
+                "word": "に",
                 "number": 12,
-                "children": {}
+                "children": []
               }
-            }
+            ]
           },
-          "ん": {
+          {
+            "word": "ん",
             "number": 14,
-            "children": {
-              "だろう": {
+            "children": [
+              {
+                "word": "だろう",
                 "number": 15,
-                "children": {}
+                "children": []
               }
-            }
+            ]
           },
-          "。": {
+          {
+            "word": "。",
             "number": 16,
-            "children": {}
+            "children": []
           }
-        }
+        ]
       }
-    }
+    ]
   },
-  "S2": {
-    "そんな大きな道があるから明日の自分に逢いに行けるだろう。": {
-      "行ける": {
-        "number": 12,
-        "children": {
-          "ある": {
-            "number": 4,
-            "children": {
-              "道": {
-                "number": 2,
-                "children": {
-                  "そんな": {
-                    "number": 0,
-                    "children": {}
-                  },
-                  "大きな": {
-                    "number": 1,
-                    "children": {}
-                  },
-                  "が": {
-                    "number": 3,
-                    "children": {}
-                  }
+  "S2": [
+    {
+      "word": "行ける",
+      "number": 12,
+      "children": [
+        {
+          "word": "ある",
+          "number": 4,
+          "children": [
+            {
+              "word": "道",
+              "number": 2,
+              "children": [
+                {
+                  "word": "そんな",
+                  "number": 0,
+                  "children": []
+                },
+                {
+                  "word": "大きな",
+                  "number": 1,
+                  "children": []
+                },
+                {
+                  "word": "が",
+                  "number": 3,
+                  "children": []
                 }
-              },
-              "から": {
-                "number": 5,
-                "children": {}
-              }
+              ]
+            },
+            {
+              "word": "から",
+              "number": 5,
+              "children": []
             }
-          },
-          "逢い": {
-            "number": 10,
-            "children": {
-              "自分": {
-                "number": 8,
-                "children": {
-                  "明日": {
-                    "number": 6,
-                    "children": {
-                      "の": {
-                        "number": 7,
-                        "children": {}
-                      }
+          ]
+        },
+        {
+          "word": "逢い",
+          "number": 10,
+          "children": [
+            {
+              "word": "自分",
+              "number": 8,
+              "children": [
+                {
+                  "word": "明日",
+                  "number": 6,
+                  "children": [
+                    {
+                      "word": "の",
+                      "number": 7,
+                      "children": []
                     }
-                  },
-                  "に": {
-                    "number": 9,
-                    "children": {}
-                  }
+                  ]
+                },
+                {
+                  "word": "に",
+                  "number": 9,
+                  "children": []
                 }
-              },
-              "に": {
-                "number": 11,
-                "children": {}
-              }
+              ]
+            },
+            {
+              "word": "に",
+              "number": 11,
+              "children": []
             }
-          },
-          "だろう": {
-            "number": 13,
-            "children": {}
-          },
-          "。": {
-            "number": 14,
-            "children": {}
-          }
+          ]
+        },
+        {
+          "word": "だろう",
+          "number": 13,
+          "children": []
+        },
+        {
+          "word": "。",
+          "number": 14,
+          "children": []
         }
-      }
+      ]
     }
-  }
+  ]
 }
