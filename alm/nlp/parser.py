@@ -1,8 +1,20 @@
 from spacy import displacy
+import spacy
 from . import util
 from . import load_model
 
-def parse(in_dir_path, out_dir_path, artist):
+def parse(in_dir_path: str, out_dir_path: str, artist: str) -> None:
+    """文法構造を解析する
+
+    係り受け木を可視化する
+    JSONファイルに木を保存する
+
+    Args:
+        in_dir_path (str): 入力ファイルがあるディレクトリパス
+        out_dir_path (str): 出力先のディレクトリパス
+        artist (str): アーティスト名
+    """
+
     # 文法構造を解析
     res = parse_file(f"{util.put_slash_dir_path(in_dir_path)}{artist}.json")
 
@@ -19,8 +31,16 @@ def parse(in_dir_path, out_dir_path, artist):
 
         util.output_json(f"{out_dir_path}{song_name}.json", data)
 
-#　文法構造を解析する
-def parse_file(file_path):
+def parse_file(file_path: str) -> dict:
+    """文法構造を解析し、辞書型配列として返す
+
+    Args:
+        file_path (str): 解析対象のファイルパス
+
+    Returns:
+        dict: 解析結果の辞書型配列
+    """
+    
     songs = util.read_json(file_path)
     nlp = load_model.load_ginza()
     
@@ -33,14 +53,29 @@ def parse_file(file_path):
 
     return res
 
-# 歌詞の文法構造を可視化する
-def visualize(song, song_name):
+#TODO: 曲名を引数で受取り、解析結果から検索して表示したほうが良いのでは？(クラスにしてしまったほうが良い可能性)
+def visualize(song: dict, song_name: str) -> None:
+    """歌詞の文法構造を可視化する
+
+    Args:
+        song (dict): 解析結果のある1曲
+        song_name (str): 曲名
+    """
+
     for section in song:
         print(song_name, section, "\n")
         displacy.render(song[section], style='dep', jupyter=True, options={'compact':True, 'distance': 90})
 
-# 再帰的に木を作成する
-def recur_tree(token):
+def recur_tree(token: spacy.Token) -> dict:
+    """再帰的に木を作成する
+
+    Args:
+        token (spacy.Token): 解析結果のトークン
+
+    Returns:
+        dict: 木のノード
+    """
+
     node = {"word": token.text, "number": token.i, "children": {}}
 
     node["children"] = []
@@ -49,8 +84,16 @@ def recur_tree(token):
 
     return node
 
-# 根を結合する
-def join_roots(roots):
+def join_roots(roots: list) -> dict:
+    """ルートが複数ある場合に結合する
+
+    Args:
+        roots (list): ルートのリスト
+
+    Returns:
+        dict: 結合後の木
+    """
+
     if len(roots) <= 1:
         return roots
 
@@ -64,9 +107,16 @@ def join_roots(roots):
             res["children"].append(roots[i])
     return res
 
+#TODO: 解析結果のための構造体を作る
+def to_tree_map(song: dict) -> dict:
+    """係り受け木を辞書型にする
 
-# 文法構造をもとに、構文木のJSONファイルを作成する
-def to_tree_map(artist, song):
+    Args:
+        song (dict): ある曲の解析結果
+
+    Returns:
+        dict: 辞書型配列として表現された係り受け木
+    """
     data = {}
     for section in song:
         data[section] = []

@@ -1,7 +1,18 @@
+import spacy
 from . import util
 from . import load_model
 
-def add_punctuation(nlp, text):
+def add_punctuation(nlp: spacy.Language, text: str) -> str:
+    """句読点を追加
+
+    Args:
+        nlp (spacy.Language): モデルを読み込んだもの
+        text (str): 句読点を追加したい文字列
+
+    Returns:
+        str: 句読点を追加した文字列
+    """
+
     doc = nlp(text)
 
     res = ""

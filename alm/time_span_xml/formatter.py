@@ -26,7 +26,7 @@ def time_span_tree_to_json(file_path) -> node.Node:
     """タイムスパン木のXMLをJSONに変換する
 
     Args:
-        file_path (string): XMLファイルのパス
+        file_path (str): XMLファイルのパス
     
     Returns:
         node.Node: タイムスパン木のルート
