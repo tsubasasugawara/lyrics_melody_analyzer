@@ -6,7 +6,7 @@ ARG USERNAME=user
 ARG GROUPNAME=user
 ARG UID=1000
 ARG GID=1000
-ARG WORKDIR=/jupyter
+ARG WORKDIR=/alm
 
 ENV PYTHONPATH $WORKDIR
 
@@ -21,11 +21,11 @@ ENV PATH /home/$USERNAME/.local/bin:$PATH
 USER $USERNAME
 
 COPY . $WORKDIR
-WORKDIR $WORKDIR/src
+WORKDIR $WORKDIR
 
 RUN pip install --upgrade --user pip
 RUN pip install --upgrade --user setuptools
 
-RUN pip install --user -r ../requirements.txt
+RUN pip install --user -r requirements.txt
 
 EXPOSE 8888
