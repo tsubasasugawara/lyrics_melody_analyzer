@@ -1,5 +1,5 @@
 import spacy
-from . import util
+from ...utils import util
 from . import load_model
 
 def add_punctuation(nlp: spacy.Language, text: str) -> str:

@@ -1,6 +1,5 @@
 from spacy import displacy
-import spacy
-from . import util
+from ...utils import util
 from . import load_model
 
 def parse(in_dir_path: str, out_dir_path: str, artist: str) -> None:
