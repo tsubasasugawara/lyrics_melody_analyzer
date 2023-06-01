@@ -24,7 +24,7 @@ def parse(in_dir_path: str, out_dir_path: str, artist: str) -> None:
     
     # 曲ごとの構文木のJSONファイルを出力
     for song_name in res["songs"]:
-        data = to_tree_map(artist, res["songs"][song_name])
+        data = to_tree_map(res["songs"][song_name])
 
         out_dir_path = util.put_slash_dir_path(out_dir_path)
         util.make_dir(out_dir_path)
@@ -66,11 +66,12 @@ def visualize(song: dict, song_name: str) -> None:
         print(song_name, section, "\n")
         displacy.render(song[section], style='dep', jupyter=True, options={'compact':True, 'distance': 90})
 
-def recur_tree(token: spacy.Token) -> dict:
+def recur_tree(token) -> dict:
     """再帰的に木を作成する
 
     Args:
-        token (spacy.Token): 解析結果のトークン
+        TODO: tokenのタイプが不明
+        token (Any): 解析結果のトークン
 
     Returns:
         dict: 木のノード
