@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as et
 from ...utils import util
 
-class Extractor:
+class LyricsExtractor:
     def __init__(self):
         """歌詞をMusicXMLから抽出するためのクラス
 
