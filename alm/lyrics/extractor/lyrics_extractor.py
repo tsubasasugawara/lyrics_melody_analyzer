@@ -31,6 +31,15 @@ class LyricsExtractor:
         self.lyrics_notes_map[self.part] = {}
         self.__mapping_lyrics_notes(tree.iter("measure"))
 
+    def to_json(self, file_path: str) -> None:
+        """抽出結果をJSONファイルとして出力する
+
+        Args:
+            file_path (str): 出力先ファイルのパス
+        """
+
+        util.output_json(file_path, self.lyrics_notes_map)
+
     def __mapping_lyrics_notes(self, measures) -> None:
         """歌詞を抽出し、音符と対応付ける
 
@@ -43,7 +52,8 @@ class LyricsExtractor:
         lyrics = ""
         for measure in measures:
             measure_number = measure.attrib["number"]
-            self.lyrics_notes_map[self.part][measure_number] = {}
+            measure_lyrics = ""
+            self.lyrics_notes_map[self.part][measure_number] = {"lyrics": "", "notes": {}}
             
             notes_cnt = 0
             for note in measure.iter("note"):
@@ -57,11 +67,16 @@ class LyricsExtractor:
                 lyric_ele = note.find("lyric")
                 if lyric_ele != None:
                     char= lyric_ele.find("text").text
-                    lyrics = lyrics + char
-                    self.lyrics_notes_map[self.part][measure_number][char] = [note_id]
-                elif self.lyrics_notes_map[self.part][measure_number].get(char) == None:
-                    self.lyrics_notes_map[self.part][measure_number][char] = [note_id]
-                else:
-                    self.lyrics_notes_map[self.part][measure_number][char].append(note_id)
 
-        self.lyrics_notes_map[self.part][measure_number]["lyrics"] = lyrics 
+                    measure_lyrics = measure_lyrics + char
+                    lyrics = lyrics + char
+
+                    self.lyrics_notes_map[self.part][measure_number]["notes"][char] = [note_id]
+                elif self.lyrics_notes_map[self.part][measure_number]["notes"].get(char) == None:
+                    self.lyrics_notes_map[self.part][measure_number]["notes"][char] = [note_id]
+                else:
+                    self.lyrics_notes_map[self.part][measure_number]["notes"][char].append(note_id)
+
+                self.lyrics_notes_map[self.part][measure_number]["lyrics"] = measure_lyrics
+
+        self.lyrics_notes_map[self.part]["lyrics"] = lyrics 

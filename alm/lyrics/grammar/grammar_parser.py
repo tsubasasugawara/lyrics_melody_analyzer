@@ -12,13 +12,15 @@ class GrammarParser:
         
         Attribute:
             nlp (spacy.Language): モデルを読み込んだもの
-            nlp_res (spacy.Language): 文法解析の結果
+            doc (spacy.Language): 文法解析の結果
             tree (dict): 文法構造の構文解析木
+            words (list): 形態素解析で分割した単語のリスト
         """
 
         self.nlp = spacy.load(nlp_model_name)
-        self.nlp_res = None
+        self.doc = None
         self.tree = None
+        self.words = []
 
     def parse(self, lyrics: str) -> None:
         """歌詞の文法構造を解析する
@@ -27,17 +29,20 @@ class GrammarParser:
             lyrics (str): 解析したい歌詞
         """
 
-        self.nlp_res = self.nlp(lyrics)
+        self.doc = self.nlp(lyrics)
+
+        for token in self.doc:
+            self.words.append(token.text)
     
     def to_tree_map(self) -> None:
         """係り受け木を辞書型にする
         """
 
-        if self.nlp_res == None:
+        if self.doc == None:
             return
 
         tree_list = []
-        for sent in self.nlp_res.sents:
+        for sent in self.doc.sents:
             tree_list.append(self.__recur_tree(sent.root))
         self.tree = self.__join_roots(tree_list)
 
@@ -85,4 +90,4 @@ class GrammarParser:
     def visualize(self) -> None:
         """歌詞の文法構造を可視化する
         """
-        displacy.render(self.nlp_res, style='dep', jupyter=True, options={"compact": True, "distance": 90})
+        displacy.render(self.doc, style='dep', jupyter=True, options={"compact": True, "distance": 90})
