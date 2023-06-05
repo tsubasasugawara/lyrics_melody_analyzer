@@ -1,0 +1,81 @@
+{
+  "word": "なれる",
+  "number": 7,
+  "children": [
+    {
+      "word": "明日",
+      "number": 0,
+      "children": [
+        {
+          "word": "、",
+          "number": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "word": "好き",
+      "number": 5,
+      "children": [
+        {
+          "word": "今日",
+          "number": 2,
+          "children": [
+            {
+              "word": "より",
+              "number": 3,
+              "children": []
+            },
+            {
+              "word": "も",
+              "number": 4,
+              "children": []
+            }
+          ]
+        },
+        {
+          "word": "に",
+          "number": 6,
+          "children": []
+        }
+      ]
+    },
+    {
+      "word": "。",
+      "number": 8,
+      "children": []
+    },
+    {
+      "word": "止まら",
+      "number": 12,
+      "children": [
+        {
+          "word": "思い",
+          "number": 10,
+          "children": [
+            {
+              "word": "あふれる",
+              "number": 9,
+              "children": []
+            },
+            {
+              "word": "が",
+              "number": 11,
+              "children": []
+            }
+          ]
+        },
+        {
+          "word": "ない",
+          "number": 13,
+          "children": []
+        },
+        {
+          "word": "。",
+          "number": 14,
+          "children": []
+        }
+      ]
+    }
+  ]
+}
