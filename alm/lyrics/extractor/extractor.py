@@ -1,8 +1,9 @@
 import xml.etree.ElementTree as et
+from ...utils import util
 
 class Extractor:
     def __init__(self):
-        """歌詞を抽出するためのクラス
+        """歌詞をMusicXMLから抽出するためのクラス
 
         Attributes:
             part (str): パートのID
@@ -29,6 +30,15 @@ class Extractor:
         self.part = tree.find("part").attrib["id"]
         self.lyrics_notes_map[self.part] = {}
         self.__mapping_lyrics_notes(tree.iter("measure"))
+
+    def to_json(self, file_path: str) -> None:
+        """抽出結果をJSONファイルとして出力する
+
+        Args:
+            file_path (str): 出力先ファイルのパス
+        """
+
+        util.output_json(file_path, self.lyrics_notes_map)
 
     def __mapping_lyrics_notes(self, measures) -> None:
         """歌詞を抽出し、音符と対応付ける
