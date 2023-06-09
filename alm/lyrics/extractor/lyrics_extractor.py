@@ -1,6 +1,9 @@
 import xml.etree.ElementTree as et
 from ...utils import util
 
+PART_KEY = "parts"
+LYRICS_KEY = "lyrics"
+
 class LyricsExtractor:
     def __init__(self):
         """歌詞をMusicXMLから抽出するためのクラス
@@ -10,7 +13,6 @@ class LyricsExtractor:
             lyrics_notes_map (dict): 抽出し音符と対応付けた歌詞のリスト
             lyrics (str): 歌詞
         """
-        self.part = ""
         self.lyrics_notes_map = {}
         self.lyrics = ""
 
@@ -27,8 +29,7 @@ class LyricsExtractor:
             print("ParseError:", err)
             return
 
-        self.part = tree.find("part").attrib["id"]
-        self.lyrics_notes_map[self.part] = {}
+        self.lyrics_notes_map[PART_KEY] = {}
         self.__mapping_lyrics_notes(tree.iter("measure"))
 
     def to_json(self, file_path: str) -> None:
@@ -53,7 +54,7 @@ class LyricsExtractor:
         for measure in measures:
             measure_number = measure.attrib["number"]
             measure_lyrics = ""
-            self.lyrics_notes_map[self.part][measure_number] = {"lyrics": "", "notes": {}}
+            self.lyrics_notes_map[PART_KEY][measure_number] = {LYRICS_KEY: "", "notes": {}}
             
             notes_cnt = 0
             for note in measure.iter("note"):
@@ -62,7 +63,7 @@ class LyricsExtractor:
                 if note.find("rest") != None:
                     continue
 
-                note_id = '-'.join([self.part, measure_number, str(notes_cnt)])
+                note_id = '-'.join([PART_KEY, measure_number, str(notes_cnt)])
 
                 lyric_ele = note.find("lyric")
                 if lyric_ele != None:
@@ -71,12 +72,13 @@ class LyricsExtractor:
                     measure_lyrics = measure_lyrics + char
                     lyrics = lyrics + char
 
-                    self.lyrics_notes_map[self.part][measure_number]["notes"][char] = [note_id]
-                elif self.lyrics_notes_map[self.part][measure_number]["notes"].get(char) == None:
-                    self.lyrics_notes_map[self.part][measure_number]["notes"][char] = [note_id]
+                    self.lyrics_notes_map[PART_KEY][measure_number]["notes"][char] = [note_id]
+                elif self.lyrics_notes_map[PART_KEY][measure_number]["notes"].get(char) == None:
+                    self.lyrics_notes_map[PART_KEY][measure_number]["notes"][char] = [note_id]
                 else:
-                    self.lyrics_notes_map[self.part][measure_number]["notes"][char].append(note_id)
+                    self.lyrics_notes_map[PART_KEY][measure_number]["notes"][char].append(note_id)
 
-                self.lyrics_notes_map[self.part][measure_number]["lyrics"] = measure_lyrics
+                self.lyrics_notes_map[PART_KEY][measure_number][LYRICS_KEY] = measure_lyrics
 
-        self.lyrics_notes_map[self.part]["lyrics"] = lyrics 
+        self.lyrics_notes_map[PART_KEY][LYRICS_KEY] = lyrics 
+        self.lyrics = lyrics

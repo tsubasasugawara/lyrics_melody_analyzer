@@ -7,7 +7,7 @@
   <identification>
     <encoding>
       <software>MuseScore 4.0.2</software>
-      <encoding-date>2023-06-02</encoding-date>
+      <encoding-date>2023-06-09</encoding-date>
       <supports element="accidental" type="yes"/>
       <supports element="beam" type="yes"/>
       <supports element="print" attribute="new-page" type="no"/>
@@ -64,7 +64,7 @@
         <stem>down</stem>
         <lyric number="1">
           <syllabic>single</syllabic>
-          <text>hi</text>
+          <text>ひ</text>
           </lyric>
         </note>
       <note>
@@ -78,8 +78,8 @@
         <type>quarter</type>
         <stem>down</stem>
         <lyric number="1">
-          <syllabic>begin</syllabic>
-          <text>to</text>
+          <syllabic>single</syllabic>
+          <text>と</text>
           </lyric>
         </note>
       <note>
@@ -91,6 +91,10 @@
         <voice>1</voice>
         <type>quarter</type>
         <stem>up</stem>
+        <lyric number="1">
+          <syllabic>single</syllabic>
+          <text>つ</text>
+          </lyric>
         </note>
       <barline location="right">
         <bar-style>light-light</bar-style>
@@ -107,8 +111,8 @@
         <type>quarter</type>
         <stem>down</stem>
         <lyric number="1">
-          <syllabic>middle</syllabic>
-          <text>hu</text>
+          <syllabic>single</syllabic>
+          <text>ふ</text>
           </lyric>
         </note>
       <note>
@@ -120,6 +124,10 @@
         <voice>1</voice>
         <type>quarter</type>
         <stem>up</stem>
+        <lyric number="1">
+          <syllabic>single</syllabic>
+          <text>た</text>
+          </lyric>
         </note>
       <note>
         <pitch>
@@ -131,6 +139,10 @@
         <voice>1</voice>
         <type>quarter</type>
         <stem>down</stem>
+        <lyric number="1">
+          <syllabic>single</syllabic>
+          <text>つ</text>
+          </lyric>
         </note>
       <note>
         <pitch>
@@ -142,6 +154,10 @@
         <type>eighth</type>
         <stem>down</stem>
         <beam number="1">begin</beam>
+        <lyric number="1">
+          <syllabic>begin</syllabic>
+          <text>と</text>
+          </lyric>
         </note>
       <note>
         <pitch>
@@ -183,6 +199,10 @@
         <type>eighth</type>
         <stem>up</stem>
         <beam number="1">begin</beam>
+        <lyric number="1">
+          <syllabic>single</syllabic>
+          <text>ほ</text>
+          </lyric>
         </note>
       <note>
         <pitch>
@@ -194,6 +214,10 @@
         <type>eighth</type>
         <stem>up</stem>
         <beam number="1">end</beam>
+        <lyric number="1">
+          <syllabic>single</syllabic>
+          <text>し</text>
+          </lyric>
         </note>
       </measure>
     <measure number="4">
@@ -207,6 +231,10 @@
         <voice>1</voice>
         <type>quarter</type>
         <stem>down</stem>
+        <lyric number="1">
+          <syllabic>single</syllabic>
+          <text>が</text>
+          </lyric>
         </note>
       <note>
         <pitch>
@@ -219,6 +247,10 @@
         <type>eighth</type>
         <stem>down</stem>
         <beam number="1">begin</beam>
+        <lyric number="1">
+          <syllabic>begin</syllabic>
+          <text>で</text>
+          </lyric>
         </note>
       <note>
         <pitch>
@@ -241,6 +273,10 @@
         <voice>1</voice>
         <type>quarter</type>
         <stem>down</stem>
+        <lyric number="1">
+          <syllabic>end</syllabic>
+          <text>て</text>
+          </lyric>
         </note>
       <note>
         <pitch>
@@ -252,6 +288,10 @@
         <type>eighth</type>
         <stem>down</stem>
         <beam number="1">begin</beam>
+        <lyric number="1">
+          <syllabic>begin</syllabic>
+          <text>き</text>
+          </lyric>
         </note>
       <note>
         <pitch>
@@ -275,6 +315,10 @@
         <voice>1</voice>
         <type>quarter</type>
         <stem>down</stem>
+        <lyric number="1">
+          <syllabic>end</syllabic>
+          <text>た</text>
+          </lyric>
         </note>
       <note>
         <rest/>

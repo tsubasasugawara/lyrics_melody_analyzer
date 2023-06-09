@@ -73,7 +73,9 @@ class GrammarParser:
             dict: 結合後の木
         """
 
-        if len(roots) <= 1:
+        if len(roots) == 1:
+            return roots[0]
+        elif len(roots) <= 0:
             return roots
 
         res = roots[0]
