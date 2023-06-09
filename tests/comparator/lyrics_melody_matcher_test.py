@@ -16,4 +16,18 @@ def make_words_notes_map_test():
     for key in key_list:
         print(matcher.words_notes_map[key])
 
-make_words_notes_map_test()
+def match_words_notes_test():
+    e = lyrics_extractor.LyricsExtractor()
+    e.abstract_lyrics("tests/test_file/オレンジ_A1/オレンジ_A1.xml")
+
+    parser = GP.GrammarParser("ja_ginza")
+    parser.parse(e.lyrics)
+    parser.to_tree_map()
+
+    matcher = LMM.LyricsMelodyMatcher(parser.tree, e.lyrics_notes_map)
+    matcher.match_words_notes()
+    key_list = sorted(matcher.words_notes_map)
+    for key in key_list:
+        print(matcher.words_notes_map[key])
+
+match_words_notes_test()
