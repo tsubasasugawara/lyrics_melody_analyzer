@@ -68,6 +68,7 @@ class LyricsMelodyMatcher:
 
             chars = chars + self.lyrics_notes_map[LE.CHAR_NOTES_KEY][index_lyrics_map][LE.CHAR_KEY]
             notes.extend(self.lyrics_notes_map[LE.CHAR_NOTES_KEY][index_lyrics_map][LE.NOTES_KEY])
+            notes = list(dict.fromkeys(notes))
 
             if word == chars:
                 self.words_notes_map[key]["notes"] = notes

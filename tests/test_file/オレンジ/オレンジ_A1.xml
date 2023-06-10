@@ -2,7 +2,7 @@
 <!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 4.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
 <score-partwise version="4.0">
   <work>
-    <work-title>無題のスコア</work-title>
+    <work-title>オレンジ_A1</work-title>
     </work>
   <identification>
     <creator type="composer">作曲者/編曲者</creator>
@@ -343,7 +343,6 @@
         </note>
       </measure>
     <measure number="4">
-      <print new-system="yes"/>
       <note>
         <pitch>
           <step>E</step>
@@ -471,6 +470,7 @@
         </note>
       </measure>
     <measure number="5">
+      <print new-system="yes"/>
       <note>
         <pitch>
           <step>D</step>
@@ -1118,162 +1118,6 @@
           <syllabic>single</syllabic>
           <text>て</text>
           </lyric>
-        </note>
-      </measure>
-    <measure number="11">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="12">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="13">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="14">
-      <print new-system="yes"/>
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="15">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="16">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="17">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="18">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="19">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="20">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="21">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="22">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="23">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="24">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="25">
-      <print new-system="yes"/>
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="26">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="27">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="28">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="29">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="30">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="31">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
-        </note>
-      </measure>
-    <measure number="32">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
         </note>
       <barline location="right">
         <bar-style>light-heavy</bar-style>

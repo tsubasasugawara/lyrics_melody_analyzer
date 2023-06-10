@@ -38,6 +38,8 @@ class LyricsExtractor:
         self.lyrics_notes_map = {CHAR_NOTES_KEY: [], MEASURES_KEY: [], LYRICS_KEY: ""}
         self.__mapping_lyrics_notes(tree.iter("measure"))
 
+        self.__split_a_char()
+
     def to_json(self, file_path: str) -> None:
         """抽出結果をJSONファイルとして出力する
 
@@ -46,6 +48,29 @@ class LyricsExtractor:
         """
 
         util.output_json(file_path, self.lyrics_notes_map)
+
+    def __split_a_char(self) -> None:
+        """一つの音符に2文字以上が対応しているときに分割する
+        """
+
+        index = 0
+        while True:
+            if index >= len(self.lyrics_notes_map[CHAR_NOTES_KEY]) - 1:
+                break
+
+            chars = self.lyrics_notes_map[CHAR_NOTES_KEY][index][CHAR_KEY]
+
+            char_list = list(chars)
+            if len(char_list) <= 1:
+                index += 1
+                continue
+
+            char_notes = self.lyrics_notes_map[CHAR_NOTES_KEY][index]
+            self.lyrics_notes_map[CHAR_NOTES_KEY].pop(index)
+            for i in range(len(char_list)):
+                self.lyrics_notes_map[CHAR_NOTES_KEY].insert(index + i, {CHAR_KEY: char_list[i], NOTES_KEY: char_notes[NOTES_KEY], CHAR_NUMBER: char_notes[CHAR_NUMBER]})
+
+            index += len(char_list)
 
     def __mapping_lyrics_notes(self, measures) -> None:
         """歌詞を抽出し、音符と対応付ける
