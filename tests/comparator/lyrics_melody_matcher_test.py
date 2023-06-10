@@ -25,9 +25,13 @@ def match_words_notes_test():
     parser.to_tree_map()
 
     matcher = LMM.LyricsMelodyMatcher(parser.tree, e.lyrics_notes_map)
-    matcher.match_words_notes()
+    matcher.match_word_notes()
     key_list = sorted(matcher.words_notes_map)
     for key in key_list:
         print(matcher.words_notes_map[key])
+
+    print(matcher.lyrics_tree)
+
+    util.output_json("tests/test_file/mapping_word_notes_test.json", matcher.lyrics_tree)
 
 match_words_notes_test()

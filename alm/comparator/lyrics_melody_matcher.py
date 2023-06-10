@@ -35,7 +35,22 @@ class LyricsMelodyMatcher:
         for child in tree["children"]:
             self.__explore_words_in_tree(child)
 
-    def match_words_notes(self) -> None:
+    def __match_notes_words_tree(self, tree: dict) -> None:
+        """単語の木に音符を対応付ける
+
+        Args:
+            tree (dict): 構文解析木の部分木
+        """
+
+        number = tree["number"]
+        tree["notes"] = self.words_notes_map[number]["notes"]
+        # notesとchildrenの順番を入れ替えるために、childrenを再度入れ直す
+        tree["children"] = tree.pop("children")
+
+        for child in tree["children"]:
+            self.__match_notes_words_tree(child)
+
+    def match_word_notes(self) -> None:
         """単語と音符を対応付ける
         """
 
@@ -60,3 +75,5 @@ class LyricsMelodyMatcher:
 
                 notes = []
                 chars = ""
+        
+        self.__match_notes_words_tree(self.lyrics_tree)
