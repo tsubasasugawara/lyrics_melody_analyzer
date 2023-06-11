@@ -1,4 +1,4 @@
-from alm.lyrics.extractor import lyrics_extractor
+from alm.lyrics import lyrics_extractor
 
 def test_extractor():
     e = lyrics_extractor.LyricsExtractor()

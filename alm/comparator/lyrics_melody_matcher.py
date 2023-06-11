@@ -1,4 +1,4 @@
-from ..lyrics.extractor import lyrics_extractor as LE
+from ..lyrics import lyrics_extractor as LE
 
 class LyricsMelodyMatcher:
     def __init__(self, lyrics_tree: dict, lyrics_notes_map: dict):

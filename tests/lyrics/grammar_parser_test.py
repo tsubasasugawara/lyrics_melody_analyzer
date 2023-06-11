@@ -1,4 +1,4 @@
-from alm.lyrics.grammar import grammar_parser as gp
+from alm.lyrics import grammar_parser as gp
 from alm.utils import util
 
 def test_gramar_parser():
