@@ -1,6 +1,33 @@
 import xml.etree.ElementTree as et
 from ..utils import util
 
+class Node:
+    """タイムスパン木のノード
+
+    Attributes:
+        id(str): 音符のID
+        children(Node): 子ノード
+    """
+    def __init__(self, id):
+        self.id = id
+        self.children = []
+
+    def to_dict(self) -> dict:
+        """Nodeオブジェクトを辞書型配列にする
+
+        Args:
+            depth (int): 現在の深さ
+
+        Returns:
+            dict: Nodeを辞書型配列に変換した結果
+        """
+
+        res = {"id": self.id, "children": []}
+        for child in self.children:
+            res["children"].append(child.to_dict())
+
+        return res 
+
 class TimeSpanTree:
     def __init__(self) -> None:
         """タイムスパン木の処理を行うクラス
@@ -8,34 +35,7 @@ class TimeSpanTree:
         Attribute:
             time_span_tree_dict (dict): タイムスパン木を辞書型配列にしたもの
         """
-        self.time_span_tree_dict = {}
-    
-    class Node:
-        """タイムスパン木のノード
-
-        Attributes:
-            id(str): 音符のID
-            children(Node): 子ノード
-        """
-        def __init__(self, id):
-            self.id = id
-            self.children = []
-
-        def to_dict(self) -> dict:
-            """Nodeオブジェクトを辞書型配列にする
-
-            Args:
-                depth (int): 現在の深さ
-
-            Returns:
-                dict: Nodeを辞書型配列に変換した結果
-            """
-
-            res = {"id": self.id, "children": []}
-            for child in self.children:
-                res["children"].append(child.to_dict())
-
-            return res 
+        self.time_span_tree_dict = {} 
 
     def time_span_tree_to_dict(self, file_path: str) -> None:
         """タイムスパン木のXMLをJSONに変換する
@@ -54,7 +54,7 @@ class TimeSpanTree:
             print("ParseError:", err)
 
         root = tree.getroot()
-        head = self.Node(root.find("./ts/head/chord/note").attrib["id"])
+        head = Node(root.find("./ts/head/chord/note").attrib["id"])
         if head == None:
             return
         self.__parse_time_span_tree(root.find("./ts"), head)
@@ -86,7 +86,7 @@ class TimeSpanTree:
         secondary = ts.find("./secondary/ts")
         if secondary != None:
             id = secondary.find("./head/chord/note").attrib["id"]
-            sn = self.Node(id)
+            sn = Node(id)
             self.__parse_time_span_tree(secondary, sn)
             parent.children.append(sn)
     
