@@ -1,5 +1,4 @@
 import xml.etree.ElementTree as et
-from ..utils import util
 
 class Node:
     """タイムスパン木のノード
@@ -28,65 +27,51 @@ class Node:
 
         return res 
 
-class TimeSpanTree:
-    def __init__(self) -> None:
-        """タイムスパン木の処理を行うクラス
+def time_span_tree_to_dict(file_path: str) -> dict:
+    """タイムスパン木のXMLをJSONに変換する
 
-        Attribute:
-            time_span_tree_dict (dict): タイムスパン木を辞書型配列にしたもの
-        """
-        self.time_span_tree_dict = {} 
+    Args:
+        file_path (str): XMLファイルのパス
 
-    def time_span_tree_to_dict(self, file_path: str) -> None:
-        """タイムスパン木のXMLをJSONに変換する
+    Returns:
+        dict: タイムスパン木の辞書型配列
+    
+    Raises:
+        ParseError:XMLの解析に失敗したときの例外
+    """
 
-        Args:
-            file_path (str): XMLファイルのパス
-        
-        Raises:
-            ParseError:XMLの解析に失敗したときの例外
-        """
+    # XMLファイルを解析
+    try:
+        tree = et.parse(file_path)
+    except et.ParseError as err:
+        print("ParseError:", err)
 
-        # XMLファイルを解析
-        try:
-            tree = et.parse(file_path)
-        except et.ParseError as err:
-            print("ParseError:", err)
+    root = tree.getroot()
+    head = Node(root.find("./ts/head/chord/note").attrib["id"])
+    if head == None:
+        return
+    __parse_time_span_tree(root.find("./ts"), head)
 
-        root = tree.getroot()
-        head = Node(root.find("./ts/head/chord/note").attrib["id"])
-        if head == None:
-            return
-        self.__parse_time_span_tree(root.find("./ts"), head)
+    return head.to_dict()
 
-        self.time_span_tree_dict = head.to_dict()
+def __parse_time_span_tree(ts: et.ElementTree, parent: Node):
+    """タイムスパン木を解析し、Nodeによって木を構築する
 
-    def to_json(self, file_path: str) -> None:
-        """タイムスパン木のJSONファイルを出力する
+    Args:
+        ts (ElementTree): タイムスパン木のElementTree
+        parent (Node): 親ノード
+    """
 
-        Args:
-            file_path (str): 出力先のファイルのパス
-        """
-        util.output_json(file_path, self.time_span_tree_dict)
+    # primary要素
+    primary = ts.find("./primary/ts")
+    if primary != None:
+        __parse_time_span_tree(primary, parent)
 
-    def __parse_time_span_tree(self, ts: et.ElementTree, parent: Node):
-        """タイムスパン木を解析し、Nodeによって木を構築する
-
-        Args:
-            ts (ElementTree): タイムスパン木のElementTree
-            parent (Node): 親ノード
-        """
-
-        # primary要素
-        primary = ts.find("./primary/ts")
-        if primary != None:
-            self.__parse_time_span_tree(primary, parent)
-
-        # secondary要素
-        secondary = ts.find("./secondary/ts")
-        if secondary != None:
-            id = secondary.find("./head/chord/note").attrib["id"]
-            sn = Node(id)
-            self.__parse_time_span_tree(secondary, sn)
-            parent.children.append(sn)
+    # secondary要素
+    secondary = ts.find("./secondary/ts")
+    if secondary != None:
+        id = secondary.find("./head/chord/note").attrib["id"]
+        sn = Node(id)
+        __parse_time_span_tree(secondary, sn)
+        parent.children.append(sn)
     
