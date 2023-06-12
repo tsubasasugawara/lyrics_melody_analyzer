@@ -1,5 +1,4 @@
 import xml.etree.ElementTree as et
-from ..utils import util
 
 CHAR_NOTES_KEY = "char_notes"
 MEASURES_KEY = "measures"
@@ -8,7 +7,7 @@ CHAR_KEY = "char"
 NOTES_KEY = "notes"
 CHAR_NUMBER = "char_number"
 
-def abstract_lyrics(file_path: str) -> dict:
+def extract_lyrics(file_path: str) -> dict:
     """MusicXmlから歌詞を抽出して音符と対応付ける
 
     Args:

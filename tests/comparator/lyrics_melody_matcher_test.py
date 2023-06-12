@@ -1,7 +1,6 @@
 from alm.comparator import lyrics_melody_matcher as LMM
 from alm.lyrics import grammar_parser as GP
 from alm.lyrics import lyrics_extractor as LE
-from alm.utils import util
 
 def match_words_notes_test(file_path: str):
     lyrics_notes_map = LE.extract_lyrics(file_path)

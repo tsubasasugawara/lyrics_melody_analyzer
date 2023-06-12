@@ -1,6 +1,5 @@
 import spacy
 from spacy import displacy
-from ..utils import util
 
 class GrammarParser:
     def __init__(self, nlp_model_name: str):

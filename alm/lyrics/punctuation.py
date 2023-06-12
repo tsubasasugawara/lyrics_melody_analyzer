@@ -1,7 +1,6 @@
 import spacy
 from ..utils import util
 
-#TODO: クラス
 #TODO: テスト
 def add_punctuation(nlp: spacy.Language, text: str) -> str:
     """句読点を追加
