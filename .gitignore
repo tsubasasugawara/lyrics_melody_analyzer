@@ -1,2 +1,4 @@
 .vimsession
 *.swp
+__pycache__
+.vscode
