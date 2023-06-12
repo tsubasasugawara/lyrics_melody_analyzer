@@ -8,105 +8,100 @@ CHAR_KEY = "char"
 NOTES_KEY = "notes"
 CHAR_NUMBER = "char_number"
 
-class LyricsExtractor:
-    def __init__(self):
-        """歌詞をMusicXMLから抽出するためのクラス
+def abstract_lyrics(file_path: str) -> dict:
+    """MusicXmlから歌詞を抽出して音符と対応付ける
 
-        Attributes:
-            part (str): パートのID
-            lyrics_notes_map (dict): 抽出し音符と対応付けた歌詞のリスト
-            lyrics (str): 歌詞
-        """
-        self.part = ""
-        self.lyrics_notes_map = {}
-        self.lyrics = ""
+    Args:
+        file_path (str): 歌詞を抽出したファイルのパス
 
-    def abstract_lyrics(self, file_path: str):
-        """MusicXmlから歌詞のみを抽出する
+    Returns:
+        dict: 歌詞の1文字と音符が対応付けられた辞書
+    """
 
-        Args:
-            file_path (str): 歌詞を抽出したファイルのパス
-        """
+    try:
+        tree = et.parse(file_path)
+    except et.ParseError as err:
+        print("ParseError:", err)
+        return
 
-        try:
-            tree = et.parse(file_path)
-        except et.ParseError as err:
-            print("ParseError:", err)
-            return
+    part = tree.find("part").attrib["id"]
 
-        self.part = tree.find("part").attrib["id"]
-        self.lyrics_notes_map = {CHAR_NOTES_KEY: [], MEASURES_KEY: [], LYRICS_KEY: ""}
-        self.__mapping_lyrics_notes(tree.iter("measure"))
+    lyrics_notes_map = __mapping_lyrics_notes(tree.iter("measure"), part)
 
-        self.__split_a_char()
+    return __split_char(lyrics_notes_map)
 
-    def to_json(self, file_path: str) -> None:
-        """抽出結果をJSONファイルとして出力する
+def __mapping_lyrics_notes(measures, part: str) -> dict:
+    """歌詞を抽出し、音符と対応付ける
 
-        Args:
-            file_path (str): 出力先ファイルのパス
-        """
+    Args:
+        #TODO: measureのタイプ
+        measures (Any): xmlからiter関数によって抜き出したmeasureタグのリスト
+        part: 小節ID
+    
+    Returns:
+        dict: 歌詞と音符を対応付けた辞書
+    """
 
-        util.output_json(file_path, self.lyrics_notes_map)
+    lyrics_notes_map = {CHAR_NOTES_KEY: [], MEASURES_KEY: [], LYRICS_KEY: ""}
+    
+    char= ''
+    lyrics = ""
+    for measure in measures:
+        measure_number = measure.attrib["number"]
+        measure_lyrics = ""
+        notes_cnt = 0
+        for note in measure.iter("note"):
+            notes_cnt += 1
 
-    def __split_a_char(self) -> None:
-        """一つの音符に2文字以上が対応しているときに分割する
-        """
-
-        index = 0
-        while True:
-            if index >= len(self.lyrics_notes_map[CHAR_NOTES_KEY]) - 1:
-                break
-
-            chars = self.lyrics_notes_map[CHAR_NOTES_KEY][index][CHAR_KEY]
-
-            char_list = list(chars)
-            if len(char_list) <= 1:
-                index += 1
+            if note.find("rest") != None:
                 continue
 
-            char_notes = self.lyrics_notes_map[CHAR_NOTES_KEY][index]
-            self.lyrics_notes_map[CHAR_NOTES_KEY].pop(index)
-            for i in range(len(char_list)):
-                self.lyrics_notes_map[CHAR_NOTES_KEY].insert(index + i, {CHAR_KEY: char_list[i], NOTES_KEY: char_notes[NOTES_KEY], CHAR_NUMBER: char_notes[CHAR_NUMBER]})
+            note_id = '-'.join([part, measure_number, str(notes_cnt)])
 
-            index += len(char_list)
+            lyric_ele = note.find("lyric")
+            if lyric_ele != None:
+                char= lyric_ele.find("text").text
 
-    def __mapping_lyrics_notes(self, measures) -> None:
-        """歌詞を抽出し、音符と対応付ける
+                measure_lyrics = measure_lyrics + char
+                lyrics = lyrics + char
 
-        Args:
-            #TODO: measureのタイプ
-            measures (Any): xmlからiter関数によって抜き出したmeasureタグのリスト
-        """
-        
-        char= ''
-        lyrics = ""
-        for measure in measures:
-            measure_number = measure.attrib["number"]
-            measure_lyrics = ""
-            notes_cnt = 0
-            for note in measure.iter("note"):
-                notes_cnt += 1
+                lyrics_notes_map[CHAR_NOTES_KEY].append({CHAR_KEY: char, NOTES_KEY: [note_id]})
+                lyrics_notes_map[CHAR_NOTES_KEY][-1][CHAR_NUMBER] = len(lyrics_notes_map[CHAR_NOTES_KEY]) - 1
+            else:
+                lyrics_notes_map[CHAR_NOTES_KEY][-1][NOTES_KEY].append(note_id)
 
-                if note.find("rest") != None:
-                    continue
+        lyrics_notes_map[MEASURES_KEY].append(measure_lyrics)
 
-                note_id = '-'.join([self.part, measure_number, str(notes_cnt)])
+    lyrics_notes_map[LYRICS_KEY] = lyrics 
+    return lyrics_notes_map
 
-                lyric_ele = note.find("lyric")
-                if lyric_ele != None:
-                    char= lyric_ele.find("text").text
+def __split_char(lyrics_notes_map: dict) -> dict:
+    """一つの音符に2文字以上が対応しているときに分割する
 
-                    measure_lyrics = measure_lyrics + char
-                    lyrics = lyrics + char
+    Args:
+        lyrics_notes_map (dict): 歌詞と音符を対応付けた辞書
 
-                    self.lyrics_notes_map[CHAR_NOTES_KEY].append({CHAR_KEY: char, NOTES_KEY: [note_id]})
-                    self.lyrics_notes_map[CHAR_NOTES_KEY][-1][CHAR_NUMBER] = len(self.lyrics_notes_map[CHAR_NOTES_KEY]) - 1
-                else:
-                    self.lyrics_notes_map[CHAR_NOTES_KEY][-1][NOTES_KEY].append(note_id)
+    Returns:
+        dict: 1文字ごとに音符と対応付けた辞書型
+    """
 
-            self.lyrics_notes_map[MEASURES_KEY].append(measure_lyrics)
+    index = 0
+    while True:
+        if index >= len(lyrics_notes_map[CHAR_NOTES_KEY]) - 1:
+            break
 
-        self.lyrics_notes_map[LYRICS_KEY] = lyrics 
-        self.lyrics = lyrics
+        chars = lyrics_notes_map[CHAR_NOTES_KEY][index][CHAR_KEY]
+
+        char_list = list(chars)
+        if len(char_list) <= 1:
+            index += 1
+            continue
+
+        char_notes = lyrics_notes_map[CHAR_NOTES_KEY][index]
+        lyrics_notes_map[CHAR_NOTES_KEY].pop(index)
+        for i in range(len(char_list)):
+            lyrics_notes_map[CHAR_NOTES_KEY].insert(index + i, {CHAR_KEY: char_list[i], NOTES_KEY: char_notes[NOTES_KEY], CHAR_NUMBER: char_notes[CHAR_NUMBER]})
+
+        index += len(char_list)
+    
+    return lyrics_notes_map
