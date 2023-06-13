@@ -25,11 +25,11 @@ def extract_lyrics(file_path: str) -> dict:
 
     part = tree.find("part").attrib["id"]
 
-    lyrics_notes_map = __mapping_lyrics_notes(tree.iter("measure"), part)
+    lyrics_notes_map = mapping_lyrics_notes(tree.iter("measure"), part)
 
-    return __split_char(lyrics_notes_map)
+    return split_char(lyrics_notes_map)
 
-def __mapping_lyrics_notes(measures, part: str) -> dict:
+def mapping_lyrics_notes(measures, part: str) -> dict:
     """歌詞を抽出し、音符と対応付ける
 
     Args:
@@ -74,7 +74,7 @@ def __mapping_lyrics_notes(measures, part: str) -> dict:
     lyrics_notes_map[LYRICS_KEY] = lyrics 
     return lyrics_notes_map
 
-def __split_char(lyrics_notes_map: dict) -> dict:
+def split_char(lyrics_notes_map: dict) -> dict:
     """一つの音符に2文字以上が対応しているときに分割する
 
     Args:

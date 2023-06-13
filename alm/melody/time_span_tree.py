@@ -50,11 +50,11 @@ def time_span_tree_to_dict(file_path: str) -> dict:
     head = Node(root.find("./ts/head/chord/note").attrib["id"])
     if head == None:
         return
-    __parse_time_span_tree(root.find("./ts"), head)
+    parse_time_span_tree(root.find("./ts"), head)
 
     return head.to_dict()
 
-def __parse_time_span_tree(ts: et.ElementTree, parent: Node):
+def parse_time_span_tree(ts: et.ElementTree, parent: Node):
     """タイムスパン木を解析し、Nodeによって木を構築する
 
     Args:
@@ -65,13 +65,13 @@ def __parse_time_span_tree(ts: et.ElementTree, parent: Node):
     # primary要素
     primary = ts.find("./primary/ts")
     if primary != None:
-        __parse_time_span_tree(primary, parent)
+        parse_time_span_tree(primary, parent)
 
     # secondary要素
     secondary = ts.find("./secondary/ts")
     if secondary != None:
         id = secondary.find("./head/chord/note").attrib["id"]
         sn = Node(id)
-        __parse_time_span_tree(secondary, sn)
+        parse_time_span_tree(secondary, sn)
         parent.children.append(sn)
     

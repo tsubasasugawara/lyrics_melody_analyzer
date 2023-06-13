@@ -12,7 +12,7 @@ def match_word_notes(lyrics_tree: dict, lyrics_notes_map: dict) -> dict:
     """
 
     words_notes_map = {}
-    words_notes_map = __explore_words_in_tree(lyrics_tree, words_notes_map)
+    words_notes_map = explore_words_in_tree(lyrics_tree, words_notes_map)
 
     key_list = sorted(words_notes_map)
     index_words_map_key_list = 0
@@ -37,10 +37,10 @@ def match_word_notes(lyrics_tree: dict, lyrics_notes_map: dict) -> dict:
             notes = []
             chars = ""
     
-    __match_notes_words_tree(lyrics_tree, words_notes_map)
+    match_notes_words_tree(lyrics_tree, words_notes_map)
     return lyrics_tree
 
-def __explore_words_in_tree(tree: dict, words_notes_map: dict) -> dict:
+def explore_words_in_tree(tree: dict, words_notes_map: dict) -> dict:
     """構文解析木から単語を探索し、単語リストを作成する
 
     Args:
@@ -57,11 +57,11 @@ def __explore_words_in_tree(tree: dict, words_notes_map: dict) -> dict:
     words_notes_map[number] = {"word": word, "notes": []}
 
     for child in tree["children"]:
-        __explore_words_in_tree(child, words_notes_map)
+        explore_words_in_tree(child, words_notes_map)
     
     return words_notes_map
 
-def __match_notes_words_tree(tree: dict, words_notes_map: dict) -> None:
+def match_notes_words_tree(tree: dict, words_notes_map: dict) -> None:
     """単語の木に音符を対応付ける
 
     Args:
@@ -75,4 +75,4 @@ def __match_notes_words_tree(tree: dict, words_notes_map: dict) -> None:
     tree["children"] = tree.pop("children")
 
     for child in tree["children"]:
-        __match_notes_words_tree(child, words_notes_map)
+        match_notes_words_tree(child, words_notes_map)
