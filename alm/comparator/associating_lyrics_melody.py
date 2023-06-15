@@ -1,6 +1,6 @@
 from ..lyrics import lyrics_extractor as LE
 
-def match_word_notes(lyrics_tree: dict, lyrics_notes_map: dict) -> dict:
+def associate_word_notes(lyrics_tree: dict, lyrics_notes_map: dict) -> dict:
     """単語と音符を対応付ける
 
     Args:
@@ -13,6 +13,22 @@ def match_word_notes(lyrics_tree: dict, lyrics_notes_map: dict) -> dict:
 
     words_notes_map = {}
     words_notes_map = explore_words_in_tree(lyrics_tree, words_notes_map)
+
+    associate_word_list_notes(words_notes_map, lyrics_notes_map)
+    associate_words_tree_notes(lyrics_tree, words_notes_map)
+
+    return lyrics_tree
+
+def associate_word_list_notes(words_notes_map: dict, lyrics_notes_map: dict) -> list:
+    """単語のリストに音符を対応付ける
+
+    Args:
+        words_notes_map (dict): 分割された単語を格納する配列
+        lyrics_notes_map (dict): LyricsExtractorクラスで出力された音符と歌詞の対応を示したリスト
+
+    Returns:
+        list: 音符を対応付けた単語のリスト
+    """
 
     key_list = sorted(words_notes_map)
     index_words_map_key_list = 0
@@ -36,9 +52,8 @@ def match_word_notes(lyrics_tree: dict, lyrics_notes_map: dict) -> dict:
 
             notes = []
             chars = ""
-    
-    match_notes_words_tree(lyrics_tree, words_notes_map)
-    return lyrics_tree
+        
+    return words_notes_map
 
 def explore_words_in_tree(tree: dict, words_notes_map: dict) -> dict:
     """構文解析木から単語を探索し、単語リストを作成する
@@ -61,7 +76,7 @@ def explore_words_in_tree(tree: dict, words_notes_map: dict) -> dict:
     
     return words_notes_map
 
-def match_notes_words_tree(tree: dict, words_notes_map: dict) -> None:
+def associate_words_tree_notes(tree: dict, words_notes_map: dict) -> None:
     """単語の木に音符を対応付ける
 
     Args:
@@ -75,4 +90,4 @@ def match_notes_words_tree(tree: dict, words_notes_map: dict) -> None:
     tree["children"] = tree.pop("children")
 
     for child in tree["children"]:
-        match_notes_words_tree(child, words_notes_map)
+        associate_words_tree_notes(child, words_notes_map)
