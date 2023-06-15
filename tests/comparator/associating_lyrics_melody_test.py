@@ -12,5 +12,12 @@ def associate_words_notes_test(file_path: str):
     lyrics_tree = LMM.associate_word_notes(tree, lyrics_notes_map)
     print(lyrics_tree)
 
+    words_notes_map = {}
+    LMM.explore_words_in_tree(tree, words_notes_map)
+    words_list = LMM.associate_word_list_notes(words_notes_map, lyrics_notes_map)
+    print(words_list)
+
+    print()
+
 associate_words_notes_test("tests/test_file/オレンジ/オレンジ_A1.xml")
 associate_words_notes_test("tests/test_file/オレンジ/オレンジ_S1.xml")

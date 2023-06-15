@@ -12,7 +12,7 @@ def associate_word_notes(lyrics_tree: dict, lyrics_notes_map: dict) -> dict:
     """
 
     words_notes_map = {}
-    words_notes_map = explore_words_in_tree(lyrics_tree, words_notes_map)
+    explore_words_in_tree(lyrics_tree, words_notes_map)
 
     associate_word_list_notes(words_notes_map, lyrics_notes_map)
     associate_words_tree_notes(lyrics_tree, words_notes_map)
@@ -55,15 +55,12 @@ def associate_word_list_notes(words_notes_map: dict, lyrics_notes_map: dict) -> 
         
     return words_notes_map
 
-def explore_words_in_tree(tree: dict, words_notes_map: dict) -> dict:
+def explore_words_in_tree(tree: dict, words_notes_map: dict) -> None:
     """構文解析木から単語を探索し、単語リストを作成する
 
     Args:
         tree (dict): 構文解析木の部分木
         words_notes_map (dict): 分割された単語を格納する配列
-    
-    Returns:
-        dict: 分割された単語のリスト
     """
 
     word = tree["word"]
@@ -73,8 +70,6 @@ def explore_words_in_tree(tree: dict, words_notes_map: dict) -> dict:
 
     for child in tree["children"]:
         explore_words_in_tree(child, words_notes_map)
-    
-    return words_notes_map
 
 def associate_words_tree_notes(tree: dict, words_notes_map: dict) -> None:
     """単語の木に音符を対応付ける
