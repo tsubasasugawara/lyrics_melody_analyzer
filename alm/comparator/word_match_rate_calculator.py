@@ -17,19 +17,30 @@ def calc_word_match_rate(words_list: list, melody_tree: dict) -> float:
         word = words_list[word_number]["word"]
         notes = words_list[word_number]["notes"]
 
+        is_note_found = {}
+        for note in notes:
+            is_note_found[note] = False
+
         melody_subtree = search_subtree(notes, melody_tree)
         # TODO: 音符がタイムスパン木に含まれていないことがある(オレンジ_A1: ひとつふた...　つ None)
         if melody_subtree == None:
             not_found_subtree_words += 1
             continue
 
-        is_matched = are_word_melody_matched(notes, melody_subtree)
+        are_word_melody_matched(notes, melody_subtree, is_note_found)
+
+        is_matched = True
+        for note_id in is_note_found:
+            is_matched = is_matched and is_note_found[note_id]
+
         if is_matched:
             matched_words_count += 1
+        print(word, is_matched)
 
     return matched_words_count / (len(words_list) - not_found_subtree_words)
 
-def are_word_melody_matched(notes: list, melody_subtree: dict) -> bool:
+# TODO: 判定が異常
+def are_word_melody_matched(notes: list, melody_subtree: dict, is_note_found: dict) -> bool:
     """単語とメロディが一致しているかどうかを求める
 
     Args:
@@ -39,13 +50,13 @@ def are_word_melody_matched(notes: list, melody_subtree: dict) -> bool:
     Returns:
         bool: 一致しているかどうか
     """
-    if util.contains(notes, melody_subtree["id"]):
-        is_matched = True
+
+    note_id = melody_subtree["id"]
+
+    if util.contains(notes, note_id):
+        is_note_found[note_id] = True
         for child in melody_subtree["children"]:
-            is_matched = is_matched and are_word_melody_matched(notes, child)
-        return is_matched
-    else:
-        return False
+            are_word_melody_matched(notes, child, is_note_found)
 
 def search_subtree(notes: list, melody_subtree: dict) -> dict:
     """リスト内の音符が含まれる部分木を探す

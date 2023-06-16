@@ -14,6 +14,7 @@ def calc_word_match_rate_test(xml_path: str, time_span_path: str):
     words_notes_map = {}
     LMM.explore_words_in_tree(tree, words_notes_map)
     words_list = LMM.associate_word_list_notes(words_notes_map, lyrics_notes_map)
+    print(words_list)
 
     melody_tree = TST.time_span_tree_to_dict(time_span_path)
 
@@ -21,5 +22,5 @@ def calc_word_match_rate_test(xml_path: str, time_span_path: str):
 
     print(match_rate)
 
-calc_word_match_rate_test("tests/test_file/キセキ_A1_test.xml", "tests/test_file/キセキ_A1_TS_test.xml")
+calc_word_match_rate_test("tests/test_file/キセキ/キセキ_A1_test.xml", "tests/test_file/キセキ/キセキ_A1_TS_test.xml")
 # calc_word_match_rate_test("tests/test_file/オレンジ/オレンジ_A1.xml", "tests/test_file/オレンジ/オレンジ_A1_TS.xml")
