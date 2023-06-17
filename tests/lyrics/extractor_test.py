@@ -4,4 +4,4 @@ def test_extractor(file_path: str):
     lyrics_notes_map = lec.extract_lyrics(file_path)
     print(lyrics_notes_map)
 
-test_extractor("tests/test_file/オレンジ/オレンジ_S1.xml")
+test_extractor("tests/files/オレンジ/オレンジ_S1.xml")

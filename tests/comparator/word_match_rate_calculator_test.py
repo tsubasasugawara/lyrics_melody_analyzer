@@ -24,17 +24,17 @@ def calc_word_match_rate_test(test_cases: list):
         print(match_rate)
 
 test_cases = [
-    ["tests/test_file/オレンジ/オレンジ_A1_1.xml", "tests/test_file/オレンジ/オレンジ_A1_1_TS.xml"],
-    ["tests/test_file/オレンジ/オレンジ_A1_2.xml", "tests/test_file/オレンジ/オレンジ_A1_2_TS.xml"],
-    ["tests/test_file/オレンジ/オレンジ_A2.xml", "tests/test_file/オレンジ/オレンジ_A2_TS.xml"],
-    ["tests/test_file/キセキ/キセキ_A1.xml", "tests/test_file/キセキ/キセキ_A1_TS.xml"],
-    ["tests/test_file/キセキ/キセキ_A2.xml", "tests/test_file/キセキ/キセキ_A2_TS.xml"],
-    ["tests/test_file/キセキ/キセキ_S1.xml", "tests/test_file/キセキ/キセキ_S1_TS.xml"],
-    ["tests/test_file/キセキ/キセキ_S2.xml", "tests/test_file/キセキ/キセキ_S2_TS.xml"],
-    ["tests/test_file/愛唄/愛唄_A1.xml", "tests/test_file/愛唄/愛唄_A1_TS.xml"],
-    ["tests/test_file/愛唄/愛唄_A2.xml", "tests/test_file/愛唄/愛唄_A2_TS.xml"],
-    ["tests/test_file/愛唄/愛唄_S1.xml", "tests/test_file/愛唄/愛唄_S1_TS.xml"],
-    ["tests/test_file/愛唄/愛唄_S2.xml", "tests/test_file/愛唄/愛唄_S2_TS.xml"],
+    ["tests/files/オレンジ/オレンジ_A1_1.xml", "tests/files/オレンジ/オレンジ_A1_1_TS.xml"],
+    ["tests/files/オレンジ/オレンジ_A1_2.xml", "tests/files/オレンジ/オレンジ_A1_2_TS.xml"],
+    ["tests/files/オレンジ/オレンジ_A2.xml", "tests/files/オレンジ/オレンジ_A2_TS.xml"],
+    ["tests/files/キセキ/キセキ_A1.xml", "tests/files/キセキ/キセキ_A1_TS.xml"],
+    ["tests/files/キセキ/キセキ_A2.xml", "tests/files/キセキ/キセキ_A2_TS.xml"],
+    ["tests/files/キセキ/キセキ_S1.xml", "tests/files/キセキ/キセキ_S1_TS.xml"],
+    ["tests/files/キセキ/キセキ_S2.xml", "tests/files/キセキ/キセキ_S2_TS.xml"],
+    ["tests/files/愛唄/愛唄_A1.xml", "tests/files/愛唄/愛唄_A1_TS.xml"],
+    ["tests/files/愛唄/愛唄_A2.xml", "tests/files/愛唄/愛唄_A2_TS.xml"],
+    ["tests/files/愛唄/愛唄_S1.xml", "tests/files/愛唄/愛唄_S1_TS.xml"],
+    ["tests/files/愛唄/愛唄_S2.xml", "tests/files/愛唄/愛唄_S2_TS.xml"],
 ]
 
 calc_word_match_rate_test(test_cases)

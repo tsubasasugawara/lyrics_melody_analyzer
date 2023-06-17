@@ -19,5 +19,5 @@ def associate_words_notes_test(file_path: str):
 
     print()
 
-associate_words_notes_test("tests/test_file/オレンジ/オレンジ_A1.xml")
-associate_words_notes_test("tests/test_file/オレンジ/オレンジ_S1.xml")
+associate_words_notes_test("tests/files/オレンジ/オレンジ_A1.xml")
+associate_words_notes_test("tests/files/オレンジ/オレンジ_S1.xml")
