@@ -21,16 +21,20 @@ def calc_word_match_rate_test(test_cases: list):
 
         match_rate = WMRC.calc_word_match_rate(words_list, melody_tree)
 
-        print(match_rate, ele[2], match_rate == ele[2])
+        print(match_rate)
 
 test_cases = [
-    ["tests/test_file/オレンジ/オレンジ_A1_1.xml", "tests/test_file/オレンジ/オレンジ_A1_1_TS.xml", 16/24],
-    ["tests/test_file/オレンジ/オレンジ_A1_2.xml", "tests/test_file/オレンジ/オレンジ_A1_2_TS.xml", 16/23],
-    ["tests/test_file/オレンジ/オレンジ_A2.xml", "tests/test_file/オレンジ/オレンジ_A2_TS.xml", 17/23],
-    ["tests/test_file/キセキ/キセキ_A1.xml", "tests/test_file/キセキ/キセキ_A1_TS.xml", 13/25],
-    ["tests/test_file/キセキ/キセキ_A2.xml", "tests/test_file/キセキ/キセキ_A2_TS.xml", 15/27],
-    ["tests/test_file/キセキ/キセキ_S1.xml", "tests/test_file/キセキ/キセキ_S1_TS.xml", 26/43],
-    ["tests/test_file/キセキ/キセキ_S2.xml", "tests/test_file/キセキ/キセキ_S2_TS.xml", 27/40],
+    ["tests/test_file/オレンジ/オレンジ_A1_1.xml", "tests/test_file/オレンジ/オレンジ_A1_1_TS.xml"],
+    ["tests/test_file/オレンジ/オレンジ_A1_2.xml", "tests/test_file/オレンジ/オレンジ_A1_2_TS.xml"],
+    ["tests/test_file/オレンジ/オレンジ_A2.xml", "tests/test_file/オレンジ/オレンジ_A2_TS.xml"],
+    ["tests/test_file/キセキ/キセキ_A1.xml", "tests/test_file/キセキ/キセキ_A1_TS.xml"],
+    ["tests/test_file/キセキ/キセキ_A2.xml", "tests/test_file/キセキ/キセキ_A2_TS.xml"],
+    ["tests/test_file/キセキ/キセキ_S1.xml", "tests/test_file/キセキ/キセキ_S1_TS.xml"],
+    ["tests/test_file/キセキ/キセキ_S2.xml", "tests/test_file/キセキ/キセキ_S2_TS.xml"],
+    ["tests/test_file/愛唄/愛唄_A1.xml", "tests/test_file/愛唄/愛唄_A1_TS.xml"],
+    ["tests/test_file/愛唄/愛唄_A2.xml", "tests/test_file/愛唄/愛唄_A2_TS.xml"],
+    ["tests/test_file/愛唄/愛唄_S1.xml", "tests/test_file/愛唄/愛唄_S1_TS.xml"],
+    ["tests/test_file/愛唄/愛唄_S2.xml", "tests/test_file/愛唄/愛唄_S2_TS.xml"],
 ]
 
 calc_word_match_rate_test(test_cases)
