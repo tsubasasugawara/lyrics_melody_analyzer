@@ -50,11 +50,18 @@ def mapping_lyrics_notes(measures, part: str) -> dict:
         measure_number = measure.attrib["number"]
         measure_lyrics = ""
         notes_cnt = 0
+        is_prev_rest = False # 前に休符があるかどうか
+
         for note in measure.iter("note"):
             notes_cnt += 1
 
-            if note.find("rest") != None:
+            rest = note.find("rest")
+            if rest != None and is_prev_rest:
+                notes_cnt -= 1
+            if rest != None:
+                is_prev_rest = True
                 continue
+            is_prev_rest = False
 
             note_id = '-'.join([part, measure_number, str(notes_cnt)])
 

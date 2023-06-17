@@ -35,7 +35,6 @@ def calc_word_match_rate(words_list: list, melody_tree: dict) -> float:
 
         if is_matched:
             matched_words_count += 1
-        print(word, is_matched)
 
     return matched_words_count / (len(words_list) - not_found_subtree_words)
 

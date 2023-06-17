@@ -1,0 +1,240 @@
+{
+  "word": "でき",
+  "number": 23,
+  "notes": [
+    "P1-8-4",
+    "P1-8-5"
+  ],
+  "children": [
+    {
+      "word": "いま",
+      "number": 12,
+      "notes": [
+        "P1-5-6",
+        "P1-5-7"
+      ],
+      "children": [
+        {
+          "word": "とまら",
+          "number": 10,
+          "notes": [
+            "P1-5-1",
+            "P1-5-2",
+            "P1-5-3"
+          ],
+          "children": [
+            {
+              "word": "あした",
+              "number": 0,
+              "notes": [
+                "P1-1-2",
+                "P1-1-3",
+                "P1-2-1"
+              ],
+              "children": []
+            },
+            {
+              "word": "おもい",
+              "number": 8,
+              "notes": [
+                "P1-4-4",
+                "P1-4-5",
+                "P1-4-6",
+                "P1-4-7"
+              ],
+              "children": [
+                {
+                  "word": "あふれる",
+                  "number": 7,
+                  "notes": [
+                    "P1-3-8",
+                    "P1-4-1",
+                    "P1-4-2",
+                    "P1-4-3"
+                  ],
+                  "children": [
+                    {
+                      "word": "なれる",
+                      "number": 6,
+                      "notes": [
+                        "P1-3-3",
+                        "P1-3-4",
+                        "P1-3-5",
+                        "P1-3-6"
+                      ],
+                      "children": [
+                        {
+                          "word": "きょう",
+                          "number": 1,
+                          "notes": [
+                            "P1-2-2",
+                            "P1-2-3"
+                          ],
+                          "children": [
+                            {
+                              "word": "より",
+                              "number": 2,
+                              "notes": [
+                                "P1-2-4",
+                                "P1-2-5"
+                              ],
+                              "children": []
+                            },
+                            {
+                              "word": "も",
+                              "number": 3,
+                              "notes": [
+                                "P1-2-6"
+                              ],
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "word": "すき",
+                          "number": 4,
+                          "notes": [
+                            "P1-2-7",
+                            "P1-3-1"
+                          ],
+                          "children": [
+                            {
+                              "word": "に",
+                              "number": 5,
+                              "notes": [
+                                "P1-3-2"
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "word": "が",
+                  "number": 9,
+                  "notes": [
+                    "P1-4-8"
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "word": "ない",
+              "number": 11,
+              "notes": [
+                "P1-5-4",
+                "P1-5-5"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "word": "も",
+          "number": 13,
+          "notes": [
+            "P1-6-1"
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "word": "すき",
+      "number": 16,
+      "notes": [
+        "P1-6-6",
+        "P1-6-7"
+      ],
+      "children": [
+        {
+          "word": "こんな",
+          "number": 14,
+          "notes": [
+            "P1-6-2",
+            "P1-6-3",
+            "P1-6-4"
+          ],
+          "children": [
+            {
+              "word": "に",
+              "number": 15,
+              "notes": [
+                "P1-6-5"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "word": "で",
+          "number": 17,
+          "notes": [
+            "P1-7-1"
+          ],
+          "children": [
+            {
+              "word": "いる",
+              "number": 18,
+              "notes": [
+                "P1-7-2",
+                "P1-7-3"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "word": "の",
+          "number": 19,
+          "notes": [
+            "P1-7-4"
+          ],
+          "children": []
+        },
+        {
+          "word": "に",
+          "number": 20,
+          "notes": [
+            "P1-7-5",
+            "P1-7-6"
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "word": "ことば",
+      "number": 21,
+      "notes": [
+        "P1-7-8",
+        "P1-8-1",
+        "P1-8-2"
+      ],
+      "children": [
+        {
+          "word": "に",
+          "number": 22,
+          "notes": [
+            "P1-8-3"
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "word": "ない",
+      "number": 24,
+      "notes": [
+        "P1-8-6",
+        "P1-8-7",
+        "P1-9-1"
+      ],
+      "children": []
+    }
+  ]
+}

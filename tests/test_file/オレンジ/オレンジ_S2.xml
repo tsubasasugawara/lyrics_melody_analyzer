@@ -366,7 +366,7 @@
         <beam number="1">continue</beam>
         <beam number="2">continue</beam>
         <lyric number="1">
-          <syllabic>single</syllabic>
+          <syllabic>end</syllabic>
           <text>か</text>
           </lyric>
         </note>
@@ -499,7 +499,7 @@
         <type>16th</type>
         <stem>up</stem>
         <lyric number="1">
-          <syllabic>single</syllabic>
+          <syllabic>end</syllabic>
           <text>あ</text>
           </lyric>
         </note>
@@ -876,7 +876,8 @@
         </note>
       <note>
         <pitch>
-          <step>E</step>
+          <step>D</step>
+          <alter>1</alter>
           <octave>4</octave>
           </pitch>
         <duration>1</duration>
@@ -1008,7 +1009,7 @@
         <type>16th</type>
         <stem>up</stem>
         <lyric number="1">
-          <syllabic>end</syllabic>
+          <syllabic>single</syllabic>
           <text>こ</text>
           </lyric>
         </note>
@@ -1562,8 +1563,9 @@
         </note>
       <note>
         <pitch>
-          <step>B</step>
-          <octave>3</octave>
+          <step>C</step>
+          <alter>1</alter>
+          <octave>4</octave>
           </pitch>
         <duration>2</duration>
         <voice>1</voice>
@@ -1749,11 +1751,6 @@
       </measure>
     <measure number="10">
       <print new-system="yes"/>
-      <attributes>
-        <key>
-          <fifths>4</fifths>
-          </key>
-        </attributes>
       <note>
         <pitch>
           <step>F</step>
@@ -1801,16 +1798,6 @@
           <syllabic>single</syllabic>
           <text>だ</text>
           </lyric>
-        </note>
-      <barline location="right">
-        <bar-style>light-heavy</bar-style>
-        </barline>
-      </measure>
-    <measure number="11">
-      <note>
-        <rest measure="yes"/>
-        <duration>16</duration>
-        <voice>1</voice>
         </note>
       <barline location="right">
         <bar-style>light-heavy</bar-style>
