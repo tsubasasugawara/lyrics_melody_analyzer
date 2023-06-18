@@ -32,9 +32,7 @@ def extract_lyrics(file_path: str) -> dict:
 def mapping_lyrics_notes(measures, part: str) -> dict:
     """歌詞を抽出し、音符と対応付ける
 
-    TODO:休符が続いているときに、それらを一つとしている可能性がある(キセキ_A1 休符,休符,P-1-2,P-1-3)
     Args:
-        #TODO: measureのタイプ
         measures (Any): xmlからiter関数によって抜き出したmeasureタグのリスト
         part: 小節ID
     

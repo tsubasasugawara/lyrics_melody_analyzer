@@ -38,7 +38,6 @@ def calc_word_match_rate(words_list: list, melody_tree: dict) -> float:
 
     return matched_words_count / (len(words_list) - not_found_subtree_words)
 
-# TODO: 判定が異常
 def are_word_melody_matched(notes: list, melody_subtree: dict, is_note_found: dict) -> bool:
     """単語とメロディが一致しているかどうかを求める
 
