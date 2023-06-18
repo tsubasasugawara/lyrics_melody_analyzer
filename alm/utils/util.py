@@ -96,5 +96,5 @@ def contains(str_list: list, text: str) -> bool:
     """
     res = False
     for s in str_list:
-        res = res or s in text
+        res = res or s == text
     return res
