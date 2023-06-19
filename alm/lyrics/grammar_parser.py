@@ -77,7 +77,8 @@ class GrammarParser:
         Returns:
             dict: ノード
         """
-        node = {"word": token.text, "number": token.i, "children": {}}
+
+        node = {"word": token.text, "id": token.i, "children": {}}
 
         node["children"] = []
         for child in token.children:

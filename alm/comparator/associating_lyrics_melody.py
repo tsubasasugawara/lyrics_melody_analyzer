@@ -64,9 +64,9 @@ def explore_words_in_tree(tree: dict, words_notes_map: dict) -> None:
     """
 
     word = tree["word"]
-    number = tree["number"]
+    word_id = tree["id"]
 
-    words_notes_map[number] = {"word": word, "notes": []}
+    words_notes_map[word_id] = {"word": word, "notes": []}
 
     for child in tree["children"]:
         explore_words_in_tree(child, words_notes_map)
@@ -79,7 +79,7 @@ def associate_words_tree_notes(tree: dict, words_notes_map: dict) -> None:
         words_notes_map (dict): 単語ごとに音符と対応付けされたマップ
     """
 
-    number = tree["number"]
+    number = tree["id"]
     tree["notes"] = words_notes_map[number]["notes"]
     # notesとchildrenの順番を入れ替えるために、childrenを再度入れ直す
     tree["children"] = tree.pop("children")
