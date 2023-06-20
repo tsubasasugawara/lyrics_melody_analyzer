@@ -19,22 +19,51 @@ def calc_word_match_rate_test(test_cases: list):
 
         melody_tree = TST.time_span_tree_to_dict(ele[1])
 
-        match_rate = WMRC.calc_word_match_rate(words_list, melody_tree)
+        res = WMRC.calc_word_match_rate(words_list, melody_tree)
 
-        print(match_rate)
+        print(ele[2], res[0], len(words_list), res[1])
+        words = [" " for i in range(len(words_list))]
+        for i in words_list:
+            words[i] = words_list[i]["word"] + str(words_list[i]["is_matched"])
+        print(words, "\n")
 
 test_cases = [
-    ["tests/files/オレンジ/オレンジ_A1_1.xml", "tests/files/オレンジ/オレンジ_A1_1_TS.xml"],
-    ["tests/files/オレンジ/オレンジ_A1_2.xml", "tests/files/オレンジ/オレンジ_A1_2_TS.xml"],
-    ["tests/files/オレンジ/オレンジ_A2.xml", "tests/files/オレンジ/オレンジ_A2_TS.xml"],
-    ["tests/files/キセキ/キセキ_A1.xml", "tests/files/キセキ/キセキ_A1_TS.xml"],
-    ["tests/files/キセキ/キセキ_A2.xml", "tests/files/キセキ/キセキ_A2_TS.xml"],
-    ["tests/files/キセキ/キセキ_S1.xml", "tests/files/キセキ/キセキ_S1_TS.xml"],
-    ["tests/files/キセキ/キセキ_S2.xml", "tests/files/キセキ/キセキ_S2_TS.xml"],
-    ["tests/files/愛唄/愛唄_A1.xml", "tests/files/愛唄/愛唄_A1_TS.xml"],
-    ["tests/files/愛唄/愛唄_A2.xml", "tests/files/愛唄/愛唄_A2_TS.xml"],
-    ["tests/files/愛唄/愛唄_S1.xml", "tests/files/愛唄/愛唄_S1_TS.xml"],
-    ["tests/files/愛唄/愛唄_S2.xml", "tests/files/愛唄/愛唄_S2_TS.xml"],
+#    ["tests/files/オレンジ/オレンジ_A1_1.xml", "tests/files/オレンジ/オレンジ_A1_1_TS.xml"],
+#    ["tests/files/オレンジ/オレンジ_A1_2.xml", "tests/files/オレンジ/オレンジ_A1_2_TS.xml"],
+#    ["tests/files/オレンジ/オレンジ_A2.xml", "tests/files/オレンジ/オレンジ_A2_TS.xml"],
+#    ["tests/files/キセキ/キセキ_A1.xml", "tests/files/キセキ/キセキ_A1_TS.xml"],
+#    ["tests/files/キセキ/キセキ_A2.xml", "tests/files/キセキ/キセキ_A2_TS.xml"],
+#    ["tests/files/キセキ/キセキ_S1.xml", "tests/files/キセキ/キセキ_S1_TS.xml"],
+#    ["tests/files/キセキ/キセキ_S2.xml", "tests/files/キセキ/キセキ_S2_TS.xml"],
+#    ["tests/files/愛唄/愛唄_A1.xml", "tests/files/愛唄/愛唄_A1_TS.xml"],
+#    ["tests/files/愛唄/愛唄_A2.xml", "tests/files/愛唄/愛唄_A2_TS.xml"],
+#    ["tests/files/愛唄/愛唄_S1.xml", "tests/files/愛唄/愛唄_S1_TS.xml"],
+#    ["tests/files/愛唄/愛唄_S2.xml", "tests/files/愛唄/愛唄_S2_TS.xml"],
+    ["tests/files/popular/キセキ_A1.xml", "tests/files/popular/キセキ_A1_TS.xml", "キセキ_A1"],
+    ["tests/files/popular/キセキ_A2.xml", "tests/files/popular/キセキ_A2_TS.xml", "キセキ_A2"],
+    ["tests/files/popular/キセキ_S1.xml", "tests/files/popular/キセキ_S1_TS.xml", "キセキ_S1"],
+    ["tests/files/popular/キセキ_S2.xml", "tests/files/popular/キセキ_S2_TS.xml", "キセキ_S2"],
+    ["tests/files/popular/キセキ_S3.xml", "tests/files/popular/キセキ_S3_TS.xml", "キセキ_S3"],
+    ["tests/files/popular/愛唄_A1.xml", "tests/files/popular/愛唄_A1_TS.xml", "愛唄_A1"],
+    ["tests/files/popular/愛唄_A2.xml", "tests/files/popular/愛唄_A2_TS.xml", "愛唄_A2"],
+    ["tests/files/popular/愛唄_S1.xml", "tests/files/popular/愛唄_S1_TS.xml", "愛唄_S1"],
+    ["tests/files/popular/愛唄_S2.xml", "tests/files/popular/愛唄_S2_TS.xml", "愛唄_S2"],
+    ["tests/files/popular/花唄_A1.xml", "tests/files/popular/花唄_A1_TS.xml", "花唄_A1"],
+    ["tests/files/popular/花唄_A2.xml", "tests/files/popular/花唄_A2_TS.xml", "花唄_A2"],
+    ["tests/files/popular/花唄_S1.xml", "tests/files/popular/花唄_S1_TS.xml", "花唄_S1"],
+    ["tests/files/popular/花唄_S2.xml", "tests/files/popular/花唄_S2_TS.xml", "花唄_S2"],
+    ["tests/files/popular/オレンジ_A1.xml", "tests/files/popular/オレンジ_A1_TS.xml", "オレンジ_A1"],
+    ["tests/files/popular/オレンジ_A2.xml", "tests/files/popular/オレンジ_A2_TS.xml", "オレンジ_A2"],
+    ["tests/files/popular/オレンジ_S1.xml", "tests/files/popular/オレンジ_S1_TS.xml", "オレンジ_S1"],
+    ["tests/files/popular/オレンジ_S2.xml", "tests/files/popular/オレンジ_S2_TS.xml", "オレンジ_S2"],
+    ["tests/files/popular/オレンジ_S3.xml", "tests/files/popular/オレンジ_S3_TS.xml", "オレンジ_S3"],
+    ["tests/files/popular/オレンジ_S4.xml", "tests/files/popular/オレンジ_S4_TS.xml", "オレンジ_S4"],
+    ["tests/files/popular/遥か_A1.xml", "tests/files/popular/遥か_A1_TS.xml", "遥か_A1"],
+    ["tests/files/popular/遥か_A2.xml", "tests/files/popular/遥か_A2_TS.xml", "遥か_A2"],
+    ["tests/files/popular/遥か_A3.xml", "tests/files/popular/遥か_A3_TS.xml", "遥か_A3"],
+    ["tests/files/popular/遥か_A4.xml", "tests/files/popular/遥か_A4_TS.xml", "遥か_A4"],
+    ["tests/files/popular/遥か_S1.xml", "tests/files/popular/遥か_S1_TS.xml", "遥か_S1"],
+    ["tests/files/popular/遥か_S2.xml", "tests/files/popular/遥か_S2_TS.xml", "遥か_S2"],
 ]
 
 calc_word_match_rate_test(test_cases)

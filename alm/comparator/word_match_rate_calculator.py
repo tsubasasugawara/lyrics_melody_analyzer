@@ -11,7 +11,6 @@ def calc_word_match_rate(words_list: list, melody_tree: dict) -> float:
         float: 単語の一致率
     """
 
-    not_found_subtree_words = 0
     matched_words_count = 0
     for word_number in words_list:
         word = words_list[word_number]["word"]
@@ -21,10 +20,11 @@ def calc_word_match_rate(words_list: list, melody_tree: dict) -> float:
         for note in notes:
             is_note_found[note] = False
 
+        words_list[word_number]["is_matched"] = False
+
         melody_subtree = search_subtree(notes, melody_tree)
         # TODO: 音符がタイムスパン木に含まれていないことがある(オレンジ_A1: ひとつふた...　つ None)
         if melody_subtree == None:
-            not_found_subtree_words += 1
             continue
 
         are_word_melody_matched(notes, melody_subtree, is_note_found)
@@ -35,8 +35,10 @@ def calc_word_match_rate(words_list: list, melody_tree: dict) -> float:
 
         if is_matched:
             matched_words_count += 1
+        
+        words_list[word_number]["is_matched"] = is_matched
 
-    return matched_words_count / (len(words_list) - not_found_subtree_words)
+    return matched_words_count, matched_words_count / len(words_list)
 
 def are_word_melody_matched(notes: list, melody_subtree: dict, is_note_found: dict) -> bool:
     """単語とメロディが一致しているかどうかを求める
