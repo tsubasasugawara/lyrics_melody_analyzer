@@ -53,6 +53,7 @@ def mapping_lyrics_notes(measures, part: str) -> dict:
         for note in measure.iter("note"):
             notes_cnt += 1
 
+            # 休符かどうかを確認し、前も休符の場合はnotes_cntを-1することでIDを正しく付ける
             rest = note.find("rest")
             if rest != None and is_prev_rest:
                 notes_cnt -= 1
@@ -61,8 +62,14 @@ def mapping_lyrics_notes(measures, part: str) -> dict:
                 continue
             is_prev_rest = False
 
-            note_id = '-'.join([part, measure_number, str(notes_cnt)])
+            # タイの後ろの音符の場合は、前と同じIDにする
+            tie = note.find("tie")
+            if tie != None and tie.attrib["type"] == "stop":
+                note_id = '-'.join([part, measure_number, str(notes_cnt - 1)])
+            else:
+                note_id = '-'.join([part, measure_number, str(notes_cnt)])
 
+            # 歌詞を抜き出し、音符と対応付ける
             lyric_ele = note.find("lyric")
             if lyric_ele != None:
                 char= lyric_ele.find("text").text
@@ -75,6 +82,7 @@ def mapping_lyrics_notes(measures, part: str) -> dict:
             else:
                 lyrics_notes_map[CHAR_NOTES_KEY][-1][NOTES_KEY].append(note_id)
 
+        # 小節ごとの歌詞を辞書型配列に追加する
         lyrics_notes_map[MEASURES_KEY].append(measure_lyrics)
 
     lyrics_notes_map[LYRICS_KEY] = lyrics 
