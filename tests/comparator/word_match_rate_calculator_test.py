@@ -64,6 +64,18 @@ test_cases = [
     ["tests/files/popular/遥か_A4.xml", "tests/files/popular/遥か_A4_TS.xml", "遥か_A4"],
     ["tests/files/popular/遥か_S1.xml", "tests/files/popular/遥か_S1_TS.xml", "遥か_S1"],
     ["tests/files/popular/遥か_S2.xml", "tests/files/popular/遥か_S2_TS.xml", "遥か_S2"],
+    ["tests/files/unpopular/beautiful_days_A1.xml", "tests/files/unpopular/beautiful_days_A1_TS.xml", "beautiful_days_A1"],
+    ["tests/files/unpopular/beautiful_days_A2.xml", "tests/files/unpopular/beautiful_days_A2_TS.xml", "beautiful_days_A2"],
+    ["tests/files/unpopular/beautiful_days_S1.xml", "tests/files/unpopular/beautiful_days_S1_TS.xml", "beautiful_days_S1"],
+    ["tests/files/unpopular/beautiful_days_S2.xml", "tests/files/unpopular/beautiful_days_S2_TS.xml", "beautiful_days_S2"],
+    ["tests/files/unpopular/ビリーヴ_A1.xml", "tests/files/unpopular/ビリーヴ_A1_TS.xml", "ビリーヴ_A1"],
+    ["tests/files/unpopular/ビリーヴ_A2.xml", "tests/files/unpopular/ビリーヴ_A2_TS.xml", "ビリーヴ_A2"],
+    ["tests/files/unpopular/ビリーヴ_S1.xml", "tests/files/unpopular/ビリーヴ_S1_TS.xml", "ビリーヴ_S1"],
+    ["tests/files/unpopular/ビリーヴ_S2.xml", "tests/files/unpopular/ビリーヴ_S2_TS.xml", "ビリーヴ_S2"],
+    ["tests/files/unpopular/たけてん_A1.xml", "tests/files/unpopular/たけてん_A1_TS.xml", "たけてん_A1"],
+    ["tests/files/unpopular/たけてん_A2.xml", "tests/files/unpopular/たけてん_A2_TS.xml", "たけてん_A2"],
+    ["tests/files/unpopular/たけてん_S1.xml", "tests/files/unpopular/たけてん_S1_TS.xml", "たけてん_S1"],
+    ["tests/files/unpopular/たけてん_S2.xml", "tests/files/unpopular/たけてん_S2_TS.xml", "たけてん_S2"],
 ]
 
 calc_word_match_rate_test(test_cases)

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GPR>
+  <part id="P1">
+    <group>
+      <group>
+        <group>
+          <note id="P1-1-1" />
+          <applied rule="2a" />
+          <note id="P1-1-2" />
+          <note id="P1-1-3" />
+          <note id="P1-1-4" />
+          <note id="P1-1-5" />
+        </group>
+        <applied rule="2b" />
+        <applied rule="3a" />
+        <applied rule="4" />
+        <group>
+          <note id="P1-1-6" />
+          <note id="P1-1-7" />
+          <note id="P1-1-8" />
+          <note id="P1-1-9" />
+          <note id="P1-1-10" />
+          <applied rule="3a" />
+          <applied rule="4" />
+          <note id="P1-1-11" />
+          <note id="P1-1-12" />
+        </group>
+      </group>
+      <applied rule="2a" />
+      <applied rule="2b" />
+      <applied rule="3a" />
+      <applied rule="4" />
+      <group>
+        <group>
+          <note id="P1-1-14" />
+          <note id="P1-2-1" />
+          <note id="P1-2-2" />
+          <note id="P1-2-3" />
+          <note id="P1-2-4" />
+          <note id="P1-2-5" />
+          <note id="P1-2-6" />
+          <note id="P1-2-7" />
+          <note id="P1-2-8" />
+          <applied rule="6" />
+          <note id="P1-2-9" />
+          <note id="P1-2-10" />
+          <note id="P1-2-11" />
+          <applied rule="3a" />
+          <applied rule="4" />
+          <note id="P1-2-12" />
+          <applied rule="6" />
+          <note id="P1-2-13" />
+          <note id="P1-2-14" />
+          <note id="P1-2-15" />
+          <applied rule="3a" />
+          <applied rule="4" />
+          <note id="P1-2-16" />
+          <applied rule="6" />
+          <note id="P1-3-1" />
+          <applied rule="3a" />
+          <applied rule="4" />
+          <note id="P1-3-2" />
+          <note id="P1-3-3" />
+          <applied rule="2b" />
+          <applied rule="6" />
+          <note id="P1-3-4" />
+        </group>
+        <applied rule="2a" />
+        <applied rule="2b" />
+        <group>
+          <group>
+            <note id="P1-3-5" />
+            <note id="P1-3-6" />
+            <applied rule="3a" />
+            <applied rule="4" />
+            <note id="P1-3-7" />
+            <applied rule="6" />
+            <note id="P1-3-8" />
+            <applied rule="3a" />
+            <applied rule="4" />
+            <note id="P1-3-9" />
+            <note id="P1-3-10" />
+            <applied rule="2b" />
+            <applied rule="6" />
+            <note id="P1-3-11" />
+          </group>
+          <applied rule="2a" />
+          <applied rule="2b" />
+          <group>
+            <note id="P1-3-12" />
+            <note id="P1-3-13" />
+            <applied rule="3a" />
+            <applied rule="4" />
+            <note id="P1-3-14" />
+            <note id="P1-4-1" />
+            <applied rule="3a" />
+            <applied rule="4" />
+            <note id="P1-4-2" />
+            <note id="P1-4-3" />
+            <note id="P1-4-4" />
+            <note id="P1-4-5" />
+            <note id="P1-4-6" />
+            <note id="P1-4-7" />
+            <note id="P1-4-8" />
+            <applied rule="3a" />
+            <applied rule="4" />
+            <note id="P1-4-9" />
+            <note id="P1-4-10" />
+            <note id="P1-4-11" />
+            <note id="P1-4-12" />
+            <note id="P1-4-13" />
+          </group>
+        </group>
+      </group>
+    </group>
+  </part>
+</GPR>
+
