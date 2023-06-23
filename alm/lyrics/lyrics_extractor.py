@@ -80,6 +80,9 @@ def mapping_lyrics_notes(measures, part: str) -> dict:
             if lyric_ele != None:
                 char= lyric_ele.find("text").text
 
+                # XMLから抜き出したときに、半角スペースが\xa0となるため、それを戻す
+                char = char.replace("\xa0", " ")
+
                 measure_lyrics = measure_lyrics + char
                 lyrics = lyrics + char
 
@@ -110,6 +113,7 @@ def split_char(lyrics_notes_map: dict) -> dict:
             break
 
         chars = lyrics_notes_map[CHAR_NOTES_KEY][index][CHAR_KEY]
+        chars = chars.replace(" ", "")
 
         char_list = list(chars)
         if len(char_list) <= 1:
