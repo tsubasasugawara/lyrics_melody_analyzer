@@ -1,6 +1,27 @@
 from ..utils import util
 
-def calc_word_match_rate(words_list: list, melody_tree: dict) -> float:
+class WordMatchRate:
+    def __init__(self, words_number: int, match_words_number: int) -> None:
+        """単語の一致率の計算結果を含むデータ構造
+
+        Args:
+            words_number (int): 単語総数
+            match_words_number (int): 一致した単語の数
+
+        Attribute:
+            section_name (str): セクション名
+            words_number (int): 単語総数
+            match_words_number (int): 一致した単語の数
+            match_rate (float): 単語の一致率
+        """
+
+        self.section_name = ""
+        self.words_number = words_number
+        self.match_words_number = match_words_number
+        self.match_rate = match_words_number / words_number
+        
+
+def calc_word_match_rate(words_list: list, melody_tree: dict) -> WordMatchRate:
     """単語の一致率を計算する
 
     Args:
@@ -8,7 +29,7 @@ def calc_word_match_rate(words_list: list, melody_tree: dict) -> float:
         melody_tree (dict): メロディの木,タイムスパン木
 
     Returns:
-        float: 単語の一致率
+        WordMatchRate: 単語の一致率の計算結果を含むデータ構造
     """
 
     matched_words_count = 0
@@ -38,7 +59,7 @@ def calc_word_match_rate(words_list: list, melody_tree: dict) -> float:
         
         words_list[word_number]["is_matched"] = is_matched
 
-    return matched_words_count, matched_words_count / len(words_list)
+    return WordMatchRate(len(words_list), matched_words_count)
 
 def are_word_melody_matched(notes: list, melody_subtree: dict, is_note_found: dict) -> bool:
     """単語とメロディが一致しているかどうかを求める

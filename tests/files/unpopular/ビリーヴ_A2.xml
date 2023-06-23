@@ -7,7 +7,7 @@
   <identification>
     <encoding>
       <software>MuseScore 4.0.2</software>
-      <encoding-date>2023-06-21</encoding-date>
+      <encoding-date>2023-06-23</encoding-date>
       <supports element="accidental" type="yes"/>
       <supports element="beam" type="yes"/>
       <supports element="print" attribute="new-page" type="no"/>
@@ -361,7 +361,7 @@
         <beam number="1">continue</beam>
         <beam number="2">begin</beam>
         <lyric number="1">
-          <syllabic>begin</syllabic>
+          <syllabic>single</syllabic>
           <text>い</text>
           </lyric>
         </note>
@@ -381,6 +381,10 @@
         <notations>
           <tied type="start"/>
           </notations>
+        <lyric number="1">
+          <syllabic>begin</syllabic>
+          <text>よ</text>
+          </lyric>
         </note>
       <note>
         <pitch>
@@ -413,10 +417,6 @@
         <notations>
           <slur type="stop" number="1"/>
           </notations>
-        <lyric number="1">
-          <syllabic>end</syllabic>
-          <text>よ</text>
-          </lyric>
         </note>
       <note>
         <rest/>
@@ -437,7 +437,7 @@
         <beam number="1">begin</beam>
         <beam number="2">begin</beam>
         <lyric number="1">
-          <syllabic>single</syllabic>
+          <syllabic>end</syllabic>
           <text>あ</text>
           </lyric>
         </note>

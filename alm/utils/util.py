@@ -3,6 +3,7 @@ import glob
 from pathlib import Path
 import os
 from os import path
+import csv
 
 def read_json(file_path: str) -> dict:
     """JSONファイルを読み込む
@@ -29,6 +30,20 @@ def output_json(file_path: str, data: dict) -> None:
 
     f = open(file_path, 'w+', encoding="utf-8")
     json.dump(data, f, ensure_ascii=False, indent=2)
+    f.close()
+
+def output_csv(file_path: str, header: list, data: list) -> None:
+    """CSV形式で出力
+
+    Args:
+        file_path (str): 出力先のファイルパス
+        data (list): 書き込むデータ
+    """
+
+    f = open(file_path, 'w+', encoding='utf-8')
+    writer = csv.writer(f)
+    writer.writerow(header)
+    writer.writerows(data)
     f.close()
 
 def put_slash_dir_path(dir_path) -> str:
