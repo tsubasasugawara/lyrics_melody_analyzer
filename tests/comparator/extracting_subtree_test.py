@@ -1,4 +1,5 @@
 from alm.comparator import extracting_subtree as ES
+from alm.utils import util
 import pprint
 
 def extracting_subtree_test(file_path: str):
@@ -23,25 +24,28 @@ def extracting_subtree_test(file_path: str):
                 "children": [
                     {
                         "id": 6,
-                        "children": []
+                        "children": [
+                            {
+                                "id": 8,
+                                "children": []
+                            },
+                            {
+                                "id": 9,
+                                "children": []
+                            }
+                        ]
                     },
                     {
                         "id": 7,
                         "children": []
                     },
-                    {
-                        "id": 8,
-                        "children": []
-                    },
-                    {
-                        "id": 9,
-                        "children": []
-                    }
                 ]
             }
         ]
     }
     res = ES.extract_subtree(tree)
+    res = ES.join_subtree(res, tree["id"])
+    util.output_json("tests/files/extracting_subtree_test.json", res)
     pprint.pprint(res)
 
 extracting_subtree_test("tests/files/オレンジ/オレンジ_A1_1_TS.xml")
