@@ -44,7 +44,6 @@ def extracting_subtree_test(file_path: str):
         ]
     }
     res = ES.extract_subtree(tree)
-    res = ES.join_subtree(res, tree["id"])
     util.output_json("tests/files/extracting_subtree_test.json", res)
     pprint.pprint(res)
 

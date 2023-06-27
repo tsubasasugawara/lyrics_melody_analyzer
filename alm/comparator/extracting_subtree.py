@@ -1,23 +1,17 @@
 def extract_subtree(tree: dict) -> list:
     node_id = tree["id"]
-    
-    res = []
-    for child in tree["children"]:
-        children = extract_subtree(child)
-        res.append(join_subtree(children, child["id"]))
-    
-    return res
+
+    return join_subtree(tree["children"], node_id)
 
 def join_subtree(subtree_list: list, node_id: int) -> list:
-    length = len(subtree_list)
+    n = len(subtree_list)
     res = []
 
-    for i in range(2 ** length):
+    for bit in range(1 << (n)):
         node = {"id": node_id, "children": []}
-        for j in range(length):
-            if ((i >> j) & 1):
-                node["children"].append(subtree_list[j])
+        for i in range(n):
+            if bit & (1 << i):
+                node["children"].append(subtree_list[i])
         res.append(node)
-    
 
     return res
