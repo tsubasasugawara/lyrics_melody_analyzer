@@ -4,6 +4,7 @@ from pathlib import Path
 import os
 from os import path
 import csv
+import matplotlib.pyplot as plt
 
 def read_json(file_path: str) -> dict:
     """JSONファイルを読み込む
@@ -113,3 +114,17 @@ def contains(str_list: list, text: str) -> bool:
     for s in str_list:
         res = res or s == text
     return res
+
+def print_scatter(x: list, y: list, xlabel: str, ylabel: str, title: str) -> None:
+    """散布図を描画する
+
+    Args:
+        x (list): x座標
+        y (list): y座標
+    """
+
+    plt.scatter(x, y)
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.grid(True)
