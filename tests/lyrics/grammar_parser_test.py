@@ -4,7 +4,7 @@ from alm.utils import util
 def test_gramar_parser(lyrics: str):
     parser = gp.GrammarParser("ja_ginza")
     doc = parser.parse(lyrics)
-    tree = parser.to_tree_map(doc)
+    tree = parser.to_tree(doc)
 
     print(tree)
 

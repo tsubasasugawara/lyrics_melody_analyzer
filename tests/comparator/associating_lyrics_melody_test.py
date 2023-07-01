@@ -7,7 +7,7 @@ def associate_words_notes_test(file_path: str):
 
     parser = GP.GrammarParser("ja_ginza")
     doc = parser.parse(lyrics_notes_map[LE.LYRICS_KEY])
-    tree = parser.to_tree_map(doc)
+    tree = parser.to_tree(doc)
 
     lyrics_tree = LMM.associate_word_notes(tree, lyrics_notes_map)
     print(lyrics_tree)

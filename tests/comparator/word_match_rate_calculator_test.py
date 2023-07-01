@@ -11,7 +11,7 @@ def calc_word_match_rate_test(test_cases: list):
     for ele in test_cases:
         lyrics_notes_map = LE.extract_lyrics(ele[0])
         doc = parser.parse(lyrics_notes_map[LE.LYRICS_KEY])
-        tree = parser.to_tree_map(doc)
+        tree = parser.to_tree(doc)
 
         words_notes_map = {}
         LMM.explore_words_in_tree(tree, words_notes_map)
@@ -36,7 +36,7 @@ def word_match_rate_to_csv(test_cases: list, csv_path: str):
     for ele in test_cases:
         lyrics_notes_map = LE.extract_lyrics(ele[0])
         doc = parser.parse(lyrics_notes_map[LE.LYRICS_KEY])
-        tree = parser.to_tree_map(doc)
+        tree = parser.to_tree(doc)
 
         words_notes_map = {}
         LMM.explore_words_in_tree(tree, words_notes_map)

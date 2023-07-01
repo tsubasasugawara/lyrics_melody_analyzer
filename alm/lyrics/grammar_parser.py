@@ -1,6 +1,7 @@
 import spacy
 from spacy import displacy
-from ..utils import util
+from alm.utils import util
+from alm.node import node
 
 class GrammarParser:
     def __init__(self, nlp_model_name: str):
@@ -52,63 +53,61 @@ class GrammarParser:
 
         return words_list
    
-    def to_tree_map(self, doc: spacy.Language) -> dict:
+    def to_tree(self, doc: spacy.Language) -> node.Node:
         """構文解析木を辞書型にする
 
         Args:
             doc (spacy.Language): parse関数での解析結果
 
         Returns:
-            dict: 構文解析木
+            node.Node: 構文解析木
         """
 
         tree_list = []
         for sent in doc.sents:
             tree_list.append(self.__recur_tree(sent.root))
-
+        
         return self.__join_roots(tree_list)
 
-    def __recur_tree(self, token) -> dict:
+    def __recur_tree(self, token) -> node.Node:
         """再帰的に木を作成する
 
         Args:
             token (_type_): 文法構造解析結果のトークン
 
         Returns:
-            dict: ノード
+            node.Node: ノード
         """
 
-        node = {"word": token.text, "id": token.i, "children": {}}
-
-        node["children"] = []
+        n = node.Node(token.i, [], word=token.text)
         for child in token.children:
-            node["children"].append(self.__recur_tree(child))
+            n.children.append(self.__recur_tree(child))
 
-        return node
+        return n
     
-    def __join_roots(self, roots: list) -> dict:
+    def __join_roots(self, roots: list) -> node.Node:
         """複数あるルートを一つにまとめる
 
         Args:
             roots (list): ルートのリスト
 
         Returns:
-            dict: 結合後の木
+            node.Node: 結合後の木
         """
 
         if len(roots) == 1:
             return roots[0]
         elif len(roots) <= 0:
-            return roots
+            return node.Node(None, None)
 
         res = roots[0]
         for i in range(1, len(roots)):
-            if len(res["children"]) > len(roots[i]["children"]):
+            if len(res.children) > len(roots[i].children):
                 temp = roots[i]
-                temp["children"].append(res)
+                temp.children.append(res)
                 res = temp
             else:
-                res["children"].append(roots[i])
+                res.children.append(roots[i])
 
         return res
 

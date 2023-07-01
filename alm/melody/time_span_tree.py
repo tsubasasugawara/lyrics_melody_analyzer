@@ -1,40 +1,14 @@
 import xml.etree.ElementTree as et
+from alm.node import node
 
-class Node:
-    """タイムスパン木のノード
-
-    Attributes:
-        id(str): 音符のID
-        children(Node): 子ノード
-    """
-    def __init__(self, id):
-        self.id = id
-        self.children = []
-
-    def to_dict(self) -> dict:
-        """Nodeオブジェクトを辞書型配列にする
-
-        Args:
-            depth (int): 現在の深さ
-
-        Returns:
-            dict: Nodeを辞書型配列に変換した結果
-        """
-
-        res = {"id": self.id, "children": []}
-        for child in self.children:
-            res["children"].append(child.to_dict())
-
-        return res 
-
-def time_span_tree_to_dict(file_path: str) -> dict:
+def time_span_tree_to_dict(file_path: str) -> node.Node:
     """タイムスパン木のXMLをJSONに変換する
 
     Args:
         file_path (str): XMLファイルのパス
 
     Returns:
-        dict: タイムスパン木の辞書型配列
+        node.Node: タイムスパン木の辞書型配列
     
     Raises:
         ParseError:XMLの解析に失敗したときの例外
@@ -47,19 +21,21 @@ def time_span_tree_to_dict(file_path: str) -> dict:
         print("ParseError:", err)
 
     root = tree.getroot()
-    head = Node(root.find("./ts/head/chord/note").attrib["id"])
-    if head == None:
+    head_id = root.find("./ts/head/chord/note").attrib["id"]
+    if head_id == None:
         return
+        
+    head = node.Node(head_id, [])
     parse_time_span_tree(root.find("./ts"), head)
 
-    return head.to_dict()
+    return head
 
-def parse_time_span_tree(ts: et.ElementTree, parent: Node):
+def parse_time_span_tree(ts: et.ElementTree, parent: node.Node):
     """タイムスパン木を解析し、Nodeによって木を構築する
 
     Args:
         ts (ElementTree): タイムスパン木のElementTree
-        parent (Node): 親ノード
+        parent (node.Node): 親ノード
     """
 
     # primary要素
@@ -71,7 +47,8 @@ def parse_time_span_tree(ts: et.ElementTree, parent: Node):
     secondary = ts.find("./secondary/ts")
     if secondary != None:
         id = secondary.find("./head/chord/note").attrib["id"]
-        sn = Node(id)
+        sn = node.Node(id, [])
         parse_time_span_tree(secondary, sn)
         parent.children.append(sn)
     
+    return parent
