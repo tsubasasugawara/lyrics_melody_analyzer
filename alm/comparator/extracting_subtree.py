@@ -1,7 +1,13 @@
-def extract_subtree(tree: dict) -> list:
-    node_id = tree["id"]
+from alm.node import node
 
-    return join_subtree(tree["children"], node_id)
+def extract_subtree(node: node.Node) -> list:
+    res = []
+    for child in node.children:
+        res.append({"id": node.id, "child": child.id})
+        res.extend(extract_subtree(child))
+    
+    return res
+
 
 def join_subtree(subtree_list: list, node_id: int) -> list:
     n = len(subtree_list)

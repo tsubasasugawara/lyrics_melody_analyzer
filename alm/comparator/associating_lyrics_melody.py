@@ -1,4 +1,4 @@
-from ..lyrics import lyrics_extractor as LE
+from alm.lyrics import lyrics_extractor as LE
 from alm.node import node
 
 def associate_word_notes(lyrics_tree: node.Node, lyrics_notes_map: node.Node) -> node.Node:

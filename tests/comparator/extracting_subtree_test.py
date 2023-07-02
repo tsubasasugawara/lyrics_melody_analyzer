@@ -1,49 +1,51 @@
 from alm.comparator import extracting_subtree as ES
 from alm.utils import util
+from alm.node import node
 import pprint
 
 def extracting_subtree_test(file_path: str):
-    tree = {
-        "id": 1,
-        "children": [
-            {
-                "id": 2,
-                "children": [
-                    {
-                        "id": 4,
-                        "children": []
-                    },
-                    {
-                        "id": 5,
-                        "children": []
-                    }
+    head = node.Node(
+        1,
+        [
+            node.Node(
+                2,
+                [
+                    node.Node(
+                        4,
+                        []
+                    ),
+                    node.Node(
+                        5,
+                        []
+                    )
                 ]
-            },
-            {
-                "id": 3,
-                "children": [
-                    {
-                        "id": 6,
-                        "children": [
-                            {
-                                "id": 8,
-                                "children": []
-                            },
-                            {
-                                "id": 9,
-                                "children": []
-                            }
+            ),
+            node.Node(
+                3,
+                [
+                    node.Node(
+                        6,
+                        [
+                            node.Node(
+                                8,
+                                []
+                            ),
+                            node.Node(
+                                9,
+                                []
+                            ),
                         ]
-                    },
-                    {
-                        "id": 7,
-                        "children": []
-                    },
+                    ),
+                    node.Node(
+                        7,
+                        []
+                    ),
                 ]
-            }
+            )
         ]
-    }
-    res = ES.extract_subtree(tree)
+    )
+
+    res = ES.extract_subtree(head)
     util.output_json("tests/files/extracting_subtree_test.json", res)
     pprint.pprint(res)
 

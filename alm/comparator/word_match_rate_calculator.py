@@ -1,4 +1,4 @@
-from ..utils import util
+from alm.utils import util
 from alm.node import node
 
 class WordMatchRate:

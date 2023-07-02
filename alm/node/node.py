@@ -1,5 +1,5 @@
 class Node:
-    def __init__(self, id, children, word=None, notes=None):
+    def __init__(self, id, children: list, word: str =None, notes: str =None):
         """ノード
 
         Args:
