@@ -79,7 +79,10 @@ class GrammarParser:
             node.Node: ノード
         """
 
-        n = node.Node(token.i, [], word=token.text)
+        n = node.Node(token.i, [], False, word=token.text)
+        if len(list(token.children)) == 0:
+            n.end = True
+
         for child in token.children:
             n.children.append(self.__recur_tree(child))
 
@@ -98,7 +101,7 @@ class GrammarParser:
         if len(roots) == 1:
             return roots[0]
         elif len(roots) <= 0:
-            return node.Node(None, None)
+            return node.Node(None, None, True)
 
         res = roots[0]
         for i in range(1, len(roots)):

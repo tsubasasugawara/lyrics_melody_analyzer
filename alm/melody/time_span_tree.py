@@ -25,7 +25,7 @@ def time_span_tree_to_dict(file_path: str) -> node.Node:
     if head_id == None:
         return
         
-    head = node.Node(head_id, [])
+    head = node.Node(head_id, [], False)
     parse_time_span_tree(root.find("./ts"), head)
 
     return head
@@ -47,8 +47,13 @@ def parse_time_span_tree(ts: et.ElementTree, parent: node.Node):
     secondary = ts.find("./secondary/ts")
     if secondary != None:
         id = secondary.find("./head/chord/note").attrib["id"]
-        sn = node.Node(id, [])
-        parse_time_span_tree(secondary, sn)
+        sn = node.Node(id, [], False)
+
+        if secondary.find("./primary") == None:
+            sn.end = True
+        else:
+            parse_time_span_tree(secondary, sn)
+
         parent.children.append(sn)
     
     return parent
