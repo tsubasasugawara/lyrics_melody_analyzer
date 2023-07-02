@@ -12,13 +12,16 @@ def extracting_subtree_test(file_path: str):
                 [
                     node.Node(
                         4,
-                        []
+                        [],
+                        True
                     ),
                     node.Node(
                         5,
-                        []
+                        [],
+                        True
                     )
-                ]
+                ],
+                False
             ),
             node.Node(
                 3,
@@ -28,21 +31,27 @@ def extracting_subtree_test(file_path: str):
                         [
                             node.Node(
                                 8,
-                                []
+                                [],
+                                True
                             ),
                             node.Node(
                                 9,
-                                []
+                                [],
+                                True
                             ),
-                        ]
+                        ],
+                        False
                     ),
                     node.Node(
                         7,
-                        []
+                        [],
+                        True
                     ),
-                ]
+                ],
+                False
             )
-        ]
+        ],
+        False
     )
 
     res = ES.extract_subtree(head)
