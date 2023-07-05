@@ -3,7 +3,7 @@ from alm.utils import io
 from alm.node import node
 import pprint
 
-def extracting_subtree_test(file_path: str):
+def extracting_parent_child_test(file_path: str):
     head = node.Node(
         1,
         [
@@ -54,8 +54,8 @@ def extracting_subtree_test(file_path: str):
         False
     )
 
-    res = ES.extract_subtree(head)
+    res = ES.extract_parent_child(head)
     io.output_json("tests/files/extracting_subtree_test.json", res)
     pprint.pprint(res)
 
-extracting_subtree_test("tests/files/オレンジ/オレンジ_A1_1_TS.xml")
+extracting_parent_child_test("tests/files/オレンジ/オレンジ_A1_1_TS.xml")
