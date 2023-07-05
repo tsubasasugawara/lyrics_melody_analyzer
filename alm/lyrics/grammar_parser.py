@@ -1,6 +1,6 @@
 import spacy
 from spacy import displacy
-from alm.utils import util
+from alm.utils import string
 from alm.node import node
 
 class GrammarParser:
@@ -144,8 +144,8 @@ class GrammarParser:
 
                 if token.text == "\n" and pre_token.text != ("!" or "?" or "！" or "？"):
                     if (
-                        (len(pre_morph) > 0 and util.contains(["連用形", "連体形"], pre_morph[0]))
-                        or util.contains(["名詞", "間投詞", "副詞", "接続詞", "感嘆詞"], pre_token.tag_)
+                        (len(pre_morph) > 0 and string.contains(["連用形", "連体形"], pre_morph[0]))
+                        or string.contains(["名詞", "間投詞", "副詞", "接続詞", "感嘆詞"], pre_token.tag_)
                         or ("助詞" in pre_token.tag_ and "終助詞" not in pre_token.tag_)
                         ):
                         res = res + "、"

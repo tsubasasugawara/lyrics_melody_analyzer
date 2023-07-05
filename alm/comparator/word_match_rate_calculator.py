@@ -1,4 +1,4 @@
-from alm.utils import util
+from alm.utils import string
 from alm.node import node
 
 class WordMatchRate:
@@ -75,7 +75,7 @@ def are_word_melody_matched(notes: list, melody_subtree: node.Node, is_note_foun
 
     note_id = melody_subtree.id
 
-    if util.contains(notes, note_id):
+    if string.contains(notes, note_id):
         is_note_found[note_id] = True
         for child in melody_subtree.children:
             are_word_melody_matched(notes, child, is_note_found)
@@ -91,7 +91,7 @@ def search_subtree(notes: list, melody_subtree: node.Node) -> node.Node:
         node.Node: 部分木
     """
 
-    if util.contains(notes, melody_subtree.id):
+    if string.contains(notes, melody_subtree.id):
         return melody_subtree
     else:
         for child in melody_subtree.children:

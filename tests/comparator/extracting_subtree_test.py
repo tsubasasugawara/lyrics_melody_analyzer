@@ -1,5 +1,5 @@
 from alm.comparator import extracting_subtree as ES
-from alm.utils import util
+from alm.utils import io
 from alm.node import node
 import pprint
 
@@ -55,7 +55,7 @@ def extracting_subtree_test(file_path: str):
     )
 
     res = ES.extract_subtree(head)
-    util.output_json("tests/files/extracting_subtree_test.json", res)
+    io.output_json("tests/files/extracting_subtree_test.json", res)
     pprint.pprint(res)
 
 extracting_subtree_test("tests/files/オレンジ/オレンジ_A1_1_TS.xml")

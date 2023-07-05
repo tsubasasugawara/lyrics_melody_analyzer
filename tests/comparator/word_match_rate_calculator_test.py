@@ -3,7 +3,7 @@ from alm.lyrics import grammar_parser as GP
 from alm.comparator import associating_lyrics_melody as LMM
 from alm.comparator import word_match_rate_calculator as WMRC
 from alm.melody import time_span_tree as TST
-from alm.utils import util
+from alm.utils import io
 
 def calc_word_match_rate_test(test_cases: list):
     parser = GP.GrammarParser("ja_ginza")
@@ -49,7 +49,7 @@ def word_match_rate_to_csv(test_cases: list, csv_path: str):
 
         csv_data.append([res.section_name, res.words_number, res.match_words_number, res.words_number - res.match_words_number, res.match_rate])
     
-    util.output_csv(csv_path, ["セクション名", "単語数", "一致した単語数", "一致しなかった単語数", "一致率"], csv_data)
+    io.output_csv(csv_path, ["セクション名", "単語数", "一致した単語数", "一致しなかった単語数", "一致率"], csv_data)
 
 test_cases = [
 #    ["tests/files/オレンジ/オレンジ_A1_1.xml", "tests/files/オレンジ/オレンジ_A1_1_TS.xml"],

@@ -1,5 +1,4 @@
 from alm.lyrics import grammar_parser as gp
-from alm.utils import util
 
 def test_gramar_parser(lyrics: str):
     parser = gp.GrammarParser("ja_ginza")
