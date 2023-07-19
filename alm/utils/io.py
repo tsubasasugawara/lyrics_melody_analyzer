@@ -5,6 +5,8 @@ import os
 from os import path
 import csv
 
+XML = "xml"
+
 def read_json(file_path: str) -> dict:
     """JSONファイルを読み込む
 
@@ -60,11 +62,12 @@ def put_slash_dir_path(dir_path) -> str:
         dir_path = dir_path + "/"
     return dir_path
 
-def get_file_list(dir_path: str) -> list:
+def get_file_list(dir_path: str, extension: str) -> list:
     """ファイルの一覧を取得
 
     Args:
         dir_path (str): 一覧を取得したいディレクトリのパス
+        extension (str): 拡張子
 
     Returns:
         list: ファイル一覧
@@ -73,7 +76,7 @@ def get_file_list(dir_path: str) -> list:
     if len(dir_path) <= 0:
         return []
     
-    path = put_slash_dir_path(dir_path) + "*.json"
+    path = put_slash_dir_path(dir_path) + f"*.{extension}"
     
     return glob.glob(path);
 
