@@ -8,6 +8,7 @@ POP_DIR = "xmls/pop/"
 POP_TSTREE_DIR = "xmls/pop_tstree/"
 UNPOP_DIR = "xmls/unpop/"
 UNPOP_TSTREE_DIR = "xmls/unpop_tstree/"
+GINZA = "ja_ginza"
 
 def calc_word_match_rate(mscx_list: list, parser: grammar_parser.GrammarParser, word_match_rate_list:list = []) -> list:
     res = word_match_rate_list
@@ -33,7 +34,7 @@ def calc_word_match_rate(mscx_list: list, parser: grammar_parser.GrammarParser, 
     return res
 
 def output_word_match_rate_csv() -> None:
-    parser = grammar_parser.GrammarParser("ja_ginza")
+    parser = grammar_parser.GrammarParser(GINZA)
 
     pop_xmls = io.get_file_list(POP_DIR, io.XML)
     res = calc_word_match_rate(pop_xmls, parser)
@@ -50,8 +51,12 @@ def main(argv):
         return
 
     if argv[1] == "word-match-rate":
-        res = output_word_match_rate_csv()
-        print(res)
+        if len(argv) >= 2:
+            res = calc_word_match_rate([argv[2]], grammar_parser.GrammarParser(GINZA))
+            data = res[0]
+            print(f"{data[0]}\n単語数：　　　　　　　{data[1]}\n一致した単語数：　　　{data[2]}\n一致しなかった単語数：{data[3]}\n一致率：　　　　　　　{data[4]}")
+        else:
+            res = output_word_match_rate_csv()
 
 if __name__ == "__main__":
     sys.exit(main(sys.argv))
