@@ -1,61 +1,20 @@
 from alm.comparator import extracting_subtree as ES
+from alm.lyrics import *
+from alm.melody import *
 from alm.utils import io
 from alm.node import node
 import pprint
 
-def extracting_parent_child_test(file_path: str):
-    head = node.Node(
-        1,
-        [
-            node.Node(
-                2,
-                [
-                    node.Node(
-                        4,
-                        [],
-                        True
-                    ),
-                    node.Node(
-                        5,
-                        [],
-                        True
-                    )
-                ],
-                False
-            ),
-            node.Node(
-                3,
-                [
-                    node.Node(
-                        6,
-                        [
-                            node.Node(
-                                8,
-                                [],
-                                True
-                            ),
-                            node.Node(
-                                9,
-                                [],
-                                True
-                            ),
-                        ],
-                        False
-                    ),
-                    node.Node(
-                        7,
-                        [],
-                        True
-                    ),
-                ],
-                False
-            )
-        ],
-        False
-    )
+def extracting_parent_child_test(mscx_path: str, tstree_path: str):
+    parser = grammar_parser.GrammarParser("ja_ginza")
+    lyrics_notes_map = lyrics_extractor.extract_lyrics(mscx_path)
+    doc = parser.parse(lyrics_notes_map[lyrics_extractor.LYRICS_KEY])
+    lyrics_tree = parser.to_tree(doc)
 
-    res = ES.extract_parent_child(head)
-    io.output_json("tests/files/extracting_subtree_test.json", res)
-    pprint.pprint(res)
+    tstree = time_span_tree.time_span_tree_to_dict(tstree_path)
 
-extracting_parent_child_test("tests/files/オレンジ/オレンジ_A1_1_TS.xml")
+    pprint.pprint(ES.extract_parent_child(lyrics_tree))
+    print()
+    pprint.pprint(ES.extract_parent_child(tstree))
+
+extracting_parent_child_test("xmls/pop/BE_FREE_A.xml", "xmls/pop_tstree/BE_FREE_A_TS.xml")
