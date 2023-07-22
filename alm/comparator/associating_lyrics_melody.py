@@ -106,3 +106,16 @@ def associate_notes_words(words_list : dict) -> dict:
 
     return notes_word_map
 
+def associate_tstree_words(tstree: node.Node, notes_word_map: dict) -> None:
+    """タイムスパン木のIDに単語を対応付ける
+
+    Args:
+        tstree (node.Node): タイムスパン木
+        notes_word_map (dict): 音符ごとに単語を対応付けたマップ
+    """
+
+    note_id = tstree.id
+    tstree.word = notes_word_map[note_id]
+
+    for child in tstree.children:
+        associate_tstree_words(child, notes_word_map)

@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as et
 from alm.node import node
 
-def time_span_tree_to_dict(file_path: str) -> node.Node:
+def tstree_xml_2_struct(file_path: str) -> node.Node:
     """タイムスパン木のXMLをJSONに変換する
 
     Args:

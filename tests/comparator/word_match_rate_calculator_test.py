@@ -17,7 +17,7 @@ def calc_word_match_rate_test(test_cases: list):
         LMM.explore_words_in_tree(tree, words_notes_map)
         words_list = LMM.associate_word_list_notes(words_notes_map, lyrics_notes_map)
 
-        melody_tree = TST.time_span_tree_to_dict(ele[1])
+        melody_tree = TST.tstree_xml_2_struct(ele[1])
 
         res = WMRC.calc_word_match_rate(words_list, melody_tree)
         res.section_name = ele[2]
@@ -42,7 +42,7 @@ def word_match_rate_to_csv(test_cases: list, csv_path: str):
         LMM.explore_words_in_tree(tree, words_notes_map)
         words_list = LMM.associate_word_list_notes(words_notes_map, lyrics_notes_map)
 
-        melody_tree = TST.time_span_tree_to_dict(ele[1])
+        melody_tree = TST.tstree_xml_2_struct(ele[1])
 
         res = WMRC.calc_word_match_rate(words_list, melody_tree)
         res.section_name = ele[2]

@@ -24,7 +24,7 @@ def calc_word_match_rate(mscx_list: list, parser: grammar_parser.GrammarParser, 
         associating_lyrics_melody.explore_words_in_tree(lyrics_tree, words_notes_map)
         words_list = associating_lyrics_melody.associate_word_list_notes(words_notes_map, lyrics_notes_map)
 
-        melody_tree = time_span_tree.time_span_tree_to_dict(ts_path)
+        melody_tree = time_span_tree.tstree_xml_2_struct(ts_path)
 
         rate = word_match_rate_calculator.calc_word_match_rate(words_list, melody_tree)
         rate .section_name = io.get_file_name(mscx_path)

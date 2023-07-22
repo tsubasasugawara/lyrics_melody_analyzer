@@ -11,7 +11,7 @@ def extracting_parent_child_test(mscx_path: str, tstree_path: str):
     doc = parser.parse(lyrics_notes_map[lyrics_extractor.LYRICS_KEY])
     lyrics_tree = parser.to_tree(doc)
 
-    tstree = time_span_tree.time_span_tree_to_dict(tstree_path)
+    tstree = time_span_tree.tstree_xml_2_struct(tstree_path)
 
     pprint.pprint(ES.extract_parent_child(lyrics_tree))
     print()
