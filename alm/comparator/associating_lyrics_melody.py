@@ -85,3 +85,24 @@ def associate_words_tree_notes(tree: node.Node, words_notes_map: dict) -> None:
 
     for child in tree.children:
         associate_words_tree_notes(child, words_notes_map)
+
+def associate_notes_words(words_list : dict) -> dict:
+    """音符に単語を対応付ける
+
+    Args:
+        words_list (dict): 単語ごとに音符と対応付けされたマップ
+
+    Returns:
+        dict: 音符ごとに単語を対応付けたマップ
+    """
+
+    notes_word_map = {}
+
+    for word_num in words_list:
+        word = words_list[word_num]["word"]
+
+        for note in words_list[word_num]["notes"]:
+            notes_word_map[note] = word
+
+    return notes_word_map
+
