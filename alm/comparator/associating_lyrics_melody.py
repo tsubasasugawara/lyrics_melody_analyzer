@@ -99,10 +99,8 @@ def associate_notes_words(words_list : dict) -> dict:
     notes_word_map = {}
 
     for word_num in words_list:
-        word = words_list[word_num]["word"]
-
         for note in words_list[word_num]["notes"]:
-            notes_word_map[note] = word
+            notes_word_map[note] = word_num
 
     return notes_word_map
 
@@ -115,7 +113,8 @@ def associate_tstree_words(tstree: node.Node, notes_word_map: dict) -> None:
     """
 
     note_id = tstree.id
-    tstree.word = notes_word_map[note_id]
+    tstree.id = notes_word_map[note_id]
+    tstree.note_id = note_id
 
     for child in tstree.children:
         associate_tstree_words(child, notes_word_map)
