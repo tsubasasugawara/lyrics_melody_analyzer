@@ -23,7 +23,7 @@ class TreeSimilarity:
 
         return self.numerator / self.denominator
 
-def calc_tree_similarity(mscx_path: str, tstree_path: str) -> TreeSimilarity:
+def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser) -> TreeSimilarity:
     """木の類似度を計算する
 
     Args:
@@ -35,7 +35,6 @@ def calc_tree_similarity(mscx_path: str, tstree_path: str) -> TreeSimilarity:
     """
     lyrics_notes_map = lyrics_extractor.extract_lyrics(mscx_path)
 
-    parser = grammar_parser.GrammarParser("ja_ginza")
     doc = parser.parse(lyrics_notes_map[lyrics_extractor.LYRICS_KEY])
     lyrics_tree = parser.to_tree(doc)
 
@@ -60,3 +59,26 @@ def calc_tree_similarity(mscx_path: str, tstree_path: str) -> TreeSimilarity:
 
     tree_similarity = TreeSimilarity(max(len(lyrics_subtree_list), len(ts_subtree_list)), cnt)
     return tree_similarity
+
+def calc_tree_similarities(mscx_path_list: list, tstree_path_list: list) -> list:
+    """木の類似度を複数個計算する
+
+    Args:
+        mscx_path_list (list): MusicXMLのパスのリスト
+        tstree_path_list (list): タイムスパン木のパスのリスト
+
+    Returns:
+        list: 類似度のリスト
+    """
+
+    if len(mscx_path_list) != len(tstree_path_list):
+        return []
+
+    res = []
+    parser = grammar_parser.GrammarParser("ja_ginza")
+
+    for i in range(len(mscx_path_list)):
+        similarity = calc_tree_similarity(mscx_path_list[i], tstree_path_list[i], parser)
+        res.append(similarity)
+    
+    return res
