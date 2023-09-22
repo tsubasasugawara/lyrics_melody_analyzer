@@ -1,18 +1,21 @@
 from alm.comparator import *
 from alm.lyrics import *
 from alm.melody import *
+from alm.utils import io
 
 class TreeSimilarity:
-    def __init__(self, denominator: int, numerator: int) -> None:
+    def __init__(self, denominator: int, numerator: int, song_name: str) -> None:
         """木の類似度計算の結果を入れるクラス
 
         Args:
             denominator (int): 分母
             numerator (int): 分子
+            song_name (str): 楽曲名
         """
 
         self.denominator = denominator
         self.numerator = numerator
+        self.song_name = song_name
 
     def calc_similarity(self) -> float:
         """類似度を計算する
@@ -57,7 +60,7 @@ def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: grammar_parse
             if lyrics_subtree["id"] == ts_subtree["id"] and lyrics_subtree["child"] == ts_subtree["child"]:
                 cnt += 1
 
-    tree_similarity = TreeSimilarity(max(len(lyrics_subtree_list), len(ts_subtree_list)), cnt)
+    tree_similarity = TreeSimilarity(max(len(lyrics_subtree_list), len(ts_subtree_list)), cnt, io.get_file_name(mscx_path))
     return tree_similarity
 
 def calc_tree_similarities(mscx_path_list: list, tstree_path_list: list) -> list:
