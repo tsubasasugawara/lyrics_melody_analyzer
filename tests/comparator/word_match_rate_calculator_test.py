@@ -9,13 +9,13 @@ def calc_word_match_rate_test(test_cases: list):
     parser = GP.GrammarParser("ja_ginza")
 
     for ele in test_cases:
-        lyrics_notes_map = LE.extract_lyrics(ele[0])
-        doc = parser.parse(lyrics_notes_map[LE.LYRICS_KEY])
+        lyrics_notes_dict = LE.extract_lyrics(ele[0])
+        doc = parser.parse(lyrics_notes_dict[LE.LYRICS_KEY])
         tree = parser.to_tree(doc)
 
-        words_notes_map = {}
-        LMM.explore_words_in_tree(tree, words_notes_map)
-        words_list = LMM.associate_word_list_notes(words_notes_map, lyrics_notes_map)
+        words_notes_dict = {}
+        LMM.explore_words_in_tree(tree, words_notes_dict)
+        words_list = LMM.associate_word_list_notes(words_notes_dict, lyrics_notes_dict)
 
         melody_tree = TST.tstree_xml_2_struct(ele[1])
 
@@ -34,13 +34,13 @@ def word_match_rate_to_csv(test_cases: list, csv_path: str):
     csv_data = []
 
     for ele in test_cases:
-        lyrics_notes_map = LE.extract_lyrics(ele[0])
-        doc = parser.parse(lyrics_notes_map[LE.LYRICS_KEY])
+        lyrics_notes_dict = LE.extract_lyrics(ele[0])
+        doc = parser.parse(lyrics_notes_dict[LE.LYRICS_KEY])
         tree = parser.to_tree(doc)
 
-        words_notes_map = {}
-        LMM.explore_words_in_tree(tree, words_notes_map)
-        words_list = LMM.associate_word_list_notes(words_notes_map, lyrics_notes_map)
+        words_notes_dict = {}
+        LMM.explore_words_in_tree(tree, words_notes_dict)
+        words_list = LMM.associate_word_list_notes(words_notes_dict, lyrics_notes_dict)
 
         melody_tree = TST.tstree_xml_2_struct(ele[1])
 

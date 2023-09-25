@@ -18,12 +18,12 @@ def calc_word_match_rate(mscx_list: list, parser: grammar_parser.GrammarParser, 
         ts_path = mscx_path.replace("pop", "pop_tstree")
         ts_path = ts_path.replace(".xml", "_TS.xml")
 
-        lyrics_notes_map = lyrics_extractor.extract_lyrics(mscx_path)
-        doc = parser.parse(lyrics_notes_map[lyrics_extractor.LYRICS_KEY])
+        lyrics_notes_dict = lyrics_extractor.extract_lyrics(mscx_path)
+        doc = parser.parse(lyrics_notes_dict[lyrics_extractor.LYRICS_KEY])
         lyrics_tree = parser.to_tree(doc)
-        words_notes_map = {}
-        associating_lyrics_melody.explore_words_in_tree(lyrics_tree, words_notes_map)
-        words_list = associating_lyrics_melody.associate_word_list_notes(words_notes_map, lyrics_notes_map)
+        words_notes_dict = {}
+        associating_lyrics_melody.explore_words_in_tree(lyrics_tree, words_notes_dict)
+        words_list = associating_lyrics_melody.associate_word_list_notes(words_notes_dict, lyrics_notes_dict)
 
         melody_tree = time_span_tree.tstree_xml_2_struct(ts_path)
 

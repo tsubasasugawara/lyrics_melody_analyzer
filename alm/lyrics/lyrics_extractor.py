@@ -25,9 +25,9 @@ def extract_lyrics(file_path: str) -> dict:
 
     part = tree.find("part").attrib["id"]
 
-    lyrics_notes_map = mapping_lyrics_notes(tree.iter("measure"), part)
+    lyrics_notes_dict = mapping_lyrics_notes(tree.iter("measure"), part)
 
-    return split_char(lyrics_notes_map)
+    return split_char(lyrics_notes_dict)
 
 def mapping_lyrics_notes(measures, part: str) -> dict:
     """歌詞を抽出し、音符と対応付ける
@@ -40,7 +40,7 @@ def mapping_lyrics_notes(measures, part: str) -> dict:
         dict: 歌詞と音符を対応付けた辞書
     """
 
-    lyrics_notes_map = {CHAR_NOTES_KEY: [], MEASURES_KEY: [], LYRICS_KEY: ""}
+    lyrics_notes_dict = {CHAR_NOTES_KEY: [], MEASURES_KEY: [], LYRICS_KEY: ""}
     
     char= ''
     lyrics = ""
@@ -86,22 +86,22 @@ def mapping_lyrics_notes(measures, part: str) -> dict:
                 measure_lyrics = measure_lyrics + char
                 lyrics = lyrics + char
 
-                lyrics_notes_map[CHAR_NOTES_KEY].append({CHAR_KEY: char, NOTES_KEY: [note_id]})
-                lyrics_notes_map[CHAR_NOTES_KEY][-1][CHAR_NUMBER] = len(lyrics_notes_map[CHAR_NOTES_KEY]) - 1
+                lyrics_notes_dict[CHAR_NOTES_KEY].append({CHAR_KEY: char, NOTES_KEY: [note_id]})
+                lyrics_notes_dict[CHAR_NOTES_KEY][-1][CHAR_NUMBER] = len(lyrics_notes_dict[CHAR_NOTES_KEY]) - 1
             else:
-                lyrics_notes_map[CHAR_NOTES_KEY][-1][NOTES_KEY].append(note_id)
+                lyrics_notes_dict[CHAR_NOTES_KEY][-1][NOTES_KEY].append(note_id)
             
         # 小節ごとの歌詞を辞書型配列に追加する
-        lyrics_notes_map[MEASURES_KEY].append(measure_lyrics)
+        lyrics_notes_dict[MEASURES_KEY].append(measure_lyrics)
 
-    lyrics_notes_map[LYRICS_KEY] = lyrics 
-    return lyrics_notes_map
+    lyrics_notes_dict[LYRICS_KEY] = lyrics 
+    return lyrics_notes_dict
 
-def split_char(lyrics_notes_map: dict) -> dict:
+def split_char(lyrics_notes_dict: dict) -> dict:
     """一つの音符に2文字以上が対応しているときに分割する
 
     Args:
-        lyrics_notes_map (dict): 歌詞と音符を対応付けた辞書
+        lyrics_notes_dict (dict): 歌詞と音符を対応付けた辞書
 
     Returns:
         dict: 1文字ごとに音符と対応付けた辞書型
@@ -109,10 +109,10 @@ def split_char(lyrics_notes_map: dict) -> dict:
 
     index = 0
     while True:
-        if index >= len(lyrics_notes_map[CHAR_NOTES_KEY]) - 1:
+        if index >= len(lyrics_notes_dict[CHAR_NOTES_KEY]) - 1:
             break
 
-        chars = lyrics_notes_map[CHAR_NOTES_KEY][index][CHAR_KEY]
+        chars = lyrics_notes_dict[CHAR_NOTES_KEY][index][CHAR_KEY]
         chars = chars.replace(" ", "")
 
         char_list = list(chars)
@@ -120,11 +120,11 @@ def split_char(lyrics_notes_map: dict) -> dict:
             index += 1
             continue
 
-        char_notes = lyrics_notes_map[CHAR_NOTES_KEY][index]
-        lyrics_notes_map[CHAR_NOTES_KEY].pop(index)
+        char_notes = lyrics_notes_dict[CHAR_NOTES_KEY][index]
+        lyrics_notes_dict[CHAR_NOTES_KEY].pop(index)
         for i in range(len(char_list)):
-            lyrics_notes_map[CHAR_NOTES_KEY].insert(index + i, {CHAR_KEY: char_list[i], NOTES_KEY: char_notes[NOTES_KEY], CHAR_NUMBER: char_notes[CHAR_NUMBER]})
+            lyrics_notes_dict[CHAR_NOTES_KEY].insert(index + i, {CHAR_KEY: char_list[i], NOTES_KEY: char_notes[NOTES_KEY], CHAR_NUMBER: char_notes[CHAR_NUMBER]})
 
         index += len(char_list)
     
-    return lyrics_notes_map
+    return lyrics_notes_dict
