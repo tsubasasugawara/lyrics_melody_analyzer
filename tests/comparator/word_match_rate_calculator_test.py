@@ -1,11 +1,11 @@
 from alm.lyrics import lyrics_extractor as LE
 from alm.lyrics import grammar_parser as GP
 from alm.comparator import associating_lyrics_melody as LMM
-from alm.comparator import word_match_rate_calculator as WMRC
+from alm.comparator import word_matched_rate_calculator as WMRC
 from alm.melody import time_span_tree as TST
 from alm.utils import io
 
-def calc_word_match_rate_test(test_cases: list):
+def calc_word_matched_rate_test(test_cases: list):
     parser = GP.GrammarParser("ja_ginza")
 
     for ele in test_cases:
@@ -19,7 +19,7 @@ def calc_word_match_rate_test(test_cases: list):
 
         melody_tree = TST.tstree_xml_2_struct(ele[1])
 
-        res = WMRC.calc_word_match_rate(words_list, melody_tree)
+        res = WMRC.calc_word_matched_rate(words_list, melody_tree)
         res.section_name = ele[2]
 
         print(res.section_name, res.words_number, res.match_words_number, res.match_rate)
@@ -28,7 +28,7 @@ def calc_word_match_rate_test(test_cases: list):
             words[i] = words_list[i]["word"] + str(words_list[i]["is_matched"])
         print(words, "\n")
 
-def word_match_rate_to_csv(test_cases: list, csv_path: str):
+def word_matched_rate_to_csv(test_cases: list, csv_path: str):
     parser = GP.GrammarParser("ja_ginza")
 
     csv_data = []
@@ -44,7 +44,7 @@ def word_match_rate_to_csv(test_cases: list, csv_path: str):
 
         melody_tree = TST.tstree_xml_2_struct(ele[1])
 
-        res = WMRC.calc_word_match_rate(words_list, melody_tree)
+        res = WMRC.calc_word_matched_rate(words_list, melody_tree)
         res.section_name = ele[2]
 
         csv_data.append([res.section_name, res.words_number, res.match_words_number, res.words_number - res.match_words_number, res.match_rate])
@@ -109,5 +109,5 @@ test_cases = [
     ["tests/files/unpopular/蕾_S3.xml", "tests/files/unpopular/蕾_S3_TS.xml", "蕾_S3"],
 ]
 
-calc_word_match_rate_test(test_cases)
-word_match_rate_to_csv(test_cases, "tests/files/word_match_rate_result.csv")
+calc_word_matched_rate_test(test_cases)
+word_matched_rate_to_csv(test_cases, "tests/files/word_matched_rate_result.csv")

@@ -20,7 +20,7 @@ class WordMatchRate:
         self.matched_words_number = matched_words_number
         
 
-def calc_word_match_rate(words_list: list, melody_tree: node.Node) -> WordMatchRate:
+def calc_word_matched_rate(words_list: list, melody_tree: node.Node) -> WordMatchRate:
     """単語の一致率を計算する
 
     Args:
