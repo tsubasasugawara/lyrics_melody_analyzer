@@ -2,24 +2,22 @@ from alm.utils import string
 from alm.node import node
 
 class WordMatchRate:
-    def __init__(self, words_number: int, match_words_number: int) -> None:
+    def __init__(self, total_words_number: int, matched_words_number: int) -> None:
         """単語の一致率の計算結果を含むデータ構造
 
         Args:
-            words_number (int): 単語総数
-            match_words_number (int): 一致した単語の数
+            total_words_number (int): 単語総数
+            matched_words_number (int): 一致した単語の数
 
         Attribute:
             section_name (str): セクション名
-            words_number (int): 単語総数
-            match_words_number (int): 一致した単語の数
-            match_rate (float): 単語の一致率
+            total_words_number (int): 単語総数
+            matched_words_number (int): 一致した単語の数
         """
 
         self.section_name = ""
-        self.words_number = words_number
-        self.match_words_number = match_words_number
-        self.match_rate = match_words_number / words_number
+        self.total_words_number = total_words_number
+        self.matched_words_number = matched_words_number
         
 
 def calc_word_match_rate(words_list: list, melody_tree: node.Node) -> WordMatchRate:

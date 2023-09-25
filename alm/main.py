@@ -10,6 +10,7 @@ UNPOP_DIR = "xmls/unpop/"
 UNPOP_TSTREE_DIR = "xmls/unpop_tstree/"
 GINZA = "ja_ginza"
 
+#TODO: 作り直し
 def calc_word_match_rate(mscx_list: list, parser: grammar_parser.GrammarParser, word_match_rate_list:list = []) -> list:
     res = word_match_rate_list
 
