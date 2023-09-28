@@ -33,21 +33,22 @@ def extract_subtrees_test():
         [
             node.Node(
                 2,
-                [],
-                True
+                [
+                    node.Node(
+                        4,
+                        [],
+                        True
+                    ),
+                    node.Node(
+                        5,
+                        [],
+                        True
+                    ),
+                ],
+                False
             ),
             node.Node(
                 3,
-                [],
-                True
-            ),
-            node.Node(
-                4,
-                [],
-                True
-            ),
-            node.Node(
-                5,
                 [],
                 True
             ),
@@ -55,10 +56,13 @@ def extract_subtrees_test():
         False
     )
 
-    res = extracting_subtree.extract_subtree(root)
+    subtree_dict = {}
+    extracting_subtree.extract_subtree(root, subtree_dict)
 
-    for item in res:
-        pprint.pprint(item.to_dict())
+    for key, subtrees in subtree_dict.items():
+        for subtree in subtrees:
+            pprint.pprint(subtree.to_dict())
+        print("\n")
 
-extracting_parent_child_test("xmls/mscx/BE_FREE_A.xml", "xmls/tstree/BE_FREE_A_TS.xml")
+# extracting_parent_child_test("xmls/mscx/BE_FREE_A.xml", "xmls/tstree/BE_FREE_A_TS.xml")
 extract_subtrees_test()
