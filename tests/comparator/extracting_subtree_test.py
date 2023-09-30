@@ -61,6 +61,7 @@ def extract_subtrees_test():
 
     cnt = 0
     for key, subtrees in subtree_dict.items():
+        print(key)
         for subtree in subtrees:
             pprint.pprint(subtree.to_dict())
             cnt +=1
