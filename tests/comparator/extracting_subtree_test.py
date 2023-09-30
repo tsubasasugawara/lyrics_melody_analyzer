@@ -59,10 +59,13 @@ def extract_subtrees_test():
     subtree_dict = {}
     extracting_subtree.extract_subtree(root, subtree_dict)
 
+    cnt = 0
     for key, subtrees in subtree_dict.items():
         for subtree in subtrees:
             pprint.pprint(subtree.to_dict())
+            cnt +=1
         print("\n")
+    print(cnt)
 
 # extracting_parent_child_test("xmls/mscx/BE_FREE_A.xml", "xmls/tstree/BE_FREE_A_TS.xml")
 extract_subtrees_test()

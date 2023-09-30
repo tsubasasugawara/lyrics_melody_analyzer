@@ -27,25 +27,15 @@ def extract_subtree(node: nd.Node, subtree_dict: map):
 
     subtree_dict[node.id] = []
 
-    if left_len == 0 and right_len == 0:
-        subtree_dict[node.id] = [
-            nd.Node(
-                node.id,
-                [node.children[0], node.children[1]],
-                False
-                ),
-            nd.Node(
-                node.id,
-                [node.children[0]],
-                False
-                ),
-            nd.Node(
-                node.id,
-                [node.children[1]],
-                False
-                ),
-            ]
-    elif left_len == 0:
+    # 親と子のすべての組み合わせを抽出する
+    for i in range(1, 2**len(node.children)):
+        subtree = nd.Node(node.id, [], False)
+        for j in range(len(node.children)):
+            if i >> j & 1:
+                subtree.children.append(nd.Node(node.children[j].id, [], True))
+        subtree_dict[node.id].append(subtree)
+
+    if left_len == 0 and right_len > 0:
         for right_subtree in right_subtrees:
             subtree_dict[node.id].extend(
                 [
@@ -59,14 +49,9 @@ def extract_subtree(node: nd.Node, subtree_dict: map):
                         [right_subtree],
                         False
                     ),
-                    nd.Node(
-                        node.id,
-                        [node.children[0]],
-                        False
-                    )
                 ]
             )
-    elif right_len == 0:
+    elif left_len > 0 and right_len == 0:
         for left_subtree in left_subtrees:
             subtree_dict[node.id].extend(
                 [
@@ -80,15 +65,10 @@ def extract_subtree(node: nd.Node, subtree_dict: map):
                         [left_subtree],
                         False
                     ),
-                    nd.Node(
-                        node.id,
-                        [node.children[1]],
-                        False
-                    ),
                 ]
             )
-    else:
-        for left_subtree in lefft_subtrees:
+    elif left_len > 0 and right_len > 0:
+        for left_subtree in left_subtrees:
             for right_subtree in right_subtrees:
                 subtree_dict[node.id].extend(
                     [
@@ -109,20 +89,5 @@ def extract_subtree(node: nd.Node, subtree_dict: map):
                         ),
                     ]
                 )
-    
+
     return subtree_dict[node.id]
-
-# def extract_subtree(node: nd.Node, subtree_dict: map) -> (list, bool):
-#     if node.end:
-#         return []
-
-#     res = []
-#     n = len(node.children)
-#     for i in range(1, 2**n):
-#         subtree = nd.Node(node.id, [], False)
-#         for j in range(n):
-#             if i >> j & 1:
-#                 subtree.children.append(node.children[j])
-#         res.append(subtree)
-    
-#     return res
