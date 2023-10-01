@@ -119,12 +119,11 @@ def calc_tree_similarities_by_subtrees(mscx_path: str, tstree_path: str, parser:
     ts_subtrees = {}
     extracting_subtree.extract_subtree(tstree, ts_subtrees)
 
-    tree_similarity = TreeSimilarity(len(lyrics_subtrees) * len(ts_subtrees), 0, io.get_file_name(mscx_path))
+    tree_similarity = TreeSimilarity(min(len(lyrics_subtrees), len(ts_subtrees)), 0, io.get_file_name(mscx_path))
     for lyrics_subtree in lyrics_subtrees.values():
+        lyrics_subtree_dict = lyrics_subtree.to_dict()
         for ts_subtree in ts_subtrees.values():
-            lyrics_subtree_str = json.dumps(lyrics_subtree)
-            ts_subtree_str = json.dumps(ts_subtree)
-            if lyrics_subtree_str == ts_subtree_str:
+            if lyrics_subtree_dict == ts_subtree.to_dict():
                 tree_similarity.numerator += 1
     
     return tree_similarity
