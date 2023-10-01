@@ -1,4 +1,5 @@
 from alm.node import node as nd
+import copy
 
 def extract_parent_child(node: nd.Node) -> list:
     res = []
@@ -48,4 +49,4 @@ def extract_subtree(node: nd.Node, subtree_dict: map):
                     )
             )
     
-    return subtree_dict[node.id]
+    return copy.deepcopy(subtree_dict[node.id])
