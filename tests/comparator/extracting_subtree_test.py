@@ -71,12 +71,10 @@ def extract_subtrees_test():
     subtree_dict = {}
     extracting_subtree.extract_subtree(root, subtree_dict)
 
-    cnt = 0
     subtree_list = []
     for _, subtrees in subtree_dict.items():
         for subtree in subtrees:
             subtree_list.append(subtree)
-            cnt +=1
 
     subtree_test = [
         node.Node(2, [node.Node(4, [], True)], False),
@@ -84,50 +82,46 @@ def extract_subtrees_test():
         node.Node(2, [node.Node(6, [], True)], False),
         node.Node(2, [node.Node(4, [], True), node.Node(5, [], True)], False),
         node.Node(2, [node.Node(5, [], True), node.Node(6, [], True)], False),
-        node.Node(2, [node.Node(6, [], True), node.Node(4, [], True)], False),
+        node.Node(2, [node.Node(4, [], True), node.Node(6, [], True)], False),
         node.Node(2, [node.Node(4, [], True), node.Node(5, [], True), node.Node(6, [], True)], False),
-
         node.Node(3, [node.Node(7, [], True)], False),
-
         node.Node(1, [node.Node(2, [], True)], False),
         node.Node(1, [node.Node(3, [], True)], False),
         node.Node(1, [node.Node(2, [], True), node.Node(3, [], True)], False),
-
         node.Node(1, [node.Node(3, [node.Node(7, [], True)], False)], False),
-        node.Node(1, [node.Node(2, [], False), node.Node(3, [node.Node(7, [], True)], False)], False),
-
+        node.Node(1, [node.Node(2, [], True), node.Node(3, [node.Node(7, [], True)], False)], False),
         node.Node(1, [node.Node(2, [node.Node(4, [], True)], False),], False),
         node.Node(1, [node.Node(2, [node.Node(5, [], True)], False),], False),
         node.Node(1, [node.Node(2, [node.Node(6, [], True)], False),], False),
         node.Node(1, [node.Node(2, [node.Node(4, [], True), node.Node(5, [], True)], False),], False),
         node.Node(1, [node.Node(2, [node.Node(5, [], True), node.Node(6, [], True)], False),], False),
-        node.Node(1, [node.Node(2, [node.Node(6, [], True), node.Node(4, [], True)], False),], False),
+        node.Node(1, [node.Node(2, [node.Node(4, [], True), node.Node(6, [], True)], False),], False),
         node.Node(1, [node.Node(2, [node.Node(4, [], True), node.Node(5, [], True), node.Node(6, [], True)], False),], False),
-
         node.Node(1, [node.Node(2, [node.Node(4, [], True)], False), node.Node(3, [], True)], False),
         node.Node(1, [node.Node(2, [node.Node(5, [], True)], False), node.Node(3, [], True)], False),
         node.Node(1, [node.Node(2, [node.Node(6, [], True)], False), node.Node(3, [], True)], False),
         node.Node(1, [node.Node(2, [node.Node(4, [], True), node.Node(5, [], True)], False), node.Node(3, [], True)], False),
         node.Node(1, [node.Node(2, [node.Node(5, [], True), node.Node(6, [], True)], False), node.Node(3, [], True)], False),
-        node.Node(1, [node.Node(2, [node.Node(6, [], True), node.Node(4, [], True)], False), node.Node(3, [], True)], False),
+        node.Node(1, [node.Node(2, [node.Node(4, [], True), node.Node(6, [], True)], False), node.Node(3, [], True)], False),
         node.Node(1, [node.Node(2, [node.Node(4, [], True), node.Node(5, [], True), node.Node(6, [], True)], False), node.Node(3, [], True)], False),
- 
-        node.Node(1, [node.Node(2, [node.Node(4, [], True)], False), node.Node(3, [node.Node(7, [], True)], True)], False),
-        node.Node(1, [node.Node(2, [node.Node(5, [], True)], False), node.Node(3, [node.Node(7, [], True)], True)], False),
-        node.Node(1, [node.Node(2, [node.Node(6, [], True)], False), node.Node(3, [node.Node(7, [], True)], True)], False),
-        node.Node(1, [node.Node(2, [node.Node(4, [], True), node.Node(5, [], True)], False), node.Node(3, [node.Node(7, [], True)], True)], False),
-        node.Node(1, [node.Node(2, [node.Node(5, [], True), node.Node(6, [], True)], False), node.Node(3, [node.Node(7, [], True)], True)], False),
-        node.Node(1, [node.Node(2, [node.Node(6, [], True), node.Node(4, [], True)], False), node.Node(3, [node.Node(7, [], True)], True)], False),
-        node.Node(1, [node.Node(2, [node.Node(4, [], True), node.Node(5, [], True), node.Node(6, [], True)], False), node.Node(3, [node.Node(7, [], True)], True)], False),
+        node.Node(1, [node.Node(2, [node.Node(4, [], True)], False), node.Node(3, [node.Node(7, [], True)], False)], False),
+        node.Node(1, [node.Node(2, [node.Node(5, [], True)], False), node.Node(3, [node.Node(7, [], True)], False)], False),
+        node.Node(1, [node.Node(2, [node.Node(6, [], True)], False), node.Node(3, [node.Node(7, [], True)], False)], False),
+        node.Node(1, [node.Node(2, [node.Node(4, [], True), node.Node(5, [], True)], False), node.Node(3, [node.Node(7, [], True)], False)], False),
+        node.Node(1, [node.Node(2, [node.Node(5, [], True), node.Node(6, [], True)], False), node.Node(3, [node.Node(7, [], True)], False)], False),
+        node.Node(1, [node.Node(2, [node.Node(4, [], True), node.Node(6, [], True)], False), node.Node(3, [node.Node(7, [], True)], False)], False),
+        node.Node(1, [node.Node(2, [node.Node(4, [], True), node.Node(5, [], True), node.Node(6, [], True)], False), node.Node(3, [node.Node(7, [], True)], False)], False),
     ]
 
     matched_cnt = 0
     for subtree in subtree_list:
+        subtree_dict = subtree.to_dict()
         for test_subtree in subtree_test:
-            if json.dumps(sorted(subtree.to_dict())) == json.dumps(sorted(test_subtree.to_dict())):
+            if  subtree_dict == test_subtree.to_dict():
                 matched_cnt += 1
     
-    print(matched_cnt, matched_cnt / (len(subtree_list) * len(subtree_test)))
+    print(matched_cnt / min(len(subtree_list), len(subtree_test)))
+    
 
 # extracting_parent_child_test("xmls/mscx/BE_FREE_A.xml", "xmls/tstree/BE_FREE_A_TS.xml")
 extract_subtrees_test()
