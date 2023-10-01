@@ -2,7 +2,11 @@ from alm.comparator import *
 from alm.lyrics import *
 from alm.melody import *
 from alm.utils import io
-import json
+import os
+import glob
+
+ALL_SUBTREE = "all_subtree"
+PARENT_CHILD = "parent_child"
 
 class TreeSimilarity:
     def __init__(self, denominator: int, numerator: int, section_name: str) -> None:
@@ -57,8 +61,8 @@ def gen_tree(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarPar
     return [lyrics_tree, tstree]
 
 
-def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser) -> TreeSimilarity:
-    """木の類似度を計算する
+def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser) -> TreeSimilarity:
+    """木の類似度を親子関係から計算する
 
     Args:
         mscx_path (str): MusicXMLのパス
@@ -85,8 +89,8 @@ def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: grammar_parse
     tree_similarity = TreeSimilarity(max(len(lyrics_subtree_list), len(ts_subtree_list)), cnt, io.get_file_name(mscx_path))
     return tree_similarity
 
-def calc_tree_similarities(mscx_path_list: list, tstree_path_list: list) -> list:
-    """木の類似度を複数個計算する
+def calc_tree_similarities_by_parent_child(mscx_path_list: list, tstree_path_list: list) -> list:
+    """木の類似度を親子関係から複数個計算する
 
     Args:
         mscx_path_list (list): MusicXMLのパスのリスト
@@ -103,12 +107,23 @@ def calc_tree_similarities(mscx_path_list: list, tstree_path_list: list) -> list
     parser = grammar_parser.GrammarParser("ja_ginza")
 
     for i in range(len(mscx_path_list)):
-        similarity = calc_tree_similarity(mscx_path_list[i], tstree_path_list[i], parser)
+        similarity = calc_tree_similarity_by_parent_child(mscx_path_list[i], tstree_path_list[i], parser)
         res.append(similarity)
     
     return res
 
-def calc_tree_similarities_by_subtrees(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser) -> TreeSimilarity:
+def calc_tree_similarity_by_all_subtree(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser) -> TreeSimilarity:
+    """木の類似度をすべての部分木によって計算
+
+    Args:
+        mscx_path (str): MusicXMLのパス
+        tstree_path (str): タイムスパン木のパス
+        parser (grammar_parser.GrammarParser): 文法の分析に使用する
+
+    Returns:
+        TreeSimilarity: 木の類似度
+    """
+
     res = gen_tree(mscx_path, tstree_path, parser)
     lyrics_tree = res[0]
     tstree = res[1]
@@ -127,3 +142,79 @@ def calc_tree_similarities_by_subtrees(mscx_path: str, tstree_path: str, parser:
                 tree_similarity.numerator += 1
     
     return tree_similarity
+
+def calc_tree_similarities_by_all_subtree(mscx_path_list: list, tstree_path_list: list) -> list:
+    """木の類似度をすべての部分木によって複数個計算する
+
+    Args:
+        mscx_path_list (list): MusicXMLのパスのリスト
+        tstree_path_list (list): タイムスパン木のパスのリスト
+
+    Returns:
+        list: 類似度のリスト
+    """
+
+    if len(mscx_path_list) != len(tstree_path_list):
+        return []
+
+    res = []
+    parser = grammar_parser.GrammarParser("ja_ginza")
+
+    for i in range(len(mscx_path_list)):
+        similarity = calc_tree_similarity_by_all_subtree(mscx_path_list[i], tstree_path_list[i], parser)
+        res.append(similarity)
+    
+    return res
+
+def calc_tree_similarities(mscx_dir_path: str, tstree_dir_path: str, calc_by: str = ALL_SUBTREE):
+    """木構造の類似度計算を行う
+
+    Args:
+        mscx_dir_path (str): MusicXMLのあるディレクトリのパス
+        tstree_dir_path (str): タイムスパン木のあるディレクトリのパス
+        calc_by (str, optional): 部分木の抽出基準. Defaults to ALL_SUBTREE.
+    """
+
+    mscx_path_list = []
+    for item in glob.glob(mscx_dir_path):
+        mscx_path_list.append(os.path.abspath(item))
+    mscx_path_list.sort()
+
+    tstree_path_list = []
+    for item in glob.glob(tstree_dir_path):
+        tstree_path_list.append(os.path.abspath(item))
+    tstree_path_list.sort()
+
+    tree_similarities = None
+    if calc_by == ALL_SUBTREE:
+        tree_similarities = calc_tree_similarities_by_all_subtree(mscx_path_list, tstree_path_list)
+    elif calc_by == PARENT_CHILD:
+        tree_similarities = calc_tree_similarities_by_parent_child(mscx_path_list, tstree_path_list)
+    else:
+        return
+    
+    tree_similarities_dict = {}
+    for item in tree_similarities:
+        song_name = item.section_name[:-2]
+        section = item.section_name[-1]
+
+        if song_name not in tree_similarities_dict:
+            tree_similarities_dict[song_name] = [-1, -1, -1, -1]
+
+        if section == "A":
+            tree_similarities_dict[song_name][0] = item.denominator
+            tree_similarities_dict[song_name][1] = item.numerator
+        elif section == "S":
+            tree_similarities_dict[song_name][2] = item.denominator
+            tree_similarities_dict[song_name][3] = item.numerator
+
+    res = [] 
+    for key, value in tree_similarities_dict.items():
+        value.insert(0, key)
+        res.append(value)
+
+    io.output_csv(
+        f"./csv/tree_similarities_by_{calc_by}.csv",
+        ["楽曲名", "部分木の総組み合わせ数_A", "一致した部分木数_A", "部分木の総組み合わせ数_S", "一致した部分木数_S"],
+        res
+    )
