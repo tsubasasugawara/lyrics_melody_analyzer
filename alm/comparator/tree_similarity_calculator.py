@@ -2,6 +2,7 @@ from alm.comparator import *
 from alm.lyrics import *
 from alm.melody import *
 from alm.utils import io
+import json
 
 class TreeSimilarity:
     def __init__(self, denominator: int, numerator: int, section_name: str) -> None:
@@ -26,16 +27,18 @@ class TreeSimilarity:
 
         return self.numerator / self.denominator
 
-def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser) -> TreeSimilarity:
-    """木の類似度を計算する
+def gen_tree(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser) -> list:
+    """係り受け木とタイムスパン木のNodeオブジェクトを生成
 
     Args:
         mscx_path (str): MusicXMLのパス
         tstree_path (str): タイムスパン木のパス
+        parser (grammar_parser.GrammarParser): 文法の分析に使用する
 
     Returns:
-        _type_: _description_
+        list: 係り受け木(0番目)とタイムスパン木(1番目)。
     """
+
     lyrics_notes_dict = lyrics_extractor.extract_lyrics(mscx_path)
 
     doc = parser.parse(lyrics_notes_dict[lyrics_extractor.LYRICS_KEY])
@@ -50,6 +53,25 @@ def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: grammar_parse
     
     associating_lyrics_melody.associate_tstree_words(tstree, notes_word_dict)
     associating_lyrics_melody.associate_words_tree_notes(lyrics_tree, words_notes_dict)
+
+    return [lyrics_tree, tstree]
+
+
+def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser) -> TreeSimilarity:
+    """木の類似度を計算する
+
+    Args:
+        mscx_path (str): MusicXMLのパス
+        tstree_path (str): タイムスパン木のパス
+        parser (grammar_parser.GrammarParser): 文法の分析に使用する
+
+    Returns:
+        _type_: _description_
+    """
+
+    res = gen_tree(mscx_path, tstree_path, parser)
+    lyrics_tree = res[0]
+    tstree = res[1]
 
     lyrics_subtree_list = extracting_subtree.extract_parent_child(lyrics_tree)
     ts_subtree_list = extracting_subtree.extract_parent_child(tstree)
@@ -85,3 +107,24 @@ def calc_tree_similarities(mscx_path_list: list, tstree_path_list: list) -> list
         res.append(similarity)
     
     return res
+
+def calc_tree_similarities_by_subtrees(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser) -> TreeSimilarity:
+    res = gen_tree(mscx_path, tstree_path, parser)
+    lyrics_tree = res[0]
+    tstree = res[1]
+
+    lyrics_subtrees = {}
+    extracting_subtree.extract_subtree(lyrics_tree, lyrics_subtrees)
+
+    ts_subtrees = {}
+    extracting_subtree.extract_subtree(tstree, ts_subtrees)
+
+    tree_similarity = TreeSimilarity(len(lyrics_subtrees) * len(ts_subtrees), 0, io.get_file_name(mscx_path))
+    for lyrics_subtree in lyrics_subtrees.values():
+        for ts_subtree in ts_subtrees.values():
+            lyrics_subtree_str = json.dumps(lyrics_subtree)
+            ts_subtree_str = json.dumps(ts_subtree)
+            if lyrics_subtree_str == ts_subtree_str:
+                tree_similarity.numerator += 1
+    
+    return tree_similarity
