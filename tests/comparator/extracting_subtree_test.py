@@ -124,7 +124,7 @@ def extract_subtrees_test():
     matched_cnt = 0
     for subtree in subtree_list:
         for test_subtree in subtree_test:
-            if json.dumps(subtree.to_dict()) == json.dumps(test_subtree.to_dict()):
+            if json.dumps(sorted(subtree.to_dict())) == json.dumps(sorted(test_subtree.to_dict())):
                 matched_cnt += 1
     
     print(matched_cnt, matched_cnt / (len(subtree_list) * len(subtree_test)))
