@@ -10,6 +10,15 @@ def extract_parent_child(node: nd.Node) -> list:
     
     return res
 
+def extract_parent_brothers(node: nd.Node) -> list:
+    res = []
+    for i in rang(1, 2**len(node.children)):
+        res.append(nd.Node(node.id, [], False))
+        for j in range(len(subtrees_lists)):
+            if i >> j & 1:
+                res[i].children.append(node.children[j])
+    return res
+
 def extract_subtree(node: nd.Node, subtree_dict: map):
     subtree_dict[node.id] = []
 
