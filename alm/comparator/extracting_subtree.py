@@ -11,12 +11,21 @@ def extract_parent_child(node: nd.Node) -> list:
     return res
 
 def extract_parent_brothers(node: nd.Node) -> list:
+    if node.end:
+        return None
+
     res = []
-    for i in rang(1, 2**len(node.children)):
+    for i in range(1, 2**len(node.children)):
         res.append(nd.Node(node.id, [], False))
-        for j in range(len(subtrees_lists)):
+        for j in range(len(node.children)):
             if i >> j & 1:
-                res[i].children.append(node.children[j])
+                res[i-1].children.append(nd.Node(node.children[j].id, [], True))
+    
+    for child in node.children:
+        child_subtree = extract_parent_brothers(child)
+        if child_subtree != None:
+            res.extend(child_subtree)
+
     return res
 
 def extract_subtree(node: nd.Node, subtree_dict: map):
