@@ -120,7 +120,7 @@ def extract_subtrees_test():
             if  subtree_dict == test_subtree.to_dict():
                 matched_cnt += 1
     
-    print(matched_cnt / min(len(subtree_list), len(subtree_test)))
+    print(matched_cnt / len(subtree_list), len(subtree_test)))
     
 
 # extracting_parent_child_test("xmls/mscx/BE_FREE_A.xml", "xmls/tstree/BE_FREE_A_TS.xml")

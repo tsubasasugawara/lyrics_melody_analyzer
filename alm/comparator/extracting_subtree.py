@@ -16,10 +16,10 @@ def extract_parent_brothers(node: nd.Node) -> list:
 
     res = []
     for i in range(1, 2**len(node.children)):
-        res.append(nd.Node(node.id, [], False))
+        res.append(nd.Node(node.id, [], False, node.depth))
         for j in range(len(node.children)):
             if i >> j & 1:
-                res[i-1].children.append(nd.Node(node.children[j].id, [], True))
+                res[i-1].children.append(nd.Node(node.children[j].id, [], True, node.children[j].depth))
     
     for child in node.children:
         child_subtree = extract_parent_brothers(child)
@@ -39,7 +39,7 @@ def extract_subtree(node: nd.Node, subtree_dict: map):
     for i in range(len(node.children)):
         extract_subtree(node.children[i], subtree_dict)
         subtrees_lists.append(copy.deepcopy(subtree_dict[node.children[i].id]))
-        subtrees_lists[i].append(nd.Node(node.children[i].id, [], True))
+        subtrees_lists[i].append(nd.Node(node.children[i].id, [], True, node.children[i].depth))
 
     # subtrees_listからbit全探索を用いて全組み合わせの部分木の生成を行う
     for i in range(1, 2**len(subtrees_lists)):
@@ -50,5 +50,5 @@ def extract_subtree(node: nd.Node, subtree_dict: map):
 
         combinations = itertools.product(*lists)
         for ele in combinations:
-            subtree_dict[node.id].append(nd.Node(node.id, list(ele), False))
+            subtree_dict[node.id].append(nd.Node(node.id, list(ele), False, node.depth))
    

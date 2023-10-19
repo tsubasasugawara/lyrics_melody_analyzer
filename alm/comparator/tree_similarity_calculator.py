@@ -134,7 +134,7 @@ def calc_tree_similarity_by_all_subtree(mscx_path: str, tstree_path: str, parser
     ts_subtrees = {}
     extracting_subtree.extract_subtree(tstree, ts_subtrees)
 
-    tree_similarity = TreeSimilarity(min(len(lyrics_subtrees), len(ts_subtrees)), 0, io.get_file_name(mscx_path))
+    tree_similarity = TreeSimilarity(max(len(lyrics_subtrees), len(ts_subtrees)), 0, io.get_file_name(mscx_path))
     for lyrics_subtree in lyrics_subtrees.values():
         lyrics_subtree_dict = lyrics_subtree.to_dict()
         for ts_subtree in ts_subtrees.values():

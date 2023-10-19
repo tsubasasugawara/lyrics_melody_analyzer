@@ -1,11 +1,12 @@
 class Node:
-    def __init__(self, id, children: list, end: bool, word: str =None, note_id: str=None, notes: str =None):
+    def __init__(self, id, children: list, end: bool, depth: int, word: str =None, note_id: str=None, notes: str =None):
         """ノード
 
         Args:
             id (Any): ノードのID
             children (list): 子ノードのリスト
             end(bool): 葉かどうか
+            depth (int): 深さ
             word (str, optional): 単語 Defaults to None.
             note_id (str, optional): 音符のID Defaults to None.
             notes (list, optional): 音符のリスト Defaults to None.
@@ -13,6 +14,7 @@ class Node:
         self.id = id
         self.word = word
         self.note_id = note_id
+        self.depth = depth
         self.end = end
         self.notes = notes
         self.children = children
@@ -24,7 +26,7 @@ class Node:
             dict: Nodeを辞書型配列に変換した結果
         """
 
-        res = {"id": self.id, "end": self.end, "children": []}
+        res = {"id": self.id, "end": self.end, "children": [], "depth": self.depth}
 
         if self.word != None:
             res["word"] = self.word

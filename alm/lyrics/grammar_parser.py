@@ -65,26 +65,27 @@ class GrammarParser:
 
         tree_list = []
         for sent in doc.sents:
-            tree_list.append(self.__recur_tree(sent.root))
+            tree_list.append(self.__recur_tree(sent.root, 1))
         
         return self.__join_roots(tree_list)
 
-    def __recur_tree(self, token) -> node.Node:
+    def __recur_tree(self, token, depth: int) -> node.Node:
         """再帰的に木を作成する
 
         Args:
             token (_type_): 文法構造解析結果のトークン
+            depth (int): 深さ
 
         Returns:
             node.Node: ノード
         """
 
-        n = node.Node(token.i, [], False, word=token.text)
+        n = node.Node(token.i, [], False, depth, word=token.text)
         if len(list(token.children)) == 0:
             n.end = True
 
         for child in token.children:
-            n.children.append(self.__recur_tree(child))
+            n.children.append(self.__recur_tree(child, depth + 1))
 
         return n
     

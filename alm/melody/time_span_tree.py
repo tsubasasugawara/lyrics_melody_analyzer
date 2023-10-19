@@ -25,7 +25,7 @@ def tstree_xml_2_struct(file_path: str) -> node.Node:
     if head_id == None:
         return
         
-    head = node.Node(head_id, [], False)
+    head = node.Node(head_id, [], False, 1)
     parse_time_span_tree(root.find("./ts"), head)
 
     return head
@@ -47,7 +47,7 @@ def parse_time_span_tree(ts: et.ElementTree, parent: node.Node):
     secondary = ts.find("./secondary/ts")
     if secondary != None:
         id = secondary.find("./head/chord/note").attrib["id"]
-        sn = node.Node(id, [], False)
+        sn = node.Node(id, [], False, parent.depth + 1)
 
         if secondary.find("./primary") == None:
             sn.end = True
