@@ -1,32 +1,39 @@
 from alm.node import node as nd
 import copy
+from alm.utils import math
 import itertools
 
-def extract_parent_child(node: nd.Node) -> list:
+# def extract_parent_child(node: nd.Node) -> list:
+#     res = []
+#     for child in node.children:
+#         res.append({"id": node.id, "child": child.id})
+#         res.extend(extract_parent_child(child))
+    
+#     return res
+
+def extract_parent_child(node: nd.Node, count_subtree_map: dict) -> list:
+    if node.end:
+        count_subtree_map[node.id] = 0
+        return []
+
     res = []
     for child in node.children:
         res.append({"id": node.id, "child": child.id})
-        res.extend(extract_parent_child(child))
-    
-    return res
+        res.extend(extract_parent_child(child, count_subtree_map))
 
-def extract_parent_brothers(node: nd.Node) -> list:
-    if node.end:
-        return None
+    count_subtree_map[node.id] = 0
+    for k in range(len(node.children)):
+        count_subtree_map[node.id] += math.comb(len(node.children), k)
 
-    res = []
     for i in range(1, 2**len(node.children)):
-        res.append(nd.Node(node.id, [], False, node.depth))
+        count = 1
         for j in range(len(node.children)):
             if i >> j & 1:
-                res[i-1].children.append(nd.Node(node.children[j].id, [], True, node.children[j].depth))
+                count *= count_subtree_map[node.children[j].id]
+        count_subtree_map[node.id] += count
     
-    for child in node.children:
-        child_subtree = extract_parent_brothers(child)
-        if child_subtree != None:
-            res.extend(child_subtree)
-
     return res
+
 
 def extract_subtree(node: nd.Node, subtree_dict: map):
     subtree_dict[node.id] = []
@@ -49,6 +56,7 @@ def extract_subtree(node: nd.Node, subtree_dict: map):
                 lists.append(subtrees_lists[j])
 
         combinations = itertools.product(*lists)
+        print(list(combinations))
         for ele in combinations:
             subtree_dict[node.id].append(nd.Node(node.id, list(ele), False, node.depth))
    
