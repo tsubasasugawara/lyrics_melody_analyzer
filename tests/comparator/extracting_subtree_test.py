@@ -28,15 +28,19 @@ def extracting_parent_child_test(mscx_path: str, tstree_path: str):
     associating_lyrics_melody.associate_tstree_words(tstree, notes_word_dict)
     associating_lyrics_melody.associate_words_tree_notes(lyrics_tree, words_notes_dict)
 
-    count_subtree_lyrics = {}
-    count_subtree_tstree = {}
-    lyrics_subtree_list = extracting_subtree.extract_parent_child(lyrics_tree, count_subtree_lyrics)
-    tstree_subtree_list = extracting_subtree.extract_parent_child(tstree, count_subtree_tstree)
+    lyrics_subtree_list = extracting_subtree.extract_parent_child(lyrics_tree)
+    tstree_subtree_list = extracting_subtree.extract_parent_child(tstree)
 
-    pprint.pprint(lyrics_subtree_list)
-    print(count_subtree_lyrics)
-    pprint.pprint(tstree_subtree_list)
-    print(count_subtree_tstree)
+    count_subtree_lyrics = {}
+    extracting_subtree.count_subtree(lyrics_tree, count_subtree_lyrics)
+    associating_lyrics_melody.simplify_timespan_tree(tstree)
+    count_subtree_tstree = {}
+    extracting_subtree.count_subtree(tstree, count_subtree_tstree)
+
+    print(count_subtree_lyrics[lyrics_tree.id])
+    print(count_subtree_tstree[tstree.id])
+    # pprint.pprint(lyrics_subtree_list)
+    # pprint.pprint(tstree_subtree_list)
 
 extracting_parent_child_test("xmls/mscx/BE_FREE_A.xml", "xmls/tstree/BE_FREE_A_TS.xml")
 
@@ -134,6 +138,57 @@ extracting_parent_child_test("xmls/mscx/BE_FREE_A.xml", "xmls/tstree/BE_FREE_A_T
     
 #     print(matched_cnt / len(subtree_list), len(subtree_test))
     
-
-# # extracting_parent_child_test("xmls/mscx/BE_FREE_A.xml", "xmls/tstree/BE_FREE_A_TS.xml")
 # extract_subtrees_test()
+
+def count_subtree_test():
+    root = node.Node(
+        1,
+        [
+            node.Node(
+                2,
+                [
+                    node.Node(
+                        4,
+                        [],
+                        True,
+                        3
+                    ),
+                    node.Node(
+                        5,
+                        [],
+                        True,
+                        3
+                    ),
+                    node.Node(
+                        6,
+                        [],
+                        True,
+                        3
+                    ),
+                ],
+                False,
+                2
+            ),
+            node.Node(
+                3,
+                [
+                    node.Node(
+                        7,
+                        [],
+                        True,
+                        3
+                    )
+                ],
+                False,
+                2
+            ),
+        ],
+        False,
+        1
+    )
+
+    count_subtree_map = {}
+    extracting_subtree.count_subtree(root, count_subtree_map)
+    print(count_subtree_map[root.id])
+
+count_subtree_test()

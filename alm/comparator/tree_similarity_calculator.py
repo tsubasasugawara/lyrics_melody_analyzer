@@ -132,12 +132,13 @@ def calc_tree_similarity_by_all_subtree(mscx_path: str, tstree_path: str, parser
     extracting_subtree.extract_subtree(lyrics_tree, lyrics_subtrees)
 
     ts_subtrees = {}
+    associating_lyrics_melody.simplify_timespan_tree(tstree)
     extracting_subtree.extract_subtree(tstree, ts_subtrees)
 
     tree_similarity = TreeSimilarity(max(len(lyrics_subtrees), len(ts_subtrees)), 0, io.get_file_name(mscx_path))
-    for lyrics_subtree in lyrics_subtrees.values():
+    for lyrics_subtree in lyrics_subtrees[lyrics_tree.id]:
         lyrics_subtree_dict = lyrics_subtree.to_dict()
-        for ts_subtree in ts_subtrees.values():
+        for ts_subtree in ts_subtrees[tstree.id]:
             if lyrics_subtree_dict == ts_subtree.to_dict():
                 tree_similarity.numerator += 1
     
