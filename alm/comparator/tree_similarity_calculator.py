@@ -79,6 +79,7 @@ def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parse
 
     lyrics_subtree_list = extracting_subtree.extract_parent_child(lyrics_tree)
     ts_subtree_list = extracting_subtree.extract_parent_child(tstree)
+    associating_lyrics_melody.simplify_timespan_tree(ts_subtree_list)
 
     cnt = 0
     for lyrics_subtree in lyrics_subtree_list:
@@ -86,7 +87,7 @@ def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parse
             if lyrics_subtree["id"] == ts_subtree["id"] and lyrics_subtree["child"] == ts_subtree["child"]:
                 cnt += 1
 
-    tree_similarity = TreeSimilarity(max(len(lyrics_subtree_list), len(ts_subtree_list)), cnt, io.get_file_name(mscx_path))
+    tree_similarity = TreeSimilarity(min(len(lyrics_subtree_list), len(ts_subtree_list)), cnt, io.get_file_name(mscx_path))
     return tree_similarity
 
 def calc_tree_similarities_by_parent_child(mscx_path_list: list, tstree_path_list: list) -> list:
@@ -135,7 +136,7 @@ def calc_tree_similarity_by_all_subtree(mscx_path: str, tstree_path: str, parser
     associating_lyrics_melody.simplify_timespan_tree(tstree)
     extracting_subtree.extract_subtree(tstree, ts_subtrees)
 
-    tree_similarity = TreeSimilarity(max(len(lyrics_subtrees), len(ts_subtrees)), 0, io.get_file_name(mscx_path))
+    tree_similarity = TreeSimilarity(min(len(lyrics_subtrees), len(ts_subtrees)), 0, io.get_file_name(mscx_path))
     for lyrics_subtree in lyrics_subtrees[lyrics_tree.id]:
         lyrics_subtree_dict = lyrics_subtree.to_dict()
         for ts_subtree in ts_subtrees[tstree.id]:
