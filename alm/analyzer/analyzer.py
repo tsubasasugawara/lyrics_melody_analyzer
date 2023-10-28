@@ -20,9 +20,9 @@ def show_scatter(popularity: pd.DataFrame, center: int, title: str = "木構造�
     ax.set_ylabel('サビ')
     fig.show()
 
-def analyze_tree_similarities(calc_by: str):
+def analyze_tree_similarities():
     # TODO:パスが決め打ち
-    tree_similarities = pd.read_csv(f"csv/tree_similarities_by_{calc_by}.csv")
+    tree_similarities = pd.read_csv(f"csv/tree_similarities.csv")
     popularities = pd.read_csv("csv/popularities.csv")
     tree_similarities = pd.merge(tree_similarities, popularities)
 
