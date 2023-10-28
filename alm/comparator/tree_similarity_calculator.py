@@ -20,6 +20,9 @@ class TreeSimilarity:
         self.numerator = numerator
         self.section_name = section_name
 
+    def print(self):
+        print(f"{self.section_name}\n分母：{self.denominator}\n分子：{self.numerator}\n類似度:{self.numerator/self.denominator}")
+
     def calc_similarity(self) -> float:
         """類似度を計算する
 
@@ -115,13 +118,12 @@ def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: grammar_parse
                 io.get_file_name(mscx_path)
             )
 
-def calc_tree_similarities(mscx_dir_path: str, tstree_dir_path: str, calc_by: str = ALL_SUBTREE):
+def calc_tree_similarities(mscx_dir_path: str, tstree_dir_path: str):
     """木構造の類似度計算を行う
 
     Args:
         mscx_dir_path (str): MusicXMLのあるディレクトリのパス
         tstree_dir_path (str): タイムスパン木のあるディレクトリのパス
-        calc_by (str, optional): 部分木の抽出基準. Defaults to ALL_SUBTREE.
     """
 
     # MusicXMLのパスを取得する

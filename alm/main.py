@@ -1,30 +1,22 @@
 import sys
 import argparse
-from alm.lyrics import *
-from alm.melody import *
-from alm.comparator import *
-from alm.utils import io
+from alm.lyrics import grammar_parser as gp
+from alm.comparator import tree_similarity_calculator as tsc
 
 def main():
     parser = argparse.ArgumentParser(description='Process some integers.')
     parser.add_argument(
-        'integers',
-        metavar='N',
-        type=int,
-        nargs='+',
-        help='an integer for the accumulator'
+        'mscx_path',
+        help='MusicXML Path'
     )
     parser.add_argument(
-        '--sum',
-        action='store_true',
-        help='sum the integers (default: find the max)'
+        'tstx_path',
+        help='Timespan Tree XML Path'
     )
-
     args = parser.parse_args()
-    if args.sum:
-        print(sum(args.integers))
-    else:
-        print(max(args.integers))
+
+    similarity = tsc.calc_tree_similarity(args.mscx_path, args.tstx_path, gp.GrammarParser("ja_ginza"))
+    similarity.print()
 
 if __name__ == "__main__":
     sys.exit(main())
