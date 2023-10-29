@@ -1,6 +1,8 @@
 from alm.lyrics import lyrics_extractor as LE
 from alm.node import node as nd
 from collections import deque
+from alm.lyrics import *
+from alm.melody import *
 
 def associate_word_notes(lyrics_tree: nd.Node, lyrics_notes_dict: nd.Node) -> nd.Node:
     """単語と音符を対応付ける
@@ -144,3 +146,37 @@ def simplify_timespan_tree(tstree: nd.Node):
         node.children = children
         for child in node.children:
             queue.append(child)
+
+WORD_MATCHED_RATE = 0
+TREE_SIMILARITY = 1
+
+def gen_trees_and_word_list(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser, mode: int = WORD_MATCHED_RATE):
+    """タイムスパン木、係り受け木、単語のリストを生成
+
+    Args:
+        mscx_path (str): MusicXMLのパス
+        tstree_path (str): タイムスパン木のパス
+        parser (grammar_parser.GrammarParser): 文法の分析に使用する
+        mode (int): 単語の一致率か類似度かどちらを求めるかを選択する
+
+    Returns:
+        list: タイムスパン木(1番目)、係り受け木(2番目)、単語のリスト(3番目)
+    """
+
+    lyrics_notes_dict = lyrics_extractor.extract_lyrics(mscx_path)
+
+    doc = parser.parse(lyrics_notes_dict[lyrics_extractor.LYRICS_KEY])
+    lyrics_tree = parser.to_tree(doc)
+
+    words_notes_dict = {}
+    explore_words_in_tree(lyrics_tree, words_notes_dict)
+    words_list = associate_word_list_notes(words_notes_dict, lyrics_notes_dict)
+
+    tstree = time_span_tree.tstree_xml_2_struct(tstree_path)
+
+    if mode == TREE_SIMILARITY:
+        notes_word_dict = associate_notes_words(words_list)
+        associate_tstree_words(tstree, notes_word_dict)
+        associate_words_tree_notes(lyrics_tree, words_notes_dict)
+
+    return [tstree, lyrics_tree, words_list]

@@ -1,5 +1,7 @@
 from alm.utils import string
 from alm.node import node
+from alm.comparator import associating_lyrics_melody
+from alm.lyrics import grammar_parser
 
 class WordMatchRate:
     def __init__(self, total_words_number: int, matched_words_number: int) -> None:
@@ -18,18 +20,25 @@ class WordMatchRate:
         self.section_name = ""
         self.total_words_number = total_words_number
         self.matched_words_number = matched_words_number
-        
+    
+    def print(self):
+        print(f"{self.section_name}\n単語総数：{self.total_words_number}\n一致した単語の数：{self.matched_words_number}\n単語の一致率：{self.matched_words_number/self.total_words_number}")
 
-def calc_word_matched_rate(words_list: list, melody_tree: node.Node) -> WordMatchRate:
+def calc_word_matched_rate(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser) -> WordMatchRate:
     """単語の一致率を計算する
 
     Args:
-        words_list (list): 歌詞の単語リスト
-        melody_tree (node.Node): メロディの木,タイムスパン木
+        mscx_path (str): MusicXMLのパス
+        tstree_path (str): タイムスパン木のパス
+        parser (grammar_parser.GrammarParser): 文法の分析に使用する
 
     Returns:
         WordMatchRate: 単語の一致率の計算結果を含むデータ構造
     """
+
+    res = associating_lyrics_melody.gen_trees_and_word_list(mscx_path, tstree_path, parser)
+    melody_tree = res[0]
+    words_list = res[2]
 
     matched_words_count = 0
     for word_number in words_list:

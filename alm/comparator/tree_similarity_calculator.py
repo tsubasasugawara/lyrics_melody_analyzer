@@ -32,36 +32,6 @@ class TreeSimilarity:
 
         return self.numerator / self.denominator
 
-def gen_tree(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser) -> list:
-    """係り受け木とタイムスパン木のNodeオブジェクトを生成
-
-    Args:
-        mscx_path (str): MusicXMLのパス
-        tstree_path (str): タイムスパン木のパス
-        parser (grammar_parser.GrammarParser): 文法の分析に使用する
-
-    Returns:
-        list: 係り受け木(0番目)とタイムスパン木(1番目)。
-    """
-
-    lyrics_notes_dict = lyrics_extractor.extract_lyrics(mscx_path)
-
-    doc = parser.parse(lyrics_notes_dict[lyrics_extractor.LYRICS_KEY])
-    lyrics_tree = parser.to_tree(doc)
-
-    words_notes_dict = {}
-    associating_lyrics_melody.explore_words_in_tree(lyrics_tree, words_notes_dict)
-    words_list = associating_lyrics_melody.associate_word_list_notes(words_notes_dict, lyrics_notes_dict)
-
-    tstree = time_span_tree.tstree_xml_2_struct(tstree_path)
-    notes_word_dict = associating_lyrics_melody.associate_notes_words(words_list)
-    
-    associating_lyrics_melody.associate_tstree_words(tstree, notes_word_dict)
-    associating_lyrics_melody.associate_words_tree_notes(lyrics_tree, words_notes_dict)
-
-    return [lyrics_tree, tstree]
-
-
 def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser) -> TreeSimilarity:
     """木の類似度を親子関係から計算する
 
@@ -75,10 +45,10 @@ def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: grammar_parse
     """
 
     # MusicXMLとタイムスパン木のXMLから木構造を生成
-    res = gen_tree(mscx_path, tstree_path, parser)
-    lyrics_tree = res[0]
-    tstree = res[1]
+    res = associating_lyrics_melody.gen_trees_and_word_list(mscx_path, tstree_path, parser)
+    tstree = res[0]
     associating_lyrics_melody.simplify_timespan_tree(tstree)
+    lyrics_tree = res[1]
 
     # 歌詞とメロディのタイムスパン木の総数を求める
     count_lyrics_subtree_map = {}
@@ -171,7 +141,7 @@ def calc_tree_similarities(mscx_dir_path: str, tstree_dir_path: str):
         res.append(value)
 
     io.output_csv(
-        f"./csv/tree_similarities_by_{calc_by}.csv",
+        f"./csv/tree_similarities.csv",
         ["楽曲名", "部分木の総組み合わせ数_A", "一致した部分木数_A", "部分木の総組み合わせ数_S", "一致した部分木数_S"],
         res
     )
