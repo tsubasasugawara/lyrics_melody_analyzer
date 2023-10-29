@@ -99,6 +99,9 @@ class GrammarParser:
             node.Node: 結合後の木
         """
 
+        for root in roots:
+            root.end = False
+
         if len(roots) == 1:
             return roots[0]
         elif len(roots) <= 0:

@@ -21,7 +21,7 @@ class TreeSimilarity:
         self.section_name = section_name
 
     def print(self):
-        print(f"{self.section_name}\n分母：{self.denominator}\n分子：{self.numerator}\n類似度:{self.numerator/self.denominator}")
+        print(f"{self.section_name}\n分母：{self.denominator}\n分子：{self.numerator}")
 
     def calc_similarity(self) -> float:
         """類似度を計算する
@@ -45,9 +45,8 @@ def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: grammar_parse
     """
 
     # MusicXMLとタイムスパン木のXMLから木構造を生成
-    res = associating_lyrics_melody.gen_trees_and_word_list(mscx_path, tstree_path, parser)
+    res = associating_lyrics_melody.gen_trees_and_word_list(mscx_path, tstree_path, parser, associating_lyrics_melody.TREE_SIMILARITY)
     tstree = res[0]
-    associating_lyrics_melody.simplify_timespan_tree(tstree)
     lyrics_tree = res[1]
 
     # 歌詞とメロディのタイムスパン木の総数を求める
@@ -117,7 +116,8 @@ def calc_tree_similarities(mscx_dir_path: str, tstree_dir_path: str):
     tree_similarities = []
     for i in range(len(mscx_path_list)):
         similarity = calc_tree_similarity(mscx_path_list[i], tstree_path_list[i], parser)
-        tree_similarities.append(similarity)   
+        tree_similarities.append(similarity)
+        print(similarity.print())
 
     # 類似度計算の結果を整理
     tree_similarities_dict = {}

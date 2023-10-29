@@ -178,5 +178,6 @@ def gen_trees_and_word_list(mscx_path: str, tstree_path: str, parser: grammar_pa
         notes_word_dict = associate_notes_words(words_list)
         associate_tstree_words(tstree, notes_word_dict)
         associate_words_tree_notes(lyrics_tree, words_notes_dict)
+        simplify_timespan_tree(tstree)
 
     return [tstree, lyrics_tree, words_list]

@@ -1,13 +1,16 @@
 from alm.lyrics import grammar_parser as gp
+from alm.lyrics import lyrics_extractor as le
+import pprint
 
-def test_gramar_parser(lyrics: str):
+def test_gramar_parser(mscx_path: str):
     parser = gp.GrammarParser("ja_ginza")
-    doc = parser.parse(lyrics)
+    words_dict = le.extract_lyrics(mscx_path)
+    doc = parser.parse(words_dict[le.LYRICS_KEY])
     tree = parser.to_tree(doc)
 
-    print(tree.to_dict())
+    pprint.pprint(tree.to_dict())
 
-test_gramar_parser("明日、今日よりも好きになれる。あふれる思いが止まらない。")
+test_gramar_parser("xmls/mscx/オレンジ_S.xml")
 
 def add_punctuation_test(lyrics: str):
     parser = gp.GrammarParser("ja_ginza")
