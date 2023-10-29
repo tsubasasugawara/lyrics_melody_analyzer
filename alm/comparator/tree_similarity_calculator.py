@@ -5,6 +5,7 @@ from alm.utils import io
 from alm.node import node as nd
 import os
 import glob
+import timeout_decorator
 
 class TreeSimilarity:
     def __init__(self, denominator: int, numerator: int, section_name: str) -> None:
@@ -32,6 +33,7 @@ class TreeSimilarity:
 
         return self.numerator / self.denominator
 
+@timeout_decorator.timeout(10)
 def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser) -> TreeSimilarity:
     """木の類似度を親子関係から計算する
 
@@ -115,9 +117,12 @@ def calc_tree_similarities(mscx_dir_path: str, tstree_dir_path: str):
     # 類似度の計算
     tree_similarities = []
     for i in range(len(mscx_path_list)):
-        similarity = calc_tree_similarity(mscx_path_list[i], tstree_path_list[i], parser)
-        tree_similarities.append(similarity)
-        print(similarity.print())
+        try:
+            similarity = calc_tree_similarity(mscx_path_list[i], tstree_path_list[i], parser)
+            tree_similarities.append(similarity)
+            print(similarity.print())
+        except:
+            print(f"{mscx_path_list[i]}：Time out error.")
 
     # 類似度計算の結果を整理
     tree_similarities_dict = {}
