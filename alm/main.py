@@ -26,6 +26,9 @@ def main():
         help='Timespan Tree XML Path'
     )
 
+    #TODO: t検定のオプション追加
+    #TODO: spotifyのpopularity取得オプション追加
+
     args = parser.parse_args()
 
     grammar_parser = gp.GrammarParser("ja_ginza")
