@@ -120,7 +120,6 @@ def calc_tree_similarities(mscx_dir_path: str, tstree_dir_path: str):
         try:
             similarity = calc_tree_similarity(mscx_path_list[i], tstree_path_list[i], parser)
             tree_similarities.append(similarity)
-            print(similarity.print())
         except:
             print(f"{mscx_path_list[i]}：Time out error.")
 
