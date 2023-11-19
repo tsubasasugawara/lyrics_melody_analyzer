@@ -22,7 +22,7 @@ def calc_word_matched_rate_test(test_cases: list):
         res = WMRC.calc_word_matched_rate(words_list, melody_tree)
         res.section_name = ele[2]
 
-        print(res.section_name, res.words_number, res.match_words_number, res.match_rate)
+        print(res.section_name, res.word_count, res.match_word_count, res.match_rate)
         words = [" " for i in range(len(words_list))]
         for i in words_list:
             words[i] = words_list[i]["word"] + str(words_list[i]["is_matched"])
@@ -47,7 +47,7 @@ def word_matched_rate_to_csv(test_cases: list, csv_path: str):
         res = WMRC.calc_word_matched_rate(words_list, melody_tree)
         res.section_name = ele[2]
 
-        csv_data.append([res.section_name, res.words_number, res.match_words_number, res.words_number - res.match_words_number, res.match_rate])
+        csv_data.append([res.section_name, res.word_count, res.match_word_count, res.word_count - res.match_word_count, res.match_rate])
     
     io.output_csv(csv_path, ["セクション名", "単語数", "一致した単語数", "一致しなかった単語数", "一致率"], csv_data)
 

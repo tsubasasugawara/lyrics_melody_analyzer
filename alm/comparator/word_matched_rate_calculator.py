@@ -1,30 +1,12 @@
+import glob
+from alm.utils import io
 from alm.utils import string
 from alm.node import node
 from alm.comparator import associating_lyrics_melody
 from alm.lyrics import grammar_parser
+from alm.comparator import rate
 
-class WordMatchRate:
-    def __init__(self, total_words_number: int, matched_words_number: int) -> None:
-        """単語の一致率の計算結果を含むデータ構造
-
-        Args:
-            total_words_number (int): 単語総数
-            matched_words_number (int): 一致した単語の数
-
-        Attribute:
-            section_name (str): セクション名
-            total_words_number (int): 単語総数
-            matched_words_number (int): 一致した単語の数
-        """
-
-        self.section_name = ""
-        self.total_words_number = total_words_number
-        self.matched_words_number = matched_words_number
-    
-    def print(self):
-        print(f"{self.section_name}\n単語総数：{self.total_words_number}\n一致した単語の数：{self.matched_words_number}\n単語の一致率：{self.matched_words_number/self.total_words_number}")
-
-def calc_word_matched_rate(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser) -> WordMatchRate:
+def calc_word_matched_rate(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser) -> rate.Rate:
     """単語の一致率を計算する
 
     Args:
@@ -67,7 +49,7 @@ def calc_word_matched_rate(mscx_path: str, tstree_path: str, parser: grammar_par
         
         words_list[word_number]["is_matched"] = is_matched
 
-    return WordMatchRate(len(words_list), matched_words_count)
+    return rate.Rate(len(words_list), matched_words_count, io.get_file_name(mscx_path))
 
 def are_word_melody_matched(notes: list, melody_subtree: node.Node, is_note_found: dict) -> bool:
     """単語とメロディが一致しているかどうかを求める
@@ -106,3 +88,37 @@ def search_subtree(notes: list, melody_subtree: node.Node) -> node.Node:
 
             if subtree != None:
                 return subtree
+
+def calc_word_matched_rates(mscx_dir: str, tstree_dir: str):
+    mscx_list = glob.glob(f"{io.put_slash_dir_path(mscx_dir)}*")
+    tstree_list = glob.glob(f"{io.put_slash_dir_path(tstree_dir)}*")
+
+    if len(mscx_list) != len(tstree_list):
+        return None
+    
+    mscx_list.sort()
+    tstree_list.sort()
+
+    parser = grammar_parser.GrammarParser("ja_ginza")
+
+    res = {}
+    for i in range(len(mscx_list)):
+        wmr = calc_word_matched_rate(mscx_list[i], tstree_list[i], parser)
+        song = wmr.section_name[:-2]
+        section = wmr.section_name[-1]
+
+        if song not in res:
+            res[song] = [song, -1, -1, -1, -1]
+        
+        if section == "A":
+            res[song][1] = wmr.denominator
+            res[song][2] = wmr.numerator
+        elif section == "S":
+           res[song][3] = wmr.denominator
+           res[song][4] = wmr.numerator
+
+    io.output_csv(
+        f"./csv/{io.get_file_name(mscx_dir)}_wmr_{io.get_now_date()}.csv",
+        ["song", "word_count_A", "matched_word_count_A", "word_count_S", "matched_word_count_S"],
+        res.values()
+    )

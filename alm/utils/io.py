@@ -4,6 +4,7 @@ from pathlib import Path
 import os
 from os import path
 import csv
+import datetime
 
 XML = "xml"
 
@@ -102,3 +103,5 @@ def make_dir(dir_path: str) -> None:
     if path.exists(dir_path) == False:
         os.makedirs(dir_path)
 
+def get_now_date():
+    return datetime.datetime.now().strftime("%Y_%m_%d")
