@@ -104,4 +104,4 @@ def make_dir(dir_path: str) -> None:
         os.makedirs(dir_path)
 
 def get_now_date():
-    return datetime.datetime.now().strftime("%Y_%m_%d")
+    return datetime.datetime.now().strftime("%Y%m%d")
