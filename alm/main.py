@@ -5,13 +5,14 @@ from alm.lyrics import grammar_parser as gp
 from alm.comparator import tree_similarity_calculator as tsc
 from alm.comparator import word_matched_rate_calculator as wmrc
 from alm.api import spotify
+from alm.analyzer import ttest
 
 def main():
     parser = argparse.ArgumentParser(description='This program calc word matched rates and tree similarities.')
 
     # 1曲づつの分析
     parser.add_argument(
-        '-w', '--word_match_rate',
+        '-w', '--word_matched_rate',
         action='store_true'
     )
     parser.add_argument(
@@ -29,7 +30,7 @@ def main():
     
     # 複数曲の分析
     parser.add_argument(
-        '-ws', '--word_match_rates',
+        '-ws', '--word_matched_rates',
         action='store_true'
     )
     parser.add_argument(
@@ -45,8 +46,12 @@ def main():
         help='Timespan Tree XML dir'
     )
 
-    #TODO: t検定のオプション追加
-
+    # t検定
+    parser.add_argument(
+        '-ttest',
+        action='store_true'
+    )
+    
     #TODO: youtubeの再生回数取得オプション追加
 
     # spotifyのpopularity取得
@@ -64,12 +69,48 @@ def main():
         '-sps', '--spotify_popularities',
         action='store_true'
     )
+
+    # csvの結合を行う
     parser.add_argument(
-        '-c', '--spotify_id_csv',
-        help='Track id csv'
+        '-mc', '--merge_csv',
+        action='store_true'
+    )
+    parser.add_argument(
+        '-cl', '--csv_list',
+        help='list of csv path',
+        nargs='*'
+    )
+
+    parser.add_argument(
+        '-c', '--csv',
+        help='csv path'
     )
 
     args = parser.parse_args()
+
+    # csvの結合
+    if args.merge_csv:
+        arr = []
+        for path in args.csv_list:
+            arr.append(pd.read_csv(path, index_col=0, header=0))
+        merged_data = pd.concat(arr, axis=1)
+        merged_data.to_csv(args.csv_list[0])
+        return
+
+    # t検定を行う
+    if args.ttest:
+        res = None
+
+        if args.word_matched_rate:
+            res = ttest.ttest_word_matched_rate(args.csv)
+        if args.tree_similarity:
+            res = ttest.ttest_tree_similarity(args.csv)
+
+        if res != None:
+            print(f"youtube:{res[0]}")
+            print(f"spotify:{res[1]}")
+
+        return
 
     # spotifyのpopularityを取得
     if args.spotify_popularity:
@@ -79,14 +120,14 @@ def main():
     
     #spotifyのpopularityを複数取得
     if args.spotify_popularities:
-        data = pd.read_csv(args.spotify_id_csv)
+        data = pd.read_csv(args.csv)
         res = spotify.get_popularities(data['spotify_id'])
         for item in res:
             print(item.name, item. popularity)
         return 
 
     # 複数の分析を一度に行う
-    if args.word_match_rates:
+    if args.word_matched_rates:
         wmrc.calc_word_matched_rates(args.mscx_dir, args.tstree_dir)
         return
     if args.tree_similarities:
