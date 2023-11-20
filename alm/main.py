@@ -1,8 +1,10 @@
 import sys
 import argparse
+import pandas as pd
 from alm.lyrics import grammar_parser as gp
 from alm.comparator import tree_similarity_calculator as tsc
 from alm.comparator import word_matched_rate_calculator as wmrc
+from alm.api import spotify
 
 def main():
     parser = argparse.ArgumentParser(description='This program calc word matched rates and tree similarities.')
@@ -44,10 +46,44 @@ def main():
     )
 
     #TODO: t検定のオプション追加
-    #TODO: spotifyのpopularity取得オプション追加
+
     #TODO: youtubeの再生回数取得オプション追加
 
+    # spotifyのpopularity取得
+    parser.add_argument(
+        '-sp', '--spotify_popularity',
+        action='store_true'
+    )
+    parser.add_argument(
+        '-i', '--spotify_id',
+        help='Track ID'
+    )
+
+    # spotifyのpopularityを複数取得
+    parser.add_argument(
+        '-sps', '--spotify_popularities',
+        action='store_true'
+    )
+    parser.add_argument(
+        '-c', '--spotify_id_csv',
+        help='Track id csv'
+    )
+
     args = parser.parse_args()
+
+    # spotifyのpopularityを取得
+    if args.spotify_popularity:
+        res = spotify.get_popularity(args.spotify_id)
+        print(res.name, res.popularity)
+        return
+    
+    #spotifyのpopularityを複数取得
+    if args.spotify_popularities:
+        data = pd.read_csv(args.spotify_id_csv)
+        res = spotify.get_popularities(data['spotify_id'])
+        for item in res:
+            print(item.name, item. popularity)
+        return 
 
     # 複数の分析を一度に行う
     if args.word_match_rates:

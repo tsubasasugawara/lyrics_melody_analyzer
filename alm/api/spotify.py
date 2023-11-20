@@ -25,7 +25,7 @@ def get_popularities(track_id_list: list) -> list:
         track = get_track(track_id, client_credentials_manager)
         time.sleep(3)
         if type(track) is dict:
-            res.append([track["name"], track["popularity"]])
+            res.append(Track(track["name"], track["popularity"]))
     
     return res
 
