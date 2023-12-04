@@ -87,7 +87,7 @@ def calc_tree_similarities(mscx_dir: str, tstree_dir: str):
         section = wmr.section_name[-1]
 
         if song not in res:
-            res[song] = [song, -1, -1, -1, -1]
+            res[song] = [song, None, None, None, None]
         
         if section == "A":
             res[song][1] = wmr.denominator
