@@ -34,7 +34,6 @@ def calc_word_matched_rate(mscx_path: str, tstree_path: str, parser: grammar_par
         words_list[word_number]["is_matched"] = False
 
         melody_subtree = search_subtree(notes, melody_tree)
-        # TODO: 音符がタイムスパン木に含まれていないことがある(オレンジ_A1: ひとつふた...　つ None)
         if melody_subtree == None:
             continue
 
