@@ -5,6 +5,7 @@ import os
 from os import path
 import csv
 import datetime
+import pandas as pd
 
 XML = "xml"
 
@@ -105,3 +106,9 @@ def make_dir(dir_path: str) -> None:
 
 def get_now_date():
     return datetime.datetime.now().strftime("%Y%m%d")
+
+def merge_csv_data(file_path_list: list):
+    data = []
+    for path in file_path_list:
+        data.append(pd.read_csv(path, index_col=0, header=0))
+    return pd.concat(data, axis=1)
