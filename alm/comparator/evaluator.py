@@ -33,6 +33,7 @@ def evaluate(mscx_dir: str, tstree_dir: str, mode: str):
 
     res = {}
     for i in range(len(mscx_list)):
+        #TODO: tree_similarityをrateにへんこう
         tree_similarity = None
         try:
             tree_similarity = eval_func(mscx_list[i], tstree_list[i], parser)
