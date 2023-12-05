@@ -20,7 +20,7 @@ def evaluate(mscx_dir: str, tstree_dir: str, mode: str):
 
     parser = gp.GrammarParser("ja_ginza")
 
-    # ts_modeをもとに評価関数を決定する
+    # modeをもとに評価関数を決定する
     eval_func = None
     if mode == WORD_MATCHED_RATE:
         eval_func = wmrc.calc_word_matched_rate
