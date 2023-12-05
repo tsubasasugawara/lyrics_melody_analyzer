@@ -7,7 +7,6 @@ from alm.node import node as nd
 import glob
 import timeout_decorator
 
-#TODO: 親子や親子（兄弟）などで試す
 @timeout_decorator.timeout(10)
 def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: gp.GrammarParser) -> rate.Rate:
     """木の類似度を親子関係から計算する
