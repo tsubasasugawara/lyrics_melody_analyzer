@@ -15,9 +15,19 @@ $ python alm/main.py -ws -md 'MusicXML dir' -td 'Timespan Tree XML dir'
 $ python alm/main.py -t -mp 'MusicXML Path' -tp 'Timespan Tree XML Path'
 ```
 
+## Calculate Tree Similarity by parent child
+```
+$ python alm/main.py -tpc -mp 'MusicXML Path' -tp 'Timespan Tree XML Path'
+```
+
 ## Calculate Tree Similarities
 ```
 $ python alm/main.py -ts -md 'MusicXML dir' -td 'Timespan Tree XML dir'
+```
+
+## Calculate Tree Similarities by parent child
+```
+$ python alm/main.py -tspc -md 'MusicXML dir' -td 'Timespan Tree XML dir'
 ```
 
 ## Get Spotify popularity

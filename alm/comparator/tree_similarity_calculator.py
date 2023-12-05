@@ -42,8 +42,9 @@ def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: gp.GrammarPar
     matched_parent_child_subtrees = []
     for lyrics_subtree in lyrics_subtree_list:
         for ts_subtree in ts_subtree_list:
-            if lyrics_subtree.id == ts_subtree.id and   lyrics_subtree.child_id == ts_subtree.child_id:
+            if lyrics_subtree.id == ts_subtree.id and lyrics_subtree.child_id == ts_subtree.child_id:
                 matched_parent_child_subtrees.append(lyrics_subtree)
+                break
     
     # 親子関係から木の再生成
     node_map = nd.NodeMap(matched_parent_child_subtrees)
@@ -78,27 +79,91 @@ def calc_tree_similarities(mscx_dir: str, tstree_dir: str):
 
     res = {}
     for i in range(len(mscx_list)):
-        wmr = None
+        tree_similarity = None
         try:
-            wmr = calc_tree_similarity(mscx_list[i], tstree_list[i], parser)
+            tree_similarity = calc_tree_similarity(mscx_list[i], tstree_list[i], parser)
         except:
             continue
 
-        song = wmr.section_name[:-2]
-        section = wmr.section_name[-1]
+        song = tree_similarity.section_name[:-2]
+        section = tree_similarity.section_name[-1]
 
         if song not in res:
             res[song] = [song, None, None, None, None]
         
         if section == "A":
-            res[song][1] = wmr.denominator
-            res[song][2] = wmr.numerator
+            res[song][1] = tree_similarity.denominator
+            res[song][2] = tree_similarity.numerator
         elif section == "S":
-           res[song][3] = wmr.denominator
-           res[song][4] = wmr.numerator
+           res[song][3] = tree_similarity.denominator
+           res[song][4] = tree_similarity.numerator
 
     io.output_csv(
         f"./csv/{io.get_file_name(mscx_dir)}_ts_{io.get_now_date()}.csv",
         ["song", "subtree_combination_count_A", "matched_subtree_count_A", "subtree_combination_count_S", "matched_subtree_count_S"],
+        res.values()
+    )
+
+def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parser: gp.GrammarParser) -> rate.Rate:
+    # MusicXMLとタイムスパン木のXMLから木構造を生成
+    res = alm.gen_trees_and_word_list(mscx_path, tstree_path, parser, alm.TREE_SIMILARITY)
+    tstree = res[0]
+    lyrics_tree = res[1]
+
+    # 親子関係の部分木を抜き出す
+    lyrics_subtree_list = es.extract_parent_child(lyrics_tree)
+    ts_subtree_list = es.extract_parent_child(tstree)
+
+    res = rate.Rate(
+                denominator=min(len(lyrics_subtree_list), len(ts_subtree_list)),
+                numerator=0,
+                section_name=io.get_file_name(mscx_path)
+            )
+    
+    for lyrics_subtree in lyrics_subtree_list:
+        for ts_subtree in ts_subtree_list:
+            if lyrics_subtree.id == ts_subtree.id and lyrics_subtree.child_id == ts_subtree.child_id:
+                res.numerator += 1
+                break
+    
+    return res
+
+
+def calc_tree_similarities_by_parent_child(mscx_dir: str, tstree_dir: str):
+    mscx_list = glob.glob(f"{io.put_slash_dir_path(mscx_dir)}*")
+    tstree_list = glob.glob(f"{io.put_slash_dir_path(tstree_dir)}*")
+
+    if len(mscx_list) != len(tstree_list):
+        return None
+    
+    mscx_list.sort()
+    tstree_list.sort()
+
+    parser = gp.GrammarParser("ja_ginza")
+
+    res = {}
+    for i in range(len(mscx_list)):
+        tree_similarity = None
+        try:
+            tree_similarity = calc_tree_similarity_by_parent_child(mscx_list[i], tstree_list[i], parser)
+        except:
+            continue
+
+        song = tree_similarity.section_name[:-2]
+        section = tree_similarity.section_name[-1]
+
+        if song not in res:
+            res[song] = [song, None, None, None, None]
+        
+        if section == "A":
+            res[song][1] = tree_similarity.denominator
+            res[song][2] = tree_similarity.numerator
+        elif section == "S":
+           res[song][3] = tree_similarity.denominator
+           res[song][4] = tree_similarity.numerator
+
+    io.output_csv(
+        f"./csv/{io.get_file_name(mscx_dir)}_ts_parent_child_{io.get_now_date()}.csv",
+        ["song", "parent_child_count_A", "matched_parent_child_count_A", "parent_child_count_S", "matched_parent_child_count_S"],
         res.values()
     )

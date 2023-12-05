@@ -20,6 +20,10 @@ def main():
         action='store_true'
     )
     parser.add_argument(
+        '-tpc', '--tree_similarity_by_parent_child',
+        action='store_true'
+    )
+    parser.add_argument(
         '-mp', '--mscx_path',
         help='MusicXML Path'
     )
@@ -35,6 +39,10 @@ def main():
     )
     parser.add_argument(
         '-ts', '--tree_similarities',
+        action='store_true'
+    )
+    parser.add_argument(
+        '-tspc', '--tree_similarities_by_parent_child',
         action='store_true'
     )
     parser.add_argument(
@@ -133,15 +141,22 @@ def main():
     if args.tree_similarities:
         tsc.calc_tree_similarities(args.mscx_dir, args.tstree_dir)
         return
+    if args.tree_similarities_by_parent_child:
+        tsc.calc_tree_similarities_by_parent_child(args.mscx_dir, args.tstree_dir)
+        return
 
     # 1曲づつ分析を行う
     grammar_parser = gp.GrammarParser("ja_ginza")
-    if args.tree_similarity:
-        similarity = tsc.calc_tree_similarity(args.mscx_path, args.tstx_path, grammar_parser)
-        similarity.print()
-    elif args.word_matched_rate:
+
+    if args.word_matched_rate:
         word_matched_rate = wmrc.calc_word_matched_rate(args.mscx_path, args.tstx_path, grammar_parser)
         word_matched_rate.print()
+    elif args.tree_similarity:
+        similarity = tsc.calc_tree_similarity(args.mscx_path, args.tstx_path, grammar_parser)
+        similarity.print()
+    elif args.tree_similarity_by_parent_child:
+        similarity = tsc.calc_tree_similarity_by_parent_child(args.mscx_path, args.tstx_path, grammar_parser)
+        similarity.print()
 
 if __name__ == "__main__":
     sys.exit(main())
