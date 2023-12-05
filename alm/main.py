@@ -4,6 +4,7 @@ import pandas as pd
 from alm.lyrics import grammar_parser as gp
 from alm.comparator import tree_similarity_calculator as tsc
 from alm.comparator import word_matched_rate_calculator as wmrc
+from alm.comparator import evaluator
 from alm.utils import io
 from alm.api import spotify
 from alm.analyzer import ttest
@@ -134,13 +135,13 @@ def main():
 
     # 複数の分析を一度に行う
     if args.word_matched_rates:
-        wmrc.calc_word_matched_rates(args.mscx_dir, args.tstree_dir)
+        evaluator.evaluate(args.mscx_dir, args.tstree_dir, evaluator.WORD_MATCHED_RATE)
         return
     if args.tree_similarities:
-        tsc.calc_tree_similarities(args.mscx_dir, args.tstree_dir, tsc.SUBTREE_COUNT)
+        evaluator.evaluate(args.mscx_dir, args.tstree_dir, evaluator.SUBTREE_COUNT)
         return
     if args.tree_similarities_by_parent_child:
-        tsc.calc_tree_similarities(args.mscx_dir, args.tstree_dir, tsc.PARENT_CHILD)
+        evaluator.evaluate(args.mscx_dir, args.tstree_dir, evaluator.PARENT_CHILD)
         return
 
     # 1曲づつ分析を行う

@@ -87,37 +87,3 @@ def search_subtree(notes: list, melody_subtree: node.Node) -> node.Node:
 
             if subtree != None:
                 return subtree
-
-def calc_word_matched_rates(mscx_dir: str, tstree_dir: str):
-    mscx_list = glob.glob(f"{io.put_slash_dir_path(mscx_dir)}*")
-    tstree_list = glob.glob(f"{io.put_slash_dir_path(tstree_dir)}*")
-
-    if len(mscx_list) != len(tstree_list):
-        return None
-    
-    mscx_list.sort()
-    tstree_list.sort()
-
-    parser = grammar_parser.GrammarParser("ja_ginza")
-
-    res = {}
-    for i in range(len(mscx_list)):
-        wmr = calc_word_matched_rate(mscx_list[i], tstree_list[i], parser)
-        song = wmr.section_name[:-2]
-        section = wmr.section_name[-1]
-
-        if song not in res:
-            res[song] = [song, -1, -1, -1, -1]
-        
-        if section == "A":
-            res[song][1] = wmr.denominator
-            res[song][2] = wmr.numerator
-        elif section == "S":
-           res[song][3] = wmr.denominator
-           res[song][4] = wmr.numerator
-
-    io.output_csv(
-        f"./csv/{io.get_file_name(mscx_dir)}_wmr_{io.get_now_date()}.csv",
-        ["song", "word_count_A", "matched_word_count_A", "word_count_S", "matched_word_count_S"],
-        res.values()
-    )
