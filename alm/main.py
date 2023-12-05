@@ -4,6 +4,7 @@ import pandas as pd
 from alm.lyrics import grammar_parser as gp
 from alm.comparator import tree_similarity_calculator as tsc
 from alm.comparator import word_matched_rate_calculator as wmrc
+from alm.utils import io
 from alm.api import spotify
 from alm.analyzer import ttest
 
@@ -98,11 +99,8 @@ def main():
 
     # csvの結合
     if args.merge_csv:
-        arr = []
-        for path in args.csv_list:
-            arr.append(pd.read_csv(path, index_col=0, header=0))
-        merged_data = pd.concat(arr, axis=1)
-        merged_data.to_csv(args.csv_list[0])
+        merged_data = io.merge_csv_data(args.csv_list)
+        merged_data.to_csv(f"merged_{args.csv_list[0]}")
         return
 
     # t検定を行う
@@ -142,7 +140,7 @@ def main():
         tsc.calc_tree_similarities(args.mscx_dir, args.tstree_dir, tsc.SUBTREE_COUNT)
         return
     if args.tree_similarities_by_parent_child:
-        tsc.calc_tree_similarities_by_parent_child(args.mscx_dir, args.tstree_dir, tsc.PARENT_CHILD)
+        tsc.calc_tree_similarities(args.mscx_dir, args.tstree_dir, tsc.PARENT_CHILD)
         return
 
     # 1曲づつ分析を行う
