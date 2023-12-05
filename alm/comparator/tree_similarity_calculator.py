@@ -7,6 +7,9 @@ from alm.node import node as nd
 import glob
 import timeout_decorator
 
+SUBTREE_COUNT = "subtree_count"
+PARENT_CHILD = "parent_child"
+
 @timeout_decorator.timeout(10)
 def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: gp.GrammarParser) -> rate.Rate:
     """木の類似度を親子関係から計算する
@@ -64,45 +67,6 @@ def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: gp.GrammarPar
                 io.get_file_name(mscx_path)
             )
 
-def calc_tree_similarities(mscx_dir: str, tstree_dir: str):
-    mscx_list = glob.glob(f"{io.put_slash_dir_path(mscx_dir)}*")
-    tstree_list = glob.glob(f"{io.put_slash_dir_path(tstree_dir)}*")
-
-    if len(mscx_list) != len(tstree_list):
-        return None
-    
-    mscx_list.sort()
-    tstree_list.sort()
-
-    parser = gp.GrammarParser("ja_ginza")
-
-    res = {}
-    for i in range(len(mscx_list)):
-        tree_similarity = None
-        try:
-            tree_similarity = calc_tree_similarity(mscx_list[i], tstree_list[i], parser)
-        except:
-            continue
-
-        song = tree_similarity.section_name[:-2]
-        section = tree_similarity.section_name[-1]
-
-        if song not in res:
-            res[song] = [song, None, None, None, None]
-        
-        if section == "A":
-            res[song][1] = tree_similarity.denominator
-            res[song][2] = tree_similarity.numerator
-        elif section == "S":
-           res[song][3] = tree_similarity.denominator
-           res[song][4] = tree_similarity.numerator
-
-    io.output_csv(
-        f"./csv/{io.get_file_name(mscx_dir)}_ts_{io.get_now_date()}.csv",
-        ["song", "subtree_combination_count_A", "matched_subtree_count_A", "subtree_combination_count_S", "matched_subtree_count_S"],
-        res.values()
-    )
-
 def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parser: gp.GrammarParser) -> rate.Rate:
     # MusicXMLとタイムスパン木のXMLから木構造を生成
     res = alm.gen_trees_and_word_list(mscx_path, tstree_path, parser, alm.TREE_SIMILARITY)
@@ -127,8 +91,7 @@ def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parse
     
     return res
 
-
-def calc_tree_similarities_by_parent_child(mscx_dir: str, tstree_dir: str):
+def calc_tree_similarities(mscx_dir: str, tstree_dir: str, ts_mode: str):
     mscx_list = glob.glob(f"{io.put_slash_dir_path(mscx_dir)}*")
     tstree_list = glob.glob(f"{io.put_slash_dir_path(tstree_dir)}*")
 
@@ -140,11 +103,20 @@ def calc_tree_similarities_by_parent_child(mscx_dir: str, tstree_dir: str):
 
     parser = gp.GrammarParser("ja_ginza")
 
+    # ts_modeをもとに評価関数を決定する
+    eval_func = None
+    if ts_mode == SUBTREE_COUNT:
+        eval_func = calc_tree_similarity
+    elif ts_mode == PARENT_CHILD:
+        eval_func = calc_tree_similarity_by_parent_child
+    else:
+        return
+
     res = {}
     for i in range(len(mscx_list)):
         tree_similarity = None
         try:
-            tree_similarity = calc_tree_similarity_by_parent_child(mscx_list[i], tstree_list[i], parser)
+            tree_similarity = eval_func(mscx_list[i], tstree_list[i], parser)
         except:
             continue
 
@@ -162,7 +134,7 @@ def calc_tree_similarities_by_parent_child(mscx_dir: str, tstree_dir: str):
            res[song][4] = tree_similarity.numerator
 
     io.output_csv(
-        f"./csv/{io.get_file_name(mscx_dir)}_ts_parent_child_{io.get_now_date()}.csv",
-        ["song", "parent_child_count_A", "matched_parent_child_count_A", "parent_child_count_S", "matched_parent_child_count_S"],
+        f"./csv/{io.get_file_name(mscx_dir)}_ts_{ts_mode}_{io.get_now_date()}.csv",
+        ["song", "numerator_A", "denominator_A", "numerator_S", "denominator_S"],
         res.values()
     )

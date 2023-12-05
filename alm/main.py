@@ -139,10 +139,10 @@ def main():
         wmrc.calc_word_matched_rates(args.mscx_dir, args.tstree_dir)
         return
     if args.tree_similarities:
-        tsc.calc_tree_similarities(args.mscx_dir, args.tstree_dir)
+        tsc.calc_tree_similarities(args.mscx_dir, args.tstree_dir, tsc.SUBTREE_COUNT)
         return
     if args.tree_similarities_by_parent_child:
-        tsc.calc_tree_similarities_by_parent_child(args.mscx_dir, args.tstree_dir)
+        tsc.calc_tree_similarities_by_parent_child(args.mscx_dir, args.tstree_dir, tsc.PARENT_CHILD)
         return
 
     # 1曲づつ分析を行う
