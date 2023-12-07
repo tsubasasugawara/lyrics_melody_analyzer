@@ -135,13 +135,13 @@ def main():
 
     # 複数の分析を一度に行う
     if args.word_matched_rates:
-        evaluator.evaluate(args.mscx_dir, args.tstree_dir, evaluator.WORD_MATCHED_RATE)
+        evaluator.evaluate(args.mscx_dir, args.tstree_dir, wmrc.calc_word_matched_rate)
         return
     if args.tree_similarities:
-        evaluator.evaluate(args.mscx_dir, args.tstree_dir, evaluator.SUBTREE_COUNT)
+        evaluator.evaluate(args.mscx_dir, args.tstree_dir, tsc.calc_tree_similarity)
         return
     if args.tree_similarities_by_parent_child:
-        evaluator.evaluate(args.mscx_dir, args.tstree_dir, evaluator.PARENT_CHILD)
+        evaluator.evaluate(args.mscx_dir, args.tstree_dir, tsc.calc_tree_similarity_by_parent_child)
         return
 
     # 1曲づつ分析を行う

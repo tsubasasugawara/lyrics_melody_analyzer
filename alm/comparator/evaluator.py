@@ -4,11 +4,10 @@ from alm.lyrics import grammar_parser as gp
 from alm.utils import io
 import glob
 
-WORD_MATCHED_RATE = "word_matched_rate"
-SUBTREE_COUNT = "tree_similarity_by_subtree_count"
-PARENT_CHILD = "tree_similarity_by_parent_child"
+def weighting_func(data):
+    return data
 
-def evaluate(mscx_dir: str, tstree_dir: str, mode: str):
+def evaluate(mscx_dir: str, tstree_dir: str, eval_func):
     mscx_list = glob.glob(f"{io.put_slash_dir_path(mscx_dir)}*")
     tstree_list = glob.glob(f"{io.put_slash_dir_path(tstree_dir)}*")
 
@@ -19,17 +18,6 @@ def evaluate(mscx_dir: str, tstree_dir: str, mode: str):
     tstree_list.sort()
 
     parser = gp.GrammarParser("ja_ginza")
-
-    # modeをもとに評価関数を決定する
-    eval_func = None
-    if mode == WORD_MATCHED_RATE:
-        eval_func = wmrc.calc_word_matched_rate
-    elif mode == SUBTREE_COUNT:
-        eval_func = tsc.calc_tree_similarity
-    elif mode == PARENT_CHILD:
-        eval_func = tsc.calc_tree_similarity_by_parent_child
-    else:
-        return
 
     res = {}
     for i in range(len(mscx_list)):
