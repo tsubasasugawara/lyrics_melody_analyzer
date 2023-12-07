@@ -21,25 +21,25 @@ def evaluate(mscx_dir: str, tstree_dir: str, eval_func):
 
     res = {}
     for i in range(len(mscx_list)):
-        #TODO: tree_similarityをrateにへんこう
-        tree_similarity = None
+        rate = None
         try:
-            tree_similarity = eval_func(mscx_list[i], tstree_list[i], parser)
+            rate = eval_func(mscx_list[i], tstree_list[i], parser)
         except:
             continue
+        rate = weighting_func(rate)
 
-        song = tree_similarity.section_name[:-2]
-        section = tree_similarity.section_name[-1]
+        song = rate.section_name[:-2]
+        section = rate.section_name[-1]
 
         if song not in res:
             res[song] = [song, None, None, None, None]
         
         if section == "A":
-            res[song][1] = tree_similarity.numerator
-            res[song][2] = tree_similarity.denominator
+            res[song][1] = rate.numerator
+            res[song][2] = rate.denominator
         elif section == "S":
-           res[song][3] = tree_similarity.numerator
-           res[song][4] = tree_similarity.denominator
+           res[song][3] = rate.numerator
+           res[song][4] = rate.denominator
 
     io.output_csv(
         f"./csv/{io.get_file_name(mscx_dir)}_{mode}_{io.get_now_date()}.csv",
