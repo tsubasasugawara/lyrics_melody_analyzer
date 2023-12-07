@@ -3,6 +3,7 @@ from alm.comparator import word_matched_rate_calculator as wmrc
 from alm.lyrics import grammar_parser as gp
 from alm.utils import io
 import glob
+import os
 
 def weighting_func(data):
     return data
@@ -41,8 +42,11 @@ def evaluate(mscx_dir: str, tstree_dir: str, eval_func):
            res[song][3] = rate.numerator
            res[song][4] = rate.denominator
 
+    dir_path = "./csv"
+    os.makedirs(dir_path, exist_ok=True)
+
     io.output_csv(
-        f"./csv/{io.get_file_name(mscx_dir)}_{mode}_{io.get_now_date()}.csv",
+        f"{dir_path}/{io.get_file_name(mscx_dir)}_{mode}_{io.get_now_date()}.csv",
         ["song", "numerator_A", "denominator_A", "numerator_S", "denominator_S"],
         res.values()
     )
