@@ -2,6 +2,7 @@ from alm.comparator import associating_lyrics_melody as LMM
 from alm.lyrics import grammar_parser as GP
 from alm.lyrics import lyrics_extractor as LE
 from alm.melody import time_span_tree as TST
+from collections import deque
 from alm.node import node
 import pprint
 
@@ -64,54 +65,38 @@ def associate_tstree_words(mscx_path: str, tstree_path: str):
     pprint.pprint(tstree.to_dict())
     pprint.pprint(tree.to_dict())
 
-def simplify_tstree_test():
-    root = node.Node(
-        1,
-        [
-            node.Node(
-                2,
-                [
-                    node.Node(
-                        4,
-                        [],
-                        True,
-                        3
-                    ),
-                    node.Node(
-                        3,
-                        [],
-                        True,
-                        3
-                    ),
-                    node.Node(
-                        1,
-                        [],
-                        True,
-                        3
-                    ),
-                ],
-                False,
-                2
-            ),
-            node.Node(
-                3,
-                [
-                    node.Node(
-                        2,
-                        [],
-                        True,
-                        3
-                    )
-                ],
-                False,
-                2
-            ),
-        ],
-        False,
-        1
-    )
+def __count_nodes(tree):
+    cnt = 0
+    queue = deque([tree])
+    while queue:
+        node = queue.popleft()
+        cnt += 1
 
-    LMM.simplify_timespan_tree(root)
-    pprint.pprint(root.to_dict())
+        for child in node.children:
+            queue.append(child)
+    return cnt
+
+def simplify_tstree_test():
+    mscx_path = "xmls/mscx/GReeeeN/BE_FREE_A.xml"
+    ts_path = "xmls/tstree/GReeeeN/BE_FREE_A_TS.xml"
+
+    lyrics_notes_dict = LE.extract_lyrics(mscx_path)
+
+    parser = GP.GrammarParser("ja_ginza")
+    doc = parser.parse(lyrics_notes_dict[LE.LYRICS_KEY])
+    lyrics_tree = parser.to_tree(doc)
+
+    words_notes_dict = {}
+    LMM.explore_words_in_tree(lyrics_tree, words_notes_dict)
+    words_list = LMM.associate_word_list_notes(words_notes_dict, lyrics_notes_dict)
+
+    tstree = TST.tstree_xml_2_struct(ts_path)
+
+    notes_word_dict = LMM.associate_notes_words(words_list)
+    LMM.associate_tstree_words(tstree, notes_word_dict)
+    LMM.associate_words_tree_notes(lyrics_tree, words_notes_dict)
+    LMM.simplify_timespan_tree(tstree)
+    
+    pprint.pprint(tstree.to_dict())
 
 simplify_tstree_test()

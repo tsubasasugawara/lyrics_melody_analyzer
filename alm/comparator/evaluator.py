@@ -5,10 +5,13 @@ from alm.utils import io
 import glob
 import os
 
-def weighting_func(data):
-    return data
+def dummy_func():
+    return
 
-def evaluate(mscx_dir: str, tstree_dir: str, eval_func, output: str):
+def calculate_height_product_reciprocal(node1, node2):
+    return 1 / (node1.depth * node2.depth)
+
+def evaluate(mscx_dir: str, tstree_dir: str, eval_func, weighting_func, output: str):
     mscx_list = glob.glob(f"{io.put_slash_dir_path(mscx_dir)}*")
     tstree_list = glob.glob(f"{io.put_slash_dir_path(tstree_dir)}*")
 
@@ -27,7 +30,6 @@ def evaluate(mscx_dir: str, tstree_dir: str, eval_func, output: str):
             rate = eval_func(mscx_list[i], tstree_list[i], parser)
         except:
             continue
-        rate = weighting_func(rate)
 
         song = rate.section_name[:-2]
         section = rate.section_name[-1]

@@ -122,6 +122,11 @@ def associate_tstree_words(tstree: nd.Node, notes_word_dict: dict) -> None:
     for child in tstree.children:
         associate_tstree_words(child, notes_word_dict)
 
+def __update_depth(node, depth:int):
+    node.depth = depth
+    for child in node.children:
+        __update_depth(child, depth+1)
+
 def simplify_timespan_tree(tstree: nd.Node):
     """タイムスパン木の簡約
 
@@ -146,6 +151,8 @@ def simplify_timespan_tree(tstree: nd.Node):
         node.children = children
         for child in node.children:
             queue.append(child)
+    
+    __update_depth(tstree, 1)
 
 WORD_MATCHED_RATE = 0
 TREE_SIMILARITY = 1
