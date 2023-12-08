@@ -89,6 +89,11 @@ class GrammarParser:
 
         return n
     
+    def update_depth(self, nd: node.Node, depth:int):
+        nd.depth = depth
+        for child in nd.children:
+            self.update_depth(child, depth + 1)
+    
     def __join_roots(self, roots: list) -> node.Node:
         """複数あるルートを一つにまとめる
 
@@ -107,7 +112,6 @@ class GrammarParser:
         elif len(roots) <= 0:
             return node.Node(None, None, True)
 
-        # TODO:結合した際にdepthを更新する
         res = roots[0]
         for i in range(1, len(roots)):
             if len(res.children) > len(roots[i].children):
@@ -116,6 +120,7 @@ class GrammarParser:
                 res = temp
             else:
                 res.children.append(roots[i])
+            self.update_depth(res, 1)
 
         return res
 
