@@ -107,7 +107,7 @@ class GrammarParser:
         elif len(roots) <= 0:
             return node.Node(None, None, True)
 
-        # 結合した際にdepthを更新する
+        # TODO:結合した際にdepthを更新する
         res = roots[0]
         for i in range(1, len(roots)):
             if len(res.children) > len(roots[i].children):
