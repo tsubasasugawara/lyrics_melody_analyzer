@@ -55,6 +55,10 @@ def main():
         '-td', '--tstree_dir',
         help='Timespan Tree XML dir'
     )
+    parser.add_argument(
+        '-o', '--output',
+        help='output file path.'
+    )
 
     # t検定
     parser.add_argument(
@@ -135,13 +139,13 @@ def main():
 
     # 複数の分析を一度に行う
     if args.word_matched_rates:
-        evaluator.evaluate(args.mscx_dir, args.tstree_dir, wmrc.calc_word_matched_rate)
+        evaluator.evaluate(args.mscx_dir, args.tstree_dir, wmrc.calc_word_matched_rate, args.output)
         return
     if args.tree_similarities:
-        evaluator.evaluate(args.mscx_dir, args.tstree_dir, tsc.calc_tree_similarity)
+        evaluator.evaluate(args.mscx_dir, args.tstree_dir, tsc.calc_tree_similarity, args.output)
         return
     if args.tree_similarities_by_parent_child:
-        evaluator.evaluate(args.mscx_dir, args.tstree_dir, tsc.calc_tree_similarity_by_parent_child)
+        evaluator.evaluate(args.mscx_dir, args.tstree_dir, tsc.calc_tree_similarity_by_parent_child, args.output)
         return
 
     # 1曲づつ分析を行う

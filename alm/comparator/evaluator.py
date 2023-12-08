@@ -8,7 +8,7 @@ import os
 def weighting_func(data):
     return data
 
-def evaluate(mscx_dir: str, tstree_dir: str, eval_func):
+def evaluate(mscx_dir: str, tstree_dir: str, eval_func, output: str):
     mscx_list = glob.glob(f"{io.put_slash_dir_path(mscx_dir)}*")
     tstree_list = glob.glob(f"{io.put_slash_dir_path(tstree_dir)}*")
 
@@ -46,7 +46,7 @@ def evaluate(mscx_dir: str, tstree_dir: str, eval_func):
     os.makedirs(dir_path, exist_ok=True)
 
     io.output_csv(
-        f"{dir_path}/{io.get_file_name(mscx_dir)}_{mode}_{io.get_now_date()}.csv",
+        output,
         ["song", "numerator_A", "denominator_A", "numerator_S", "denominator_S"],
         res.values()
     )
