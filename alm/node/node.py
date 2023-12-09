@@ -43,9 +43,10 @@ class Node:
         return res 
 
 class ParentChildSubtree:
-    def __init__(self, id: int, child_id: int):
+    def __init__(self, id: int, child_id: int, depth):
         self.id = id
         self.child_id = child_id
+        self.depth = depth
 
 class NodeMapElement:
     def __init__(self, parent_id: int, id: int, children: list = []):

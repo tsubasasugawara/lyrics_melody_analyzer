@@ -8,7 +8,7 @@ PARENT_CHILD_COMBINATIONS = "parent_child_combinations"
 def extract_parent_child(node: nd.Node) -> list:
     res = []
     for child in node.children:
-        res.append(nd.ParentChildSubtree(node.id, child.id))
+        res.append(nd.ParentChildSubtree(node.id, child.id, node.depth))
         res.extend(extract_parent_child(child))
     
     return res
