@@ -4,8 +4,8 @@ from alm.comparator import extracting_subtree as es
 from alm.lyrics import grammar_parser as gp
 from alm.utils import io
 from alm.node import node as nd
-import glob
 import timeout_decorator
+import pprint
 
 @timeout_decorator.timeout(1)
 def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: gp.GrammarParser) -> rate.Rate:
@@ -82,8 +82,8 @@ def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parse
     
     for lyrics_subtree in lyrics_subtree_list:
         for ts_subtree in ts_subtree_list:
+            # 同じ親子の部分木が存在することがあるが、それは複数の単語が一つの音符に対応しているのを分割したため
             if lyrics_subtree.id == ts_subtree.id and lyrics_subtree.child_id == ts_subtree.child_id:
                 res.numerator += 1
-                break
     
     return res
