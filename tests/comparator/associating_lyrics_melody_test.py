@@ -67,18 +67,25 @@ def associate_tstree_words(mscx_path: str, tstree_path: str):
 
 def __count_nodes(tree):
     cnt = 0
+    id_dict = {}
     queue = deque([tree])
     while queue:
         node = queue.popleft()
+        if node.id in id_dict:
+            id_dict[node.id] += 1
+        else:
+            id_dict[node.id] = 0
         cnt += 1
 
         for child in node.children:
             queue.append(child)
+    
+    pprint.pprint(id_dict)
     return cnt
 
 def simplify_tstree_test():
-    mscx_path = "xmls/mscx/GReeeeN/BE_FREE_A.xml"
-    ts_path = "xmls/tstree/GReeeeN/BE_FREE_A_TS.xml"
+    mscx_path = "xmls/mscx/GReeeeN/遥か_S.xml"
+    ts_path = "xmls/tstree/GReeeeN/遥か_S_TS.xml"
 
     lyrics_notes_dict = LE.extract_lyrics(mscx_path)
 
@@ -98,5 +105,6 @@ def simplify_tstree_test():
     LMM.simplify_timespan_tree(tstree)
     
     pprint.pprint(tstree.to_dict())
+    print(__count_nodes(tstree), __count_nodes(lyrics_tree))
 
 simplify_tstree_test()

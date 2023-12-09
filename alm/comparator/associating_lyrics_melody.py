@@ -127,32 +127,32 @@ def __update_depth(node, depth:int):
     for child in node.children:
         __update_depth(child, depth+1)
 
-def simplify_timespan_tree(tstree: nd.Node):
+def simplify_timespan_tree(tree: nd.Node):
     """タイムスパン木の簡約
 
     Args:
-        tstree (nd.Node) : 簡約化したいタイムスパン木
+        tree (nd.Node) : 簡約化したいタイムスパン木
     """
 
     id_depth_map = {}
-    id_depth_map[tstree.id] = tstree.depth
-    queue = deque([tstree])
-    while queue:
-        node = queue.popleft()
+    id_depth_map[tree.id] = tree.depth
+    queue = [tree]
+    while len(queue) > 0:
+        node = queue.pop(0)
         children = []
-
         for child in node.children:
-            if child.id not in id_depth_map:
-                id_depth_map[child.id] = child.depth
-                children.append(child)
-            else:
+            if child.id in id_depth_map:
+                simplify_timespan_tree(child)
                 children.extend(child.children)
+            else:
+                id_depth_map[child.id] = node.depth
+                children.append(child)
 
         node.children = children
         for child in node.children:
             queue.append(child)
     
-    __update_depth(tstree, 1)
+    __update_depth(tree, 1)
 
 WORD_MATCHED_RATE = 0
 TREE_SIMILARITY = 1
