@@ -1,8 +1,9 @@
 from alm.lyrics import lyrics_extractor as LE
 from alm.node import node as nd
-from collections import deque
 from alm.lyrics import *
 from alm.melody import *
+import sys
+import threading
 
 def associate_word_notes(lyrics_tree: nd.Node, lyrics_notes_dict: nd.Node) -> nd.Node:
     """単語と音符を対応付ける
@@ -103,7 +104,10 @@ def associate_notes_words(words_list : dict) -> dict:
 
     for word_num in words_list:
         for note in words_list[word_num]["notes"]:
-            notes_word_dict[note] = word_num
+            if note in notes_word_dict:
+                notes_word_dict[note].append(word_num)
+            else:
+                notes_word_dict[note] = [word_num]
 
     return notes_word_dict
 
@@ -121,6 +125,36 @@ def associate_tstree_words(tstree: nd.Node, notes_word_dict: dict) -> None:
 
     for child in tstree.children:
         associate_tstree_words(child, notes_word_dict)
+
+def copy_note_supported_multiple_word(tree: nd.Node, is_root:bool=False):
+    """複数の単語に対応している音符のノードを複製する
+    """
+
+    if is_root and len(tree.id) > 1:
+        tree.id.sort()
+        root = nd.Node(tree.id[0], [], False, 1, note_id=tree.note_id)
+        root.children.append(nd.Node(tree.id[1], tree.children, False, 2, word=child.word, note_id=tree.note_id))
+        copy_note_supported_multiple_word(root)
+        for i in range(2, len(tree.id)):
+            root.children.append(nd.Node(tree.id[i], [], False, 2, word=child.word, note_id=tree.note_id))
+        tree = root
+    elif is_root:
+        tree.id = tree.id[0]
+        copy_note_supported_multiple_word(tree)
+    else:
+        children = []
+        for child in tree.children:
+            copy_note_supported_multiple_word(child)
+            if type(child.id) == int:
+                children.append(child)
+            elif len(child.id) == 1:
+                child.id = child.id[0]
+                children.append(child)
+            elif len(child.id) > 1:
+                children.append(nd.Node(child.id[0], child.children, child.end, child.depth, word=child.word, note_id=child.note_id))
+                for i in range(1, len(child.id)):
+                    children.append(nd.Node(child.id[i], [], child.end, child.depth, word=child.word, note_id=child.note_id))
+        tree.children = children
 
 def __update_depth(node, depth:int):
     node.depth = depth
@@ -168,7 +202,7 @@ def gen_trees_and_word_list(mscx_path: str, tstree_path: str, parser: grammar_pa
 
     Returns:
         list: タイムスパン木(1番目)、係り受け木(2番目)、単語のリスト(3番目)
-    """
+    """ 
 
     lyrics_notes_dict = lyrics_extractor.extract_lyrics(mscx_path)
 
@@ -185,6 +219,8 @@ def gen_trees_and_word_list(mscx_path: str, tstree_path: str, parser: grammar_pa
         notes_word_dict = associate_notes_words(words_list)
         associate_tstree_words(tstree, notes_word_dict)
         associate_words_tree_notes(lyrics_tree, words_notes_dict)
+        # 複数の単語に対応する音符のノードを複製
+        copy_note_supported_multiple_word(tstree, True)
         # タイムスパン木の簡約化
         simplify_timespan_tree(tstree)
 

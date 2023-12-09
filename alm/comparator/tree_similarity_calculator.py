@@ -73,7 +73,6 @@ def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parse
     # 親子関係の部分木を抜き出す
     lyrics_subtree_list = es.extract_parent_child(lyrics_tree)
     ts_subtree_list = es.extract_parent_child(tstree)
-    print(len(lyrics_subtree_list), len(ts_subtree_list))
 
     res = rate.Rate(
                 denominator=min(len(lyrics_subtree_list), len(ts_subtree_list)),

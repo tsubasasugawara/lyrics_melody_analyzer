@@ -3,7 +3,6 @@ from alm.lyrics import grammar_parser as GP
 from alm.lyrics import lyrics_extractor as LE
 from alm.melody import time_span_tree as TST
 from collections import deque
-from alm.node import node
 import pprint
 
 def associate_words_notes_test(file_path: str):
@@ -80,12 +79,11 @@ def __count_nodes(tree):
         for child in node.children:
             queue.append(child)
     
-    pprint.pprint(id_dict)
     return cnt
 
 def simplify_tstree_test():
-    mscx_path = "xmls/mscx/GReeeeN/遥か_S.xml"
-    ts_path = "xmls/tstree/GReeeeN/遥か_S_TS.xml"
+    mscx_path = "xmls/mscx/GReeeeN/遥か_A.xml"
+    ts_path = "xmls/tstree/GReeeeN/遥か_A_TS.xml"
 
     lyrics_notes_dict = LE.extract_lyrics(mscx_path)
 
@@ -96,12 +94,14 @@ def simplify_tstree_test():
     words_notes_dict = {}
     LMM.explore_words_in_tree(lyrics_tree, words_notes_dict)
     words_list = LMM.associate_word_list_notes(words_notes_dict, lyrics_notes_dict)
+    pprint.pprint(words_list)
 
     tstree = TST.tstree_xml_2_struct(ts_path)
 
     notes_word_dict = LMM.associate_notes_words(words_list)
     LMM.associate_tstree_words(tstree, notes_word_dict)
     LMM.associate_words_tree_notes(lyrics_tree, words_notes_dict)
+    LMM.copy_note_supported_multiple_word(tstree, True)
     LMM.simplify_timespan_tree(tstree)
     
     pprint.pprint(tstree.to_dict())
