@@ -4,8 +4,8 @@ from alm.comparator import extracting_subtree as es
 from alm.lyrics import grammar_parser as gp
 from alm.utils import io
 from alm.node import node as nd
+from alm.comparator import evaluator
 import timeout_decorator
-import pprint
 
 @timeout_decorator.timeout(1)
 def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: gp.GrammarParser) -> rate.Rate:
@@ -64,7 +64,7 @@ def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: gp.GrammarPar
                 io.get_file_name(mscx_path)
             )
 
-def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parser: gp.GrammarParser) -> rate.Rate:
+def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parser: gp.GrammarParser, weighting_func=evaluator.dummy_weight) -> rate.Rate:
     # MusicXMLとタイムスパン木のXMLから木構造を生成
     res = alm.gen_trees_and_word_list(mscx_path, tstree_path, parser, alm.TREE_SIMILARITY)
     tstree = res[0]
@@ -75,15 +75,22 @@ def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parse
     ts_subtree_list = es.extract_parent_child(tstree)
 
     res = rate.Rate(
-                denominator=min(len(lyrics_subtree_list), len(ts_subtree_list)),
+                denominator=0,
                 numerator=0,
                 section_name=io.get_file_name(mscx_path)
             )
     
     for lyrics_subtree in lyrics_subtree_list:
+        weight = weighting_func(lyrics_subtree.depth, ts_subtree_list[0].depth)
+        is_matched = False
         for ts_subtree in ts_subtree_list:
             # 同じ親子の部分木が存在することがあるが、それは複数の単語が一つの音符に対応しているのを分割したため
             if lyrics_subtree.id == ts_subtree.id and lyrics_subtree.child_id == ts_subtree.child_id:
-                res.numerator += 1
+                is_matched = True
+                res.numerator += weighting_func(lyrics_subtree.depth, ts_subtree.depth)
+                res.denominator += weighting_func(lyrics_subtree.depth, ts_subtree.depth)
+                weight = min(weight, weighting_func(lyrics_subtree.depth, ts_subtree.depth))
+        if not is_matched:
+            res.denominator += weight
     
     return res

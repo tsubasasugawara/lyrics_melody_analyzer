@@ -60,6 +60,11 @@ def main():
         help='output file path.'
     )
 
+    parser.add_argument(
+        '-w1', '--weight1',
+        action='store_true'
+    )
+
     # t検定
     parser.add_argument(
         '-ttest',
@@ -145,7 +150,10 @@ def main():
         evaluator.evaluate(args.mscx_dir, args.tstree_dir, tsc.calc_tree_similarity, evaluator.dummy_func, args.output)
         return
     if args.tree_similarities_by_parent_child:
-        evaluator.evaluate(args.mscx_dir, args.tstree_dir, tsc.calc_tree_similarity_by_parent_child, evaluator.dummy_func, args.output)
+        if args.weight1:
+            evaluator.evaluate(args.mscx_dir, args.tstree_dir, tsc.calc_tree_similarity_by_parent_child, evaluator.weight1, args.output)
+        else:
+            evaluator.evaluate(args.mscx_dir, args.tstree_dir, tsc.calc_tree_similarity_by_parent_child, evaluator.dummy_weight, args.output)
         return
 
     # 1曲づつ分析を行う
@@ -158,7 +166,10 @@ def main():
         similarity = tsc.calc_tree_similarity(args.mscx_path, args.tstx_path, grammar_parser)
         similarity.print()
     elif args.tree_similarity_by_parent_child:
-        similarity = tsc.calc_tree_similarity_by_parent_child(args.mscx_path, args.tstx_path, grammar_parser)
+        if args.weight1:
+            similarity = tsc.calc_tree_similarity_by_parent_child(args.mscx_path, args.tstx_path, grammar_parser, evaluator.weight1)
+        else:
+            similarity = tsc.calc_tree_similarity_by_parent_child(args.mscx_path, args.tstx_path, grammar_parser)
         similarity.print()
 
 if __name__ == "__main__":
