@@ -92,6 +92,14 @@ def main():
         '-w8', '--weight8',
         action='store_true'
     )
+    parser.add_argument(
+        '-w9', '--weight9',
+        action='store_true'
+    )
+    parser.add_argument(
+        '-w10', '--weight10',
+        action='store_true'
+    )
 
     # t検定
     parser.add_argument(
