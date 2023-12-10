@@ -2,8 +2,6 @@ from alm.lyrics import lyrics_extractor as LE
 from alm.node import node as nd
 from alm.lyrics import *
 from alm.melody import *
-import sys
-import threading
 
 def associate_word_notes(lyrics_tree: nd.Node, lyrics_notes_dict: nd.Node) -> nd.Node:
     """単語と音符を対応付ける

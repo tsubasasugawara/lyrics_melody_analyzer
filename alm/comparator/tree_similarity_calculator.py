@@ -64,7 +64,7 @@ def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: gp.GrammarPar
                 io.get_file_name(mscx_path)
             )
 
-def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parser: gp.GrammarParser, weighting_func=evaluator.dummy_weight) -> rate.Rate:
+def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parser: gp.GrammarParser, weighting_func=evaluator.weight0) -> rate.Rate:
     # MusicXMLとタイムスパン木のXMLから木構造を生成
     res = alm.gen_trees_and_word_list(mscx_path, tstree_path, parser, alm.TREE_SIMILARITY)
     tstree = res[0]
