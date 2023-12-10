@@ -1,4 +1,3 @@
-import glob
 from alm.utils import io
 from alm.utils import string
 from alm.node import node

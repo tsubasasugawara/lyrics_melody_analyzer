@@ -1,5 +1,4 @@
 from alm.melody import time_span_tree as TST
-from alm.utils import io
 
 def time_span_tree_test(in_path: str):
     ts_tree = TST.tstree_xml_2_struct(in_path)

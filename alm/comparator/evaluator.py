@@ -1,5 +1,3 @@
-from alm.comparator import tree_similarity_calculator as tsc
-from alm.comparator import word_matched_rate_calculator as wmrc
 from alm.lyrics import grammar_parser as gp
 from alm.utils import io
 import glob

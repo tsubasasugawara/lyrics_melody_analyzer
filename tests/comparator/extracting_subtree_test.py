@@ -2,14 +2,7 @@ from alm.comparator import *
 from alm.lyrics import *
 from alm.melody import *
 from alm.node import node
-import pprint
-import json
-from alm.comparator import associating_lyrics_melody as LMM
-from alm.lyrics import grammar_parser as GP
-from alm.lyrics import lyrics_extractor as LE
-from alm.melody import time_span_tree as TST
 from alm.node import node
-import pprint
 
 def extracting_parent_child_test(mscx_path: str, tstree_path: str):
     lyrics_notes_dict = lyrics_extractor.extract_lyrics(mscx_path)
