@@ -80,6 +80,10 @@ def main():
         '-w5', '--weight5',
         action='store_true'
     )
+    parser.add_argument(
+        '-w6', '--weight6',
+        action='store_true'
+    )
 
     # t検定
     parser.add_argument(
@@ -169,6 +173,8 @@ def main():
         weighting_func = evaluator.weight4
     elif args.weight5:
         weighting_func = evaluator.weight5
+    elif args.weight6:
+        weighting_func = evaluator.weight6
 
     # 複数の分析を一度に行う
     if args.word_matched_rates:
