@@ -31,10 +31,16 @@ def weight8(depth1:int, depth2:int):
     return depth2 / (depth1 + depth2)
     
 def weight9(depth1:int, depth2:int):
-    return depth1 / (depth1 * depth2)
+    return 1 / depth1
 
 def weight10(depth1:int, depth2:int):
-    return depth2 / (depth1 * depth2)
+    return 1 / depth2
+
+def weight11(depth1:int, depth2:int):
+    return depth1
+
+def weight12(depth1:int, depth2:int):
+    return depth2
 
 def evaluate(mscx_dir: str, tstree_dir: str, eval_func, weighting_func, output: str):
     mscx_list = glob.glob(f"{io.put_slash_dir_path(mscx_dir)}*")
