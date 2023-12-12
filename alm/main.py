@@ -7,7 +7,6 @@ from alm.comparator import word_matched_rate_calculator as wmrc
 from alm.comparator import evaluator
 from alm.utils import io
 from alm.api import spotify
-from alm.analyzer import ttest
 
 def main():
     parser = argparse.ArgumentParser(description='This program calc word matched rates and tree similarities.')
