@@ -90,11 +90,11 @@ def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parse
             )
     
     for lyrics_subtree in lyrics_subtree_list:
-        depth_l = lt_max_depth - lyrics_subtree.depth + 1
-        weight = weighting_func(depth_l, ts_max_depth - ts_subtree_list[0].depth + 1)
+        depth_l = lyrics_subtree.depth
+        weight = weighting_func(depth_l, ts_subtree_list[0].depth)
         is_matched = False
         for ts_subtree in ts_subtree_list:
-            depth_t = ts_max_depth - ts_subtree.depth + 1
+            depth_t = ts_subtree.depth
             if lyrics_subtree.id == ts_subtree.id and lyrics_subtree.child_id == ts_subtree.child_id:
                 is_matched = True
                 res.numerator += weighting_func(depth_l, depth_t)
