@@ -64,11 +64,20 @@ def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: gp.GrammarPar
                 io.get_file_name(mscx_path)
             )
 
+def __get_max_depth(tree:nd.Node):
+    depth = tree.depth
+    for child in tree.children:
+        depth = max(depth, __get_max_depth(child))
+    return depth
+
 def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parser: gp.GrammarParser, weighting_func=evaluator.weight0) -> rate.Rate:
     # MusicXMLとタイムスパン木のXMLから木構造を生成
     res = alm.gen_trees_and_word_list(mscx_path, tstree_path, parser, alm.TREE_SIMILARITY)
     tstree = res[0]
     lyrics_tree = res[1]
+
+    ts_max_depth = __get_max_depth(tstree)
+    lt_max_depth = __get_max_depth(lyrics_tree)
 
     # 親子関係の部分木を抜き出す
     lyrics_subtree_list = es.extract_parent_child(lyrics_tree)
@@ -81,15 +90,17 @@ def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parse
             )
     
     for lyrics_subtree in lyrics_subtree_list:
-        weight = weighting_func(lyrics_subtree.depth, ts_subtree_list[0].depth)
+        depth_l = lt_max_depth - lyrics_subtree.depth + 1
+        weight = weighting_func(depth_l, ts_max_depth - ts_subtree_list[0].depth + 1)
         is_matched = False
         for ts_subtree in ts_subtree_list:
+            depth_t = ts_max_depth - ts_subtree.depth + 1
             # 同じ親子の部分木が存在することがあるが、それは複数の単語が一つの音符に対応しているのを分割したため
             if lyrics_subtree.id == ts_subtree.id and lyrics_subtree.child_id == ts_subtree.child_id:
                 is_matched = True
-                res.numerator += weighting_func(lyrics_subtree.depth, ts_subtree.depth)
-                res.denominator += weighting_func(lyrics_subtree.depth, ts_subtree.depth)
-                weight = min(weight, weighting_func(lyrics_subtree.depth, ts_subtree.depth))
+                res.numerator += weighting_func(depth_l, depth_t)
+                res.denominator += weighting_func(depth_l, depth_t)
+                weight = min(weight, weighting_func(depth_l, depth_t))
         if not is_matched:
             res.denominator += weight
     
