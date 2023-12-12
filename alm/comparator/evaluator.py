@@ -42,6 +42,12 @@ def weight11(depth1:int, depth2:int):
 def weight12(depth1:int, depth2:int):
     return depth2
 
+def weight13(depth1: int, depth2:int):
+    return depth1 / depth2
+
+def weight14(depth1: int, depth2:int):
+    return depth2 / depth1
+
 def evaluate(mscx_dir: str, tstree_dir: str, eval_func, weighting_func, output: str):
     mscx_list = glob.glob(f"{io.put_slash_dir_path(mscx_dir)}*")
     tstree_list = glob.glob(f"{io.put_slash_dir_path(tstree_dir)}*")
