@@ -10,7 +10,7 @@ def test_gramar_parser(mscx_path: str):
 
     pprint.pprint(tree.to_dict())
 
-test_gramar_parser("xmls/mscx/オレンジ_S.xml")
+test_gramar_parser("xmls/mscx/GReeeeN/オレンジ_S.xml")
 
 def add_punctuation_test(lyrics: str):
     parser = gp.GrammarParser("ja_ginza")

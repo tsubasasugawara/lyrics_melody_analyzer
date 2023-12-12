@@ -78,6 +78,8 @@ def __count_nodes(tree):
 
         for child in node.children:
             queue.append(child)
+
+    pprint.pprint(id_dict)
     
     return cnt
 
@@ -94,7 +96,6 @@ def simplify_tstree_test():
     words_notes_dict = {}
     LMM.explore_words_in_tree(lyrics_tree, words_notes_dict)
     words_list = LMM.associate_word_list_notes(words_notes_dict, lyrics_notes_dict)
-    pprint.pprint(words_list)
 
     tstree = TST.tstree_xml_2_struct(ts_path)
 
@@ -102,6 +103,7 @@ def simplify_tstree_test():
     LMM.associate_tstree_words(tstree, notes_word_dict)
     LMM.associate_words_tree_notes(lyrics_tree, words_notes_dict)
     LMM.copy_note_supported_multiple_word(tstree, True)
+    # pprint.pprint(tstree.to_dict())
     LMM.simplify_timespan_tree(tstree)
     
     pprint.pprint(tstree.to_dict())

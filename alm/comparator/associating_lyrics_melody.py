@@ -159,6 +159,25 @@ def __update_depth(node, depth:int):
     for child in node.children:
         __update_depth(child, depth+1)
 
+def delete_unnecessary_node(tree: nd.Node):
+    queue = [tree]
+    while len(queue) > 0:
+        node = queue.pop(0)
+        children = []
+        for child in node.children:
+            if child.id == -1:
+                delete_unnecessary_node(child)
+                children.extend(child.children)
+            else:
+                children.append(child)
+
+        node.children = children
+        for child in node.children:
+            queue.append(child)
+    
+    __update_depth(tree, 1)
+
+
 def simplify_timespan_tree(tree: nd.Node):
     """タイムスパン木の簡約
 
@@ -171,19 +190,14 @@ def simplify_timespan_tree(tree: nd.Node):
     queue = [tree]
     while len(queue) > 0:
         node = queue.pop(0)
-        children = []
         for child in node.children:
             if child.id in id_depth_map:
-                simplify_timespan_tree(child)
-                children.extend(child.children)
+                child.id = -1
             else:
-                id_depth_map[child.id] = node.depth
-                children.append(child)
-
-        node.children = children
-        for child in node.children:
+                id_depth_map[child.id] = child.depth
             queue.append(child)
     
+    delete_unnecessary_node(tree)
     __update_depth(tree, 1)
 
 WORD_MATCHED_RATE = 0
