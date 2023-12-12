@@ -164,21 +164,6 @@ def main():
         merged_data.to_csv(f"merged_{args.csv_list[0]}")
         return
 
-    # t検定を行う
-    if args.ttest:
-        res = None
-
-        if args.word_matched_rate:
-            res = ttest.ttest_word_matched_rate(args.csv)
-        if args.tree_similarity:
-            res = ttest.ttest_tree_similarity(args.csv)
-
-        if res != None:
-            print(f"youtube:{res[0]}")
-            print(f"spotify:{res[1]}")
-
-        return
-
     # spotifyのpopularityを取得
     if args.spotify_popularity:
         res = spotify.get_popularity(args.spotify_id)
