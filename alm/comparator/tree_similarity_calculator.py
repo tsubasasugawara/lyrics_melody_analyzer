@@ -76,9 +76,6 @@ def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parse
     tstree = res[0]
     lyrics_tree = res[1]
 
-    ts_max_depth = __get_max_depth(tstree)
-    lt_max_depth = __get_max_depth(lyrics_tree)
-
     # 親子関係の部分木を抜き出す
     lyrics_subtree_list = es.extract_parent_child(lyrics_tree)
     ts_subtree_list = es.extract_parent_child(tstree)
@@ -90,16 +87,17 @@ def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parse
             )
     
     for lyrics_subtree in lyrics_subtree_list:
-        depth_l = lyrics_subtree.depth
-        weight = weighting_func(depth_l, ts_subtree_list[0].depth)
+        weight = weighting_func(lyrics_subtree.depth, ts_subtree_list[0].depth)
         is_matched = False
         for ts_subtree in ts_subtree_list:
-            depth_t = ts_subtree.depth
+            weight_t = weighting_func(lyrics_subtree.depth, ts_subtree.depth)
             if lyrics_subtree.id == ts_subtree.id and lyrics_subtree.child_id == ts_subtree.child_id:
                 is_matched = True
-                res.numerator += weighting_func(depth_l, depth_t)
-                res.denominator += weighting_func(depth_l, depth_t)
-                weight = min(weight, weighting_func(depth_l, depth_t))
+                res.numerator += weight_t
+                res.denominator += weight_t
+
+            weight = min(weight, weight_t)
+
         if not is_matched:
             res.denominator += weight
     
