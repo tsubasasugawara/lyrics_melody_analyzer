@@ -81,24 +81,16 @@ def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parse
     ts_subtree_list = es.extract_parent_child(tstree)
 
     res = rate.Rate(
-                denominator=0,
+                denominator=len(lyrics_subtree_list),
                 numerator=0,
                 section_name=io.get_file_name(mscx_path)
             )
     
     for lyrics_subtree in lyrics_subtree_list:
-        weight = weighting_func(lyrics_subtree.depth, ts_subtree_list[0].depth)
-        is_matched = False
         for ts_subtree in ts_subtree_list:
-            weight_t = weighting_func(lyrics_subtree.depth, ts_subtree.depth)
             if lyrics_subtree.id == ts_subtree.id and lyrics_subtree.child_id == ts_subtree.child_id:
-                is_matched = True
-                res.numerator += weight_t
-                res.denominator += weight_t
+                weight = weighting_func(lyrics_subtree.depth, ts_subtree.depth)
+                res.numerator += weight + 1
+                res.denominator += weight
 
-            weight = min(weight, weight_t)
-
-        if not is_matched:
-            res.denominator += weight
-    
     return res
