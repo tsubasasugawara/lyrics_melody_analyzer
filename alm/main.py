@@ -59,27 +59,6 @@ def main():
         help='output file path.'
     )
 
-    parser.add_argument(
-        '-w1', '--weight1',
-        action='store_true'
-    )
-    parser.add_argument(
-        '-w2', '--weight2',
-        action='store_true'
-    )
-    parser.add_argument(
-        '-w3', '--weight3',
-        action='store_true'
-    )
-    parser.add_argument(
-        '-w4', '--weight4',
-        action='store_true'
-    )
-    parser.add_argument(
-        '-w5', '--weight5',
-        action='store_true'
-    )
-
     # t検定
     parser.add_argument(
         '-ttest',
@@ -142,27 +121,15 @@ def main():
             print(item.name, item. popularity)
         return 
 
-    weighting_func = evaluator.weight0
-    if args.weight1:
-        weighting_func = evaluator.weight1
-    elif args.weight2:
-        weighting_func = evaluator.weight2
-    elif args.weight3:
-        weighting_func = evaluator.weight3
-    elif args.weight4:
-        weighting_func = evaluator.weight4
-    elif args.weight5:
-        weighting_func = evaluator.weight5
-
     # 複数の分析を一度に行う
     if args.word_matched_rates:
-        evaluator.evaluate(args.mscx_dir, args.tstree_dir, wmrc.calc_word_matched_rate, evaluator.weight0, args.output)
+        evaluator.evaluate(args.mscx_dir, args.tstree_dir, wmrc.calc_word_matched_rate, args.output)
         return
     if args.tree_similarities:
-        evaluator.evaluate(args.mscx_dir, args.tstree_dir, tsc.calc_tree_similarity, evaluator.weight0, args.output)
+        evaluator.evaluate(args.mscx_dir, args.tstree_dir, tsc.calc_tree_similarity, args.output)
         return
     if args.tree_similarities_by_parent_child:
-        evaluator.evaluate(args.mscx_dir, args.tstree_dir, tsc.calc_tree_similarity_by_parent_child, weighting_func, args.output)
+        evaluator.evaluate(args.mscx_dir, args.tstree_dir, tsc.calc_tree_similarity_by_parent_child, args.output)
         return
 
     # 1曲づつ分析を行う
@@ -175,7 +142,7 @@ def main():
         similarity = tsc.calc_tree_similarity(args.mscx_path, args.tstx_path, grammar_parser)
         similarity.print()
     elif args.tree_similarity_by_parent_child:
-        similarity = tsc.calc_tree_similarity_by_parent_child(args.mscx_path, args.tstx_path, grammar_parser, weighting_func)
+        similarity = tsc.calc_tree_similarity_by_parent_child(args.mscx_path, args.tstx_path, grammar_parser)
         similarity.print()
 
 if __name__ == "__main__":

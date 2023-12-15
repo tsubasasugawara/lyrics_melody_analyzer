@@ -4,11 +4,10 @@ from alm.comparator import extracting_subtree as es
 from alm.lyrics import grammar_parser as gp
 from alm.utils import io
 from alm.node import node as nd
-from alm.comparator import evaluator
 import timeout_decorator
 
 @timeout_decorator.timeout(1)
-def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: gp.GrammarParser, weighting_func) -> rate.Rate:
+def calc_tree_similarity(mscx_path: str, tstree_path: str, parser: gp.GrammarParser) -> rate.Rate:
     """木の類似度を親子関係から計算する
 
     Args:
@@ -70,7 +69,7 @@ def __get_max_depth(tree:nd.Node):
         depth = max(depth, __get_max_depth(child))
     return depth
 
-def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parser: gp.GrammarParser, weighting_func=evaluator.weight0) -> rate.Rate:
+def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parser: gp.GrammarParser) -> rate.Rate:
     # MusicXMLとタイムスパン木のXMLから木構造を生成
     res = alm.gen_trees_and_word_list(mscx_path, tstree_path, parser, alm.TREE_SIMILARITY)
     tstree = res[0]
@@ -89,8 +88,7 @@ def calc_tree_similarity_by_parent_child(mscx_path: str, tstree_path: str, parse
     for lyrics_subtree in lyrics_subtree_list:
         for ts_subtree in ts_subtree_list:
             if lyrics_subtree.id == ts_subtree.id and lyrics_subtree.child_id == ts_subtree.child_id:
-                weight = weighting_func(lyrics_subtree.depth, ts_subtree.depth)
-                res.numerator += weight + 1
-                res.denominator += weight
+                res.numerator += 1
+                break
 
     return res

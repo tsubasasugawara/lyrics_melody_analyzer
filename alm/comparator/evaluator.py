@@ -3,19 +3,7 @@ from alm.utils import io
 import glob
 import os
 
-def weight0(a:int, b:int):
-    return 1
-
-def weight1(depth1:int, depth2:int):
-    return 1 / abs(depth1 - depth2)
-
-def weight2(depth1:int, depth2:int):
-    return 1 / (depth1 + depth2)
-
-def weight3(depth1:int, depth2:int):
-    return 1 / (depth1 * depth2)
-
-def evaluate(mscx_dir: str, tstree_dir: str, eval_func, weighting_func, output: str):
+def evaluate(mscx_dir: str, tstree_dir: str, eval_func, output: str):
     mscx_list = glob.glob(f"{io.put_slash_dir_path(mscx_dir)}*")
     tstree_list = glob.glob(f"{io.put_slash_dir_path(tstree_dir)}*")
 
@@ -31,7 +19,7 @@ def evaluate(mscx_dir: str, tstree_dir: str, eval_func, weighting_func, output: 
     for i in range(len(mscx_list)):
         rate = None
         try:
-            rate = eval_func(mscx_list[i], tstree_list[i], parser, weighting_func)
+            rate = eval_func(mscx_list[i], tstree_list[i], parser)
         except:
             continue
 

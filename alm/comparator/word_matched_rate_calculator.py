@@ -5,7 +5,7 @@ from alm.comparator import associating_lyrics_melody
 from alm.lyrics import grammar_parser
 from alm.comparator import rate
 
-def calc_word_matched_rate(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser, weighting_func) -> rate.Rate:
+def calc_word_matched_rate(mscx_path: str, tstree_path: str, parser: grammar_parser.GrammarParser) -> rate.Rate:
     """単語の一致率を計算する
 
     Args:
