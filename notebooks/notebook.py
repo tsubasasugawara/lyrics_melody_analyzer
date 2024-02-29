@@ -44,8 +44,8 @@ def scatter(rates:pd.DataFrame, xy_min:int, xy_max:int, y_or_s: int, xlabel:str,
     plt.scatter(x=RATE_A, y=RATE_S, data=pop, color='blue', label='人気曲')
     plt.scatter(x=RATE_A, y=RATE_S, data=unpop, color='red', label='普通曲')
 
-    plt.xlabel(xlabel, fontsize=15)
-    plt.ylabel(ylabel, fontsize=15)
+    plt.xlabel(xlabel, fontsize=20)
+    plt.ylabel(ylabel, fontsize=20)
     plt.legend(fontsize=15)
     plt.xlim(xy_min, xy_max)
     plt.ylim(xy_min, xy_max)
